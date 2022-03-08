@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>НАЧАЛО</title>
+    <meta name="description" content="Интерактивное руководство по началу работы в Brackets.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+
+    <a href="index.html">Home</a>
+    <h1>Grid</h1>
+
+    <h2>свойства</h2>
+    <ul>
+        <li>✔️ grid-template-columns</li>
+        <li>✔️ grid-template-rows</li>
+        <li>✔️ grid-template-areas</li>
+        <li>✔️ gap</li>
+        <li>✔️ justify-items</li>
+        <li>✔️ align-items</li>
+        <li>✔️ justify-content</li>
+        <li>✔️ align-content</li>
+        <li>✔️ grid-auto-rows</li>
+        <li>grid-auto-columns</li>
+        <li>✔️ grid-auto-flow</li>
+    </ul>
+
+    <h2>grid-template-columns:</h2>
+
+    <ul>
+        <li>100px 1fr</li>
+        <li>minmax(50px, 1fr)</li>
+        <li>fit-content(40%)</li>
+        <li>repeat(3, 50px)</li>
+
+        <li>50px repeat(auto-fill, 50px) 70px</li>
+        <li>minmax(50px, max-content)
+            repeat(auto-fill, 70px) 20%</li>
+    </ul>
+
+    <h2>grid-template-rows + grid-template-columns</h2>
+
+    <ul>
+        <li>grid-template-rows: 30px 40px 50px;</li>
+        <li>grid-template-columns: 30px 50px auto 50px 30px;</li>
+    </ul>
+
+    <div class="grid ex-1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+
+
+    <ul>
+        <li>
+            grid-template-rows: 30px 40px 50px;</li>
+        <li>grid-template-columns: 1fr 1fr 1fr;</li>
+    </ul>
+
+    <div class="grid ex-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+    <h2>grid-template-areas</h2>
+
+    <ul>
+        <li>grid-template-columns: repeat(2, 1fr);</li>
+        <li>grid-template-rows: auto;</li>
+        <li>grid-template-areas: </li>
+        <pre>
+     "header header header"
+     "main  . sidebar"
+     "footer footer footer";
+     </pre>
+    </ul>
+
+    <div class="grid ex-3">
+        <div class="header">header</div>
+        <div class="main">main</div>
+        <div class="sidebar">sidebar</div>
+        <div class="footer">footer</div>
+    </div>
+
+    <h2>gap: 16px;</h2>
+
+    <div class="grid ex-1 ex-4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+
+    <h2>justify-items</h2>
+
+    <ul>
+        <li>stretch - default</li>
+        <li>start </li>
+        <li>end </li>
+        <li>center </li>
+    </ul>
+
+    <div class="grid ex-2 ex-5">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+        <div>101010</div>
+        <div>111111</div>
+        <div>121212</div>
+        <div>131313</div>
+        <div>141414</div>
+        <div>151515</div>
+    </div>
+
+    <div class="grid ex-2 ex-6">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+        <div>101010</div>
+        <div>111111</div>
+        <div>121212</div>
+        <div>131313</div>
+        <div>141414</div>
+        <div>151515</div>
+    </div>
+
+    <div class="grid ex-2 ex-7">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+        <div>101010</div>
+        <div>111111</div>
+        <div>121212</div>
+        <div>131313</div>
+        <div>141414</div>
+        <div>151515</div>
+    </div>
+
+    <h2>align-items</h2>
+
+    <ul>
+        <li>stretch - default</li>
+        <li>start</li>
+        <li>end </li>
+        <li>center </li>
+    </ul>
+
+    <div class="grid ex-align ex-8">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid ex-align ex-9">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid ex-align ex-10">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <h2>justify-content(по оси строки) и align-content(по оси столбца)</h2>
+
+    <ul>
+        <li>stretch</li>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>space-around</li>
+        <li>space-between</li>
+        <li>space-evenly</li>
+    </ul>
+
+    <div class="grid justify-content justify-content-stretch">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-start">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-end">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-center">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-space-around">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-space-between">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <div class="grid justify-content justify-content-space-evenly">
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+    </div>
+
+    <h2>grid-auto-rows и grid-auto-columns</h2>
+
+
+    <div class="grid grid-auto-rows">
+        <div class="item-a">111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+        <div>555</div>
+        <div>666</div>
+        <div>777</div>
+        <div>888</div>
+        <div>999</div>
+        <div class="item-b">10</div>
+    </div>
+
+    <div class="grid   grid-container">
+        <div class="item-a">item-a</div>
+        <div>item-b</div>
+        <div>item-c</div>
+        <div>item-d</div>
+        <div class="item-e">item-e</div>
+    </div>
+
+</body></html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>НАЧАЛО</title>
+    <meta name="description" content="Интерактивное руководство по началу работы в Brackets.">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <a href="index.html">Home</a>
+    <h1>Теги</h1>
+
+    <h2>&#60;head&#62; контейнер для метаданных</h2>
+    <p>&#60;base&#62;</p>
+    <ul>
+        <li>href="" базовый адрес (URL) для полного пути. можно запросить document.baseURI<br> должен находиться до других элементов с атрибутами URL. Разрешены абсолютные (внешние) и относительные (внутренние) адреса.</li>
+        <li>target="" Значение атрибута определяет имя контекста, которое применяется для ссылок a и форм form. Они нужны для отображения контекста (пример: вкладка, окно или встроенный фрейм). Следующие ключевые слова имеют специальные значения:</li>
+        <ul>
+            <li>_self(default): в текущем окне или вкладке</li>
+            <li>_blank: загружает результат в новом окне или бланке </li>
+            <li>_parent: загружает данные в родительском окне</li>
+            <li>_top: загружает данные в контексте верхнего уровня (то есть, отображает полученный контекст без обратного перехода, если не имеет родительского значения). Если нет родительских данных используется как _self.</li>
+        </ul>
+    </ul>
+    <p>&#60;link&#62;</p>
+    <ul>
+        <li>Путь href="main.css" href="apple-icon-114.png"</li>
+        <li>rel="" как связанный элемент связан с содержащим документом rel="icon"</li>
+        <li>на различных мобильных платформах rel="apple-touch-icon-precomposed"
+        </li>
+        <li>sizes="" указывает размер значка sizes="114x114"</li>
+        <li>type="" содержит MIME-тип связываемого ресурса type="image/png"</li>
+        <li>тип мультимедиа или запрос внутри media атрибута media="screen and (max-width: 600px)" media="print"</li>
+        <li>производительности и безопасности crossorigin="anonymous" - браузер должен предварительно загрузить этот ресурс. Атрибут указывает, следует ли извлекать ресурс с помощью запроса CORS</li>
+
+    </ul>
+    <p>&#60;meta&#62; это данные о данных, могут быть обработаны машиной</p>
+    <ol>
+        <li>name=""</li>
+        <ul>
+            <li>description</li>
+            <li>keywords</li>
+            <li>author</li>
+            <li>viewport</li>
+        </ul>
+        <li>content="HTML, CSS, JavaScript"</li>
+    </ol>
+    <p>&#60;script src="/path/to/script.js"&#62;</p>
+    <p>&#60;script src="https://..."&#62;</p>
+    <p>style</p>
+    <p>title </p>
+
+    <h2>SEO</h2>
+    <ul>
+        <li>nav</li>
+        <li>main</li>
+        <li>body</li>
+        <li>header</li>
+        <li>section</li>
+        <li>article</li>
+        <li>aside</li>
+        <li>footer</li>
+    </ul>
+
+    <h2>Контент </h2>
+    <ul>
+        <li>video</li>
+        <li>audio</li>
+    </ul>
+
+</body></html>
