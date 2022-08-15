@@ -16,14 +16,402 @@
     <h1>JS</h1>
 
     <nav class="nav">
-        <a href="/js/obshee/js.html">✔️ Общее</a>
-        <a href="/js/arrays/js.html">✔️ Массивы</a>
-        <a href="/js/objects/js.html">✔️ Объекты</a>
-        <a href="/js/strings/js.html">✔️ Строки</a>
-        <a href="/js/class/js.html">✔️ Классы</a>
-        <a href="/js/promise/js.html">✔️ Промисы</a>
+        <h2>✔️ Общее</h2>
+        <ol>
+            <li>
+                типы данных
+                <ol>
+                    <li>string</li>
+                    <li>number</li>
+                    <li>NaN? isNan()</li>
+                    <li>BigInt</li>
+                    <li>Boolean</li>
+                    <li>null</li>
+                    <li>undefined</li>
+                    <li>Symbol</li>
+                    <li>Object</li>
+                </ol>
+            </li>
+            <li>
+                <p>виды преобразований</p>
+                <ul>
+                    <li>toString</li>
+                    <li>Number()</li>
+                    <li>Boolean</li>
+                </ul>
+            </li>
+            <li>типы операций: + - * / % ! !!</li>
+            <li>
+                <p>== или ===</p>
+                <ul>
+                    <li>1 == '1' // true</li>
+                    <li>1 === '1' // false</li>
+                </ul>
+            </li>
+            <li>
+                <p>Виды циклов:</p>
+                <ul>
+                    <li>for</li>
+                    <li>for of</li>
+                    <li>while</li>
+                    <li>do while</li>
+                </ul>
+            </li>
+            <li>
+                <p>Взаимодействие:</p>
+                <ul>
+                    <li>alert</li>
+                    <li>prompt</li>
+                    <li>confirm</li>
+                </ul>
+            </li>
+            <li>strict mode - убирает ошибки ранних версий js, можно весь файл, строку в функции, по умочанию в модулях</li>
+            <li>null не существует, undefined не найдено</li>
+            <li>
+                <p>&#38; ||</p>
+                <ul>
+                    <li>&#38; ищет первый false</li>
+                    <li>|| ищет первый true</li>
+                </ul>
+            </li>
+            <li>
+                <p>типы таймеров</p>
+                <ul>
+                    <li>setTimeout - 1 раз</li>
+                    <li>setInterval - постоянно (можно удалить таймер)</li>
+                </ul>
+            </li>
+            <li>
+                <p>любой тип данных в булевый:</p>
+                <ul>
+                    <li>Boolean()</li>
+                    <li>!!{}</li>
+                    <li>'', 0, null, undefined, NaN, false</li>
+                </ul>
+            </li>
+            <li>Обработка ошибок, "try..catch" работает только для ошибок, возникающих во время выполнения кода</li>
+            <li>Модули - обычно содержит класс или библиотеку с функциями
+                <ol>
+                    <li>export function sayHi(user) {}</li>
+                    <li>import {sayHi} from './sayHi.js';</li>
+                    <li>В модулях всегда строгий режим</li>
+                    <li>собственную область видимости</li>
+                    <li>Код выполняется только один раз</li>
+                    <li>«this» не определён</li>
+                    <li>являются отложенными (deferred)</li>
+                    <li>Не допускаются «голые» модули</li>
+                </ol>
+            </li>
+            <li>Proxy «оборачивается» вокруг другого объекта и может перехватывать</li>
+            <li>Reflect – встроенный объект, упрощающий создание прокси</li>
+            <li>Встроенная функция eval позволяет выполнять строку кода</li>
+            <li></li>
+        </ol>
+
+        <h2>✔️ Массивы</h2>
+        <ol>
+            <li>методы массивов:
+                <ol>
+                    <li>some() проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции
+                        <pre>myAwesomeArray.some(test => test === "d")
+                        //-------> Output : true</pre>
+                    </li>
+                    <li>reduce() принимает функцию, которая имеет в качестве аргумента аккумулятор и значение
+                        <pre>myAwesomeArray.reduce((total, value) => total * value)
+// 1 * 2 * 3 * 4 * 5
+//-------> Output = 120</pre>
+                    </li>
+                    <li>every() проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции. Он вернет значение true, если каждый элемент совпадет с проверяемой функцией, и значение false — если нет
+                        <pre>const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
+
+myAwesomeArray2.every(test => test === "a")
+//-------> Output : true</pre>
+                    </li>
+                    <li>map() принимает функцию в качестве параметра и создает новый массив с результатом вызова указанной функции для каждого элемента массива
+                        <pre>const myAwesomeArray = [5, 4, 3, 2, 1]
+myAwesomeArray.map(x => x * x) 25</pre>
+                    </li>
+                    <li>flat() принимает в качестве аргумента массив массивов и сглаживает вложенные массивы в массив верхнего уровня [[1, 2], [3, 4], 5] в [1, 2, 3, 4, 5]
+                    </li>
+                    <li>filter() принимает функцию в качестве параметра и возвращает новый массив, содержащий все элементы массива, для которого функция фильтрации передавалась в качестве аргумента, и возвращает ее со значением true
+                        <pre>const myAwesomeArray = [
+{ id: 1, name: "john" },
+{ id: 2, name: "Ali" },
+{ id: 3, name: "Mass" },
+{ id: 4, name: "Mass" },
+]
+
+myAwesomeArray.filter(element => element.name === "Mass")
+//-------> Output : 0:{id: 3, name: "Mass"},
+// 1:{id: 4, name: "Mass"}</pre>
+                    </li>
+                    <li>forEach() применяет функцию к каждому элементу массива
+                        <pre>const myAwesomeArray = [
+{ id: 1, name: "john" },
+{ id: 2, name: "Ali" },
+{ id: 3, name: "Mass" },
+]
+
+myAwesomeArray.forEach(element => console.log(element.name))
+//-------> Output : john
+// Ali
+// Mass</pre>
+                    </li>
+                    <li>findIndex() принимает функцию в качестве параметра и в дальнейшем применяет ее к массиву
+                        <pre>const myAwesomeArray = [
+{ id: 1, name: "john" },
+{ id: 2, name: "Ali" },
+{ id: 3, name: "Mass" },
+]
+
+myAwesomeArray.findIndex(element => element.id === 3)
+//-------> Output : 2
+
+myAwesomeArray.findIndex(element => element.id === 7)
+//-------> Output : -1</pre>
+                    </li>
+                    <li>find() метод принимает функцию в качестве аргумента и в дальнейшем применяет ее к массиву
+                        <pre>const myAwesomeArray = [
+{ id: 1, name: "john" },
+{ id: 2, name: "Ali" },
+{ id: 3, name: "Mass" },
+]
+
+myAwesomeArray.find(element => element.id === 3)
+//-------> Output : {id: 3, name: "Mass"}
+
+myAwesomeArray.find(element => element.id === 7)
+//-------> Output : undefined</pre>
+                    </li>
+                    <li>sort() метод принимает функцию в качестве параметра. Он сортирует элементы массива и возвращает их.
+                        <pre>const myAwesomeArray = [5, 4, 3, 2, 1]
+// Sort from smallest to largest
+myAwesomeArray.sort((a, b) => a - b)
+//-------> Output : [1, 2, 3, 4, 5]
+
+// Sort from largest to smallest
+myAwesomeArray.sort((a, b) => b - a)
+//-------> Output : [5, 4, 3, 2, 1]</pre>
+                    </li>
+                    <li>concat() метод объединяет два или более массива/значения и возвращает новый массив.
+                        <pre>const myAwesomeArray = [1, 2, 3, 4, 5]
+const myAwesomeArray2 = [10, 20, 30, 40, 50]
+myAwesomeArray.concat(myAwesomeArray2)
+//-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]</pre>
+                    </li>
+                    <li>fill() Этот метод заполняет все элементы массива одинаковым значением, от начального индекса (по умолчанию 0) до конечного индекса (по умолчанию array.length).
+                        <pre>const myAwesomeArray = [1, 2, 3, 4, 5]
+// The first argument (0) is the value
+// The second argument (1) is the starting index
+// The third argument (3) is the ending index
+myAwesomeArray.fill(0, 1, 3)
+//-------> Output : [1, 0, 0, 4, 5]</pre>
+                    </li>
+                    <li>includes() Этот метод возвращает значение true, если массив содержит определенный элемент, и значение false — если нет.
+                        <pre>const myAwesomeArray = [1, 2, 3, 4, 5]
+myAwesomeArray.includes(3)
+//-------> Output : true
+myAwesomeArray.includes(8)
+//-------> Output : false</pre>
+                    </li>
+                    <li>reverse() Этот метод меняет порядок следования элементов в массиве на обратный. Первый элемент становится последним, а последний — первым.
+                        <pre>const myAwesomeArray = ["e", "d", "c", "b", "a"]
+myAwesomeArray.reverse()
+//-------> Output : ['a', 'b', 'c', 'd', 'e']</pre>
+                    </li>
+                    <li>flatMap() Этот метод применяет функцию к каждому элементу массива, а затем сглаживает результат в новый массив. Он объединяет метод flat() и метод map() в одну функцию.
+                        <pre>const myAwesomeArray = [[1], [2], [3], [4], [5]]
+myAwesomeArray.flatMap(arr => arr * 10)
+//-------> Output : [10, 20, 30, 40, 50]
+
+// With .flat() and .map()
+myAwesomeArray.flat().map(arr => arr * 10)
+//-------> Output : [10, 20, 30, 40, 50]</pre>
+                    </li>
+                </ol>
+            </li>
+            <li>call apply, bind разница в передаче переменных apply ждет массив, call и apply вызывается на месте, bind в любом месте</li>
+            <li>псевдомассив arguments</li>
+            <li>map и set(ключи любого типа, строка, объект) (методы)
+            </li>
+            <li>WeakMap - дополнительные хранилища данных, кеширование</li>
+            <li>Деструктурирующее присваивание - «распаковать» массивы или объекты в несколько переменных</li>
+            <li>Остаточные параметры «…» - хотим не просто получить первые значения, но и собрать все остальные</li>
+            <li></li>
+        </ol>
+        <h2>✔️ Объекты</h2>
+
+        <ol>
+            <li>?? возвращает первый аргумент, если он не null/undefined</li>
+            <li>
+                <p>new object:</p>
+                <ul>
+                    <li>создается шаблонс параметрами</li>
+                    <li>передается параметр и создается объект</li>
+                    <li>имя с Большой буквы</li>
+                </ul>
+                <p>для чего new? (4)</p>
+                <ul>
+                    <li>создает пустой объект</li>
+                    <li>привязывает this</li>
+                    <li>прототип</li>
+                    <li>вернет this</li>
+                </ul>
+            </li>
+            <li>
+                <ol>
+                    <li>можно проверить (new?)</li>
+                    <li>hasOwnProperty</li>
+                    <li>'prop' in obj</li>
+                    <li>obj['prop']</li>
+                    <li>objectName.propertyName</li>
+                    <li>myCar["make"] = "Ford";</li>
+                    <li>myObj["date created"] = "String with space";</li>
+                    <li>var myObj = new Object()</li>
+                    <li>циклы for...in</li>
+                    <li>Object.keys(o)</li>
+                    <li>Object.getOwnPropertyNames(o)</li>
+                    <li>конструктор<ol>
+                            <li>function Car(make, model) {</li>
+                            <li>this.make = make;</li>
+                            <li>this.model = model;</li>
+                            <li>}</li>
+                        </ol>
+                    </li>
+                    <li>var animal1 = Object.create(Animal);</li>
+                    <li>myMethod: function(params) {}</li>
+                    <li>специальное ключевое слово this, которое вы можете использовать внутри метода, чтобы ссылаться на текущий объект.</li>
+                </ol>
+            </li>
+            <li>опциональная цепочка ?. останавливает вычисление и возвращает undefined, если значение перед ?. равно undefined или null.</li>
+            <li>this - контекст вызова</li>
+            <li>
+                <p>host-объекты vs нативные</p>
+                <ul>
+                    <li>string, math, object</li>
+                    <li>window, document, location</li>
+                </ul>
+            </li>
+            <li>прототипное наследование, объект без прототипа ссылка на другой объект, погружение внутрь объекта</li>
+            <li>wrapper objects - примитив временно становится объектом</li>
+            <li>boxing/unboxing - объект обертка new и есть упаковка/распаковка</li>
+            <li>Разница между in и hasOwnProperty. in проверяет и в прототипах</li>
+            <li>Поверхностное - копия(новый объект), глубокое - создается псевдоним (assign,</li>
+            <li>Флаги и дескрипторы свойств: writable, enumerable, configurable. Запрещающие добавлять/удалять/изменять. замораживать</li>
+            <li>геттер читаем как обычное свойство get fullName() {} - свойство, а внутри работа с this и объектом</li>
+            <li>Дескрипторы управляют геттерами через set get</li>
+            <li></li>
+        </ol>
+        <h2>✔️ Строки</h2>
+        <ol>
+            <li>
+                <p>Методы строк js:</p>
+                <ul>
+                    <li>length, charAt(1) </li>
+                    <li>toUpper(lower)Case</li>
+                    <li>indexOf(',')</li>
+                    <li>lastIndexOf('a')</li>
+                    <li>slice, substr, substring</li>
+                    <li>replace('a', 'b')</li>
+                </ul>
+            </li>
+            <li></li>
+        </ol>
+        <h2>✔️ Классы</h2>
+
+        <ol>
+            <li>разновидность функции? использует прототипирование</li>
+            <li>
+                <ul>
+                    <li>class MyClass {</li>
+                    <li> constructor() { ... }</li>
+                    <li> method1() { ... }</li>
+                    <li> method2() { ... }</li>
+                    <li>}</li>
+                </ul>
+            </li>
+            <li>
+                не сахарок, потому что
+                <ul>
+                    <li>[[IsClassConstructor]]: true</li>
+                    <li>не может быть вызван без new</li>
+                    <li>Методы неперечислимые</li>
+                    <li>всегда используют use strict</li>
+                    <li>у Class Expression имя, видно только внутри класса</li>
+                    <li>динамически создавать классы</li>
+                </ul>
+            </li>
+            <li>можно расширять классы и объединять, При переопределении конструктора Обязателен вызов конструктора родителя super()</li>
+            <li></li>
+        </ol>
+        <h2>✔️ Промисы</h2>
+
+        <ol>
+            <li>функции выполняющие асинхронные операции, передаётся аргумент callback(функция), которая будет вызвана по завершению асинхронного действия</li>
+            <li>«промис» – это специальный объект в JavaScript, который связывает «создающий» и «потребляющий» коды вмест</li>
+            <li>let promise = new Promise(function(resolve, reject) {
+                // функция-исполнитель (executor)
+                // "певец"
+                }); </li>
+            <li>.then() {}</li>
+            <li>можно возвращать промис в then(), можно передавать между модулями, можно создавать цепочки</li>
+        </ol>
+
+        <h2>✔️ Браузер</h2>
+
+        <ol>
+            <li>перебора коллекции for..of. Методы массивов не будут работать</li>
+            <li>дополнительные методы поиска
+                <ol>
+                    <li>querySelector</li>
+                    <li>querySelectorAll</li>
+                    <li>getElementById</li>
+                    <li>getElementsByName</li>
+                    <li>getElementsByTagName</li>
+                    <li>getElementsByClassName</li>
+                </ol>
+            </li>
+            <li>DOM-узлы Для наследования используют классы, основанные на прототипах
+            <li>innerHTML содержимое элемента</li>
+            <li>outerHTML: HTML элемента целиком</li>
+            <li>textContent: просто текст</li>
+            <li>скрыть элемент атрибутом hidden</li>
+            <li>нестандартный атрибут</li>
+            <li>Создание элемента
+                <ol>
+                    <li>document.createElement(tag)</li>
+                    <li>document.createTextNode(text)</li>
+                    <li>let div = document.createElement('div');</li>
+                    <li>div.className = "alert";</li>
+                    <li>div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";</li>
+                    <li>document.body.append(div);</li>
+                </ol>
+            </li>
+            <li>вставки append prepend before after replaceWith</li>
+            <li>удаление узла</li>
+            <li>Клонирование узлов: cloneNode</li>
+            <li>установить класс</li>
+            <li>classList – добавить/удалить переключить, проверка наличия</li>
+            <li>Установка стиля elem.style.width="100px"</li>
+            <li>Сброс стилей delete elem.style.display мы должны присвоить ему пустую строку: elem.style.display = "".</li>
+            <li>Получить свойства css - getComputedStyle</li>
+            <li>Предки элемента, вычисление координат относительно окна, ширина и высота элемента, размер рамки, внутри рамок, прокрутку элемента</li>
+            <li>Работа с шириной и высотой окна, полный размер, состояние прокрутки (вкл, выкл)</li>
+            <li>Работа с координатами</li>
+            <li>отлов событий мыши, отправил форму, Клавиатурные, документа, CSS-анимация завершена</li>
+            <li>Всплытие, прекращение всплытия, Погружениеделегирование - </li>
+            <li>делегирование - один обработчик на их общего предка</li>
+            <li>Отмена действия браузера</li>
+            <li>Прокрутка: Загрузка видимых изображений, Кнопка вверх/вниз, Бесконечная страница, предотвращение прокрутки</li>
+            <li>Работа с формами</li>
+            <li>Страница: DOMContentLoaded, load, beforeunload, unload
+                Загрузка ресурсов: onload и onerror</li>
+            <li></li>
+        </ol>
     </nav>
 
 
 
-</body></html>
+</body>
+
+</html>
