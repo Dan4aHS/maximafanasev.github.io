@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>НАЧАЛО</title>
+    <meta name="description" content="Интерактивное руководство по началу работы в Brackets.">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="sobes.css">
+</head>
+
+<body>
+
+    <a href="../index.html">Home</a>
+    <h1>JS</h1>
+    <ol>
+
+        <li>
+            <div id="q1" class="one">
+            </div>
+            <img src="img/1.jpg" alt="">
+            <button onClick="a1()">Show answer</button>
+        </li>
+
+        <li>
+            user ?? "Аноним"
+            <div id="q2" class="hidden-text">Аноним</div>
+            <button onClick="a2()">Show answer</button>
+        </li>
+
+        <li>
+            null ?? null ?? 'a' ?? 'b'
+            <div id="q3" class="hidden-text">a</div>
+            <button onClick="a3()">Show answer</button>
+        </li>
+
+        <li>
+            let x = 1 &#38;&#38; 2 ?? 3
+            <div id="q4" class="hidden-text">Ошибка</div>
+            <button onClick="a4()">Show answer</button>
+        </li>
+    </ol>
+
+    <style>
+        ol li {
+            position: relative;
+        }
+
+        .one {
+            width: 250px;
+            height: 500px;
+            background: aquamarine;
+            position: absolute;
+            left: 225px;
+            top: 100px;
+        }
+
+        .hidden-text {
+            background: #fff;
+            color: #fff;
+            width: fit-content;
+        }
+
+        .text {
+            background: #141414;
+            color: #fff;
+            width: fit-content;
+        }
+
+        .opacity {
+            opacity: 0.1;
+        }
+    </style>
+
+    <script>
+        function a1() {
+            let element = document.getElementById("q1");
+            element.classList.toggle('opacity');
+        }
+
+        function a2() {
+            let element = document.getElementById("q2");
+            element.classList.toggle('text');
+        }
+
+        function a3() {
+            let element = document.getElementById("q3");
+            element.classList.toggle('text');
+        }
+
+        function a4() {
+            let element = document.getElementById("q4");
+            element.classList.toggle('text');
+        }
+    </script>
+
+</body></html>

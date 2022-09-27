@@ -1,0 +1,463 @@
+!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>НАЧАЛО</title>
+    <meta name="description" content="Интерактивное руководство по началу работы в Brackets.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="sobes.css">
+</head>
+
+<body>
+
+    <a href="index.html">Home</a>
+    <h1>JS code wars</h1>
+
+    <ul>
+        <li>Функция проверки палиндрома? шалаш?в массив, развернуть, в строку и сравнить</li>
+        <li>Функция поиска самого короткого слова? в массив, отсортировать вычитая одно слово из другого длиной, выбрать нулевое значение массива</li>
+        <li>Функция создания инициалов? развить на слова, мапой вырезать первый символ и загнать в апперкейс, слепить в строку</li>
+        <li>Функция суммирования всех цифр чисел? 99 = 18, в строку, в массив, редьюсом сумма и аккум, сложить положительные числа</li>
+        <li>Функция поиска мин и макс значения в массиве? Math.min(...arr)
+        <li>Функция создания набора дубликатов символов строки? abcd -> A-Bb-Ccc-Dddd в аппер, в массив, мапой эл, эл.повтор, в нижний</li>
+        <li>Функция возврата индексов заглавных буквенных строк? в массив, редьюс(резалт, буква, индекс) если в верхнем - пушнуть индекс в резалт</li>
+        <li>Функция форматирования цифр в телефонный номер? слайс(0,3) слайс - слайс остальных цифр</li>
+        <li>Функция поиска гласных букв в строке? матч регулярки gi</li>
+        <li>Функция преобразования буквы в заглавный регистр? в массив, мапа, перую букву в аппер и слайс остатка слова, в строку</li>
+    </ul>
+
+    <div class="number">#1</div>
+    <code>
+        <pre>
+assert.strictEqual(greet("Ryan"), "Hello, Ryan how are you doing today?");
+assert.strictEqual(greet("Shingles"), "Hello, Shingles how are you doing today?");
+        </pre>
+    </code>
+
+    <code>
+        <pre>
+const greet = name => `Hello, ${name} how are you doing today?`;
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#2</div>
+    <code>
+        <pre>
+assert.strictEqual(well(['bad', 'bad', 'bad']), 'Fail!');
+assert.strictEqual(well(['good', 'bad', 'bad', 'bad', 'bad']), 'Publish!');
+assert.strictEqual(well(['good', 'bad', 'bad', 'good', 'bad', 'bad', 'good']), 'I smell a series!');
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+const well = x => {
+  const good_count = x.filter(x => x == 'good').length;
+  return good_count < 1 ? 'Fail!' : 
+         good_count < 3 ? 'Publish!' : 'I smell a series!';
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
+countBy(2,5) === [2,4,6,8,10]
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+function countBy(x, n) {
+    var z = [];
+    for (i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+ it("2 is even", () => {
+    assert.strictEqual(even_or_odd(2), "Even");
+  });
+  it("7 is odd", () => {
+    assert.strictEqual(even_or_odd(7), "Odd");
+  });
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+function even_or_odd(number) {
+  return number % 2 ? "Odd" : "Even"
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+assert.strictEqual(sumMix([9, 3, '7', '3']), 22);
+    assert.strictEqual(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+function sumMix(x){
+  return x.map(a => +a).reduce((a, b) => a + b);
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+[10, -65];
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+function countPositivesSumNegatives(input) {
+    if (input == null || input.length == 0)
+      return [];
+    
+    var positive = 0;
+    var negative = 0;
+    
+    for (var i=0, l=input.length; i<l; ++i)
+    {
+      if (input[i] > 0)
+        ++ positive;
+      else
+        negative += input[i];
+    }
+    
+    return [positive, negative];
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+assert.deepEqual(maps([1, 2, 3]), [2, 4, 6]);
+assert.deepEqual(maps([4, 1, 1, 1, 4]), [8, 2, 2, 2, 8]); 
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+function maps(x){
+  return x.map(n => n * 2);
+}
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+
+
+
+    <div class="number">#</div>
+    <code>
+        <pre>
+
+   </pre>
+    </code>
+
+    <code>
+        <pre>
+
+        </pre>
+    </code>
+
+
+</body></html>
