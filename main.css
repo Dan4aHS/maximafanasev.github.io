@@ -20,6 +20,7 @@ ul li::before {
     left: -20px;
     top: 2px;
     border-radius: 50%;
+    font-size: 20px;
 }
 
 ul li::after {
@@ -36,6 +37,7 @@ ul li::after {
 a {
     color: #222;
     text-decoration: none;
+    font-size: 20px;
 }
 
 pre {
@@ -43,4 +45,5 @@ pre {
     color: #fff;
     padding: 10px;
     border-radius: 10px;
+    font-size: 14px;
 }

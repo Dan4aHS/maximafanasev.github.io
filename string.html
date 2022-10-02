@@ -6,34 +6,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Обучение Javascript</title>
     <meta name="description" content="Самостоятельное обучение">
-    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <h4>методы строк</h4>
     <ul>
-        <li>slice(от start до end (не включая end)) можно передавать отрицательные значения</li>
-        <li>substring(между start и end) отрицательные значения равнозначны 0</li>
-        <li>substr(length символов, начиная от start) значение start может быть отрицательным</li>
-        <li></li>
-        <li></li>
-    </ul>
-    <h4>методы массивов</h4>
-    <ul>
 
         <li>
-            <h4></h4>
+            <h4>slice</h4>
         </li>
         <pre>
+"Методы строк на Tproger".slice(16); // "Tproger"
+"Методы строк на Tproger".slice(16, 21); // "Tprog"
 
-        </pre>
+// Отрицательные значения тоже работают
+"Методы строк на Tproger".slice(-7); // "Tproger"
+"Методы строк на Tproger".slice(-7, -2); // "Tprog"</pre>
 
         <li>
-            <h4></h4>
+            <h4>substring</h4>
         </li>
         <pre>
+"Методы строк на Tproger".substring(5, 2); // "тод"</pre>
 
-        </pre>
+        <li>
+            <h4>substr</h4>
+        </li>
+        <pre>
+"Методы строк на Tproger".substr(7, 5); // "строк"
+"Методы строк на Tproger".substr(-7, 5); // "Tprog"</pre>
+
+        <li>
+            <h4>replace</h4>
+        </li>
+        <pre>
+"hi, hello, hi".replace("hi", "hey"); // "hey, hello, hi"
+"hi, hello, hi".replace(/hi/g, "hey"); // "hey, hello, hey"</pre>
+
+        <li>
+            <h4>replaceAll</h4>
+        </li>
+        <pre>
+"hi, hello, hi".replaceAll("hi", "hey"); // "hey, hello, hey"</pre>
+
+        <li>
+            <h4>padEnd</h4>
+        </li>
+        <pre>
+"Hello Tproger".padEnd(20, "*"); // "Hello Tproger*******"</pre>
+
+        <li>
+            <h4>padStart</h4>
+        </li>
+        <pre>
+"Hello Tproger".padStart(20, "*"); // "*******Hello Tproger"</pre>
+
+        <li>
+            <h4>concat</h4>
+        </li>
+        <pre>
+"Hello".concat(" Tproger"); // "Hello Tproger"</pre>
+
+        <li>
+            <h4>split</h4>
+        </li>
+        <pre>
+// Получаем каждый символ
+"Hello Tproger".split(""); // ["H", "e", "l", "l", "o", " ", "T", "p", "r", "o", "g", "e", "r"]
+
+// Получаем каждое слово из строки
+"Hello Tproger".split(" "); //["Hello", "Tproger"]</pre>
+
+        <li>
+            <h4>repeat</h4>
+        </li>
+        <pre>
+"Tproger ".repeat(3); // "Tproger Tproger Tproger "</pre>
+
+        <li>
+            <h4>charAt</h4>
+        </li>
+        <pre>
+"Hello Tproger".charAt(); // "H"</pre>
+
+        <li>
+            <h4>includes</h4>
+        </li>
+        <pre>
+"Hello Tproger".includes("Tproger"); // true</pre>
+
+        <li>
+            <h4>indexOf, lastIndexOf</h4>
+        </li>
+        <pre>
+"Hello World".indexOf("o"); // 4
+"Hello World".indexOf("o", 5); // 7</pre>
+
+        <li>
+            <h4>endsWith</h4>
+        </li>
+        <pre>
+"Hello Tproger".endsWith("Tproger"); // true
+"Hello Tproger".endsWith("Tproger", 12); // false</pre>
+
+        <li>
+            <h4>startsWith</h4>
+        </li>
+        <pre>
+"Hello Tproger".startsWith("Hello"); // true
+"Hello Tproger".startsWith("Hello", 1); // false</pre>
+
+        <li>
+            <h4>search</h4>
+        </li>
+        <pre>
+"hi, hello, hey".search("hello"); // 4</pre>
+
+        <li>
+            <h4>trim trimEnd trimStart</h4>
+        </li>
+        <pre>
+"   Hello Tproger ".trim(); // "Hello Tproger"</pre>
+
+        <li>
+            <h4>charCodeAt</h4>
+        </li>
+        <pre>
+"T".charCodeAt() // 84</pre>
+
+        <li>
+            <h4>fromCharCode</h4>
+        </li>
+        <pre>
+String.fromCharCode(72, 101, 108, 108, 111); // "Hello"</pre>
 
     </ul>
     <h4>1. Вы получаете массив чисел, возвращаете сумму всех положительных.
