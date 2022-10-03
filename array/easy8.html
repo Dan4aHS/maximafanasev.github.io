@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Обучение Javascript</title>
+    <meta name="description" content="Самостоятельное обучение">
+    <link rel="stylesheet" href="../../main.css">
+</head>
+
+<body>
+    <a href="menu.html">Back</a>
+    <h4><a href="https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-8&beta=false&order_by=popularity%20desc">8 kata</a></h4>
+    <h4>1. Вы получаете массив чисел, возвращаете сумму всех положительных.
+
+        Пример [1,-4,7,12]=>1 + 7 + 12 = 20</h4>
+    <pre>
+arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);</pre>
+
+    <h4>2. перевернуть переданную строку 'world' => 'dlrow'</h4>
+    <pre>
+str.split('').reverse().join('')</pre>
+    <h4>3. Cоздать функцию, которая удаляет первый и последний символы строки</h4>
+    <pre>
+str.slice(1, -1);</pre>
+    <h4>4. Вернуть сумма квадратов каждого массива</h4>
+    <pre>
+numbers.reduce(function(sum, n){
+  return (n*n) + sum;
+}, 0)</pre>
+    <h4>5. Вернуть сумму элементов массива при переданном одном числе. 6 => 1 + 2 + 3 + 4 + 5 + 6 = 16</h4>
+    <pre>
+num * (num + 1) / 2</pre>
+    <h4>6. Вернуть наименьший элемент массива</h4>
+    <pre>
+Math.min(...args)</pre>
+    <h4>6. Вернуть количество положительных элементов</h4>
+    <pre>
+arrayOfSheeps.filter(Boolean).length;</pre>
+    <h4>6. Вернуть количество положительных элементов</h4>
+    <pre>
+return input &#38;&#38; input.length ?
+[input.filter(p => p > 0).length,
+input.filter(n => n &#60; 0).reduce
+((a, b) => a + b, 0)] : [];</pre>
+       <h4>7. среднее</h4>
+        <pre>
+[1,1,1], 1;
+[1,2,3], 2;
+[1,2,3,4], 2.5;
+        </pre>
+        <pre>
+array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+        </pre>
+        
+</body></html>

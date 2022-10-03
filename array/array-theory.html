@@ -10,18 +10,35 @@
 </head>
 
 <body>
+    <a href="menu.html">Back</a>
     <h4>методы массивов</h4>
     <ul>
+        <li>some()</li>
+        <li>reduce()</li>
+        <li>every()</li>
+        <li>map()</li>
+        <li>flat()</li>
+        <li>filter()</li>
+        <li>forEach()</li>
+        <li>findIndex()</li>
+        <li>find()</li>
+        <li>sort()</li>
+        <li>concat()</li>
+        <li>fill()</li>
+        <li>includes()</li>
+        <li>reverse()</li>
+        <li>flatMap()</li>
+    </ul>
+    <ul>
         
-        <li><h4>some()</h4>
-        удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции</li>
+        <li><h4>some()</h4></li>
         <pre>
 const myAwesomeArray = ["a", "b", "c", "d", "e"]
 
 myAwesomeArray.some(test => test === "d")
 //-------> Output : true
         </pre>
-        <li><h4>reduce()</h4>метод принимает функцию, которая имеет в качестве аргумента аккумулятор и значение. Он применяет функцию к аккумулятору и каждому значению массива, чтобы в результате вернуть только одно значение</li>
+        <li><h4>reduce()</h4></li>
         <pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 
@@ -29,7 +46,7 @@ myAwesomeArray.reduce((total, value) => total * value)
 // 1 * 2 * 3 * 4 * 5
 //-------> Output = 120
         </pre>
-        <li><h4>every()</h4>метод проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции</li>
+        <li><h4>every()</h4></li>
         <pre>
 const myAwesomeArray = ["a", "b", "c", "d", "e"]
 
@@ -41,7 +58,7 @@ const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
 myAwesomeArray2.every(test => test === "a")
 //-------> Output : true
         </pre>
-        <li><h4>map()</h4>метод принимает функцию в качестве параметра и создает новый массив с результатом вызова указанной функции для каждого элемента массива</li>
+        <li><h4>map()</h4></li>
         <pre>
 const myAwesomeArray = [5, 4, 3, 2, 1]
 myAwesomeArray.map(x => x * x)
@@ -52,14 +69,14 @@ myAwesomeArray.map(x => x * x)
 //                  4
 //                  1
         </pre>
-        <li><h4>flat()</h4>метод принимает в качестве аргумента массив массивов и сглаживает вложенные массивы в массив верхнего уровня</li>
+        <li><h4>flat()</h4></li>
         <pre>
 const myAwesomeArray = [[1, 2], [3, 4], 5]
 
 myAwesomeArray.flat()
 //-------> Output : [1, 2, 3, 4, 5]
         </pre>
-        <li><h4>filter()</h4>метод принимает функцию в качестве параметра и возвращает новый массив, содержащий все элементы массива, для которого функция фильтрации передавалась в качестве аргумента, и возвращает ее со значением true</li>
+        <li><h4>filter()</h4></li>
         <pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
@@ -86,7 +103,7 @@ myAwesomeArray.forEach(element => console.log(element.name))
 //                  Mass
         </pre>
         
-        <li><h4>findIndex()</h4>метод принимает функцию в качестве параметра и в дальнейшем применяет ее к массиву</li>
+        <li><h4>findIndex()</h4></li>
         <pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
@@ -101,7 +118,7 @@ myAwesomeArray.findIndex(element => element.id === 7)
 //-------> Output : -1
         </pre>
         
-        <li><h4>find()</h4>метод принимает функцию в качестве аргумента и в дальнейшем применяет ее к массиву</li>
+        <li><h4>find()</h4></li>
         <pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
@@ -116,7 +133,7 @@ myAwesomeArray.find(element => element.id === 7)
 //-------> Output : undefined
         </pre>
         
-        <li><h4>sort()</h4>Этот метод принимает функцию в качестве параметра. Он сортирует элементы массива и возвращает их.</li>
+        <li><h4>sort()</h4></li>
         <pre>
 const myAwesomeArray = [5, 4, 3, 2, 1]
 
@@ -129,7 +146,7 @@ myAwesomeArray.sort((a, b) => b - a)
 //-------> Output : [5, 4, 3, 2, 1]
         </pre>
         
-        <li><h4>concat()</h4>Этот метод объединяет два или более массива/значения и возвращает новый массив.</li>
+        <li><h4>concat()</h4></li>
         <pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 const myAwesomeArray2 = [10, 20, 30, 40, 50]
@@ -137,7 +154,7 @@ myAwesomeArray.concat(myAwesomeArray2)
 //-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
         </pre>
         
-        <li><h4>fill()</h4>метод заполняет все элементы массива одинаковым значением, от начального индекса (по умолчанию 0) до конечного индекса (по умолчанию array.length)</li>
+        <li><h4>fill()</h4></li>
         <pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 
@@ -148,7 +165,7 @@ myAwesomeArray.fill(0, 1, 3)
 //-------> Output : [1, 0, 0, 4, 5]
         </pre>
         
-        <li><h4>includes()</h4>Этот метод возвращает значение true, если массив содержит определенный элемент, и значение false — если нет.</li>
+        <li><h4>includes()</h4></li>
         <pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 
@@ -159,7 +176,7 @@ myAwesomeArray.includes(8)
 //-------> Output : false
         </pre>
         
-        <li><h4>reverse()</h4>Этот метод меняет порядок следования элементов в массиве на обратный. Первый элемент становится последним, а последний — первым.</li>
+        <li><h4>reverse()</h4></li>
         <pre>
 const myAwesomeArray = ["e", "d", "c", "b", "a"]
 
@@ -167,7 +184,7 @@ myAwesomeArray.reverse()
 //-------> Output : ['a', 'b', 'c', 'd', 'e']
         </pre>
         
-        <li><h4>flatMap()</h4>Этот метод применяет функцию к каждому элементу массива, а затем сглаживает результат в новый массив. Он объединяет метод flat() и метод map() в одну функцию.</li>
+        <li><h4>flatMap()</h4></li>
         <pre>
 const myAwesomeArray = [[1], [2], [3], [4], [5]]
 
@@ -222,60 +239,4 @@ alert(visitsCountMap.get(john)); // 123
         </pre>
         
     </ul>
-    <h4>1. Вы получаете массив чисел, возвращаете сумму всех положительных.
-
-        Пример [1,-4,7,12]=>1 + 7 + 12 = 20</h4>
-    <pre>
-assert.strictEqual(positiveSum([1,2,3,4,5]),15);
-assert.strictEqual(positiveSum([1,-2,3,4,5]),13);
-assert.strictEqual(positiveSum([]),0);
-    </pre>
-    <pre>
-function positiveSum(arr) {
-  let total  = 0;
-  for (let i = 0; i &#60;= arr.length; i++) {
-    if (arr[i]>0) {
-      total  += arr[i]
-    }
-  }
-  return total ;
-}
-    </pre>
-    <h4>best desicion</h4>
-    <pre>
-function positiveSum(arr) {
-   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
-}
-    </pre>
-
-    <h4>2. перевернуть переданную строку 'world' => 'dlrow'</h4>
-    <pre>
-function solution(str){
-  return str.split('').reverse().join('')
-}
-    </pre>
-    <h4>3. Cоздать функцию, которая удаляет первый и последний символы строки</h4>
-    <pre>
-function removeChar(str){
-  return str.slice(1, -1);
-};
-    </pre>
-    <h4>4. Вернуть сумма квадратов каждого массива</h4>
-    <pre>
-return numbers.reduce(function(sum, n){
-  return (n*n) + sum;
-}, 0)
-    </pre>
-    <h4>5. Вернуть сумму элементов массива при переданном одном числе. 6 => 1 + 2 + 3 + 4 + 5 + 6 = 16</h4>
-    <pre>
-function summation(num) {
-  return num * (num + 1) / 2
-}
-    </pre>
-    <h4>6. Вернуть наименьший элемент массива</h4>
-    <pre>
-function findSmallestInt(args) {
-    return Math.min(...args)
-  }
-    </pre>
 </body></html>
