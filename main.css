@@ -1,42 +1,25 @@
 body {
     font-family: sans-serif;
+    padding: 0 16px;
 }
 
 .bold {
     font-weight: 700;
 }
 
-ul li {
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
     position: relative;
     margin-bottom: 0.5rem;
 }
 
-ul li::before {
-    content: '';
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background: blue;
-    left: -20px;
-    top: 2px;
-    border-radius: 50%;
-    font-size: 20px;
-}
-
-ul li::after {
-    content: '';
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    background: #fff;
-    left: -18px;
-    top: 4px;
-    border-radius: 50%;
-}
-
 a {
     color: #222;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 pre {
@@ -45,4 +28,8 @@ pre {
     padding: 10px;
     border-radius: 10px;
     font-size: 14px;
+}
+
+.hidden {
+  display: none;
 }
