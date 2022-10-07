@@ -10,10 +10,12 @@
 </head>
 
 <body>
+	<h2>Журнал тестирования</h2>
+
 	<h3 id="click-to-hide-general">Общее</h3>
 	<ul id="general">
 		<li>
-			<h4>Напишите все типы данных</h4>
+			<h4>Типы данных</h4>
 		</li>
 		<pre>
 number
@@ -27,14 +29,14 @@ object для более сложных структур данных.
         </pre>
 
 		<li>
-			<h4>Напишите все типы взаимодействия с окном браузера</h4>
+			<h4>Типы взаимодействия с окном браузера</h4>
 		</li>
 		<pre>
  alert, prompt, confirm
         </pre>
 
 		<li>
-			<h4>Напишите все способы преобразование типов</h4>
+			<h4>Преобразование типов</h4>
 		</li>
 		<pre>
 String(value)
@@ -42,7 +44,7 @@ Number(value)
         </pre>
 
 		<li>
-			<h4>Напишите все типы операторов(математика)</h4>
+			<h4>Типы операторов(математика)</h4>
 		</li>
 		<pre>
 Сложение +,
@@ -54,7 +56,7 @@ Number(value)
         </pre>
 
 		<li>
-			<h4>Напишите все типы функции (4)</h4>
+			<h4>Типы функции (4)</h4>
 		</li>
 		<pre>
 Declaration
@@ -339,14 +341,89 @@ alert( ~-1 ); // 0, то же, что -(-1+1)
 			</li>
 			<pre>
 String.fromCharCode(72, 101, 108, 108, 111); // "Hello"</pre>
-
 		</ul>
+		<h4 id="click-to-hide-string-tasks">задачи</h4>
+		<div id="string-tasks">
+			<h4>Проверить строку на a, e, i, o, u</h4>
+			<pre>(str.match(/[aeiou]/ig)||[]).length;</pre>
+			<h4>Удалить гласные</h4>
+			<pre>str.replace(/[aeiou]/gi, '');</pre>
+			<h4>строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.</h4>
+			<pre>
+numbers = numbers.split(' ');
+return `${Math.max(...numbers)} ${Math.min(...numbers)}`;</pre>
+			<h4>Вам дадут слово. Ваша задача — вернуть средний символ слова</h4>
+			<pre>
+s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);</pre>
+			<h4>Изограмма — это слово, в котором нет повторяющихся букв</h4>
+			<pre>
+1) new Set(str.toUpperCase()).size == str.length;
+2) !/(\w).*\1/i.test(str)
+			</pre>
+			<h4></h4>
+			<pre></pre>
+		</div>
 
 	</ul>
 	<h3 id="click-to-hide-arrays">Массивы</h3>
 	<div id="arrays">
 		<pre>
-			
+let arr = new Array();
+let arr = [];
+	
+let fruits = ["Яблоко", "Апельсин", "Слива"];
+	
+alert( fruits[0] ); 
+// Яблоко
+	
+fruits[2] = 'Груша'; 
+// теперь ["Яблоко", "Апельсин", "Груша"]
+	
+fruits[3] = 'Лимон'; 
+// теперь ["Яблоко", "Апельсин", "Груша", "Лимон"]
+	
+alert( fruits.length ); // 3
+	
+// разные типы значений
+let arr = [ 
+'Яблоко', 
+{ name: 'Джон' }, 
+true, 
+function() { alert('привет'); } 
+];
+	
+let fruits = ["Apple", "Orange", "Plum"];
+alert( fruits[fruits.length-1] ); 
+// Plum
+alert( fruits.at(-1) ); // Plum
+
+let fruits = ["Банан"]
+let arr = fruits; // копируется по ссылке (две переменные ссылаются на один и тот же массив)
+alert( arr === fruits ); // true
+arr.push("Груша"); // массив меняется по ссылке
+alert( fruits ); // Банан, Груша - теперь два элемента
+	
+let arr = ["Яблоко", "Апельсин", "Груша"];
+
+for (let i = 0; i &#60; arr.length; i++) {
+  alert( arr[i] );
+}
+	
+// проходит по значениям
+for (let fruit of fruits) {
+  alert( fruit );
+}
+	
+alert( [] + 1 ); // "1"
+alert( [1] + 1 ); // "11"
+alert( [1,2] + 1 ); // "1,21"
+	
+alert( [] == [] ); // false
+alert( [0] == [0] ); // false
+	
+--
+	
+--
 		</pre>
 		<h4 id="click-to-hide-arrays-methods">методы</h4>
 		<ul id="arrays-methods">
@@ -638,6 +715,126 @@ array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
         </pre>
 		</div>
 	</div>
+	<h3 id="click-to-hide-functions">Функции</h3>
+	<div id="functions">
+		<pre>
+1) Итеративный
+function pow(x, n) {
+  let result = 1;
+
+  // умножаем result на x n раз в цикле
+  for (let i = 0; i &#60; n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+alert( pow(2, 3) ); // 8
+	
+2) Рекурсивный 
+function pow(x, n) {
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
+}
+
+alert( pow(2, 3) ); // 8
+
+3) Остаточные параметры
+a) 
+function sumAll(...args) { // args — имя массива
+  let sum = 0;
+
+  for (let arg of args) sum += arg;
+
+  return sum;
+}
+
+alert( sumAll(1) ); // 1
+alert( sumAll(1, 2) ); // 3
+alert( sumAll(1, 2, 3) ); // 6
+
+б)
+function showName(firstName, lastName, ...titles) {
+  alert( firstName + ' ' + lastName ); // Юлий Цезарь
+
+  // Оставшиеся параметры пойдут в массив
+  // titles = ["Консул", "Император"]
+  alert( titles[0] ); // Консул
+  alert( titles[1] ); // Император
+  alert( titles.length ); // 2
+}
+
+showName("Юлий", "Цезарь", "Консул", "Император");
+
+!) ...rest должен всегда быть последним.
+
+4) 
+let arr = [3, 5, 1];
+
+alert( Math.max(...arr) ); // 5М
+
+let arr1 = [1, -2, 3, 4];
+let arr2 = [8, 3, -8, 1];
+
+alert( Math.max(...arr1, ...arr2) ); // 8
+alert( Math.max(1, ...arr1, 2, ...arr2, 25) ); // 25
+
+5) Замыкание – это функция, которая запоминает свои внешние переменные и может получить к ним доступ.
+	
+6) IIFE
+(function() {
+
+  let message = "Hello";
+
+  alert(message); // Hello
+
+})();
+
+7) Глобальный объект хранит переменные, которые должны быть доступны в любом месте программы.
+	
+8) Таймаут
+
+Методы setInterval(func, delay, ...args) 
+и setTimeout(func, delay, ...args) 
+позволяют выполнять func регулярно 
+или только один раз после задержки 
+delay, заданной в мс.
+Для отмены выполнения необходимо вызвать 
+clearInterval/clearTimeout со значением, 
+которое возвращают методы setInterval/setTimeout.
+Вложенный вызов setTimeout является более 
+гибкой альтернативой setInterval. 
+Также он позволяет более точно задать 
+интервал между выполнениями.
+Планирование с нулевой задержкой 
+setTimeout(func,0) или, что то же 
+самое, setTimeout(func) используется 
+для вызовов, которые должны быть 
+исполнены как можно скорее, после 
+завершения исполнения текущего кода.
+Браузер ограничивает 4-мя мс минимальную 
+задержку между пятью и более вложенными 
+вызовами setTimeout, а также для setInterval, 
+начиная с 5-го вызова.
+	
+--
+
+--
+	
+--
+
+--
+	
+--
+		</pre>
+		<h4 id="click-to-hide-functions-tasks">задачи</h4>
+		<div id="functions-tasks">
+		</div>
+	</div>
 	<script>
 		// general block
 		document.addEventListener("DOMContentLoaded", hiddenCloseclick());
@@ -735,8 +932,41 @@ array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
 				x.style.display = "none"
 			}
 		};
+		// functions block
+		document.addEventListener("DOMContentLoaded", hiddenCloseclickFunctions());
+		document.getElementById('click-to-hide-functions').addEventListener("click", hiddenCloseclickFunctions);
 
+		function hiddenCloseclickFunctions() {
+			let x = document.getElementById('functions');
+			if (x.style.display == "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none"
+			}
+		};
+		// function-tasks block
+		document.addEventListener("DOMContentLoaded", hiddenCloseclickFunctionsTasks());
+		document.getElementById('click-to-hide-functions-tasks').addEventListener("click", hiddenCloseclickFunctionsTasks);
+
+		function hiddenCloseclickFunctionsTasks() {
+			let x = document.getElementById('functions-tasks');
+			if (x.style.display == "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none"
+			}
+		};
+		// click-to-hide-string-tasks block
+		document.addEventListener("DOMContentLoaded", hiddenCloseclickStringTasks());
+		document.getElementById('click-to-hide-string-tasks').addEventListener("click", hiddenCloseclickStringTasks);
+
+		function hiddenCloseclickStringTasks() {
+			let x = document.getElementById('string-tasks');
+			if (x.style.display == "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none"
+			}
+		};
 	</script>
-</body>
-
-</html>
+</body></html>
