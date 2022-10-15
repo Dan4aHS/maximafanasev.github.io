@@ -3,33 +3,6 @@ body {
     padding: 0 16px;
 }
 
-.bold {
-    font-weight: 700;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ol li {
-    position: relative;
-    margin-bottom: 0.5rem;
-}
-
-a {
-    color: #222;
-    font-size: 16px;
-}
-
-pre {
-    background: #222;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-.hidden {
-  display: none;
+div {
+    margin-bottom: 10px;
 }

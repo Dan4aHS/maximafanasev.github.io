@@ -10,963 +10,106 @@
 </head>
 
 <body>
-	<h2>Журнал тестирования</h2>
-
-	<h3 id="click-to-hide-general">Общее</h3>
-	<ul id="general">
-		<li>
-			<h4>Типы данных</h4>
-		</li>
-		<pre>
-number
-bigint 
-string
-boolean для true/false.
-null для неизвестных значений
-undefined для неприсвоенных значений
-symbol для уникальных идентификаторов.
-object для более сложных структур данных.
-        </pre>
-
-		<li>
-			<h4>Типы взаимодействия с окном браузера</h4>
-		</li>
-		<pre>
- alert, prompt, confirm
-        </pre>
-
-		<li>
-			<h4>Преобразование типов</h4>
-		</li>
-		<pre>
-String(value)
-Number(value)
-        </pre>
-
-		<li>
-			<h4>Типы операторов(математика)</h4>
-		</li>
-		<pre>
-Сложение +,
-Вычитание -,
-Умножение *,
-Деление /,
-Взятие остатка от деления %,
-Возведение в степень **.
-        </pre>
-
-		<li>
-			<h4>Типы функции (4)</h4>
-		</li>
-		<pre>
-Declaration
-function sayHi() {
-  alert( "Привет" );
-}
-Expr
-let sayHi = function() {
-  alert( "Привет" );
-};       
-        </pre>
-	</ul>
-	<h3 id="click-to-hide-objects">Объекты</h3>
-	<ul id='objects'>
-		<pre>
-let user = new Object();
-
-let user = {};
-
-let user = {     
-  name: "John",  
-  age: 30
-};
-
-user.isAdmin = true;
-
-delete user.age;
-
-let user = {
-  name: "John",
-  age: 30,
-  "likes birds": true 
-};
-
-delete user["likes birds"]; 
-
-function makeUser(name, age) {
-  return {
-    name,
-    age   
-  };
-}
-
-"key" in object 
-
-for (let key in user) {
-  alert( key );  
-  alert( user[key] );
-} 
-
-let a = {};
-let b = a;
-
-alert( a == b ); // true 
-alert( a === b ); // true 
-
-let user = {
-  name: "John",
-  age: 30,
-
-  sayHi() {
-    // "this" - это "текущий объект".
-    alert(this.name);
-    alert( user.name ); // приведёт к ошибке
-  }
-
-}; 
-
-let user = {}; // пользователь без адреса
-
-alert( user?.address?.street ); // undefined (без ошибки)                                     
-Object.keys(obj) – возвращает массив ключей.
-Object.values(obj) – возвращает массив значений.
-Object.entries(obj) – возвращает массив пар [ключ, значение].
-
---
-        </pre>
-
-		<li>
-			<h4>Symbol</h4>
-		</li>
-		<pre>
-let id1 = Symbol("id");
-let id2 = Symbol("id");
-
-alert(id1 == id2); // false
-        </pre>
-	</ul>
-	<h3 id="click-to-hide-numbers">Числа</h3>
-	<ul id="numbers">
-		<pre>
-let billion = 1e9;  // 1 миллиард
-
-let ms = 1e-6; // шесть нулей, слева от 1
-
-alert( 0xff ); // 255
-
-alert( num.toString(16) );  // ff
-
-let num = 12.34;
-alert( num.toFixed(1) ); // "12.3"
-
-let num = 12.34;
-alert( num.toFixed(5) ); // "12.34000"
-
-alert( 0.1 + 0.2 == 0.3 ); // false
-
-alert( isNaN(NaN) ); // true
-alert( isNaN("str") ); // true
-
-alert( isFinite("15") ); // true
-
-alert( parseInt('100px') ); // 100
-
-alert( parseInt('a123') ); // NaN
-        </pre>
-
-	</ul>
-	<h3 id="click-to-hide-strings">Строки</h3>
-	<ul id="strings">
-		<pre>
-let single = 'single-quoted';
-let double = "double-quoted";
-let backticks = `backticks`;
-
-function sum(a, b) {
-  return a + b;
-}
-
-alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
-
-let guestList = "Guests:\n * John\n * Pete\n * Mary";
-
-let str = `Hello`;
-
-// получаем первый символ
-alert( str[0] ); // H
-alert( str.charAt(0) ); // H
-
-alert( 'Interface'.toUpperCase() ); // INTERFACE
-alert( 'Interface'.toLowerCase() ); // interface
-
-let str = 'Widget with id';
-alert( str.indexOf('Widget') ); // 0
-alert( str.indexOf('widget') ); // -1
-alert( str.indexOf("id") ); // 1
-
-alert( ~2 ); // -3, то же, что -(2+1)
-alert( ~1 ); // -2, то же, что -(1+1)
-alert( ~0 ); // -1, то же, что -(0+1)
-alert( ~-1 ); // 0, то же, что -(-1+1)
-
-"Widget with id".includes("Widget"); // true
-"Widget".startsWith("Wid"); // true
-        </pre>
-		<h4 id="click-to-hide-strings-methods">методы строк</h4>
-		<ul id="strings-methods">
-			<li>
-				<h4>slice</h4>
-			</li>
-			<pre>
-"Методы строк на Tproger".slice(16); // "Tproger"
-"Методы строк на Tproger".slice(16, 21); // "Tprog"
-
-// Отрицательные значения тоже работают
-"Методы строк на Tproger".slice(-7); // "Tproger"
-"Методы строк на Tproger".slice(-7, -2); // "Tprog"</pre>
-
-			<li>
-				<h4>substring</h4>
-			</li>
-			<pre>
-"Методы строк на Tproger".substring(5, 2); // "тод"</pre>
-
-			<li>
-				<h4>substr</h4>
-			</li>
-			<pre>
-"Методы строк на Tproger".substr(7, 5); // "строк"
-"Методы строк на Tproger".substr(-7, 5); // "Tprog"</pre>
-
-			<li>
-				<h4>replace</h4>
-			</li>
-			<pre>
-"hi, hello, hi".replace("hi", "hey"); // "hey, hello, hi"
-"hi, hello, hi".replace(/hi/g, "hey"); // "hey, hello, hey"</pre>
-
-			<li>
-				<h4>replaceAll</h4>
-			</li>
-			<pre>
-"hi, hello, hi".replaceAll("hi", "hey"); // "hey, hello, hey"</pre>
-
-			<li>
-				<h4>padEnd</h4>
-			</li>
-			<pre>
-"Hello Tproger".padEnd(20, "*"); // "Hello Tproger*******"</pre>
-
-			<li>
-				<h4>padStart</h4>
-			</li>
-			<pre>
-"Hello Tproger".padStart(20, "*"); // "*******Hello Tproger"</pre>
-
-			<li>
-				<h4>concat</h4>
-			</li>
-			<pre>
-"Hello".concat(" Tproger"); // "Hello Tproger"</pre>
-
-			<li>
-				<h4>split</h4>
-			</li>
-			<pre>
-// Получаем каждый символ
-"Hello Tproger".split(""); // ["H", "e", "l", "l", "o", " ", "T", "p", "r", "o", "g", "e", "r"]
-
-// Получаем каждое слово из строки
-"Hello Tproger".split(" "); //["Hello", "Tproger"]</pre>
-
-			<li>
-				<h4>repeat</h4>
-			</li>
-			<pre>
-"Tproger ".repeat(3); // "Tproger Tproger Tproger "</pre>
-
-			<li>
-				<h4>charAt</h4>
-			</li>
-			<pre>
-"Hello Tproger".charAt(); // "H"</pre>
-
-			<li>
-				<h4>includes</h4>
-			</li>
-			<pre>
-"Hello Tproger".includes("Tproger"); // true</pre>
-
-			<li>
-				<h4>indexOf, lastIndexOf</h4>
-			</li>
-			<pre>
-"Hello World".indexOf("o"); // 4
-"Hello World".indexOf("o", 5); // 7</pre>
-
-			<li>
-				<h4>endsWith</h4>
-			</li>
-			<pre>
-"Hello Tproger".endsWith("Tproger"); // true
-"Hello Tproger".endsWith("Tproger", 12); // false</pre>
-
-			<li>
-				<h4>startsWith</h4>
-			</li>
-			<pre>
-"Hello Tproger".startsWith("Hello"); // true
-"Hello Tproger".startsWith("Hello", 1); // false</pre>
-
-			<li>
-				<h4>search</h4>
-			</li>
-			<pre>
-"hi, hello, hey".search("hello"); // 4</pre>
-
-			<li>
-				<h4>trim trimEnd trimStart</h4>
-			</li>
-			<pre>
-"   Hello Tproger ".trim(); // "Hello Tproger"</pre>
-
-			<li>
-				<h4>charCodeAt</h4>
-			</li>
-			<pre>
-"T".charCodeAt() // 84</pre>
-
-			<li>
-				<h4>fromCharCode</h4>
-			</li>
-			<pre>
-String.fromCharCode(72, 101, 108, 108, 111); // "Hello"</pre>
-		</ul>
-		<h4 id="click-to-hide-string-tasks">задачи</h4>
-		<div id="string-tasks">
-			<h4>Проверить строку на a, e, i, o, u</h4>
-			<pre>(str.match(/[aeiou]/ig)||[]).length;</pre>
-			<h4>Удалить гласные</h4>
-			<pre>str.replace(/[aeiou]/gi, '');</pre>
-			<h4>строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.</h4>
-			<pre>
-numbers = numbers.split(' ');
-return `${Math.max(...numbers)} ${Math.min(...numbers)}`;</pre>
-			<h4>Вам дадут слово. Ваша задача — вернуть средний символ слова</h4>
-			<pre>
-s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);</pre>
-			<h4>Изограмма — это слово, в котором нет повторяющихся букв</h4>
-			<pre>
-1) new Set(str.toUpperCase()).size == str.length;
-2) !/(\w).*\1/i.test(str)
-			</pre>
-			<h4></h4>
-			<pre></pre>
-		</div>
-
-	</ul>
-	<h3 id="click-to-hide-arrays">Массивы</h3>
-	<div id="arrays">
-		<pre>
-let arr = new Array();
-let arr = [];
-	
-let fruits = ["Яблоко", "Апельсин", "Слива"];
-	
-alert( fruits[0] ); 
-// Яблоко
-	
-fruits[2] = 'Груша'; 
-// теперь ["Яблоко", "Апельсин", "Груша"]
-	
-fruits[3] = 'Лимон'; 
-// теперь ["Яблоко", "Апельсин", "Груша", "Лимон"]
-	
-alert( fruits.length ); // 3
-	
-// разные типы значений
-let arr = [ 
-'Яблоко', 
-{ name: 'Джон' }, 
-true, 
-function() { alert('привет'); } 
-];
-	
-let fruits = ["Apple", "Orange", "Plum"];
-alert( fruits[fruits.length-1] ); 
-// Plum
-alert( fruits.at(-1) ); // Plum
-
-let fruits = ["Банан"]
-let arr = fruits; // копируется по ссылке (две переменные ссылаются на один и тот же массив)
-alert( arr === fruits ); // true
-arr.push("Груша"); // массив меняется по ссылке
-alert( fruits ); // Банан, Груша - теперь два элемента
-	
-let arr = ["Яблоко", "Апельсин", "Груша"];
-
-for (let i = 0; i &#60; arr.length; i++) {
-  alert( arr[i] );
-}
-	
-// проходит по значениям
-for (let fruit of fruits) {
-  alert( fruit );
-}
-	
-alert( [] + 1 ); // "1"
-alert( [1] + 1 ); // "11"
-alert( [1,2] + 1 ); // "1,21"
-	
-alert( [] == [] ); // false
-alert( [0] == [0] ); // false
-	
---
-	
---
-		</pre>
-		<h4 id="click-to-hide-arrays-methods">методы</h4>
-		<ul id="arrays-methods">
-			<li>
-				<h4>some()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = ["a", "b", "c", "d", "e"]
-
-myAwesomeArray.some(test => test === "d")
-//-------> Output : true
-        </pre>
-			<li>
-				<h4>reduce()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [1, 2, 3, 4, 5]
-
-myAwesomeArray.reduce((total, value) => total * value)
-// 1 * 2 * 3 * 4 * 5
-//-------> Output = 120
-        </pre>
-			<li>
-				<h4>every()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = ["a", "b", "c", "d", "e"]
-
-myAwesomeArray.every(test => test === "d")
-//-------> Output : false
-
-const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
-
-myAwesomeArray2.every(test => test === "a")
-//-------> Output : true
-        </pre>
-			<li>
-				<h4>map()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [5, 4, 3, 2, 1]
-myAwesomeArray.map(x => x * x)
-
-//-------> Output : 25
-//                  16
-//                  9
-//                  4
-//                  1
-        </pre>
-			<li>
-				<h4>flat()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [[1, 2], [3, 4], 5]
-
-myAwesomeArray.flat()
-//-------> Output : [1, 2, 3, 4, 5]
-        </pre>
-			<li>
-				<h4>filter()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [
-  { id: 1, name: "john" },
-  { id: 2, name: "Ali" },
-  { id: 3, name: "Mass" },
-  { id: 4, name: "Mass" },
-]
-
-myAwesomeArray.filter(element => element.name === "Mass")
-//-------> Output : 0:{id: 3, name: "Mass"},
-//                  1:{id: 4, name: "Mass"}</pre>
-
-			<li>
-				<h4>forEach()</h4>метод применяет функцию к каждому элементу массива
-			</li>
-			<pre>
-const myAwesomeArray = [
-  { id: 1, name: "john" },
-  { id: 2, name: "Ali" },
-  { id: 3, name: "Mass" },
-]
-
-myAwesomeArray.forEach(element => console.log(element.name))
-//-------> Output : john
-//                  Ali
-//                  Mass
-        </pre>
-
-			<li>
-				<h4>findIndex()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [
-  { id: 1, name: "john" },
-  { id: 2, name: "Ali" },
-  { id: 3, name: "Mass" },
-]
-
-myAwesomeArray.findIndex(element => element.id === 3)
-//-------> Output : 2
-
-myAwesomeArray.findIndex(element => element.id === 7)
-//-------> Output : -1
-        </pre>
-
-			<li>
-				<h4>find()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [
-  { id: 1, name: "john" },
-  { id: 2, name: "Ali" },
-  { id: 3, name: "Mass" },
-]
-
-myAwesomeArray.find(element => element.id === 3)
-//-------> Output : {id: 3, name: "Mass"}
-
-myAwesomeArray.find(element => element.id === 7)
-//-------> Output : undefined
-        </pre>
-
-			<li>
-				<h4>sort()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [5, 4, 3, 2, 1]
-
-// Sort from smallest to largest
-myAwesomeArray.sort((a, b) => a - b)
-//-------> Output : [1, 2, 3, 4, 5]
-
-// Sort from largest to smallest
-myAwesomeArray.sort((a, b) => b - a)
-//-------> Output : [5, 4, 3, 2, 1]
-        </pre>
-
-			<li>
-				<h4>concat()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [1, 2, 3, 4, 5]
-const myAwesomeArray2 = [10, 20, 30, 40, 50]
-myAwesomeArray.concat(myAwesomeArray2)
-//-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
-        </pre>
-
-			<li>
-				<h4>fill()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [1, 2, 3, 4, 5]
-
-// The first argument (0) is the value
-// The second argument (1) is the starting index
-// The third argument (3) is the ending index
-myAwesomeArray.fill(0, 1, 3)
-//-------> Output : [1, 0, 0, 4, 5]
-        </pre>
-
-			<li>
-				<h4>includes()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [1, 2, 3, 4, 5]
-
-myAwesomeArray.includes(3)
-//-------> Output : true
-
-myAwesomeArray.includes(8)
-//-------> Output : false
-        </pre>
-
-			<li>
-				<h4>reverse()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = ["e", "d", "c", "b", "a"]
-
-myAwesomeArray.reverse()
-//-------> Output : ['a', 'b', 'c', 'd', 'e']
-        </pre>
-
-			<li>
-				<h4>flatMap()</h4>
-			</li>
-			<pre>
-const myAwesomeArray = [[1], [2], [3], [4], [5]]
-
-myAwesomeArray.flatMap(arr => arr * 10)
-//-------> Output : [10, 20, 30, 40, 50]
-
-// With .flat() and .map()
-myAwesomeArray.flat().map(arr => arr * 10)
-//-------> Output : [10, 20, 30, 40, 50]
-        </pre>
-
-			<li>
-				<h4>Map и Set</h4>
-			</li>
-			<pre>
-new Map() – создаёт коллекцию.
-map.set(key, value) – записывает по ключу key значение value.
-map.get(key) – возвращает значение по ключу или undefined, если ключ key отсутствует.
-map.has(key) – возвращает true, если ключ key присутствует в коллекции, иначе false.
-map.delete(key) – удаляет элемент по ключу key.
-map.clear() – очищает коллекцию от всех элементов.
-map.size – возвращает текущее количество элементов.
-       
-let john = { name: "John" };
-
-// давайте сохраним количество посещений для каждого пользователя
-let visitsCountMap = new Map();
-
-// объект john - это ключ для значения в объекте Map
-visitsCountMap.set(john, 123);
-
-alert(visitsCountMap.get(john)); // 123
-        </pre>
-
-			<li>
-				<h4>WeakMap</h4>
-			</li>
-			<pre>
-new Map() – создаёт коллекцию.
-map.set(key, value) – записывает по ключу key значение value.
-map.get(key) – возвращает значение по ключу или undefined, если ключ key отсутствует.
-map.has(key) – возвращает true, если ключ key присутствует в коллекции, иначе false.
-map.delete(key) – удаляет элемент по ключу key.
-map.clear() – очищает коллекцию от всех элементов.
-map.size – возвращает текущее количество элементов.
-       
-let john = { name: "John" };
-
-// давайте сохраним количество посещений для каждого пользователя
-let visitsCountMap = new Map();
-
-// объект john - это ключ для значения в объекте Map
-visitsCountMap.set(john, 123);
-
-alert(visitsCountMap.get(john)); // 123
-        </pre>
-
-		</ul>
-
-		<h4 id="click-to-hide-arrays-tasks">задачи</h4>
-		<div id="arrays-tasks">
-			<h4>1. Вы получаете массив чисел, возвращаете сумму всех положительных.
-
-				Пример [1,-4,7,12]=>1 + 7 + 12 = 20</h4>
-			<pre>
-arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);</pre>
-
-			<h4>2. перевернуть переданную строку 'world' => 'dlrow'</h4>
-			<pre>
-str.split('').reverse().join('')</pre>
-			<h4>3. Cоздать функцию, которая удаляет первый и последний символы строки</h4>
-			<pre>
-str.slice(1, -1);</pre>
-			<h4>4. Вернуть сумма квадратов каждого массива</h4>
-			<pre>
-numbers.reduce(function(sum, n){
-  return (n*n) + sum;
-}, 0)</pre>
-			<h4>5. Вернуть сумму элементов массива при переданном одном числе. 6 => 1 + 2 + 3 + 4 + 5 + 6 = 16</h4>
-			<pre>
-num * (num + 1) / 2</pre>
-			<h4>6. Вернуть наименьший элемент массива</h4>
-			<pre>
-Math.min(...args)</pre>
-			<h4>6. Вернуть количество положительных элементов</h4>
-			<pre>
-arrayOfSheeps.filter(Boolean).length;</pre>
-			<h4>6. Вернуть количество положительных элементов</h4>
-			<pre>
-return input &#38;&#38; input.length ?
-[input.filter(p => p > 0).length,
-input.filter(n => n &#60; 0).reduce
-((a, b) => a + b, 0)] : [];</pre>
-			<h4>7. среднее</h4>
-			<pre>
-[1,1,1], 1;
-[1,2,3], 2;
-[1,2,3,4], 2.5;
-        </pre>
-			<pre>
-array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
-        </pre>
-		</div>
+	<h1>Личный проект по развитию навыков в Javascript</h1>
+	<h2>Массивы</h2>
+	<div>
+		1. Реализуйте функцию getWeekends(), которая возвращает массив из двух элементов – названий выходных дней на
+		английском. Функция принимает на вход параметр – формат возврата. Всего есть два возможных значения:
+		'long' (по умолчанию) – вернётся массив, содержащий значения saturday и sunday
+		'short' – вернётся массив со значениями sat и sun
 	</div>
-	<h3 id="click-to-hide-functions">Функции</h3>
-	<div id="functions">
-		<pre>
-1) Итеративный
-function pow(x, n) {
-  let result = 1;
-
-  // умножаем result на x n раз в цикле
-  for (let i = 0; i &#60; n; i++) {
-    result *= x;
-  }
-
-  return result;
-}
-
-alert( pow(2, 3) ); // 8
-	
-2) Рекурсивный 
-function pow(x, n) {
-  if (n == 1) {
-    return x;
-  } else {
-    return x * pow(x, n - 1);
-  }
-}
-
-alert( pow(2, 3) ); // 8
-
-3) Остаточные параметры
-a) 
-function sumAll(...args) { // args — имя массива
-  let sum = 0;
-
-  for (let arg of args) sum += arg;
-
-  return sum;
-}
-
-alert( sumAll(1) ); // 1
-alert( sumAll(1, 2) ); // 3
-alert( sumAll(1, 2, 3) ); // 6
-
-б)
-function showName(firstName, lastName, ...titles) {
-  alert( firstName + ' ' + lastName ); // Юлий Цезарь
-
-  // Оставшиеся параметры пойдут в массив
-  // titles = ["Консул", "Император"]
-  alert( titles[0] ); // Консул
-  alert( titles[1] ); // Император
-  alert( titles.length ); // 2
-}
-
-showName("Юлий", "Цезарь", "Консул", "Император");
-
-!) ...rest должен всегда быть последним.
-
-4) 
-let arr = [3, 5, 1];
-
-alert( Math.max(...arr) ); // 5М
-
-let arr1 = [1, -2, 3, 4];
-let arr2 = [8, 3, -8, 1];
-
-alert( Math.max(...arr1, ...arr2) ); // 8
-alert( Math.max(1, ...arr1, 2, ...arr2, 25) ); // 25
-
-5) Замыкание – это функция, которая запоминает свои внешние переменные и может получить к ним доступ.
-	
-6) IIFE
-(function() {
-
-  let message = "Hello";
-
-  alert(message); // Hello
-
-})();
-
-7) Глобальный объект хранит переменные, которые должны быть доступны в любом месте программы.
-	
-8) Таймаут
-
-Методы setInterval(func, delay, ...args) 
-и setTimeout(func, delay, ...args) 
-позволяют выполнять func регулярно 
-или только один раз после задержки 
-delay, заданной в мс.
-Для отмены выполнения необходимо вызвать 
-clearInterval/clearTimeout со значением, 
-которое возвращают методы setInterval/setTimeout.
-Вложенный вызов setTimeout является более 
-гибкой альтернативой setInterval. 
-Также он позволяет более точно задать 
-интервал между выполнениями.
-Планирование с нулевой задержкой 
-setTimeout(func,0) или, что то же 
-самое, setTimeout(func) используется 
-для вызовов, которые должны быть 
-исполнены как можно скорее, после 
-завершения исполнения текущего кода.
-Браузер ограничивает 4-мя мс минимальную 
-задержку между пятью и более вложенными 
-вызовами setTimeout, а также для setInterval, 
-начиная с 5-го вызова.
-	
---
-
---
-	
---
-
---
-	
---
-		</pre>
-		<h4 id="click-to-hide-functions-tasks">задачи</h4>
-		<div id="functions-tasks">
-		</div>
+	<div>
+		2. Реализуйте функцию swap(), которая меняет местами первый и последний элемент массива. Если массив содержит меньше
+		двух элементов, то он возвращается как есть.
+	</div>
+	<div>
+		3. Реализуйте функцию, которая извлекает из массива элемент по указанному индексу, если
+		индекс существует, либо возвращает значение по умолчанию. Функция принимает на вход три аргумента:
+		Массив
+		Индекс
+		Значение по умолчанию (равно null)
+	</div>
+	<div>
+		4. Реализуйте функцию, которая принимает на вход массив и строковой префикс. Эта
+		функция должна возвращать новый массив, в котором к каждому элементу исходного массива добавляется переданный
+		префикс. Функция предназначена для работы со строковыми элементами. После префикса должен добавляться пробел.
 	</div>
 	<script>
-		// general block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclick());
-		document.getElementById('click-to-hide-general').addEventListener("click", hiddenCloseclick);
+		// BEGIN
+		const getWeekends = (format) => {
+			const longFormat = ['saturday', 'sunday'];
+			const shortFormat = ['sat', 'sun'];
 
-		function hiddenCloseclick() {
-			let x = document.getElementById('general');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
+			switch (format) {
+				case 'long':
+					return longFormat;
+				case 'short':
+					return shortFormat;
+				default:
+					return longFormat;
 			}
 		};
-		// objects block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickObjects());
-		document.getElementById('click-to-hide-objects').addEventListener("click", hiddenCloseclickObjects);
-
-		function hiddenCloseclickObjects() {
-			let x = document.getElementById('objects');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// numbers block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickNumbers());
-		document.getElementById('click-to-hide-numbers').addEventListener("click", hiddenCloseclickNumbers);
-
-		function hiddenCloseclickNumbers() {
-			let x = document.getElementById('numbers');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// strings block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickStrings());
-		document.getElementById('click-to-hide-strings').addEventListener("click", hiddenCloseclickStrings);
-
-		function hiddenCloseclickStrings() {
-			let x = document.getElementById('strings');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// arrays block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickArrays());
-		document.getElementById('click-to-hide-arrays').addEventListener("click", hiddenCloseclickArrays);
-
-		function hiddenCloseclickArrays() {
-			let x = document.getElementById('arrays');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// strings-methods block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickStringsMethods());
-		document.getElementById('click-to-hide-strings-methods').addEventListener("click", hiddenCloseclickStringsMethods);
-
-		function hiddenCloseclickStringsMethods() {
-			let x = document.getElementById('strings-methods');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// arrays-methods block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickArraysMethods());
-		document.getElementById('click-to-hide-arrays-methods').addEventListener("click", hiddenCloseclickArraysMethods);
-
-		function hiddenCloseclickArraysMethods() {
-			let x = document.getElementById('arrays-methods');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// arrays-tasks block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickArraysTasks());
-		document.getElementById('click-to-hide-arrays-tasks').addEventListener("click", hiddenCloseclickArraysTasks);
-
-		function hiddenCloseclickArraysTasks() {
-			let x = document.getElementById('arrays-tasks');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// functions block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickFunctions());
-		document.getElementById('click-to-hide-functions').addEventListener("click", hiddenCloseclickFunctions);
-
-		function hiddenCloseclickFunctions() {
-			let x = document.getElementById('functions');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// function-tasks block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickFunctionsTasks());
-		document.getElementById('click-to-hide-functions-tasks').addEventListener("click", hiddenCloseclickFunctionsTasks);
-
-		function hiddenCloseclickFunctionsTasks() {
-			let x = document.getElementById('functions-tasks');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
-		// click-to-hide-string-tasks block
-		document.addEventListener("DOMContentLoaded", hiddenCloseclickStringTasks());
-		document.getElementById('click-to-hide-string-tasks').addEventListener("click", hiddenCloseclickStringTasks);
-
-		function hiddenCloseclickStringTasks() {
-			let x = document.getElementById('string-tasks');
-			if (x.style.display == "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none"
-			}
-		};
+		console.log('1 задача')
+		console.log(getWeekends('long'))
+		console.log(getWeekends('short'))
+		// END
 	</script>
-</body></html>
+	<script>
+		// BEGIN
+		const swap = (items) => {
+			if (items.length < 2) {
+				return items;
+			}
+			const lastIndex = items.length - 1;
+			const last = items[lastIndex];
+			items[lastIndex] = items[0];
+			items[0] = last;
+
+			return items;
+		};
+		console.log('2 задача')
+		console.log(swap([])); // []
+		console.log(swap([1])); // [1]
+		console.log(swap([1, 2])); // [2, 1]
+		console.log(swap(['one', 'two', 'three'])); // ['three', 'two', 'one']
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const cities = ['moscow', 'london', 'berlin', 'porto', '', null, undefined];
+		const get = (arr, index, defaultValue = null) => {
+			if (index >= arr.length || index < 0) {
+				return defaultValue;
+			}
+
+			return arr[index];
+		};
+
+		console.log('3 задача')
+		console.log(get(cities, 1));
+		console.log(get(cities, 4));
+		console.log(get(cities, 10, 'paris'));
+		console.log(get(cities, -1, 'oops'));
+// END
+	</script>
+	<script>
+		// BEGIN
+		const addPrefix = (coll, prefix) => {
+			const result = [];
+
+			for (let i = 0; i < coll.length; i += 1) {
+				result[i] = `${prefix} ${coll[i]}`;
+			}
+
+			return result;
+		};
+		const names = ['john', 'smith', 'karl'];
+		const newNames = addPrefix(names, 'Mr');
+		console.log(newNames);
+		// => ['Mr john', 'Mr smith', 'Mr karl'];
+// ENDF
+	</script>
+</body>
+
+</html>
