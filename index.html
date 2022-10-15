@@ -34,6 +34,13 @@
 		функция должна возвращать новый массив, в котором к каждому элементу исходного массива добавляется переданный
 		префикс. Функция предназначена для работы со строковыми элементами. После префикса должен добавляться пробел.
 	</div>
+	<div>
+		5. Реализуйте reverse(), которая принимает на вход массив и располагает элементы исходного массива в обратном
+		порядке. Функция должна мутировать переданный в нее массив - новый массив из нее возвращать не надо.
+	</div>
+	<div>
+		6. Реализуйте функцию, которая высчитывает сумму всех элементов массива, которые делятся без остатка на 3 (три).
+	</div>
 	<script>
 		// BEGIN
 		const getWeekends = (format) => {
@@ -110,6 +117,50 @@
 		console.log(newNames);
 		// => ['Mr john', 'Mr smith', 'Mr karl'];
 // ENDF
+	</script>
+	<script>
+		// BEGIN
+		const reverse = (coll) => {
+			const lastIndex = coll.length - 1;
+			const middleIndex = lastIndex / 2;
+
+			for (let i = 0; i < middleIndex; i += 1) {
+				const mirrorIndex = lastIndex - i;
+				const temp = coll[i];
+				coll[i] = coll[mirrorIndex];
+				coll[mirrorIndex] = temp;
+			}
+		};
+		const names2 = ['john', 'smith', 'karl'];
+
+		console.log('5 задача');
+		reverse(names2);
+		console.log(names2);
+		reverse(names2);
+		console.log(names2);
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const calculateSum = (coll) => {
+			let sum = 0;
+			for (let i = 0; i < coll.length; i += 1) {
+				const value = coll[i];
+				if (value % 3 === 0) {
+					sum += value;
+				}
+			}
+
+			return sum;
+		};
+		// END
+		console.log('6 задача');
+		const coll1 = [8, 9, 21, 19, 18, 22, 7];
+		console.log(calculateSum(coll1)); // 48
+
+		const coll2 = [2, 0, 17, 3, 9, 15, 4];
+		console.log(calculateSum(coll2)); // 27
 	</script>
 </body>
 
