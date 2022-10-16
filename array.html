@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Обучение Javascript</title>
+	<meta name="description" content="Самостоятельное обучение">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+	<h2>Массивы</h2>
+	<pre>
+		1. Реализуйте функцию getWeekends(), которая возвращает массив из двух элементов – названий выходных дней на
+		английском. Функция принимает на вход параметр – формат возврата. Всего есть два возможных значения:
+		'long' (по умолчанию) – вернётся массив, содержащий значения saturday и sunday
+		'short' – вернётся массив со значениями sat и sun
+	</pre>
+	<pre>
+		2. Реализуйте функцию swap(), которая меняет местами первый и последний элемент массива. Если массив содержит
+		меньше
+		двух элементов, то он возвращается как есть.
+	</pre>
+	<pre>
+		3. Реализуйте функцию, которая извлекает из массива элемент по указанному индексу, если
+		индекс существует, либо возвращает значение по умолчанию. Функция принимает на вход три аргумента:
+		Массив
+		Индекс
+		Значение по умолчанию (равно null)
+	</pre>
+	<pre>
+		4. Реализуйте функцию, которая принимает на вход массив и строковой префикс. Эта
+		функция должна возвращать новый массив, в котором к каждому элементу исходного массива добавляется переданный
+		префикс. Функция предназначена для работы со строковыми элементами. После префикса должен добавляться пробел.
+	</pre>
+	<pre>
+		5. Реализуйте reverse(), которая принимает на вход массив и располагает элементы исходного массива в обратном
+		порядке. Функция должна мутировать переданный в нее массив - новый массив из нее возвращать не надо.
+	</pre>
+	<pre>
+		6. Реализуйте функцию, которая высчитывает сумму всех элементов массива, которые делятся без остатка на 3 (три).
+	</pre>
+	<pre>
+		7. Реализуйте функцию, которая высчитывает среднее арифметическое элементов переданного массива. Благодаря этой
+		функции мы наконец-то посчитаем среднюю температуру по больнице :)
+	</pre>
+	<pre>
+		8. Реализуйте функцию getSameParity(), которая принимает на вход массив чисел и возвращает новый, состоящий из
+		элементов, у которых такая же чётность, как и у первого элемента входного массива. Экспортируйте функцию по
+		умолчанию.
+	</pre>
+	<pre>
+		9. Реализуйте функцию, которая принимает на вход в виде массива кошелёк с деньгами и название валюты и
+		возвращает сумму денег указанной валюты.
+
+		Реализуйте данную функцию используя управляющие инструкции.
+
+		Параметры функции:
+
+		Массив, содержащий купюры разных валют с различными номиналами
+		Наименование валюты
+	</pre>
+	<pre>
+		10. Суперсерия Канада-СССР – это 8 товарищеских хоккейных матчей, проводившихся между командами СССР и Канады в
+		72 (первая суперсерия) и в 74 годах (вторая суперсерия). В этом задании вам предстоит написать функцию, которая
+		вычисляет команду, выигравшую суперсерию.
+
+		superseries.js
+		Реализуйте функцию, которая находит команду победителя для конкретной суперсерии. Победитель определяется как
+		команда, у которой больше побед (не количество забитых шайб) в конкретной серии. Функция принимает на вход
+		массив, в котором каждый элемент — это массив, описывающий счет в конкретной игре (сколько шайб забила Канада и
+		СССР). Результат функции – название страны: 'canada', 'ussr'. Если суперсерия закончилась в ничью, то нужно
+		вернуть null.
+	</pre>
+	<pre>
+		11. Реализуйте функцию buildDefinitionList(), которая генерирует HTML список определений (теги dl, dt и dd) и
+		возвращает получившуюся строку. При отсутствии элементов в массиве функция возвращает пустую строку.
+		Экспортируйте функцию по умолчанию.
+
+		Параметры функции
+		Список определений следующего формата:
+
+		const definitions = [
+		['definition1', 'description1'],
+		['definition2', 'description2']
+		];
+		То есть каждый элемент входного списка сам является массивом, содержащим два элемента: термин и его определение.
+	</pre>
+	<pre>
+		12. Реализуйте функцию, которая заменяет каждое вхождение указанных слов в предложении на последовательность
+		$#%! и возвращает полученную строку. Аргументы:
+
+		Текст
+		Набор стоп слов
+		Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).
+	</pre>
+	<pre>
+		13. Реализуйте функцию, которая получает на вход строку и считает, сколько символов (без учёта повторяющихся
+		символов) использовано в этой строке. Например, в строке yy используется всего один символ — y. А в строке
+		111yya! — используется четыре символа: 1, y, a и !.
+	</pre>
+	<pre>
+		14. Реализуйте функцию, которая сортирует массив используя пузырьковую сортировку. Постарайтесь не подглядывать
+		в текст теории и попробуйте воспроизвести алгоритм по памяти.
+	</pre>
+	<pre>
+		15. Реализуйте функцию, которая принимает на вход строку, состоящую только из открывающих и закрывающих скобок
+		разных типов, и проверяет, является ли эта строка сбалансированной. Открывающие и закрывающие скобки должны быть
+		одного вида. Пустая строка (отсутствие скобок) считается сбалансированной.
+
+		Строка считается корректной (сбалансированной), если содержащаяся в ней скобочная структура соответствует
+		требованиям:
+
+		Скобки — это парные структуры. У каждой открывающей скобки должна быть соответствующая ей закрывающая скобка.
+		Скобки должны закрываться в правильном порядке.
+	</pre>
+	<pre>
+		16. Реализуйте функцию getTheNearestLocation(), которая находит ближайшее место к указанной точке на карте и
+		возвращает его. Параметры функции:
+
+		locations – список мест на карте (массив). Каждое место – массив из двух элементов:
+		Первый элемент – это название места
+		Второй – точка на карте (массив из двух чисел-координат x и y)
+		point – текущая точка на карте
+	</pre>
+	<pre>
+		17. Реализуйте и экспортируйте функцию getMax(), которая ищет в массиве максимальное значение и возвращает его.
+	</pre>
+	<pre>
+		18. Реализуйте flatten(). Эта функция принимает на вход массив и выпрямляет его: если элементами массива
+		являются массивы, то flatten сводит всё к одному массиву, раскрывая один уровень вложенности.
+
+		В js эта функция реализована как метод flat() у массивов. Его использовать нельзя.
+	</pre>
+	<script>
+		// BEGIN
+		const getWeekends = (format) => {
+			const longFormat = ['saturday', 'sunday'];
+			const shortFormat = ['sat', 'sun'];
+
+			switch (format) {
+				case 'long':
+					return longFormat;
+				case 'short':
+					return shortFormat;
+				default:
+					return longFormat;
+			}
+		};
+		console.log('1 задача')
+		console.log(getWeekends('long'))
+		console.log(getWeekends('short'))
+		// END
+	</script>
+	<script>
+		// BEGIN
+		const swap = (items) => {
+			if (items.length < 2) {
+				return items;
+			}
+			const lastIndex = items.length - 1;
+			const last = items[lastIndex];
+			items[lastIndex] = items[0];
+			items[0] = last;
+
+			return items;
+		};
+		console.log('2 задача')
+		console.log(swap([])); // []
+		console.log(swap([1])); // [1]
+		console.log(swap([1, 2])); // [2, 1]
+		console.log(swap(['one', 'two', 'three'])); // ['three', 'two', 'one']
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const cities = ['moscow', 'london', 'berlin', 'porto', '', null, undefined];
+		const get = (arr, index, defaultValue = null) => {
+			if (index >= arr.length || index < 0) {
+				return defaultValue;
+			}
+
+			return arr[index];
+		};
+
+		console.log('3 задача')
+		console.log(get(cities, 1));
+		console.log(get(cities, 4));
+		console.log(get(cities, 10, 'paris'));
+		console.log(get(cities, -1, 'oops'));
+// END
+	</script>
+	<script>
+		// BEGIN
+		const addPrefix = (coll, prefix) => {
+			const result = [];
+
+			for (let i = 0; i < coll.length; i += 1) {
+				result[i] = `${prefix} ${coll[i]}`;
+			}
+
+			return result;
+		};
+		const names = ['john', 'smith', 'karl'];
+		const newNames = addPrefix(names, 'Mr');
+		console.log('4 задача');
+		console.log(newNames);
+		// => ['Mr john', 'Mr smith', 'Mr karl'];
+// ENDF
+	</script>
+	<script>
+		// BEGIN
+		const reverse = (coll) => {
+			const lastIndex = coll.length - 1;
+			const middleIndex = lastIndex / 2;
+
+			for (let i = 0; i < middleIndex; i += 1) {
+				const mirrorIndex = lastIndex - i;
+				const temp = coll[i];
+				coll[i] = coll[mirrorIndex];
+				coll[mirrorIndex] = temp;
+			}
+		};
+		const names2 = ['john', 'smith', 'karl'];
+
+		console.log('5 задача');
+		reverse(names2);
+		console.log(names2);
+		reverse(names2);
+		console.log(names2);
+
+		// END
+	</script>
+	<script>
+		// BEGIN
+		const calculateSum = (coll) => {
+			let sum = 0;
+			for (let i = 0; i < coll.length; i += 1) {
+				const value = coll[i];
+				if (value % 3 === 0) {
+					sum += value;
+				}
+			}
+
+			return sum;
+		};
+		// END
+		console.log('6 задача');
+		const coll1 = [8, 9, 21, 19, 18, 22, 7];
+		console.log(calculateSum(coll1)); // 48
+
+		const coll2 = [2, 0, 17, 3, 9, 15, 4];
+		console.log(calculateSum(coll2)); // 27
+	</script>
+	<script>
+		// BEGIN
+		const calculateAverage = (coll) => {
+			const itemsCount = coll.length;
+
+			if (itemsCount === 0) {
+				return null;
+			}
+
+			let sum = 0;
+			for (const item of coll) {
+				sum += item;
+			}
+
+			return sum / itemsCount;
+		};
+		const temperatures1 = [37.5, 34, 39.3, 40, 38.7, 41.5];
+		console.log('7 задача')
+		console.log(calculateAverage(temperatures1)); // 38.5
+
+		const temperatures2 = [36, 37.4, 39, 41, 36.6];
+		console.log(calculateAverage(temperatures2)); // 38
+		// END
+	</script>
+	<script>
+		// BEGIN
+		const getSameParity = (coll) => {
+			if (coll.length === 0) {
+				return [];
+			}
+
+			const result = [];
+			const remainder = Math.abs(coll[0] % 2);
+
+			for (const item of coll) {
+				if (Math.abs(item % 2) === remainder) {
+					result.push(item);
+				}
+			}
+
+			return result;
+		};
+		console.log('8 задача')
+		console.log(getSameParity([]));        // []
+		console.log(getSameParity([1, 2, 3])); // [1, 3]
+		console.log(getSameParity([1, 2, 8])); // [1]
+		console.log(getSameParity([2, 2, 8])); // [2, 2, 8]
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const getTotalAmount = (money, currency) => {
+			let sum = 0;
+
+			for (const bill of money) {
+				const currentCurrency = bill.slice(0, 3);
+				if (currentCurrency !== currency) {
+					continue;
+				}
+				const denomination = Number(bill.slice(4));
+				sum += denomination;
+			}
+
+			return sum;
+		};
+
+		console.log('9 задача')
+		const money1 = [
+			'eur 10', 'usd 1', 'usd 10', 'rub 50', 'usd 5',
+		];
+		console.log(getTotalAmount(money1, 'usd')) // 16
+
+		const money2 = [
+			'eur 10', 'usd 1', 'eur 5', 'rub 100', 'eur 20', 'eur 100', 'rub 200',
+		];
+		console.log(getTotalAmount(money2, 'eur')) // 135
+
+		const money3 = [
+			'eur 10', 'rub 50', 'eur 5', 'rub 10', 'rub 10', 'eur 100', 'rub 200',
+		];
+		console.log(getTotalAmount(money3, 'rub')) // 270
+// END
+	</script>
+	<script>
+		// BEGIN
+		const getSuperSeriesWinner = (scores) => {
+			let result = 0;
+			for (const score of scores) {
+				result += Math.sign(score[0] - score[1]);
+			}
+
+			if (result > 0) {
+				return 'canada';
+			}
+			if (result < 0) {
+				return 'ussr';
+			}
+
+			return null;
+		};
+		console.log('10 задача')
+		const scores = [
+			[3, 7], // Первая игра
+			[4, 1], // Вторая игра
+			[4, 4],
+			[3, 5],
+			[4, 5],
+			[3, 2],
+			[4, 3],
+			[6, 5],
+		];
+
+		console.log(getSuperSeriesWinner(scores)); // 'canada'
+// END
+	</script>
+	<script>
+		// BEGIN
+		const buildDefinitionList = (definitions) => {
+			if (definitions.length === 0) {
+				return '';
+			}
+
+			const parts = [];
+
+			for (const definition of definitions) {
+				const name = definition[0];
+				const description = definition[1];
+				parts.push(`<dt>${name}</dt><dd>${description}</dd>`);
+			}
+
+			const innerValue = parts.join('');
+			const result = `<dl>${innerValue}</dl>`;
+
+			return result;
+		};
+
+		console.log('11 задача')
+		const definitions = [
+			['Блямба', 'Выпуклость, утолщения на поверхности чего-либо'],
+			['Бобр', 'Животное из отряда грызунов'],
+		];
+		console.log(buildDefinitionList(definitions));
+// END
+	</script>
+	<script>
+		// BEGIN
+		const makeCensored = (text, stopWords) => {
+			const words = text.split(' ');
+
+			const result = [];
+			for (const word of words) {
+				const newWord = stopWords.includes(word) ? '$#%!' : word;
+				result.push(newWord);
+			}
+
+			return result.join(' ');
+		};
+
+		console.log('12 задача')
+		const sentence = 'When you play the game of thrones, you win or you die';
+		const result = makeCensored(sentence, ['die', 'play']);
+		console.log(result)
+		// When you $#%! the game of thrones, you win or you $#%!
+
+		const sentence2 = 'chicken chicken? chicken! chicken';
+		const result2 = makeCensored(sentence2, ['?', 'chicken']);
+		console.log(result2)
+		// '$#%! chicken? chicken! $#%!';
+		// END
+	</script>
+	<script>
+		// BEGIN
+		const countUniqChars = (text) => {
+			const uniqChars = [];
+
+			for (const char of text) {
+				if (!uniqChars.includes(char)) {
+					uniqChars.push(char);
+				}
+			}
+
+			return uniqChars.length;
+		};
+
+		console.log('13 задача')
+		const text1 = 'yyab'; // y, a, b
+		console.log(countUniqChars(text1)); // 3
+
+		const text2 = 'You know nothing Jon Snow';
+		console.log(countUniqChars(text2)); // 13
+// END
+	</script>
+	<script>
+		// BEGIN
+		const bubbleSort = (arr) => {
+			let stepsCount = arr.length - 1;
+			let swapped;
+			do {
+				swapped = false;
+				for (let i = 0; i < stepsCount; i += 1) {
+					if (arr[i] > arr[i + 1]) {
+						const temp = arr[i];
+						arr[i] = arr[i + 1];
+						arr[i + 1] = temp;
+						swapped = true;
+					}
+				}
+				stepsCount -= 1;
+			} while (swapped);
+
+			return arr;
+		};
+
+		console.log('13 задача')
+		console.log(bubbleSort([])); // []
+		console.log(bubbleSort([3, 10, 4, 3])); // [3, 3, 4, 10]
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const openingSymbols = ['(', '[', '{', '<'];
+		const closingSymbols = [')', ']', '}', '>'];
+		const isOpeningSymbol = (symbol) => openingSymbols.includes(symbol);
+		const getClosingSymbolFor = (symbol) => closingSymbols[openingSymbols.indexOf(symbol)];
+
+		const isBracketStructureBalanced = (str) => {
+			const stack = [];
+			for (const symbol of str) {
+				if (isOpeningSymbol(symbol)) {
+					const closingSymbol = getClosingSymbolFor(symbol);
+					stack.push(closingSymbol);
+				} else {
+					const lastSavedSymbol = stack.pop();
+					if (symbol !== lastSavedSymbol) {
+						return false;
+					}
+				}
+			}
+
+			return stack.length === 0;
+		};
+		console.log('14 задача')
+		console.log(isBracketStructureBalanced('(>'));  // false
+		console.log(isBracketStructureBalanced('()'));  // true
+		console.log(isBracketStructureBalanced('[()]'));  // true
+		console.log(isBracketStructureBalanced('({}[])'));  // true
+		console.log(isBracketStructureBalanced('{<>}}')); // false
+		console.log(isBracketStructureBalanced('([)]')); // false
+// END
+	</script>
+	<script>
+		// BEGIN
+		const getIntersectionOfSortedArrays = (arr1, arr2) => {
+			const size1 = arr1.length;
+			const size2 = arr2.length;
+
+			let i1 = 0;
+			let i2 = 0;
+			const result = [];
+
+			while (i1 < size1 && i2 < size2) {
+				const lastCommon = result[result.length - 1];
+				if (arr1[i1] === arr2[i2] && arr1[i1] !== lastCommon) {
+					result.push(arr1[i1]);
+					i1 += 1;
+					i2 += 1;
+				} else if (arr1[i1] > arr2[i2]) {
+					i2 += 1;
+				} else {
+					i1 += 1;
+				}
+			}
+
+			return result;
+		};
+
+		console.log('15 задача')
+		console.log(getIntersectionOfSortedArrays([10, 11, 24], [10, 13, 14, 18, 24, 30])); // [10, 24]
+
+		console.log(getIntersectionOfSortedArrays([10, 11, 24], [-2, 3, 4])); // []
+// END
+	</script>
+	<script>
+		// BEGIN
+		const getDistance = ([x1, y1], [x2, y2]) => {
+			const xs = x2 - x1;
+			const ys = y2 - y1;
+
+			return Math.sqrt(xs ** 2 + ys ** 2);
+		};
+		const getTheNearestLocation = (locations, currentPoint) => {
+			if (locations.length === 0) {
+				return null;
+			}
+
+			let [nearestLocation] = locations;
+			const [, nearestPoint] = nearestLocation;
+			let lowestDistance = getDistance(currentPoint, nearestPoint);
+
+			for (const location of locations) {
+				const [, point] = location;
+				const distance = getDistance(currentPoint, point);
+				if (distance < lowestDistance) {
+					lowestDistance = distance;
+					nearestLocation = location;
+				}
+			}
+
+			return nearestLocation;
+		};
+		const locations = [
+			['Park', [10, 5]],
+			['Sea', [1, 3]],
+			['Museum', [8, 4]],
+		];
+
+		const currentPoint = [5, 5];
+
+		console.log('15 задача')
+		// Если мест нет, то возвращается null
+		console.log(getTheNearestLocation([], currentPoint)); // null
+
+		console.log(getTheNearestLocation(locations, currentPoint)); // ['Museum', [8, 4]]
+
+// END
+	</script>
+	<script>
+		// BEGIN
+		const getMax = (coll) => {
+			if (coll.length === 0) {
+				return null;
+			}
+
+			let [max, ...rest] = coll;
+			for (const value of rest) {
+				if (value > max) {
+					max = value;
+				}
+			}
+
+			return max;
+		};
+		console.log('16 задача')
+		console.log(getMax([])); // null
+		console.log(getMax([1, 10, 8])); // 10
+// END
+	</script>
+	<script>
+		// BEGIN
+		const flatten = (coll) => {
+			let result = [];
+			for (const item of coll) {
+				if (Array.isArray(item)) {
+					result = [...result, ...item];
+				} else {
+					result = [...result, item];
+				}
+			}
+
+			return result;
+		};
+		console.log('17 задача')
+		console.log(flatten([])); // []
+		console.log(flatten([1, [3, 2], 9])); // [1, 3, 2, 9]
+		console.log(flatten([1, [[2], [3]], [9]])); // [1, [2], [3], 9]
+
+// END
+	</script>
+</body>
+
+</html>

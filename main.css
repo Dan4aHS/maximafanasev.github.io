@@ -1,6 +1,8 @@
 body {
     font-family: sans-serif;
     padding: 0 16px;
+    background-color: #999;
+    color: #111;
 }
 
 div {
