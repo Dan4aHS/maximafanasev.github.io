@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href=../main.css>
+</head>
+
+<body>
+	<a href="../index.html">Home</a>
+	<h1>Массивы</h1>
+
+	<a href="https://habr.com/ru/company/plarium/blog/483958/">1. habr</a>
+	<a href="https://learn.javascript.ru/array-methods">2. learn javascript</a>
+	<ul>
+		<li>split()</li>
+		<li>join()</li>
+		<li>slice()</li>
+		<li>some()</li>
+		<li>reduce()</li>
+		<li>every()</li>
+		<li>map()</li>
+		<li>flat()</li>
+		<li>filter()</li>
+		<li>forEach()</li>
+		<li>findIndex()</li>
+		<li>find()</li>
+		<li>sort()</li>
+		<li>concat()</li>
+		<li>fill()</li>
+		<li>includes()</li>
+		<li>reverse()</li>
+		<li>flatMap()</li>
+	</ul>
+
+	<h2>
+		<a href="https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-8&tags=Arrays&beta=false&order_by=sort_date%20desc">1й уровень сложности</a>
+	</h2>
+
+	<ol>
+		<li><a href="https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript">pick a set of first elements</a>
+			<p>Дан массив и число, нужно вернуть количество элементов в массиве</p>
+			<button class="accordion">Алгоритм</button>
+			<div class="content">метод slice и default параметр
+			<pre>
+const first = (arr, n = 1) => arr.slice(0, n)</pre>
+			</div>
+		</li>
+		<li><a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044">count of positives / sum of negatives</a>
+			<p>Дан массив целых чисел.</p>
+			<p>Возвращает массив, где первый элемент — это количество положительных чисел, а второй элемент — сумма отрицательных чисел. 0 не является ни положительным, ни отрицательным.</p>
+			<p>Если вход представляет собой пустой массив или имеет значение null, верните пустой массив.</p>
+			<button class="accordion">Алгоритм</button>
+			<div class="content">
+				<ol>
+					<li>если входящее null и пустой массив - вернем []</li>
+					<li>создать пару переменных, позитив и негатив</li>
+					<li>прогоним цикл</li>
+					<li>если входящий элемент массива больше нуля, прибавим к позитиву</li>
+					<li>иначе входящий элемент массива меньше нуля, прибавим к негативу</li>
+					<li>вернем массив из позитива и негатива</li>
+				</ol>
+<pre>
+function countPositivesSumNegatives(input) {
+ return input &#38;&#38; input.length ? [input.filter(p => p > 0).length,
+ input.filter(n => n &#60; 0).reduce((a, b) => a + b, 0)] : [];
+}</pre>
+			</div>
+
+
+		</li>
+		<li></li>
+
+	</ol>
+
+	<style>
+		.accordion {
+			border: 2px solid #ccc;
+			border-radius: 10px;
+		}
+
+		.content {
+			transition: 0.3s;
+			max-height: 0;
+			overflow: hidden;
+		}
+	</style>
+
+	<script>
+		document.querySelectorAll('.accordion').forEach((el) => {
+			el.addEventListener('click', () => {
+				let content = el.nextElementSibling
+				if (content.style.maxHeight) {
+					document.querySelectorAll('.content').forEach((el) => {
+						el.style.maxHeight = null
+					})
+				} else {
+					document.querySelectorAll('.content').forEach((el) => {
+						el.style.maxHeight = null
+					})
+					content.style.maxHeight = content.scrollHeight + 'px'
+				}
+			})
+		})
+	</script>
+
+
+</body></html>
