@@ -228,6 +228,7 @@ myAwesomeArray.flat().map(arr => arr * 10)
 	<h2>
 		<a href="https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-8&tags=Arrays&beta=false&order_by=sort_date%20desc">1й уровень сложности</a>
 	</h2>
+	<div class="progress-bar" style="--width: 10" data-label=" 7/61"></div>
 
 	<ol>
 
@@ -292,9 +293,9 @@ output:
 				<li>разобью по каждому элементу и добавлю в конце '\n'</li>
 			</ol>
 		</li>
-		
+
 		<li>
-		<a href="https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/javascript">Sum of differences in array(sort map reduce) (Math.max(...arr) - Math.min(...arr))</a>
+			<a href="https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/javascript">Sum of differences in array(sort map reduce) (Math.max(...arr) - Math.min(...arr))</a>
 			<pre>
 [2, 1, 10]  -->  9
 (10 - 2) + (2 - 1) = 8 + 1 = 9
@@ -305,6 +306,97 @@ output:
 				<li>reduce все сложить</li>
 			</ol>
 		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/javascript">Calculate average(reduce)
+			</a>
+			<pre>
+[1,2,3,4] -> 2.5
+			</pre>
+			<ol>
+				<li>reduce</li>
+				<li>acc + x</li>
+				<li>поделить на длину массива</li>
+			</ol>
+		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/57f781872e3d8ca2a000007e/javascript">Beginner - Lost Without a Map(map)
+</a>
+	<pre>
+[1, 2, 3] --> [2, 4, 6]
+	</pre>
+	<ol>
+		<li>map</li>
+		<li>x => x*2</li>
+	</ol>
+		</li>
+		<a href="https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript">No Loops 2 - You only need one(includes)</a>
+		<pre>
+[66, 101], 66, true
+		</pre>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript">Filling an array (part 1) (push)</a>
+			<pre>
+4, [0,1,2,3]
+			</pre>
+			<ol>
+				<li>цикл и пуш в новый массив</li>
+			</ol>
+		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript">Counting sheep... (filter)</a>
+			<pre>
+[true,  true,  true,  false,
+true,  true,  true,  true ,
+true,  false, true,  false,
+true,  false, false, true ,
+true,  true,  true,  true ,
+false, false, true,  true ] -> 17
+			</pre>
+			<ol>
+				<li>филтровать нужный элемент массива</li>
+				<li></li>
+			</ol>
+		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript">Multiple of index (filter)</a>
+			<pre>
+[68, -1, 1, -7, 10, 10] => [-1, 10]
+			</pre>
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
+		<li>
+			
+		</li>
+		
 	</ol>
 
 
@@ -884,11 +976,44 @@ export const flatten = (coll) => {
 	</pre>
 		</li>
 
-
 	</ol>
 
 
+<style>
+.progress-bar {
+	position: relative;
+	width: 520px;
+	height: 3em;
+	background-color: #111;
+	border-radius: 1.5em;
+	color: white;
+}
 
+.progress-bar::before {
+	content: attr(data-label);
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: .5em;
+	top: .5em;
+	bottom: .5em;
+	width: calc(var(--width, 0) * 1%);
+	min-width: 2rem;
+	max-width: 11%;
+	background-color: #069;
+	border-radius: 1em;
+	padding: 1em;
+}
+</style>
+
+<script>
+const progressBar = document.getElementsByClassName('progress-bar')[0]
+setInterval(() => {
+  const computedStyle = getComputedStyle(progressBar)
+  const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
+  progressBar.style.setProperty('--width', width + .1)
+}, 4)
+</script>
 </body>
 
 </html>
