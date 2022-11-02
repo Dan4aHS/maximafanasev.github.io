@@ -228,28 +228,16 @@ myAwesomeArray.flat().map(arr => arr * 10)
 	<h2>
 		<a href="https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-8&tags=Arrays&beta=false&order_by=sort_date%20desc">1й уровень сложности</a>
 	</h2>
-	<div class="progress-bar" style="--width: 10" data-label=" 7/61"></div>
+	<div class="progress-bar" style="--width: 10" data-label=" 11/61"></div>
 
 	<ol>
 
-
 		<li>
-			<a href="https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript">pick a set of first elements (slice)</a>
-			<pre>
-var arr = ['a', 'b', 'c', 'd', 'e']; 
-first(arr, 2) //=> ['a', 'b']
-first(arr, 3) //=> ['a', 'b', 'c'];
-	</pre>
+			<a href="https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript">Вернуть нужное количество элементов (slice)</a>
 		</li>
 
-
 		<li>
-			<a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044">count of positives / sum of negatives</a>
-			<pre>
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15] 
-[10, -65]
-			</pre>
-
+			<a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044">Посчитать сумму положительных и отрицательных чисел</a>
 			<ol>
 				<li>если входящее null и пустой массив - вернем []</li>
 				<li>создать пару переменных, позитив и негатив</li>
@@ -261,7 +249,7 @@ first(arr, 3) //=> ['a', 'b', 'c'];
 		</li>
 
 		<li>
-			<a href="https://www.codewars.com/kata/582e0e592029ea10530009ce/javascript">Duck Duck Goose</a>
+			<a href="https://www.codewars.com/kata/582e0e592029ea10530009ce/javascript">По входящему числу вернуть нужный элемент массива</a>
 			<div>
 				<ol>
 					<li>вычтем 1 из переданного параметра</li>
@@ -269,134 +257,63 @@ first(arr, 3) //=> ['a', 'b', 'c'];
 					<li>обратимся к этому элементу</li>
 				</ol>
 			</div>
-			<pre>
-[$a, $b, $c, $d], 5); // => $a["name"]
-			</pre>
 		</li>
 		<li>
-			<a href="https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036/javascript">CSV representation of array (join)</a>
-			<pre>
-input:
-   [[ 0, 1, 2, 3, 4 ],
-    [ 10,11,12,13,14 ],
-    [ 20,21,22,23,24 ],
-    [ 30,31,32,33,34 ]] 
-    
-output:
-     '0,1,2,3,4\n'
-    +'10,11,12,13,14\n'
-    +'20,21,22,23,24\n'
-    +'30,31,32,33,34'
-		</pre>
-			<ol>
-				<li>обращусь к массиву</li>
-				<li>разобью по каждому элементу и добавлю в конце '\n'</li>
-			</ol>
+			<a href="https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036/javascript">Переформатировать массив (join)</a>
 		</li>
 
 		<li>
-			<a href="https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/javascript">Sum of differences in array(sort map reduce) (Math.max(...arr) - Math.min(...arr))</a>
-			<pre>
-[2, 1, 10]  -->  9
-(10 - 2) + (2 - 1) = 8 + 1 = 9
-			</pre>
-			<ol>
-				<li>сортировка с убыванием</li>
-				<li>map больший - меньший или 0</li>
-				<li>reduce все сложить</li>
-			</ol>
+			<a href="https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/javascript">Сумма разниц элементов массива(sort map reduce))</a>
 		</li>
-		
+
 		<li>
-			<a href="https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/javascript">Calculate average(reduce)
+			<a href="https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/javascript">Посчитать среднее(reduce)
 			</a>
-			<pre>
-[1,2,3,4] -> 2.5
-			</pre>
-			<ol>
-				<li>reduce</li>
-				<li>acc + x</li>
-				<li>поделить на длину массива</li>
-			</ol>
 		</li>
-		
+
 		<li>
-			<a href="https://www.codewars.com/kata/57f781872e3d8ca2a000007e/javascript">Beginner - Lost Without a Map(map)
-</a>
-	<pre>
-[1, 2, 3] --> [2, 4, 6]
-	</pre>
-	<ol>
-		<li>map</li>
-		<li>x => x*2</li>
-	</ol>
+			<a href="https://www.codewars.com/kata/57f781872e3d8ca2a000007e/javascript">Удвоить значения каждого элемента(map)
+			</a>
 		</li>
-		<a href="https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript">No Loops 2 - You only need one(includes)</a>
-		<pre>
-[66, 101], 66, true
-		</pre>
-		
+		<li> <a href="https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript">Проверить наличие элемента в массиве(includes)</a>
+		</li>
+
 		<li>
-			<a href="https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript">Filling an array (part 1) (push)</a>
-			<pre>
-4, [0,1,2,3]
-			</pre>
-			<ol>
-				<li>цикл и пуш в новый массив</li>
-			</ol>
+			<a href="https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript">Наполнить массив числами (push)</a>
 		</li>
-		
+
 		<li>
-			<a href="https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript">Counting sheep... (filter)</a>
-			<pre>
-[true,  true,  true,  false,
-true,  true,  true,  true ,
-true,  false, true,  false,
-true,  false, false, true ,
-true,  true,  true,  true ,
-false, false, true,  true ] -> 17
-			</pre>
-			<ol>
-				<li>филтровать нужный элемент массива</li>
-				<li></li>
-			</ol>
+			<a href="https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript">Отфильтровать по булевому значению (filter)</a>
 		</li>
-		
+
 		<li>
-			<a href="https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript">Multiple of index (filter)</a>
-			<pre>
-[68, -1, 1, -7, 10, 10] => [-1, 10]
-			</pre>
+			<a href="https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript">Убрать не четные элементы своему индексу в массиве (filter)</a>
 		</li>
-		
+
 		<li>
-			
+			<a href="https://www.codewars.com/kata/5769b3802ae6f8e4890009d2">Удалить каждый второй элемент массива (filter)</a>
 		</li>
-		
+
+		<li><a href="https://www.codewars.com/kata/58ca658cc0d6401f2700045f">(5, 25), [5, 10, 15, 20, 25]</a>
+		</li>
 		<li>
-			
+			<a href="https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/javascript">найти первый элемент массива, который не является последовательным</a>
 		</li>
-		
 		<li>
-			
+			<a href="https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/train/javascript">Удалить дубликаты из массива (set)</a>
 		</li>
-		
 		<li>
-			
+			<a href="https://www.codewars.com/kata/57d814e4950d8489720008db/train/javascript">Нужно найти N-ю степень элемента в массиве с индексом N</a>
 		</li>
-		
+
 		<li>
-			
+			<a href="https://www.codewars.com/kata/57f6ad55cca6e045d2000627/javascript">Обработать массив: Если число имеет целый квадратный корень, возьмите его, иначе возведите число в квадрат [4,3,9,7,2,1] -> [2,9,3,49,4,1]</a>
 		</li>
-		
+
 		<li>
-			
+
 		</li>
-		
-		<li>
-			
-		</li>
-		
+
 	</ol>
 
 
@@ -979,41 +896,39 @@ export const flatten = (coll) => {
 	</ol>
 
 
-<style>
-.progress-bar {
-	position: relative;
-	width: 520px;
-	height: 3em;
-	background-color: #111;
-	border-radius: 1.5em;
-	color: white;
-}
+	<style>
+		.progress-bar {
+			position: relative;
+			width: 520px;
+			height: 3em;
+			background-color: #111;
+			border-radius: 1.5em;
+			color: white;
+		}
 
-.progress-bar::before {
-	content: attr(data-label);
-	display: flex;
-	align-items: center;
-	position: absolute;
-	left: .5em;
-	top: .5em;
-	bottom: .5em;
-	width: calc(var(--width, 0) * 1%);
-	min-width: 2rem;
-	max-width: 11%;
-	background-color: #069;
-	border-radius: 1em;
-	padding: 1em;
-}
-</style>
+		.progress-bar::before {
+			content: attr(data-label);
+			display: flex;
+			align-items: center;
+			position: absolute;
+			left: .5em;
+			top: .5em;
+			bottom: .5em;
+			width: calc(var(--width, 0) * 1%);
+			min-width: 2rem;
+			max-width: 11%;
+			background-color: #069;
+			border-radius: 1em;
+			padding: 1em;
+		}
+	</style>
 
-<script>
-const progressBar = document.getElementsByClassName('progress-bar')[0]
-setInterval(() => {
-  const computedStyle = getComputedStyle(progressBar)
-  const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
-  progressBar.style.setProperty('--width', width + .1)
-}, 4)
-</script>
-</body>
-
-</html>
+	<script>
+		const progressBar = document.getElementsByClassName('progress-bar')[0]
+		setInterval(() => {
+			const computedStyle = getComputedStyle(progressBar)
+			const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
+			progressBar.style.setProperty('--width', width + .1)
+		}, 4)
+	</script>
+</body></html>
