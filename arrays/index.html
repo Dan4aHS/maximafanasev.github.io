@@ -10,8 +10,8 @@
 <body>
 	<a href="../index.html">Home</a>
 	<h1>Массивы</h1>
-	<h2>Методы</h2>
-	<ol>
+	<button class="accordion">Методы</button>
+	<ol class="content">
 		<li>split()</li>
 		<pre>
 1.
@@ -225,38 +225,19 @@ myAwesomeArray.flat().map(arr => arr * 10)
 </pre>
 	</ol>
 
-	<h2>
-		<a href="https://www.codewars.com/kata/search/javascript?q=&r%5B%5D=-8&tags=Arrays&beta=false&order_by=sort_date%20desc">1й уровень сложности</a>
-	</h2>
-	<div class="progress-bar" style="--width: 10" data-label=" 11/61"></div>
+	<button class="accordion">1й уровень сложности</button>
 
-	<ol>
-
+	<ol class="content">
 		<li>
-			<a href="https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript">Вернуть нужное количество элементов (slice)</a>
+			<a href="https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript">✅ Вернуть нужное количество элементов (slice)</a>
 		</li>
 
 		<li>
-			<a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044">Посчитать сумму положительных и отрицательных чисел</a>
-			<ol>
-				<li>если входящее null и пустой массив - вернем []</li>
-				<li>создать пару переменных, позитив и негатив</li>
-				<li>прогоним цикл</li>
-				<li>если входящий элемент массива больше нуля, прибавим к позитиву</li>
-				<li>иначе входящий элемент массива меньше нуля, прибавим к негативу</li>
-				<li>вернем массив из позитива и негатива</li>
-			</ol>
+			<a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044">✅Посчитать сумму положительных и отрицательных чисел</a>
 		</li>
 
 		<li>
 			<a href="https://www.codewars.com/kata/582e0e592029ea10530009ce/javascript">По входящему числу вернуть нужный элемент массива</a>
-			<div>
-				<ol>
-					<li>вычтем 1 из переданного параметра</li>
-					<li>прогоним на остаток через размер массива</li>
-					<li>обратимся к этому элементу</li>
-				</ol>
-			</div>
 		</li>
 		<li>
 			<a href="https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036/javascript">Переформатировать массив (join)</a>
@@ -317,8 +298,8 @@ myAwesomeArray.flat().map(arr => arr * 10)
 	</ol>
 
 
-	<h2>2й уровень сложности</h2>
-	<ol>
+	<button class="accordion">2й уровень сложности</button>
+	<ol class="content">
 		<li>
 			<div>Реализуйте и экспортируйте функцию getWeekends(), которая возвращает массив из двух элементов – названий выходных дней на английском. Функция принимает на вход параметр – формат возврата. Всего есть два возможных значения:
 				'long' (по умолчанию) – вернётся массив, содержащий значения saturday и sunday
@@ -895,34 +876,20 @@ export const flatten = (coll) => {
 
 	</ol>
 
-
 	<style>
-		.progress-bar {
-			position: relative;
-			width: 520px;
-			height: 3em;
-			background-color: #111;
-			border-radius: 1.5em;
-			color: white;
+		.accordion {
+			border: 2px solid #ccc;
+			padding: 10px 20px;
+			border-radius: 15px;
+			margin-bottom: 10px;
 		}
 
-		.progress-bar::before {
-			content: attr(data-label);
-			display: flex;
-			align-items: center;
-			position: absolute;
-			left: .5em;
-			top: .5em;
-			bottom: .5em;
-			width: calc(var(--width, 0) * 1%);
-			min-width: 2rem;
-			max-width: 11%;
-			background-color: #069;
-			border-radius: 1em;
-			padding: 1em;
+		.content {
+			transition: 0.3s;
+			max-height: 0;
+			overflow: hidden;
 		}
 	</style>
-
 	<script>
 		const progressBar = document.getElementsByClassName('progress-bar')[0]
 		setInterval(() => {
@@ -930,5 +897,22 @@ export const flatten = (coll) => {
 			const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
 			progressBar.style.setProperty('--width', width + .1)
 		}, 4)
+	</script>
+	<script>
+		document.querySelectorAll('.accordion').forEach((el) => {
+			el.addEventListener('click', () => {
+				let content = el.nextElementSibling
+				if (content.style.maxHeight) {
+					document.querySelectorAll('.content').forEach((el) => {
+						el.style.maxHeight = null
+					})
+				} else {
+					document.querySelectorAll('.content').forEach((el) => {
+						el.style.maxHeight = null
+					})
+					content.style.maxHeight = content.scrollHeight + 'px'
+				}
+			})
+		})
 	</script>
 </body></html>
