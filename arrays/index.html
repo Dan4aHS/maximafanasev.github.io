@@ -249,7 +249,7 @@ if (input == null || input.length == 0)
 	var positive = 0;
 	var negative = 0;
 
-	for (var i=0, l=input.length; i<l; ++i)
+	for (var i=0, l=input.length; i&#60;l; ++i)
 	{
 		if (input[i] > 0)
 			++ positive;
@@ -402,7 +402,62 @@ return array.map(x => {
 		</li>
 
 		<li>
+			<a href="https://www.codewars.com/kata/57cff961eca260b71900008f/javascript">Учитывая массив чисел, проверьте, являются ли какие-либо из чисел кодами символов для строчных гласных ( a, e, i, o, u)</a>
+			<pre>
+const isVow = a => a.map(x=>'aeiou'.includes(y=String.fromCharCode(x)) ? y : x)
+			</pre>
+		</li>
 
+		<li>
+			<a href="https://www.codewars.com/kata/5a2be17aee1aaefe2a000151/train/javascript">Сложить 2 массива</a>
+			<pre>
+return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+			</pre>
+		</li>
+
+		<li>
+			<a href="https://www.codewars.com/kata/5583090cbe83f4fd8c000051">Строку в массив</a>
+			<pre>
+35231 => [1,3,2,5,3]
+0 => [0]
+
+return String(n).split('').map(Number).reverse()
+			</pre>
+		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/545af3d185166a3dec001190/train/javascript">Каскадные подмножества</a>
+			<pre>
+each_cons([1,2,3,4], 2)
+  #=> [[1,2], [2,3], [3,4]]
+
+each_cons([1,2,3,4], 3)
+  #=> [[1,2,3],[2,3,4]]
+
+
+function eachCons(array, n) {
+  let res = [];
+
+  for(let i = 0; i < array.length; i++){
+    res.push(array.slice(i,i + n));
+  }
+
+  return res.filter(e => e.length === n);
+}
+			</pre>
+		</li>
+		
+		<li>
+			<a href="https://www.codewars.com/kata/570597e258b58f6edc00230d">Удалить первый и последний элементы</a>
+			<pre>
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+
+function array(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null;
+}
+			</pre>
 		</li>
 
 	</ol>
@@ -659,8 +714,9 @@ export default getTotalAmount;
 
 		</li>
 		<li>
-			<div>Реализуйте функцию buildDefinitionList(), которая генерирует HTML список определений (теги <dl>, <dt> и
-					<dd>) и возвращает получившуюся строку. При отсутствии элементов в массиве функция возвращает пустую строку. Экспортируйте функцию по умолчанию.</div>
+			<div>
+				Реализуйте функцию buildDefinitionList(), которая генерирует HTML список определений (теги &#60;dl>, <dt> и
+				&#60;dd>) и возвращает получившуюся строку. При отсутствии элементов в массиве функция возвращает пустую строку. Экспортируйте функцию по умолчанию.</div>
 			<pre>
 const definitions = [
   ['Блямба', 'Выпуклость, утолщения на поверхности чего-либо'],
@@ -678,7 +734,7 @@ const buildDefinitionList = (definitions) => {
   for (const definition of definitions) {
     const name = definition[0];
     const description = definition[1];
-    parts.push(`<dt>${name}</dt><dd>${description}</dd>`);
+    parts.push(`&#60;dt>${name}&#60;/dt>&#60;dd>${description}&#60;/dd>`);
   }
 
   const innerValue = parts.join('');
