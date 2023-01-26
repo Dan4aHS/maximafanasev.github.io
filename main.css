@@ -1,7 +1,8 @@
 body {
 	font-family: sans-serif;
 	padding: 0 16px;
-	color: #111;
+	color: #fff;
+	background: #16171b;
 }
 
 
@@ -16,8 +17,6 @@ div {
 }
 
  pre {
-	background: #fbfdff;
-	border: 1px solid #e5e8ec;
 	border-radius: 12px;
 	box-sizing: border-box;
 	font-size: .875rem;
@@ -33,7 +32,13 @@ div {
 	max-width: 600px;
 	width: 100%;
 	margin-bottom: 10px;
+ 	background: #222327;
+ 	color: #fff;
 }
+
+ a {
+	 color: #c0c0c0;
+ }
 
 ol,
 ul {
@@ -41,7 +46,8 @@ ul {
 	padding: 0 0 0 15px;
 }
 
-ol li {
+ol li,
+ul li {
 	margin: 10px;
 	margin-bottom: 15px;
 }

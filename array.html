@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h2>Массивы</h2>
+<ol>
+  <li>Создание массива</li>
+  <pre>
+let arr = new Array();
+let arr = [];
+  </pre>
+  <li>Получение нового элемента</li>
+  <pre>
+let fruits = ["Яблоко", "Апельсин", "Слива"];
+
+alert( fruits[0] ); // Яблоко
+  </pre>
+  <li>замена элемента</li>
+  <pre>
+fruits[2] = 'Груша'; // теперь ["Яблоко", "Апельсин", "Груша"]
+  </pre>
+  <li>длина массива</li>
+  <pre>
+alert( fruits.length ); // 3
+
+let arr = [1, 2, 3, 4, 5];
+
+arr.length = 2; // укорачиваем до двух элементов
+alert( arr ); // [1, 2]
+
+arr.length = 5; // возвращаем length как было
+alert( arr[3] ); // undefined: значения не восстановились
+  </pre>
+  <li>хранение любых данных</li>
+  <pre>
+    let arr = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ];
+  </pre>
+  <li>последний элемент массива</li>
+  <pre>
+let fruits = ["Apple", "Orange", "Plum"];
+alert( fruits[fruits.length-1] ); // Plum
+  </pre>
+  <li>массив копируется по ссылке</li>
+  <li>перебор элементов</li>
+  <pre>
+1. for (let i = 0; i < arr.length; i++) {}
+2. for (let fruit of fruits)
+  </pre>
+  <li>в строку</li>
+  <pre>
+let arr = [1, 2, 3];
+
+alert( arr ); // 1,2,3
+alert( String(arr) === '1,2,3' ); // true
+
+alert( [] + 1 ); // "1"
+alert( [1] + 1 ); // "11"
+alert( [1,2] + 1 ); // "1,21"
+  </pre>
+  <li>сравнение</li>
+  <pre>
+alert( [] == [] ); // false
+alert( [0] == [0] ); // false
+
+alert( 0 == [] ); // true
+
+alert('0' == [] ); // false
+  </pre>
+</ol>
+методы массивов
+<ol>
+
+  <li>добавление в массив</li>
+  <pre>
+push unhift могут добавлять сразу несколько элементов:
+pop, shift
+  </pre>
+  <li>удовлетворяет ли какой-либо элемент массива условию</li>
+  <pre>
+const myAwesomeArray = ["a", "b", "c", "d", "e"]
+
+myAwesomeArray.some(test => test === "d")
+//-------> Output : true
+  </pre>
+  <li>метод принимает функцию, которая имеет в качестве аргумента аккумулятор и значение</li>
+  <pre>
+const myAwesomeArray = [1, 2, 3, 4, 5]
+
+myAwesomeArray.reduce((total, value) => total * value)
+// 1 * 2 * 3 * 4 * 5
+//-------> Output = 120
+  </pre>
+  <li>метод проверяет, удовлетворяют ли все элементы массива условию</li>
+  <pre>
+const myAwesomeArray = ["a", "b", "c", "d", "e"]
+
+myAwesomeArray.every(test => test === "d")
+//-------> Output : false
+
+const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
+
+myAwesomeArray2.every(test => test === "a")
+//-------> Output : true
+  </pre>
+  <li>метод принимает функцию в качестве параметра и создает новый массив с результатом вызова указанной функции для каждого элемента массива</li>
+  <pre>
+const myAwesomeArray = [5, 4, 3, 2, 1]
+myAwesomeArray.map(x => x * x)
+
+//-------> Output : 25
+//                  16
+//                  9
+//                  4
+//                  1
+  </pre>
+  <li>метод принимает в качестве аргумента массив массивов и сглаживает вложенные массивы в массив верхнего уровня</li>
+  <pre>
+const myAwesomeArray = [[1, 2], [3, 4], 5]
+
+myAwesomeArray.flat()
+//-------> Output : [1, 2, 3, 4, 5]
+  </pre>
+  <li>метод принимает функцию в качестве параметра и возвращает новый массив, содержащий все элементы массива, для которого функция фильтрации передавалась в качестве аргумента, и возвращает ее со значением true.</li>
+  <pre>
+const myAwesomeArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+  { id: 4, name: "Mass" },
+]
+
+myAwesomeArray.filter(element => element.name === "Mass")
+//-------> Output : 0:{id: 3, name: "Mass"},
+//                  1:{id: 4, name: "Mass"}
+  </pre>
+  <li>метод применяет функцию к каждому элементу массива.</li>
+  <pre>
+const myAwesomeArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+]
+
+myAwesomeArray.forEach(element => console.log(element.name))
+//-------> Output : john
+//                  Ali
+//                  Mass
+  </pre>
+  <li>метод принимает функцию в качестве параметра и в дальнейшем применяет ее к массиву. Он возвращает индекс найденного элемента, если элемент удовлетворяет условию проверяющей функции, переданной в качестве аргумента. Если не удовлетворяет, возвращается –1.
+  </li>
+  <pre>
+const myAwesomeArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+]
+
+myAwesomeArray.findIndex(element => element.id === 3)
+//-------> Output : 2
+
+myAwesomeArray.findIndex(element => element.id === 7)
+//-------> Output : -1
+  </pre>
+  <li>метод принимает функцию в качестве аргумента и в дальнейшем применяет ее к массиву. Он возвращает значение элемента, найденного в массиве, если элемент удовлетворяет условию проверяющей функции. В противном случае оно возвращается со значением undefined.</li>
+  <pre>
+const myAwesomeArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+]
+
+myAwesomeArray.find(element => element.id === 3)
+//-------> Output : {id: 3, name: "Mass"}
+
+myAwesomeArray.find(element => element.id === 7)
+//-------> Output : undefined
+  </pre>
+  <li>метод принимает функцию в качестве параметра. Он сортирует элементы массива и возвращает их.</li>
+  <pre>
+const myAwesomeArray = [5, 4, 3, 2, 1]
+
+// Sort from smallest to largest
+myAwesomeArray.sort((a, b) => a - b)
+//-------> Output : [1, 2, 3, 4, 5]
+
+// Sort from largest to smallest
+myAwesomeArray.sort((a, b) => b - a)
+//-------> Output : [5, 4, 3, 2, 1]
+  </pre>
+  <li>метод объединяет два или более массива/значения и возвращает новый массив.</li>
+  <pre>
+const myAwesomeArray = [1, 2, 3, 4, 5]
+const myAwesomeArray2 = [10, 20, 30, 40, 50]
+myAwesomeArray.concat(myAwesomeArray2)
+//-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
+  </pre>
+  <li></li>
+  <pre>
+
+  </pre>
+  <li></li>
+  <pre>
+
+  </pre>
+  <li></li>
+  <pre>
+
+  </pre>
+  <li></li>
+  <pre>
+
+  </pre>
+</ol>
+</body>
+</html>
