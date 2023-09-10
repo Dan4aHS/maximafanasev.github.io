@@ -30,7 +30,7 @@ pre {
 	word-break: normal;
 	word-spacing: normal;
 	word-wrap: normal;
-	max-width: 600px;
+	max-width: 1200px;
 	width: 100%;
 	margin-bottom: 10px;
 	background: #1e2b48;
@@ -70,3 +70,4 @@ td {
 td:first-child {
 	border-right: 1px solid #e0e0e0;
 }
+

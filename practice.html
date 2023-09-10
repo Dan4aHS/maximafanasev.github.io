@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	
+	<h2>Практика</h2>
+	<ol>
+		<li><a href="https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/javascript"></a>Вам будет предоставлен список строк. Вы должны отсортировать его в алфавитном порядке (с учетом регистра и на основе значений символов ASCII), а затем вернуть первое значение.
+
+			Возвращаемое значение должно быть строкой и содержать "***"каждую букву.
+
+			Не следует удалять или добавлять элементы из/в массив.
+			
+<pre>
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests",() =>{
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' );
+    assert.strictEqual(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e'); 
+  });
+});
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***')
+}
+</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript"></a>
+				Это довольно просто. Ваша цель — создать функцию, которая удаляет первый и последний символы строки. Вам дан один параметр — исходная строка. Вам не нужно беспокоиться о строках, содержащих менее двух символов.
+				<pre>
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Tests", () => {
+  it("Fixed Tests", () => {
+    assert.strictEqual(removeChar('eloquent'), 'loquen');
+    assert.strictEqual(removeChar('country'), 'ountr');
+    assert.strictEqual(removeChar('person'), 'erso');
+    assert.strictEqual(removeChar('place'), 'lac');
+    assert.strictEqual(removeChar('ooopsss'), 'oopss');
+  });
+});
+			
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+				</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/563b74ddd19a3ad462000054/train/javascript"></a>
+				напишите мне функцию stringy, которая принимает sizeи возвращает stringчередующиеся 1s и 0s.
+
+строка должна начинаться с 1.
+
+строка с size6 должна возвращать : '101010'.
+
+с size4 должно вернуться: '1010'.
+
+с size12 должно вернуться: '101010101010'.
+
+Размер всегда будет положительным и будет использовать только целые числа.
+				<pre>
+const stringy = x => ''.padStart(x,'10');
+				
+const stringy = size => "10".repeat(size).slice(0,size);
+				</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/56b1f01c247c01db92000076"></a>
+				* "String"      -> "SSttrriinngg"
+* "Hello World" -> "HHeelllloo  WWoorrlldd"
+* "1234!_ "     -> "11223344!!__  "
+				<pre>
+const doubleChar = (str) => str.split("").map(c => c + c).join("");
+				</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/javascript"></a>
+				Вы можете напечатать свое имя на рекламном щите. Узнайте, сколько это вам будет стоить. Цена каждого персонажа по умолчанию составляет 30 фунтов стерлингов, но она может быть другой, если вам задано 2 параметра вместо 1 (всегда 2 для Java).
+
+Вы не можете использовать оператор множителя «*».
+
+Если бы вас звали Чон-Хо Аристотелис, реклама стоила бы 600 фунтов стерлингов. 20 букв * 30 = 600 (Пробел считается за символ).
+				<pre>
+Test.assertEquals(billboard("Jeong-Ho Aristotelis"), 600);
+Test.assertEquals(billboard("Abishai Charalampos"), 570);
+Test.assertEquals(billboard("Idwal Augustin"), 420);
+Test.assertEquals(billboard("Hadufuns John",20), 260);
+Test.assertEquals(billboard("Zoroaster Donnchadh"), 570);
+	
+function billboard(name, price = 30) {
+  return name.split('').reduce((sum, letter) => sum + price, 0); 
+}
+				</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/5302d846be2a9189af0001e4/train/javascript"></a>
+				Создайте метод, который принимает в качестве входных данных имя, город и штат, чтобы приветствовать человека. Обратите внимание, что это nameбудет массив, состоящий из одного или нескольких значений, которые должны быть объединены одним пробелом между каждым, а длина массива nameв тестовых примерах будет варьироваться.
+
+Пример:
+
+['John', 'Smith'], 'Phoenix', 'Arizona'
+Этот пример вернет строкуHello, John Smith! Welcome to Phoenix, Arizona!
+				<pre>
+assert.strictEqual(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'), 'Hello, John Smith! Welcome to Phoenix, Arizona!')
+
+assert.strictEqual(sayHello(['Franklin','Delano','Roosevelt'], 'Chicago', 'Illinois'), 'Hello, Franklin Delano Roosevelt! Welcome to Chicago, Illinois!')
+    
+function sayHello( name, city, state ) {
+return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+}
+				</pre>
+			</li>
+			
+			<li>
+				<a href="https://www.codewars.com/kata/570597e258b58f6edc00230d"></a>
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+				<pre>
+function array(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null;
+}
+				</pre>
+			</li>
+			
+			<li>
+("1", "22") --> "1221"
+("22", "1") --> "1221"
+				<pre>
+function solution(a, b) {
+  return a.length < b.length ? a + b + a : b + a + b
+}
+				</pre>
+			</li>
+			
+			<li>
+Test.assertSimilar(capitalizeWord('word'), 'Word');
+Test.assertSimilar(capitalizeWord('i'), 'I');
+Test.assertSimilar(capitalizeWord('glasswear'), 'Glasswear');
+				<pre>
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+				</pre>
+			</li>
+			
+			<li>
+				
+				<pre>
+
+				</pre>
+			</li>
+	</ol>
+
+</body>
+</html>
