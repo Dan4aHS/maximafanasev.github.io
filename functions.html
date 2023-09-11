@@ -499,5 +499,30 @@ function func(arr) {
 
 console.log(func([1, [2, 7, 8], [3, 4, [5, 6]]]));
     </pre>
+
+    <h2>Деструктуризация</h2>
+
+    <pre>
+func('str1', [2025, 12, 31], 'str2');
+
+function func(param1, [year, month, day], param2) {
+	console.log(param1); // выведет 'str1'
+	
+	console.log(year);   // выведет 2025
+	console.log(month);  // выведет 12
+	console.log(day);    // выведет 31
+	
+	console.log(param2); // выведет 'str2'
+}
+
+
+function func({year, month, day}) {
+	console.log(year);  // выведет 2025
+	console.log(month); // выведет 12
+	console.log(day);   // выведет 31
+}
+
+func({year: 2025, month: 12, day: 31,});
+    </pre>
 </body>
 </html>

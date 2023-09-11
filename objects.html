@@ -45,6 +45,57 @@ let obj = {a: 1, b: 2, c: 3};
 console.log('b' in obj); // выведет true
 console.log('x' in obj); // выведет false
 	</pre>
+
+    <h2>Деструктуризация</h2>
+
+    <pre>
+let obj = {
+    year:  2025,
+    month: 12,
+    day:   31,
+};
+let {year, month, day} = obj;
+console.log(year);  // выведет 2025
+console.log(month); // выведет 12
+console.log(day);   // выведет 31
+
+
+let obj = {
+	year:  2025,
+	month: 12,
+	day:   31,
+};
+let {year: y, month: m, day: d} = obj;
+console.log(y); // выведет 2025
+console.log(m); // выведет 12
+console.log(d); // выведет 31
+
+
+let obj = {
+	month: 12,
+	day:   31,
+};
+
+let {year = 2025, month, day} = obj;
+
+console.log(year);  // выведет 2025
+console.log(month); // выведет 1
+console.log(day);   // выведет 31
+
+
+let obj = {
+	month: 12,
+	day:   31,
+};
+let {year:y = 2025, month, day} = obj;
+console.log(y);     // выведет 2025
+console.log(month); // выведет 1
+console.log(day);   // выведет 31
+
+
+
+
+    </pre>
 	
 </body>
 </html>
