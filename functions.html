@@ -10,295 +10,290 @@
     
 	<h2>Функции</h2>
     <pre>
-    function func(num1, num2) {
-        console.log(num1 + num2);
-    }
-    
-    function func(num = 0) {
-        console.log(num ** 2);
-    }
-    
-    
-    function func() {
-        let sum = 0;
-        let i = 1;
-        
-        while (true) { // бесконечный цикл
-            sum += i;
-            
-            if (sum >= 100) {
-                return i; // цикл крутится пока не выйдет тут
-            }
-            
-            i++;
-        }
-    }
-    console.log( func() );
-    
-    
-    
-    function func() {
-        console.log(num);
-    }
-    let num; // объявим переменную
-    num = 1; // задаем значение 1
-    func();  // выведет 1
-    num = 2; // задаем значение 2
-    func();  // выведет 2
-    
-    
-    
-    function func1() {
-        console.log(num);
-        num++; // меняем глобальную переменную
-    }
-    function func2() {
-        console.log(num);
-    }
-    let num = 1;
-    func1(); // выведет 1
-    func2(); // выведет 2
-    
-    
-    
-    let num = 1; // глобальная переменная
-    function func() {
-        let num = 2; // локальная переменная
-        console.log(num);
-    }
-    func(); // вызываем функцию, выведет 2
-    console.log(num); // выведет 1 - глобальная переменная не поменялась
-    
-    
-    
-    function func(localNum) {
-        console.log(num); // выведет 1
-        console.log(localNum); // выведет 1
-    }
-    
-    let num = 1;
-    func(num);
-    
-    
-    
-    function func(localNum) {
-        num = 2;
-    }
-    
-    let num = 1;
-    func(num);
-    console.log(num); // выведет 2
-    
-    
-    
-    
-    function func(localNum) {
-        let num = 2; // объявим через let
-    }
-    
-    let num = 1;
-    func(num);
-    console.log(num); // выведет 1 - ничего не поменялось
-    
-    
-    function func(arr) {
-        arr[0] = '!';
-    }
-    
-    let arr = [1, 2, 3];
-    func(arr);
-    console.log(arr); // выведет ['!', 2, 3]
+function func(num1, num2) {
+				console.log(num1 + num2);
+}
+
+function func(num = 0) {
+				console.log(num ** 2);
+}
+
+
+function func() {
+				let sum = 0;
+				let i = 1;
+
+				while (true) { // бесконечный цикл
+								sum += i;
+
+								if (sum >= 100) {
+												return i; // цикл крутится пока не выйдет тут
+								}
+
+								i++;
+				}
+}
+console.log( func() );
+
+
+
+function func() {
+				console.log(num);
+}
+let num; // объявим переменную
+num = 1; // задаем значение 1
+func();  // выведет 1
+num = 2; // задаем значение 2
+func();  // выведет 2
+
+
+
+function func1() {
+				console.log(num);
+				num++; // меняем глобальную переменную
+}
+function func2() {
+				console.log(num);
+}
+let num = 1;
+func1(); // выведет 1
+func2(); // выведет 2
+
+
+
+let num = 1; // глобальная переменная
+function func() {
+				let num = 2; // локальная переменная
+				console.log(num);
+}
+func(); // вызываем функцию, выведет 2
+console.log(num); // выведет 1 - глобальная переменная не поменялась
+
+
+
+function func(localNum) {
+				console.log(num); // выведет 1
+				console.log(localNum); // выведет 1
+}
+
+let num = 1;
+func(num);
+
+
+
+function func(localNum) {
+				num = 2;
+}
+
+let num = 1;
+func(num);
+console.log(num); // выведет 2
+
+
+function func(localNum) {
+				let num = 2; // объявим через let
+}
+
+let num = 1;
+func(num);
+console.log(num); // выведет 1 - ничего не поменялось
+
+
+function func(arr) {
+				arr[0] = '!';
+}
+
+let arr = [1, 2, 3];
+func(arr);
+console.log(arr); // выведет ['!', 2, 3]
     </pre>
     
         <h2>Типы функций</h2>
     <pre>
-    Функция как переменная	
-    function func() {
-        console.log('!');
-    }
-    func(); // выведет '!'
-    
-    func = 'string'; // затрем переменную func
-    console.log(func); // выведет 'string'
-    
-    
-    
-    let str = 'str' + function() {return 3;};
-    console.log(str); // выведет 'strfunction() {return 3;}'
-    
-    
-    
-    +function func() {
-        console.log('!');
-    }
-    
-    func(); // выдаст ошибку
-    
-    
-    
-    
-    let arr = [
-        function() {console.log('1')},
-        function() {console.log('2')},
-        function() {console.log('3')},
-    ];
+Функция как переменная	
+function func() {
+				console.log('!');
+}
+func(); // выведет '!'
+
+func = 'string'; // затрем переменную func
+console.log(func); // выведет 'string'
+
+
+let str = 'str' + function() {return 3;};
+console.log(str); // выведет 'strfunction() {return 3;}'
+
+
+
++function func() {
+		console.log('!');
+}
+
+func(); // выдаст ошибку
+
+
+
+
+let arr = [
+		function() {console.log('1')},
+		function() {console.log('2')},
+		function() {console.log('3')},
+];
     </pre>
     
         <h2>Вложенные функции</h2>
     
     <pre>
-    
-    test(
-        function() {return 1;},
-        function() {return 2;}
-    );
-    
-    function test(func1, func2) {
-        console.log( func1() + func2() ); // выведет 3
-    }
-    
-    
-    
-    // Выведет 9:
-    test(function(num) {
-        return num * num;
-    });
-    
-    function test(func) {
-        console.log(func(3));
-    }
-    
-    
-    
-    function test(num, func) {
-        console.log(func(num));
-    }
-    
-    // Найдем квадрат числа:
-    test(2, function(num) {
-        return num * num; // возвращает квадрат
-    });
-    
-    // Найдем куб числа:
-    test(2, function(num) {
-        return num * num * num; // возвращает куб
-    });
-    
-    
-    
-    function test(arr, func) {
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] = func(arr[i]);
-        }
-        
-        return arr;
-    }
-    
-    // Оформим код изящнее:
-    let result = test([1, 2, 3], function(num) {
-        return num * num;
-    });
-    
-    console.log(result); // выведет [1, 4, 9]
-    
-    
-    
-    
-    function square(num) {
-        return num * num;
-    }
-    
-    function func(num1, num2) {
-        return square(num1) + square(num2);
-    }
-    
-    console.log(func(2, 3)); // выведет 13
-    
-    
-    
-    
-    
-    let num = 1; // глобальная переменная
-    
-    function test() {
-        function func() {
-            console.log(num); // выведет 1
-        }
-        
-        func(); // вызываем внутреннюю функцию
-    };
-    
-    test(); // вызываем внешнюю функцию
-    
-    
-    
-    
-    function test(num) {
-        function func(num) {
-            num = 2; // меняем локальную переменную num
-        }
-        
-        func(num);
-        console.log(num); // выведет 1 - ничего не поменялось
-    }
-    
-    test(1);
-    
-    
-    
-    function func() {
-        return function() {
-            return '!';
-        };
-    }
-    
-    let result = func();
-    console.log( result() ); // выведет '!'
-    
-    
-    
-    
-    function func() {
-        return function() {
-            return '!';
-        };
-    }
-    
-    console.log( func()() ); // выведет '!'
-    
-    
-    
-    
-    function func() {
-        return function(str) {
-            return str;
-        };
-    }
-    
-    console.log( func()('!') ); // выведет '!'
-    
-    
-    
-    
-    function func(num1) {
-        return function(num2) {
-            return num1 + num2;
-        };
-    }
-    
-    console.log( func(1)(2) ); // выведет 3
-    
-    
-    
-    function each(arr, callback) {
-        let result = [];
-        
-        for (let elem of arr) {
-            result.push( callback(elem) ); // вызываем функцию-коллбэк
-        }
-        
-        return result;
-    }
+test(
+			function() {return 1;},
+			function() {return 2;}
+);
+
+function test(func1, func2) {
+				console.log( func1() + func2() ); // выведет 3
+}
+
+
+// Выведет 9:
+test(function(num) {
+				return num * num;
+});
+
+function test(func) {
+				console.log(func(3));
+}
+
+
+
+function test(num, func) {
+				console.log(func(num));
+}
+
+// Найдем квадрат числа:
+test(2, function(num) {
+				return num * num; // возвращает квадрат
+});
+
+// Найдем куб числа:
+test(2, function(num) {
+				return num * num * num; // возвращает куб
+});
+
+
+
+function test(arr, func) {
+				for (let i = 0; i < arr.length; i++) {
+								arr[i] = func(arr[i]);
+				}
+
+				return arr;
+}
+
+// Оформим код изящнее:
+let result = test([1, 2, 3], function(num) {
+				return num * num;
+});
+
+console.log(result); // выведет [1, 4, 9]
+
+
+
+
+function square(num) {
+				return num * num;
+}
+
+function func(num1, num2) {
+				return square(num1) + square(num2);
+}
+
+console.log(func(2, 3)); // выведет 13
+
+
+
+
+
+let num = 1; // глобальная переменная
+
+function test() {
+				function func() {
+								console.log(num); // выведет 1
+				}
+
+				func(); // вызываем внутреннюю функцию
+};
+
+test(); // вызываем внешнюю функцию
+
+
+
+
+function test(num) {
+				function func(num) {
+								num = 2; // меняем локальную переменную num
+				}
+
+				func(num);
+				console.log(num); // выведет 1 - ничего не поменялось
+}
+
+test(1);
+
+
+
+function func() {
+				return function() {
+								return '!';
+				};
+}
+
+let result = func();
+console.log( result() ); // выведет '!'
+
+
+
+
+function func() {
+				return function() {
+								return '!';
+				};
+}
+
+console.log( func()() ); // выведет '!'
+
+
+
+
+function func() {
+				return function(str) {
+								return str;
+				};
+}
+
+console.log( func()('!') ); // выведет '!'
+
+
+
+
+function func(num1) {
+				return function(num2) {
+								return num1 + num2;
+				};
+}
+
+console.log( func(1)(2) ); // выведет 3
+
+
+
+function each(arr, callback) {
+				let result = [];
+
+				for (let elem of arr) {
+								result.push( callback(elem) ); // вызываем функцию-коллбэк
+				}
+
+				return result;
+}
     </pre>
     
     <h2>Замыкания</h2>

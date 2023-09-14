@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	
+	<h2>Основы</h2>
+	<pre>
+script src="script.js"
+script src="script2.js"
+		
+script src="script.js?v=1"
+	
+"use strict";
+/*
+комментарий
+*/
+	
+str, my_str, myStr, a1, $, $a, $$a
+	
+let a;    // объявим переменную
+a = 3;    // присвоим ей значение
+alert(a); // выведем значение переменной на экран
+
+alert(10 % 3); // выведет 1
+
+alert(10 ** 3); // выведет 1000
+
+let str = 'abc';
+
+let str = 'abc' + 'def'; // складываем две строки
+alert(str); // выведет 'abcdef'
+
+alert(str.length); // выведет 6
+
+let str = 'xxx';
+let txt = `aaa ${str} bbb`;
+
+let str = `abc
+def`; // так будет работать
+
+undefined, null, true, false, NaN, Infinity, -Infinity
+
+const pi = 3.14;
+
+alert('2' * '3'); // выведет 6
+
+let a = '2';
+let b = '3';
+alert(a + b); // выведет '23'
+
+let a = '2';
+let b = '3';
+alert(Number(a) + Number(b)); // выведет 5
+
+let a = '2';
+let b = +a; // в b запишется число 2
+
+alert(Number('2s')); // выведет NaN
+
+let num = parseInt('12px');
+alert(num); // выведет 12
+
+let num = parseFloat('12.5px');
+alert(num); // выведет 12.5
+
+let str = String(123); // теперь в переменной строка '123'
+
+console.log(Boolean(0));          // false
+
+let str = 'abcde';
+alert(str[0]); // выведет 'a'
+
+let str = 'abcde';
+str[0] = '!';
+
+let test = '12345';
+alert(test[0] + test[1]); // выведет '12' - суммирует как строки
+
+let test = 12345;
+alert(test[0]); // выдаст undefined
+
+let test = String(12345); // строка
+alert(Number(test[0]) + Number(test[1])); // выведет 3
+
+let num = 1;   // объявляем переменную num и записываем в нее значение 1
+num = num + 2; // записываем в num ее саму плюс 2
+alert(num);    // выведет 3
+
+let num = 0;
+num++;        // прибавляем к переменной a число 1
+alert(num);   // выведет 1
+
+let num = 0;
+alert(++num); // выведет 1 - переменная увеличилась сразу
+
+Math.pow Math.sqrt
+
+Math.round Math.ceil Math.floor toFixed toPrecision
+
+Math.max Math.min
+
+Math.random
+
+Math.abs
+	</pre>
+	
+	<h2>Условия</h2>
+	<pre>
+let test = 1;
+
+if (test > 0) {
+	console.log('+++'); // сработает это
+} else {
+	console.log('---');
+}
+
+if (3 !== 3) {
+	console.log('+++');
+} else {
+	console.log('---'); // сработает это
+}
+
+if ('3' !== 3) {
+	console.log('+++'); // сработает это
+} else {
+	console.log('---');
+}
+
+let num = 3;
+
+if (num > 0 && num < 10) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+
+if (num1 > 0 || num2 > 0) {
+	console.log('+++'); // сработает это
+} else {
+	console.log('---');
+}
+
+switch (переменная) {
+	case 'значение1':
+		/*
+			здесь код, который выполнится в случае,
+			если переменная имеет значение1
+		*/
+	break;
+	case 'значение2':
+		/*
+			здесь код, который выполнится в случае,
+			если переменная имеет значение2
+		*/
+	break;
+	case 'значение3':
+		/*
+			здесь код, который выполнится в случае,
+			если переменная имеет значение3
+		*/
+	break;
+	default:
+		/*
+			здесь код, который выполнится в случае,
+			если не совпала ни с одним значением
+		*/
+	break;
+}
+
+
+let num = 1; // пусть здесь число 1
+
+
+switch (num) {
+	case 1:
+		console.log(1); // сработает это
+	case 2:
+		console.log(2); // сработает и это
+	case 3:
+		console.log(3); // сработает и это
+}
+
+
+let age = 17;
+let adult;
+if (age >= 18) {
+	adult = true;
+} else {
+	adult = false;
+}
+console.log(adult);
+
+
+if (true) {
+	let res = '!';
+}
+console.log(res);
+
+
+let res = 1;
+if (true) {
+	let res = 2; // объявим переменную через let
+}
+console.log(res); // выведет 1, а не 2!
+
+let res = 1;
+if (true) {
+	let res = 2;
+	console.log(res); // выведет 2
+}
+console.log(res); // выведет 1
+	</pre>
+
+	<h2>Числа</h2>
+	<table>
+		<tr>
+			<td>В каком формате хранятся числа</td>
+			<td>64-битном формате IEEE-754</td>
+		</tr>
+		<tr>
+			<td>Bigint</td>
+			<td>(2**53-1)</td>
+		</tr>
+		<tr>
+			<td>большое/маленькое число</td>
+			<td>let billion = 1e9 let ms = 1e-6</td>
+		</tr>
+		<tr>
+			<td>шестнадцатеричные</td>
+			<td>представления цветов, кодировки символов 0xff</td>
+		</tr>
+		<tr>
+			<td>двоичные, восьмеричные</td>
+			<td>let a = 0b11111111 let b = 0o377</td>
+		</tr>
+		<tr>
+			<td>строковое представление в системе base</td>
+			<td>num.toString(base)</td>
+		</tr>
+		<tr>
+			<td>Округление</td>
+			<td>Math.floor ceil round trunc</td>
+		</tr>
+		<tr>
+			<td>округляет число до n</td>
+			<td>toFixed(n)</td>
+		</tr>
+	</table>
+
+</body>
+</html>

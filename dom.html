@@ -1,28 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
-</head>
-<body>
-    <h2>
-        DOM
-    </h2>
 
-    <input id="button" type="submit">
-    <pre>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<h2>
+		DOM
+	</h2>
+	<pre>
+input id="button" type="submit"
 let button = document.querySelector('#button');
 console.log(button);
-    </pre>
 
-    <div id="parent">
-        <input>
-    </div>
-<pre>
+div id="parent"
 let elem = document.querySelector('#parent input');
 console.log(elem);
+
+input id="button" type="submit"
+let button = document.querySelector('#button');
+button.addEventListener('click', function() {
+	console.log('!!!');
+});
 </pre>
+	<h2>Именованный обработчик</h2>
+	<pre>
+input id="button" type="submit"
+let button = document.querySelector('#button');
+button.addEventListener('click', func);
+function func() {
+	console.log('!!!');
+}
+</pre>
+	<h2>Один обработчик ко многим элементам</h2>
+	<pre>
+button1.addEventListener('click', func);
+button2.addEventListener('click', func);
+
+Несколько обработчиков одного события 
+button.addEventListener('click', func1);
+button.addEventListener('click', func2);
+</pre>
+	<h2>Работа с текстом элементов</h2>
+	<pre>
+elem.textContent = '!!!';
+</pre>
+	<h2>Фокус текстовых полей</h2>
+	<pre>
+elem.addEventListener('focus', function() {
+	console.log(elem.value);
+});
+</pre>
+	<h2>Исключения</h2>
+	<pre>
+input id="elem" class="aaa bbb"
+console.log(elem.className)
+</pre>
+	<h2>Цепочки методов и свойств</h2>
+	<pre>
+console.log( document.querySelector('#elem').value )
+</pre>
+	<h2>Объект this</h2>
+	<pre>
+input id="elem" value="text"
+let elem = document.querySelector('#elem')
+function func() {
+	console.log(this.value); // выведем содержимое атрибута
+}
+</pre>
+	<h2>Преимущество this</h2>
+	<pre>
+let elem = document.querySelector('#elem');
+elem.addEventListener('click', func);
+function func() {
+	console.log(elem === this); // выведет true
+}
+</pre>
+	<h2>Получение группы элементов</h2>
+	<pre>
+p class="www">text1
+p class="www">text2
+p class="www">text3
+let elems = document.querySelectorAll('.www');
+for (let elem of elems) {
+	console.log(elem.textContent);
+}
+</pre>
+	<h2>Добавление обработчиков в цикле</h2>
+	<pre>
+let elems = document.querySelectorAll('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function() {
+		console.log(this.textContent);
+	});
+}
+</pre>
+	<h2>Отвязывание событий</h2>
+	<pre>
+let button = document.querySelector('#button');
+button.addEventListener('click', func);
+function func() {
+	console.log('!!!');
+	this.removeEventListener('click', func);
+}
+</pre>
+	<h2>Отвязывание анонимных функций</h2>
+	<pre>
+let elems = document.querySelectorAll('p');
+for (let elem of elems) {
+	elem.addEventListener('click', function func() {
+		console.log(this.textContent);
+		this.removeEventListener('click', func); // отвязываем функцию
+	});
+}
+</pre>
+	<h2>Атрибуты</h2>
+	<pre>
+input id="elem" value="abcde"
+let elem = document.querySelector('#elem');
+let value = elem.getAttribute('value');
+
+input id="elem" value="abcde"
+let elem = document.querySelector('#elem');
+elem.setAttribute('value', '!!!');
+
+input id="elem" value="abcde"
+let elem = document.querySelector('#elem');
+elem.removeAttribute('value');
+
+input id="elem" value="abcde"
+let elem = document.querySelector('#elem');
+console.log(elem.hasAttribute('value'));
+
+div id="elem" data-num="1000"
+let elem = document.querySelector('#elem');
+console.log(elem.dataset.num); // выведет 1000
+
+div id="elem" data-my-test="1000"
+let elem = document.querySelector('#elem');
+console.log(elem.dataset.myTest);
+
+div id="elem" data-num="1000" data-my-num="2000"
+let elem = document.querySelector('#elem');
+console.log(elem.getAttribute('data-num'));    // выведет 1000
+console.log(elem.getAttribute('data-my-num')); // выведет 2000
+
+p id="elem" class="www ggg zzz"
+let elem = document.querySelector('#elem');
+let length = elem.classList.length;
+console.log(length);
+
+p id="elem" class="www ggg zzz"
+let elem = document.querySelector('#elem');
+elem.classList.add('kkk');
+
+elem.classList.remove('ggg');
+
+p id="elem" class="www ggg zzz"
+let elem = document.querySelector('#elem');
+let contains = elem.classList.contains('ggg');
+
+p id="elem" class="www ggg zzz"
+let elem = document.querySelector('#elem');
+elem.classList.toggle('zzz');
+</pre>
+
+	<h2>Стилизация</h2>
+	<pre>
+p id="elem"
+let elem = document.querySelector('#elem');
+elem.style.color = 'red';
+elem.style.fontSize = '20px';
+
+p text1
+p text2
+p text3
+let elems = document.querySelectorAll('p');
+for (let elem of elems) {
+	elem.addEventListener('click', function() {
+		this.classList.add('colored'); // добавляем абзацу класс
+	});
+}
+
+button id="button" click me
+div id="elem"
+#elem {
+	display: none;
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+}
+#elem.active {
+	display: block;
+}
+let button = document.querySelector('#button');
+let elem = document.querySelector('#elem');
+
+button.addEventListener('click', function() {
+	elem.classList.toggle('active');
+});
+</pre>
+	<h2>Поиск</h2>
+	<pre>
+Нахождение потомков
+
+div id="parent"
+	p 1
+	p 2
+let parent = document.querySelector('#parent');
+let text = parent.firstElementChild.textContent;
+
+let text = parent.lastElementChild.textContent;
+
+div id="parent"
+	p 1
+	p 2
+	p 3
+let parent = document.querySelector('#parent');
+let elems = parent.children;
+for (let elem of elems) {
+	console.log(elem.textContent);
+}
+
+</pre>
+	<h2>Поиск родителей </h2>
+	<pre>
+div id="parent"
+	id="elem"
+let elem = document.querySelector('#elem');
+let id = elem.parentElement.id;
+</pre>
+	<h2>Поиск всех родителей </h2>
+	<pre>
+div class="www" id="parent2"
+	div class="ggg" id="parent1"
+		p class="zzz" id="child"
+		
+let elem = document.querySelector('#child');
+let parent = elem.closest('.www');
+</pre>
+	<h2>Поиск соседей</h2>
+	<pre> 
+p sibling
+p id="elem" elem
+
+let elem = document.querySelector('#elem');
+let text = elem.previousElementSibling.textContent;
+let text = elem.nextElementSibling.textContent;
+</pre>
+	<h2>Поиск элемента по id</h2>
+	<pre>
+let elem = document.getElementById('elem');
+</pre>
+	<h2>Поиск элемента по имени тега</h2>
+	<pre>
+let elems = document.getElementsByTagName('p');
+</pre>
+	<h2>Поиск элемента по имени класса</h2>
+	<pre>
+let elems = document.getElementsByClassName('www');
+</pre>
+
+	<h2>Узлы</h2>
+	<pre>
+Перебор узлов циклом
+for (let node of elem.childNodes) {
+	console.log(node);
+}
+
+Все узлы имеют свойство nodeType
+Его значение числовое: 1 для элементов, 3 для текстовых узлов, 8 для комментариев
+
+Для всех узлов работает свойство textContent
+</pre>
+
+	<h2>Формы</h2>
+	<pre>
+textarea id="elem" text
+
+input id="elem" disabled
+let elem = document.querySelector('#elem');
+elem.disabled = false;
+
+input type="checkbox" checked id="elem"
+let elem = document.querySelector('#elem');
+console.log(elem.checked);
+</pre>
+	<h2>Чередование атрибутов</h2>
+	<pre>
+input id="elem" disabled
+input id="button" type="submit"
+
+let elem   = document.querySelector('#elem');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+	elem.disabled = !elem.disabled;
+});
+</pre>
+	<h2>Работа с радиокнопками</h2>
+	<pre>
+input type="radio" name="elem" value="1" checked
+input type="radio" name="elem" value="2"
+input type="radio" name="elem" value="3"
+
+let radios = document.querySelectorAll('input[type="radio"]');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+	for (let radio of radios) {
+		if (radio.checked) {
+			console.log(radio.value);
+		}
+	}
+});
+	
+</pre>
+	<h2>Событие change</h2>
+	<pre>
+input id="elem" value="text"
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('change', function() {
+	console.log(this.value);
+});
+</pre>
+	<h2>Событие input</h2>
+	<pre>
+input id="elem"
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('input', function() {
+	console.log(this.value);
+});
+</pre>
+	<h2>Методы focus и blur</h2>
+	<pre>
+input id="elem" value="text"
+input type="submit" id="button"
+
+let elem   = document.querySelector('#elem');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+	elem.focus();
+});
+	</pre>
+	
+	<h2>Event</h2>
+	<pre>
+button id="elem" text
+elem.addEventListener('click', function(event) {
+	console.log(event); // увидим объект с событием
+});
+	</pre>
+	
+	<h2>Координаты события</h2>
+	<pre>
+clientX clientY pageX pageY
+	</pre>
+	
+	<h2>Тип события</h2>
+	<pre>
+elem.addEventListener('click', function(event) {
+	console.log(event.type); // выведет 'click'
+});
+	</pre>
+	
+	<h2>Элемент события</h2>
+	<pre>
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('click', function(event) {
+	console.log(event.target); // выведет наш абзац
+	console.log(this);         // выведет наш див
+});
+	</pre>
+	
+	<h2>Получение нажатых клавиш </h2>
+	<pre>
+elem.addEventListener('keypress', function(event) {
+	console.log(event.key);
+	console.log(event.code);
+});
+	</pre>
+	
+	<h2>Отслеживание клавиш-модификаторов</h2>
+	<pre>
+if (event.ctrlKey)
+if (event.altKey)
+if (event.shiftKey)
+	</pre>
+	
+	<h2>Отмена действия по умолчанию</h2>
+	<pre>
+event.preventDefault();
+	</pre>
+	
+	<h2>Всплытие событий</h2>
+	<pre>
+То есть получается, что когда вы кликаете на самый внутренний блок, событие клика возникает сначала в нем, затем срабатывает в его родителе, в родителе его родителя и так далее, пока не дойдет до самого верха
+	</pre>
+	
+	<h2>Получение целевого элемента</h2>
+	<pre>
+let div = document.querySelector('div');
+
+div.addEventListener('click', function(event) {
+	if (event.target.matches('div')) {
+		console.log('клик именно по диву');
+	}
+	if (event.target.matches('p')) {
+		console.log('клик именно по абзацу');
+	}
+});
+	</pre>
+	
+	<h2>Прекращение всплытия</h2>
+	<pre>
+elem1.addEventListener('click', function() {
+	console.log('зеленый');
+});
+elem2.addEventListener('click', function(event) {
+	console.log('голубой');
+	event.stopPropagation(); // остановим всплытие
+});
+	</pre>
+	
+	<h2>Несколько обработчиков</h2>
+	<pre>
+elem1.addEventListener('click', function() {
+	console.log('зеленый');
+});
+elem2.addEventListener('click', function(event) {
+	console.log('голубой - первый обработчик');
+	event.stopPropagation(); // остановим всплытие
+});
+elem2.addEventListener('click', function() {
+	console.log('голубой - второй обработчик'); // все равно сработает
+});
+	</pre>
+	
+	<h2>Немедленное прекращение всплытия</h2>
+	<pre>
+elem1.addEventListener('click', function() {
+	console.log('зеленый');
+});
+elem2.addEventListener('click', function(event) {
+	console.log('голубой - первый обработчик');
+	event.stopImmediatePropagation();     // остановим всплытие
+});
+elem2.addEventListener('click', function() {
+	console.log('голубой - второй обработчик'); // уже не сработает
+});
+	</pre>
+	
+	<h2>Применение прекращения всплытия</h2>
+	<pre>
+	div id="parent"
+		button click me
+		div id="block" text
+		
+при клике на кнопку отменить всплытие, родитель не реагировал на этот клик
+	</pre>
+	
+	<h2>Погружение событий</h2>
+	<pre>
+в addEventListener есть третий необязательный параметр. Если он равен true - событие сработает на стадии перехвата, а если false - на стадии всплытия
+
+elem1.addEventListener('click', function() {
+	console.log('зеленый - погружение');
+}, true);
+elem1.addEventListener('click', function() {
+	console.log('зеленый - всплытие');
+}, false);
+
+elem2.addEventListener('click', function() {
+	console.log('голубой - погружение');
+}, true);
+	</pre>
+	
+	<h2>Навешивание обработчиков на новые элементы</h2>
+	<pre>
+ul
+	li item
+	li item
+	li item
+	li item
+	li item
+	
+let button = document.querySelector('button');
+let list   = document.querySelector('ul');
+let items  = list.querySelectorAll('li');
+
+for (let item of items) {
+	item.addEventListener('click', function() {
+		this.textContent = this.textContent + '!';
+	});
+}
+
+function handler() {
+	this.textContent = this.textContent + '!';
+}
+
+for (let item of items) {
+	item.addEventListener('click', handler);
+}
+
+button.addEventListener('click', function() {
+	let item = document.createElement('li');
+	item.textContent = 'item';
+	
+	item.addEventListener('click', handler);
+	
+	list.appendChild(item);
+});
+	</pre>
+	
+	<h2>Делегирование событий</h2>
+	<pre>
+list.addEventListener('click', function(event) {
+	event.target.textContent = event.target.textContent + '!';
+});
+	</pre>
+	
+	<h2>Универсальное делегирование</h2>
+	<pre>
+ul
+	li item 
+			i italic item
+			
+	list.addEventListener('click', function(event) {
+	let li = event.target.closest('li');
+	
+	if (li) {
+		li.textContent = li.textContent + '!';
+	}
+});
+	</pre>
+	
+	<h2>Контекст</h2>
+	<pre>
+let elem1 = document.querySelector('#elem1');
+elem1.addEventListener('blur', func);
+
+let elem2 = document.querySelector('#elem2');
+elem2.addEventListener('blur', func);
+
+function func() {
+	console.log(this.value); // выведет или 'text1', или 'text2'
+}
+	</pre>
+	
+	<h2>Контекст непривязанной функции</h2>
+	<pre>
+1) function func() {
+	console.log(this); // ссылка на окно window
+}
+
+func();
+
+
+2) "use strict";
+
+function func() {
+	console.log(this); // undefined
+}
+
+func();
+
+3) console.log(this); // в this ссылка на window
+	</pre>
+	
+	<h2>Потеря контекста</h2>
+	<pre>
+"use strict";
+
+let elem = document.querySelector('#elem');
+elem.addEventListener('blur', parent);
+
+function parent() {
+	console.log(this); // выведет ссылку на наш инпут
+	
+	function child() {
+		console.log(this); // выведет undefined
+	}
+	child();
+}
+	</pre>
+	
+	<h2>Контекст через переменную</h2>
+	<pre>
+"use strict";
+
+let elem = document.querySelector('#elem');
+elem.addEventListener('blur', parent);
+
+function parent() {
+	console.log(this.value); // выведет 'text'
+	
+	let self = this; // запишем this в любую переменную, например, в self
+	
+	function child() {
+		console.log(self.value); // выведет 'text'
+	}
+	child();
+}
+	</pre>
+	
+	<h2>Контекст через параметр </h2>
+	<pre>
+function child(param) {
+	// тут будет код
+}
+
+let elem = document.querySelector('#elem');
+elem.addEventListener('blur', parent);
+
+function parent() {
+	child(this); // передаем параметром this
+	
+	function child(param) {
+		console.log(param.value); // выводим value инпута
+	}
+}
+	</pre>
+	
+	<h2>Контекст через стрелочную функцию</h2>
+	<pre>
+let elem = document.querySelector('#elem');
+elem.addEventListener('blur', parent);
+
+function parent() {
+	console.log(this.value); // выведет 'text'
+	
+	let child = () => {
+		console.log(this.value); // выведет 'text'
+	}
+	child();
+}
+	</pre>
+	
+	<h2>Привязывание контекста через метод call</h2>
+	<pre>
+let elem = document.querySelector('#elem');
+
+function func() {
+	console.log(this.value); // выведет value инпута
+}
+func.call(elem);
+	</pre>
+	
+	<h2>Привязывание контекста через метод apply</h2>
+	<pre>
+func.apply(elem, [param1, param2]);
+	</pre>
+	
+	<h2>Привязывание контекста через метод bind</h2>
+	<pre>
+let elem = document.getElementById('elem');
+
+function func(param1, param2) {
+	console.log(this.value + param1 + param2);
+}
+
+let newFunc = func.bind(elem);
+newFunc('1', '2'); // выведет 'text12'
+	</pre>
+	
+	<h2>Манипулирование элементами</h2>
+	<pre>
+let parent = document.querySelector('#parent');
+
+let p = document.createElement('p');
+p.textContent = '!';
+
+parent.appendChild(p);
+	</pre>
+	
+	<h2>Привязывание событий при вставке элементов</h2>
+	<pre>
+let parent = document.querySelector('#parent');
+
+let p = document.createElement('p');
+p.textContent = '!';
+
+p.addEventListener('click', function() {
+	console.log(this.textContent); // по клику выведем текст абзаца
+});
+
+parent.appendChild(p);
+	</pre>
+	
+	<h2>Создание элементов в цикле</h2>
+	<pre>
+let parent = document.querySelector('#parent');
+
+for (let i = 1; i <= 9; i++) {
+	let p = document.createElement('p');
+	p.textContent = '!';
+	
+	// Навешиваем обработчик клика:
+	p.addEventListener('click', function() {
+		console.log(this.textContent);
+	});
+	
+	parent.appendChild(p);
+}
+	</pre>
+	
+	<h2>Удаление элементов</h2>
+	<pre>
+let elems = document.querySelectorAll('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function() {
+		elem.remove();
+	});
+}
+	</pre>
+	
+	<h2>Вставка элементов в начало или в конец</h2>
+	<pre>
+append prepend
+	</pre>
+	
+	<h2>Вставка элементов перед элементами</h2>
+	<pre>
+insertBefore
+	</pre>
+	
+	<h2>Смежная вставка элементов</h2>
+	<pre>
+beforeBegin afterEnd afterBegin beforeEndz
+	</pre>
+	
+	<h2>Смежная вставка тегов</h2>
+	<pre>
+insertAdjacentHTML
+	</pre>
+	
+	<h2>Клонирование элементов</h2>
+	<pre>
+div id="parent"
+	div class="elem"
+		p первый абзац
+		p второй абзац
+		
+let parent = document.querySelector('#parent');
+let elem = parent.querySelector('.elem');
+
+let clone = elem.cloneNode(true);
+parent.appendChild(clone);
+	</pre>
+	
+	<h2>Проверка элементов </h2>
+	<pre>
+matches contains
+	</pre>
 </body>
+
 </html>
