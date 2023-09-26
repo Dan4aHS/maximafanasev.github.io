@@ -84,6 +84,43 @@ words.join(" ");
 </script>
 	
 <script>
+// [1,-4,7,12] => 1 + 7 + 12 = 20
+arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+</script>
+	
+<script>
+// [1,2,3,4,5,],3
+Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+</script>
+	
+<script>
+// [1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+	array.map(num => -num)
+</script>
+	
+<script>
+// a = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+// filter ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]), []
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+return birds.filter(b => !geese.includes(b));
+</script>
+	
+<script>
+// читывая массив чисел, проверьте, не являются ли какие-либо числа кодами символов для гласных нижнего регистра ( a, e, i, o, u) [101,121,110,113,113,103,121,121,101,107,103]),["e",121,110,113,113,103,121,121,"e",107,103]
+a.map(x=>'aeiou'.includes(y=String.fromCharCode(x)) ? y : x)
+</script>
+	
+<script>
+// 
+	
+</script>
+	
+<script>
+// 
+	
+</script>
+	
+<script>
 // 
 	
 </script>
