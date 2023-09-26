@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<pre>
+Объект data
+data() {
+	return {
+		text1: '111',
+		text2: '222',
+	}
+}
+
+{{ text1 }}
+{{ text2 }}
+
+
+
+Работа с атрибутами
+data() {
+	return {
+		attr: 'img.png',
+	}
+}
+
+img :src="attr"
+
+
+
+Выполнения кода в представлениях 
+{{ var1 + var2 }}
+
+
+
+Массивы
+data() {
+	return {
+		arr: [1, 2, 3],
+	}
+}
+
+{{ arr[0] }}
+{{ arr[1] }}
+{{ arr[2] }}
+
+
+Объекты
+data() {
+	return {
+		obj: {a: 1, b: 2, c: 3},
+	}
+}
+{{ obj.a }}
+{{ obj.b }}
+{{ obj.c }}
+
+
+Работа с методами
+export default {
+	data() {
+		
+	},
+methods: {
+	show: function() {
+		alert('!');
+	}
+}
+}
+{{ show() }}
+
+
+
+Навешивание обработчиков
+methods: {
+	show: function() {
+		alert('!');
+	}
+}
+button @click="show" text
+
+
+Работа с data внутри методов
+data() {
+	return {
+		text: 'str',
+	}
+}
+methods: {
+	show: function() {
+		alert(this.text);
+	}
+}
+
+Вспомогательные методы
+methods: {
+	show: function() {
+		let text = this.cape(this.text);
+		alert(text);
+	},
+	cape: function(str) {
+		return str[0].toUpperCase() + str.slice(1);
+	}
+}
+
+
+Передача параметров в метод
+methods: {
+	show: function(str) {
+		alert(str);
+	}
+}
+button @click="show('text1')" btn1
+
+Вычисляемые свойства
+data() {
+	return {
+		name: 'john',
+		surn: 'smit',
+	}
+}
+full: function() {
+		return this.name + ' ' + this.surn;
+}
+p {{ name }}
+p {{ surn }}
+p {{ full }}
+</pre>
+	
+	<h2>Условия</h2>
+	<pre>
+Показ по условию
+p v-if="visible" text
+p v-if="!visible"
+
+Реактивное условие 
+data() {
+	return {
+		visible: true,
+	}
+}
+methods: {
+	hide: function() {
+		this.visible = false;
+	}
+}
+@click="hide"
+v-if="visible"
+
+Тогглинг элементов
+toggle: function() {
+	this.visible = !this.visible;
+}
+@click="toggle"
+p v-if="visible"
+
+{{ visible ? 'hide' : 'show' }}
+
+
+Директива v-show
+p v-show="isAuth"
+	</pre>
+	
+	<h2>Циклы</h2>
+	<pre>
+Перебор массивов
+data() {
+	return {
+		arr: ['a', 'b', 'c'],
+	}
+}
+p v-for="elem in arr" {{ elem }}
+
+Перебор объектов
+data() {
+	return {
+		obj: {a: 1, b: 2, c: 3},
+	}
+}
+<p v-for="(elem, key, index) in obj">
+		{{ index }}
+		{{ key }}
+		{{ elem }}
+	</p>
+	</pre>
+
+	
+</body>
+</html>

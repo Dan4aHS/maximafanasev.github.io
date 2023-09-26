@@ -171,41 +171,141 @@ let result = merge([1, 2, 3], [4, 5, 6], [7, 8, 9]);
 console.log(result); // выведет [1, 2, 3, 4, 5, 6, 7, 8, 9]
 </pre>
 
-<script>
-function loadJson(url) {
-  return fetch(url)
-    .then(response => response.json());
+	<a href="https://learn.javascript.ru/prototype-inheritance" target="_blank">Прототипное наследование</a>
+	<pre>
+rabbit.__proto__ = animal;
+	</pre>
+	
+	<a href="https://learn.javascript.ru/function-prototype" target="_blank">F.prototype</a>
+<pre>
+let rabbit = new Rabbit("White Rabbit");
+</pre>
+	
+	<a href="https://learn.javascript.ru/native-prototypes" target="_blank">Встроенные прототипы</a>
+<pre>
+obj.__proto__ === Object.prototype
+
+String.prototype.show = function() {
+  alert(this);
+};
+
+"BOOM!".show(); // BOOM!
+</pre>
+	
+	<a href="https://learn.javascript.ru/prototype-methods" target="_blank">Методы прототипов, объекты без свойства __proto__</a>
+<pre>
+Object.create(proto, [descriptors])
+Object.getPrototypeOf(obj)
+Object.setPrototypeOf(obj, proto)
+</pre>
+	
+	<a href="https://learn.javascript.ru/callbacks" target="_blank">колбэки</a>
+<pre>
+function loadScript(src, callback) {
+	script.onload = () => callback(script);
 }
 
-function loadGithubUser(name) {
-  return fetch(`https://api.github.com/users/${name}`)
-    .then(response => response.json());
+script.onload = () => callback(null, script);
+script.onerror = () => callback(new Error(`Не удалось загрузить скрипт ${src}`));
+</pre>
+	
+	<a href="https://learn.javascript.ru/promise-basics" target="_blank">Промисы</a>
+<pre>
+let promise = new Promise(function(resolve, reject) {
+});
+
+promise.then(
+  result => alert(result), // не будет запущена
+  error => alert(error) // выведет "Error: Whoops!" спустя одну секунду
+);
+
+promise.catch(alert);
+
+.finally(() => остановить индикатор загрузки)
+ 
+ 
+</pre>
+	
+	<a href="https://learn.javascript.ru/promise-api" target="_blank">Promise API</a>
+<pre>
+let promise = Promise.all(iterable);
+
+let promise = Promise.allSettled(iterable);
+
+let promise = Promise.race(iterable);
+
+let promise = Promise.any(iterable);
+</pre>
+	
+	<a href="https://learn.javascript.ru/async-await" target="_blank">Async/await</a>
+<pre>
+функция в любом случае вернёт промис
+
+async function f() {
+  return 1;
 }
+f().then(alert); // 1
 
-function showAvatar(githubUser) {
-  return new Promise(function(resolve, reject) {
-    let img = document.createElement('img');
-    img.src = githubUser.avatar_url;
-    img.className = "promise-avatar-example";
-    document.body.append(img);
+await, которое можно использовать только внутри
 
-    setTimeout(() => {
-      img.remove();
-      resolve(githubUser);
-    }, 3000);
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("готово!"), 1000)
   });
+
+  let result = await promise; // будет ждать, пока промис не выполнится (*)
+
+  alert(result); // "готово!"
 }
 
-// Используем их:
-loadJson('/article/promise-chaining/user.json')
-  .then(user => loadGithubUser(user.name))
-  .then(showAvatar)
-  .then(githubUser => alert(`Показ аватара ${githubUser.name} завершён`));
-  // ...
-</script>
+f();
 
+
+
+
+
+async function f() {
+
+  try {
+    let response = await fetch('http://no-such-url');
+  } catch(err) {
+    alert(err); // TypeError: failed to fetch
+  }
+}
+
+f();
+</pre>
+	
+	<a href="https://learn.javascript.ru/generators" target="_blank">Генераторы</a>
+<pre>
+Генераторы отлично работают с перебираемыми объектами и позволяют легко создавать потоки данных
+
+function* generateSequence() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+</pre>
+	
+	<a href="" target="_blank"></a>
+<pre>
+
+</pre>
+	
+	<a href="" target="_blank"></a>
+<pre>
+
+</pre>
+	
+	<a href="" target="_blank"></a>
+<pre>
+
+</pre>
+	
+	<a href="" target="_blank"></a>
+<pre>
+
+</pre>
 </body>
-	
-	
-
-</html>
+	</html>
