@@ -16,25 +16,24 @@ div {
 	margin-bottom: 10px;
 }
 
+
+
+.main	{
+	display: flex;
+	grid-gap: 20px;
+	flex-wrap: wrap;
+}
+
 pre {
 	border-radius: 12px;
 	box-sizing: border-box;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: 1.6;
 	margin: 0;
-	overflow: auto;
 	padding: 10px;
-	tab-size: 4;
-	white-space: pre;
-	word-break: normal;
-	word-spacing: normal;
-	word-wrap: normal;
-	max-width: 1200px;
-	width: 100%;
-	margin-bottom: 10px;
-	background: #1e2b48;
+	width: fit-content;
+	background: gray;
 	color: #fff;
-	margin-bottom: 40px;
 }
 
 a {
