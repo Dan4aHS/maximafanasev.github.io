@@ -344,51 +344,55 @@ arr[0] = arr[0] + '!';
 arr[1] = arr[1] + '!';
 arr[2] = arr[2] + '!';
 console.log(arr); // выведет ['a!', 'b!', 'c!']
-
+</pre>
+		<pre>
 let arr = [1, 2, 3, 4];
 arr[0]++;
 ++arr[1];
 arr[2]--;
 --arr[3];
 console.log(arr); // выведет [2, 3, 2, 3]
-
+</pre>
+		<pre>
 let arr = [];
 arr[0] = 'a';
 arr[1] = 'b';
 arr[2] = 'c';
 console.log(arr); // выведет ['a', 'b', 'c']
-
+</pre>
+		<pre>
 let arr = ['a', 'b', 'c'];
 arr[4] = '!';
 console.log(arr); // выведет ['a', 'b', 'c', undefined, '!']
-
+</pre>
+		<pre>
 let arr = ['a', 'b', 'c'];
 let key = 0; // запишем ключ в переменную
 console.log(arr[key]); // выведет 'a'</pre>
 	</div>
 
-		<h2>Массивы методы</h2>
+	<h2>Массивы методы</h2>
 	<div class="main">
 		<pre>
 const myAwesomeArray = ["a", "b", "c", "d", "e"]
 myAwesomeArray.some(test => test === "d")
 //-------> Output : true
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 myAwesomeArray.reduce((total, value) => total * value)
 // 1 * 2 * 3 * 4 * 5
 //-------> Output = 120
-
-
+</pre>
+		<pre>
 const myAwesomeArray = ["a", "b", "c", "d", "e"]
 myAwesomeArray.every(test => test === "d")
 //-------> Output : false
 const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
 myAwesomeArray2.every(test => test === "a")
 //-------> Output : true
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [5, 4, 3, 2, 1]
 myAwesomeArray.map(x => x * x)
 //-------> Output : 25
@@ -396,13 +400,13 @@ myAwesomeArray.map(x => x * x)
 //                  9
 //                  4
 //                  1
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [[1, 2], [3, 4], 5]
 myAwesomeArray.flat()
 //-------> Output : [1, 2, 3, 4, 5]
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
   { id: 2, name: "Ali" },
@@ -412,8 +416,8 @@ const myAwesomeArray = [
 myAwesomeArray.filter(element => element.name === "Mass")
 //-------> Output : 0:{id: 3, name: "Mass"},
 //                  1:{id: 4, name: "Mass"}
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
   { id: 2, name: "Ali" },
@@ -423,8 +427,8 @@ myAwesomeArray.forEach(element => console.log(element.name))
 //-------> Output : john
 //                  Ali
 //                  Mass
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
   { id: 2, name: "Ali" },
@@ -434,8 +438,8 @@ myAwesomeArray.findIndex(element => element.id === 3)
 //-------> Output : 2
 myAwesomeArray.findIndex(element => element.id === 7)
 //-------> Output : -1
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [
   { id: 1, name: "john" },
   { id: 2, name: "Ali" },
@@ -445,8 +449,8 @@ myAwesomeArray.find(element => element.id === 3)
 //-------> Output : {id: 3, name: "Mass"}
 myAwesomeArray.find(element => element.id === 7)
 //-------> Output : undefined
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [5, 4, 3, 2, 1]
 // Sort from smallest to largest
 myAwesomeArray.sort((a, b) => a - b)
@@ -454,459 +458,136 @@ myAwesomeArray.sort((a, b) => a - b)
 // Sort from largest to smallest
 myAwesomeArray.sort((a, b) => b - a)
 //-------> Output : [5, 4, 3, 2, 1]
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 const myAwesomeArray2 = [10, 20, 30, 40, 50]
 myAwesomeArray.concat(myAwesomeArray2)
 //-------> Output : [1, 2, 3, 4, 5, 10, 20, 30, 40, 50]
-
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 // The first argument (0) is the value
 // The second argument (1) is the starting index
 // The third argument (3) is the ending index
 myAwesomeArray.fill(0, 1, 3)
 //-------> Output : [1, 0, 0, 4, 5]
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [1, 2, 3, 4, 5]
 myAwesomeArray.includes(3)
 //-------> Output : true
 myAwesomeArray.includes(8)
 //-------> Output : false
-
-
+</pre>
+		<pre>
 const myAwesomeArray = ["e", "d", "c", "b", "a"]
 myAwesomeArray.reverse()
 //-------> Output : ['a', 'b', 'c', 'd', 'e']
-
-
+</pre>
+		<pre>
 const myAwesomeArray = [[1], [2], [3], [4], [5]]
 myAwesomeArray.flatMap(arr => arr * 10)
 //-------> Output : [10, 20, 30, 40, 50]
 // With .flat() and .map()
 myAwesomeArray.flat().map(arr => arr * 10)
 //-------> Output : [10, 20, 30, 40, 50]
-
-
+</pre>
+		<pre>
 let result = merge([1, 2, 3], [4, 5, 6], [7, 8, 9]);
 console.log(result); // выведет [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
 	</div>
 
+
+	<h2>Map</h2>
+	<div class="main">
+		<pre>
+let map = new Map;
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+
+map.set(arr1, 'data1');
+map.set(arr2, 'data2');
+
+console.log(map.get(arr1));
+console.log(map.get(arr2));
+
+console.log(map.size);
+console.log(map.has(arr1));
+map.delete(arr1);
+map.clear();
+</pre>
+		<pre>
+for (let elem of map) {
+	console.log(elem); // сначала [[1, 2], 'data1'], потом [[3, 4], 'data2']
+}
+</pre>
+		<pre>
+for (let [key, elem] of map) {
+	console.log(key);
+	console.log(elem);
+}
+</pre>
+<pre>
+let values = map.values();
+let keys = map.keys();
+let entries = map.entries();
+</pre>
+	</div>
+
+	<h2>Set - массивы без дублей</h2>
+	<div class="main">
+<pre>
+let set = new Set;
+
+set.add(1);
+set.add(2);
+set.add(3);
+set.add(3); // не добавится, т.к. уже есть
+</pre>
+<pre>
+let set = new Set([1, 2, 3]);
+</pre>
+<pre>
+console.log(set.size);
+console.log(set.has(1));
+set.delete(1);
+set.clear();
+</pre>
+<pre>
+let arr = [...set];
+let arr = Array.from(set);
+</pre>
+<pre>
+let arr = [1, 2, 3];
+let set = new Set(arr);
+</pre>
+<pre>
+let arr = [1, 2, 3, 1, 3, 4];
+let res = [...new Set(arr)];  [1, 2, 3, 4]
+</pre>
+		</div>
+
+	<h2>Symbol</h2>
+	<div class="main">
+<pre>
+
+</pre>
+<pre>
+
+</pre>
+<pre>
+
+</pre>
+		</div>
+		
+		
+
 	<h2>Функции</h2>
 	<div class="main">
 		<pre>
-function func(num1, num2) {
-				console.log(num1 + num2);
-}
+Рекурсия
 
-function func(num = 0) {
-				console.log(num ** 2);
-}
-
-
-function func() {
-				let sum = 0;
-				let i = 1;
-
-				while (true) { // бесконечный цикл
-								sum += i;
-
-								if (sum >= 100) {
-												return i; // цикл крутится пока не выйдет тут
-								}
-
-								i++;
-				}
-}
-console.log( func() );
-
-
-
-function func() {
-				console.log(num);
-}
-let num; // объявим переменную
-num = 1; // задаем значение 1
-func();  // выведет 1
-num = 2; // задаем значение 2
-func();  // выведет 2
-
-
-
-function func1() {
-				console.log(num);
-				num++; // меняем глобальную переменную
-}
-function func2() {
-				console.log(num);
-}
-let num = 1;
-func1(); // выведет 1
-func2(); // выведет 2
-
-
-
-let num = 1; // глобальная переменная
-function func() {
-				let num = 2; // локальная переменная
-				console.log(num);
-}
-func(); // вызываем функцию, выведет 2
-console.log(num); // выведет 1 - глобальная переменная не поменялась
-
-
-
-function func(localNum) {
-				console.log(num); // выведет 1
-				console.log(localNum); // выведет 1
-}
-
-let num = 1;
-func(num);
-
-
-
-function func(localNum) {
-				num = 2;
-}
-
-let num = 1;
-func(num);
-console.log(num); // выведет 2
-
-
-function func(localNum) {
-				let num = 2; // объявим через let
-}
-
-let num = 1;
-func(num);
-console.log(num); // выведет 1 - ничего не поменялось
-
-
-function func(arr) {
-				arr[0] = '!';
-}
-
-let arr = [1, 2, 3];
-func(arr);
-console.log(arr); // выведет ['!', 2, 3]
-    </pre>
-		</div>
-		<pre>
-Типы функций
-
-Функция как переменная	
-function func() {
-				console.log('!');
-}
-func(); // выведет '!'
-
-func = 'string'; // затрем переменную func
-console.log(func); // выведет 'string'
-
-
-let str = 'str' + function() {return 3;};
-console.log(str); // выведет 'strfunction() {return 3;}'
-
-
-
-+function func() {
-		console.log('!');
-}
-
-func(); // выдаст ошибку
-
-
-
-
-let arr = [
-		function() {console.log('1')},
-		function() {console.log('2')},
-		function() {console.log('3')},
-];
-    </pre>
-
-		<pre>
-Вложенные функции
-
-test(
-			function() {return 1;},
-			function() {return 2;}
-);
-
-function test(func1, func2) {
-				console.log( func1() + func2() ); // выведет 3
-}
-
-
-// Выведет 9:
-test(function(num) {
-				return num * num;
-});
-
-function test(func) {
-				console.log(func(3));
-}
-
-
-
-function test(num, func) {
-				console.log(func(num));
-}
-
-// Найдем квадрат числа:
-test(2, function(num) {
-				return num * num; // возвращает квадрат
-});
-
-// Найдем куб числа:
-test(2, function(num) {
-				return num * num * num; // возвращает куб
-});
-
-
-
-function test(arr, func) {
-				for (let i = 0; i < arr.length; i++) {
-								arr[i] = func(arr[i]);
-				}
-
-				return arr;
-}
-
-// Оформим код изящнее:
-let result = test([1, 2, 3], function(num) {
-				return num * num;
-});
-
-console.log(result); // выведет [1, 4, 9]
-
-
-
-
-function square(num) {
-				return num * num;
-}
-
-function func(num1, num2) {
-				return square(num1) + square(num2);
-}
-
-console.log(func(2, 3)); // выведет 13
-
-
-
-
-
-let num = 1; // глобальная переменная
-
-function test() {
-				function func() {
-								console.log(num); // выведет 1
-				}
-
-				func(); // вызываем внутреннюю функцию
-};
-
-test(); // вызываем внешнюю функцию
-
-
-
-
-function test(num) {
-				function func(num) {
-								num = 2; // меняем локальную переменную num
-				}
-
-				func(num);
-				console.log(num); // выведет 1 - ничего не поменялось
-}
-
-test(1);
-
-
-
-function func() {
-				return function() {
-								return '!';
-				};
-}
-
-let result = func();
-console.log( result() ); // выведет '!'
-
-
-
-
-function func() {
-				return function() {
-								return '!';
-				};
-}
-
-console.log( func()() ); // выведет '!'
-
-
-
-
-function func() {
-				return function(str) {
-								return str;
-				};
-}
-
-console.log( func()('!') ); // выведет '!'
-
-
-
-
-function func(num1) {
-				return function(num2) {
-								return num1 + num2;
-				};
-}
-
-console.log( func(1)(2) ); // выведет 3
-
-
-
-function each(arr, callback) {
-				let result = [];
-
-				for (let elem of arr) {
-								result.push( callback(elem) ); // вызываем функцию-коллбэк
-				}
-
-				return result;
-}
-    </pre>
-
-		<h2>Замыкания</h2>
-		<pre>
-let num = 1; // функция в этот момент узнает, что num = 1
-func(); // выведет 1
-
-function func() {
-    console.log(num);
-}
-
-func(); // выведет 1
-num = 2; // функция в этот момент узнает, что num = 2
-func(); // выведет 2
-
-замыкание - это функция вместе со всеми внешними переменными, которые ей доступны
-
-
-
-function test() {
-	let num = 1;
-	
-	return function() {
-		console.log(num);
-		num++;
-	}
-}
-
-let func = test();
-
-func(); //выведет 1
-func(); //выведет 2
-func(); //выведет 3
-func(); //выведет 4
-func(); //выведет 5
-
-
-function test() {
-	let num = 1;
-	
-	return function() {
-		console.log(num);
-		num++;
-	};
-}
-
-test()(); // выведет 1
-test()(); // выведет 1
-
-
-
-
-let num = 1;
-
-function test() {
-	return function() {
-		console.log(num);
-		num++;
-	};
-}
-
-let func1 = test(); // первый счетчик
-func1();  // выведет 1
-func1();  // выведет 2
-
-let func2 = test(); // второй счетчик
-func2();  // выведет 3
-func2();  // выведет 4
-    </pre>
-
-		<h2>IIFE</h2>
-		<pre>
-+function() {
-    console.log('!'); // выведет '!'
-}();
-
-
-(function() {
-	console.log('!');
-})();
-
-
-(function(str) {
-	console.log(str); // выведет '!!!'
-})('!!!');
-
-
-(function() {
-	return function() {
-		console.log('!');
-	};
-})()(); // выведет '!'
-
-
-let result = function() {
-	return '!';
-}();
-console.log(result); // выведет '!'
-
-
-
-let sum = 1 + function() {
-	return 2;
-}();
-console.log(sum); // выведет 3
-
-
-let func = (function() {
-	let num = 1;
-	
-	return function() {
-		console.log(num);
-		num++;
-	}
-})();
-
-func(); //выведет 1
-func(); //выведет 2
-func(); //выведет 3
-func(); //выведет 4
-func(); //выведет 5</pre>
-
-		<h2>Рекурсия</h2>
-		<pre>
 function func(arr) {
     console.log(arr.shift(), arr);
     
@@ -914,74 +595,7 @@ function func(arr) {
         func(arr);
     }
 }
-
-func([1, 2, 3]);
-
-
-
-function getSum(arr) {
-	let sum = arr.shift();
-	
-	if (arr.length !== 0) {
-		sum += getSum(arr);
-	}
-	
-	return sum;
-}
-
-console.log(getSum([1, 2, 3]));
-
-
-
-function func(arr) {
-	for (let elem of arr) {
-		if (typeof elem == 'object') {
-			func(elem);
-		} else {
-			console.log(elem);
-		}
-	}
-}
-
-func([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
-
-
-
-
-
-function func(arr) {
-	let sum = 0;
-	
-	for (let elem of arr) {
-		if (typeof elem == 'object') {
-			sum += func(elem);
-		} else {
-			sum += elem;
-		}
-	}
-	
-	return sum;
-}
-
-console.log(func([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]));
-
-
-
-function func(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		if (typeof arr[i] == 'object') {
-			arr[i] = func(arr[i]);
-		} else {
-			arr[i] = arr[i] + '!';
-		}
-	}
-	
-	return arr;
-}
-
-console.log(func([1, [2, 7, 8], [3, 4, [5, 6]]]));
     </pre>
-
 		<pre>
 Деструктуризация
 func('str1', [2025, 12, 31], 'str2');
@@ -995,56 +609,12 @@ function func(param1, [year, month, day], param2) {
 	
 	console.log(param2); // выведет 'str2'
 }
-
-
-function func({year, month, day}) {
-	console.log(year);  // выведет 2025
-	console.log(month); // выведет 12
-	console.log(day);   // выведет 31
-}
-
-func({year: 2025, month: 12, day: 31,});
-    </pre>
+</pre>
 	</div>
 
+	<h2>Объекты</h2>
 	<div class="main">
 		<pre>
-Объекты
-
-let obj = {1: 'a', 2: 'b', 3: 'c'};
-alert(obj); // выведет [Object object]
-
-let obj = {'a': 1, 'b': 2, 'c': 3};
-let obj = {a: 1, b: 2, c: 3};
-
-let obj = {'1key': 'a', 'key-2': 'b', key3: 'c'};
-console.log(obj['1key']);
-console.log(obj['key-2']);
-
-let obj = {};
-obj['a'] = 1;
-
-let obj = {3: 'c', 1: 'a', 2: 'b'};
-
-console.log(obj[1]); // выведет 'a'
-console.log(obj[2]); // выведет 'b'
-console.log(obj[3]); // выведет 'c'
-
-let obj = {a: 1, b: 2, c: 3};
-let keys = Object.keys(obj);
-
-let obj = {
-	[key + '1']: 1,
-	[key + '2']: 2,
-	[key + '3']: 3
-};
-
-
-let obj = {a: 1, b: 2, c: 3};
-console.log('b' in obj); // выведет true
-console.log('x' in obj); // выведет false
-
-
 Деструктуризация
 
 let obj = {
@@ -1056,8 +626,8 @@ let {year, month, day} = obj;
 console.log(year);  // выведет 2025
 console.log(month); // выведет 12
 console.log(day);   // выведет 31
-
-
+</pre>
+		<pre>
 let obj = {
 	year:  2025,
 	month: 12,
@@ -1067,30 +637,35 @@ let {year: y, month: m, day: d} = obj;
 console.log(y); // выведет 2025
 console.log(m); // выведет 12
 console.log(d); // выведет 31
-
-
-let obj = {
-	month: 12,
-	day:   31,
-};
-
-let {year = 2025, month, day} = obj;
-
-console.log(year);  // выведет 2025
-console.log(month); // выведет 1
-console.log(day);   // выведет 31
-
-
-let obj = {
-	month: 12,
-	day:   31,
-};
-let {year:y = 2025, month, day} = obj;
-console.log(y);     // выведет 2025
-console.log(month); // выведет 1
-console.log(day);   // выведет 31
-    </pre>
+</pre>
 	</div>
+
+
+	<h2>Стилизация</h2>
+	<div class="main">
+		<pre>
+let elem = document.querySelector('#elem');
+elem.style.color = 'red';
+let computedStyle = getComputedStyle(elem);
+
+elem.style.width = '100px';
+elem.style.margin = '20px';
+elem.style.display = 'block';
+	</pre>
+		<pre>
+elem.style.cssText = `
+	width: 100px;
+	height: 100px;
+	display: block;
+`;
+</pre>
+		<pre>
+[data-type="success"] {}
+elem.dataset.type = 'success';
+</pre>
+	</div>
+
+
 	<h2>Web Technologies</h2>
 	<table>
 		<tr>
