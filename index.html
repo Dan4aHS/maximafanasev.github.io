@@ -528,7 +528,7 @@ for (let [key, elem] of map) {
 	console.log(elem);
 }
 </pre>
-<pre>
+		<pre>
 let values = map.values();
 let keys = map.keys();
 let entries = map.entries();
@@ -537,7 +537,7 @@ let entries = map.entries();
 
 	<h2>Set - массивы без дублей</h2>
 	<div class="main">
-<pre>
+		<pre>
 let set = new Set;
 
 set.add(1);
@@ -545,101 +545,352 @@ set.add(2);
 set.add(3);
 set.add(3); // не добавится, т.к. уже есть
 </pre>
-<pre>
+		<pre>
 let set = new Set([1, 2, 3]);
 </pre>
-<pre>
+		<pre>
 console.log(set.size);
 console.log(set.has(1));
 set.delete(1);
 set.clear();
 </pre>
-<pre>
+		<pre>
 let arr = [...set];
 let arr = Array.from(set);
 </pre>
-<pre>
+		<pre>
 let arr = [1, 2, 3];
 let set = new Set(arr);
 </pre>
-<pre>
+		<pre>
 let arr = [1, 2, 3, 1, 3, 4];
 let res = [...new Set(arr)];  [1, 2, 3, 4]
 </pre>
-		</div>
+	</div>
+	
+	
 
 	<h2>Symbol</h2>
 	<div class="main">
+		<pre>
+let sym1 = Symbol();
+let sym2 = Symbol();
+console.log(sym1 === sym2); // false
+</pre>
+		<pre>
+ключи не будут участвовать в переборе циклом.
+let obj = {a: 1, b: 2, c: 3};
+let sym = Symbol();
+obj[sym] = 'text';
+</pre>
+		<pre>
+let obj = {a: 1, b: 2, c: 3};
+let sym = Symbol();
+obj[sym] = function() {
+	console.log('!!!');
+};
+obj[sym]();
+</pre>
+		<pre>
+Symbol.for сохранены в глобальный реестр символов
+let sym = Symbol.for('test');
+let key = Symbol.keyFor(sym);
+</pre>
+	</div>
+
+
+	<h2>Итераторы</h2>
+	<div class="main">
+		<pre>
+Любой объект, который можно перебрать через цикл for of, называется итерируемым: Массивы, Map, NodeList,
+</pre>
+		<pre>
+let arr = [1, 2, 3];
+let func = arr[Symbol.iterator];
+console.log(func); // функция
+</pre>
+		<pre>
+let arr = [1, 2, 3];
+let iter = arr[Symbol.iterator]();
+console.log( iter.next() ); // {value: 1, done: false}
+console.log( iter.next() ); // {value: undefined, done: true}
+</pre>
+		<pre>
+Генераторы, с помощью которых можно создавать свои итераторы
+function *func() {
+	yield 1;
+	yield 2;
+	yield 3;
+}
+</pre>
+		<pre>
+Каждый итератор может участвовать в цикле лишь один раз
+а можно несколько раз вот так - 
+for (let elem of func()) {
+	console.log(elem); // 1, 2, 3
+}
+</pre>
+		<pre>
+Итератор объекта
+function *func(obj) {
+	for (let key in obj) {
+		yield obj[key];
+	}
+}
+let iter = func({a: 1, b: 2, c: 3});
+</pre>
+		<pre>
+Создание итерируемого объекта
+obj[Symbol.iterator] = function *() {
+	for (let key in this) {
+		yield obj[key];
+	}
+}
+</pre>
+		<pre>
+Генератор через вычисляемое свойство
+let obj = {
+	a: 1,
+	b: 2,
+	c: 3,
+	[Symbol.iterator]: function *(){
+		for (let key in this){
+			yield this[key];
+		}
+	}
+};
+</pre>
+		<pre>
+Встроенный итератор values
+
+let map = new Map;
+
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+
+let iter = map.values();
+</pre>
+		<pre>
+Встроенный итератор keys
+
+let arr = ['a', 'b', 'c'];
+let iter = arr.keys();
+for (let elem of iter) {
+	console.log(elem); // 0, 1, 2
+}
+</pre>
+		<pre>
+Встроенный итератор entries
+let arr = ['a', 'b', 'c'];
+let iter = arr.entries();
+for (let [key, value] of iter) {
+	console.log(key);   // 'a', 'b', 'c'
+	console.log(value); // 0, 1, 2
+}
+</pre>
+		<pre>
+Три встроенных итератора
+
+let map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+
+for (let elem of map) {
+	console.log(elem); // ['a', 1], ['b', 2], ['c', 3]
+}
+
+for (let elem of map.keys()) {
+	console.log(elem); // 'a', 'b', 'c'
+}
+
+for (let elem of map.values()) {
+	console.log(elem); // 1, 2, 3
+}
+</pre>
+		<pre>
+Оператор spread и итераторы
+
+let map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+
+let arr = [...map];
+console.log(arr); // [['a', 1], ['b', 2], ['c', 3]]
+
+let arr = [...map.keys()];
+console.log(arr); // ['a', 'b', 'c']
+
+let arr = [...map.values()];
+console.log(arr); // [1, 2, 3]
+</pre>
+		<pre>
+Встроенные итераторы строк
+console.log([...'abc']); // ['a', 'b', 'c']
+</pre>
+		<pre>
+Массив цифр числа
+let num = 12345;
+let arr = [...String(num)].map(Number);
+console.log(arr); // [1, 2, 3, 4, 5]
+</pre>
+	</div>
+
+
+
+	<h2>JSON</h2>
+	<div class="main">
+		<pre>
+let json = '[1, 2, 3, 4, 5, "a", "b"]';
+
+let json = `{
+	"a": "aaa",
+	"b": "bbb",
+	"c": "ccc",
+	"111": "ddd"
+}`;
+
+let json = `[
+	{
+		"a": "aaa",
+		"b": "bbb"
+	},
+	{
+		"c": "ccc",
+		"d": "ddd"
+	}
+]`;
+</pre>
+		<pre>
+Преобразование JSON в структуру данных
+
+let json = '[1, 2, 3, 4, 5, "a", "b"]';
+let arr = JSON.parse(json);
+</pre>
+		<pre>
+можно преобразовать массивы и объекты JavaScript в формат JSON
+let arr = [1, 2, 3, 4, 5, 'a', 'b'];
+let json = JSON.stringify(arr);
+</pre>
+		<pre>
+Изменение данных в JSON
+
+let json = '[1, 2, 3, 4, 5]';
+
+let arr  = JSON.parse(json);
+arr.push(6);
+
+let res = JSON.stringify(arr);
+console.log(res);
+</pre>
+	</div>
+
+
+	<h2>Хранилище</h2>
+	<div class="main">
 <pre>
+localStorage.setItem('key', 'text');
+let str = localStorage.getItem('key');
+console.log(str); // выведет 'text'
+</pre>
+<pre>
+Однократное сохранение
+let time = localStorage.getItem('time');
+if (!time) {
+	let now = Date.now();
+	localStorage.setItem('time', now);
+}
+</pre>
+<pre>
+Перезапись данных
+localStorage.setItem('key', '1');
+localStorage.setItem('key', '2');
+</pre>
+<pre>
+Удаление данных
+localStorage.removeItem('key');
+</pre>
+<pre>
+Очистка хранилища
+localStorage.clear();
 
 </pre>
 <pre>
+Количество записей
 
+let num = localStorage.length;
 </pre>
 <pre>
+Получение ключа по номеру
 
+let key = localStorage.key(0);
+let val = localStorage.getItem(key);
+</pre>
+<pre>
+Перебор хранилища по индексам
+
+for (let i = 0; i < localStorage.length; i++) {
+	let key = localStorage.key(i);
+	let val = localStorage.getItem(key);
+	
+	console.log(val);
+}
+</pre>
+<pre>
+Массивы ключей и значений
+let keys = Object.keys(localStorage);
+let values = Object.values(localStorage);
+</pre>
+<pre>
+Хранение структур
+
+let arr = [1, 2, 3, 4, 5];
+localStorage.setItem('arr', JSON.stringify(arr));
+
+let str = localStorage.getItem('arr');
+let res = JSON.parse(str);
+
+console.log(res);
 </pre>
 		</div>
-		
-		
 
-	<h2>Функции</h2>
+	<h2>Исключительные ситуации</h2>
 	<div class="main">
-		<pre>
-Рекурсия
-
-function func(arr) {
-    console.log(arr.shift(), arr);
-    
-    if (arr.length != 0) {
-        func(arr);
-    }
-}
-    </pre>
-		<pre>
-Деструктуризация
-func('str1', [2025, 12, 31], 'str2');
-
-function func(param1, [year, month, day], param2) {
-	console.log(param1); // выведет 'str1'
-	
-	console.log(year);   // выведет 2025
-	console.log(month);  // выведет 12
-	console.log(day);    // выведет 31
-	
-	console.log(param2); // выведет 'str2'
+<pre>
+Перехват
+try {
+	// код
+} catch (error) {
+	// обработка ошибки
 }
 </pre>
-	</div>
-
-	<h2>Объекты</h2>
-	<div class="main">
-		<pre>
-Деструктуризация
-
-let obj = {
-    year:  2025,
-    month: 12,
-    day:   31,
-};
-let {year, month, day} = obj;
-console.log(year);  // выведет 2025
-console.log(month); // выведет 12
-console.log(day);   // выведет 31
+<pre>
+Выбрасывание исключений
+	
 </pre>
-		<pre>
-let obj = {
-	year:  2025,
-	month: 12,
-	day:   31,
-};
-let {year: y, month: m, day: d} = obj;
-console.log(y); // выведет 2025
-console.log(m); // выведет 12
-console.log(d); // выведет 31
-</pre>
-	</div>
+<pre>
 
+	
+</pre>
+<pre>
+
+	
+</pre>
+<pre>
+
+	
+</pre>
+<pre>
+
+	
+</pre>
+<pre>
+
+	
+</pre>
+		</div>
 
 	<h2>Стилизация</h2>
 	<div class="main">
@@ -1170,4 +1421,6 @@ function* generateSequence() {
 	<pre>
 
 </pre>
-</body></html>
+</body>
+
+</html>
