@@ -868,29 +868,248 @@ try {
 </pre>
 <pre>
 Выбрасывание исключений
-	
+создать - new Error('текст исключения');
+выбросить - throw new Error('текст исключения');
 </pre>
 <pre>
+Выбрасывание различных типов исключений
+throw new SyntaxError('текст исключения');
 
-	
-</pre>
-<pre>
+try {
+	throw {name: 'MyError', message: 'текст исключения'};
+} catch (error) {
 
-	
-</pre>
-<pre>
-
-	
-</pre>
-<pre>
-
-	
-</pre>
-<pre>
-
-	
+try {
+	throw new Error('текст исключения');
+} catch (error) {
+	console.log(error.name); // 'Error'
+	console.log(error.message); // 'текст исключения'
+}
 </pre>
 		</div>
+		
+	
+
+	<h2>Асинхронность</h2>
+	<div class="main">
+<pre>
+function make(callback) {
+	setTimeout(function() {
+		console.log('1'); // некая асинхронная операция, может не одна
+		callback();       // затем наш коллбэк
+	}, 3000);
+}
+</pre>
+<pre>
+входные параметры
+
+make(3, function(res) {
+	console.log(res); // третий элемент массива
+});
+
+function make(num, callback) {
+	setTimeout(function() {
+		let arr = [1, 2, 3, 4, 5];
+		callback(arr[num]); // результатом передаем элемент массива
+	}, 3000);
+}
+</pre>
+<pre>
+Загрузка картинок
+
+loadImage('image.png', function(image, err) {
+	if (!err) {
+		document.body.append(image);
+	} else {
+		console.log('произошла ошибка: ' + err);
+	}
+});
+</pre>
+		</div>
+		
+	
+
+	<h2>Промисы</h2>
+	<div class="main">
+<pre>
+let promise = new Promise(function() {
+	// асинхронный код
+});
+</pre>
+<pre>
+promise.then(function() {
+	// выполнится при завершении асинхронного кода
+});
+</pre>
+<pre>
+Объект с ошибкой промиса
+
+let promise = new Promise(function(resolve, reject) {
+	setTimeout(function() {
+		reject(new Error('error in promise')); // объект с ошибкой
+	}, 3000);
+});
+</pre>
+<pre>
+Отдельный перехват исключений
+
+promise.catch(
+	function(error) {
+		console.log(error);
+	}
+);
+</pre>
+<pre>
+состояния fulfilled и rejected неизменны!
+</pre>
+<pre>
+Цепочки промисов
+
+promise.then(
+	function(result) {
+		return result + '!';
+	}
+).then(
+	function(result) {
+		console.log(result); // выведет 'string!'
+	}
+);
+</pre>
+<pre>
+Работа с массивами промисов
+
+Promise.all(promises).then(function(res) {
+	console.log(res); // выведет [1, 2, 3] - результаты всех промисов
+});
+</pre>
+<pre>
+Создание сработавших промисов
+
+function func(num) {
+	if (num > 0) {
+		return new Promise(function(resolve) {
+			setTimeout(function() {
+				resolve(num * num);
+			}, 3000);
+		});
+	} else {
+		return Promise.resolve(0); // возвращаем промис, а не число
+	}
+}
+</pre>
+		</div>
+		
+	
+
+	<h2>Модули ES</h2>
+	<div class="main">
+<pre>
+{
+	"type" : "module"
+}
+</pre>
+<pre>
+Установка сборщика Webpack 
+
+npm install webpack --save-dev
+</pre>
+<pre>
+Настройка сборщика Webpack
+
+export default {
+	mode: 'development',
+	entry: './src/index.js',
+	output: {
+		filename: './dist/bundle.js',
+	}
+};
+</pre>
+		</div>
+	
+
+	<h2>AJAX</h2>
+	<div class="main">
+<pre>
+Своим результатом fetch вернет промис
+
+button.addEventListener('click', function() {
+	fetch('/ajax.html').then(
+		response => {
+			return response.text();
+		}
+	).then(
+		text => {
+			div.innerHTML = text;
+		}
+	);
+});
+</pre>
+<pre>
+Код HTTP
+
+button.addEventListener('click', function() {
+	fetch('/ajax.html').then(response => {
+		console.log(response.status); // например, 200
+	});
+});
+</pre>
+<pre>
+Успешность AJAX запроса
+
+button.addEventListener('click', function() {
+	fetch('/ajax.html').then(response => {
+		console.log(response.ok); // выведет true или false
+	});
+});
+</pre>
+<pre>
+Полный перехват AJAX ошибок
+
+button.addEventListener('click', function() {
+	let promise = fetch('/ajax.html')
+	.then(
+		response => {
+			if (response.ok) {
+				return response.text();
+			} else {
+				throw new Error('плохой статус ответа');
+			}
+		},
+	).then(
+		text => {
+			console.log(text);
+		}
+	).catch(
+		error => {
+			console.log(error);
+		}
+	);
+});
+</pre>
+<pre>
+Заголовки HTTP ответа
+
+button.addEventListener('click', function() {
+	fetch('/ajax.html').then(response => {
+		for (let [key, value] of response.headers) {
+			console.log(key, value);
+		}
+	});
+});
+</pre>
+<pre>
+Получение JSON
+
+button.addEventListener('click', function() {
+	fetch('/data.json').then(response => {
+		return response.json();
+	}).then(data => {
+		console.log(data);
+	});
+});
+</pre>
+		</div>
+	
 
 	<h2>Стилизация</h2>
 	<div class="main">
