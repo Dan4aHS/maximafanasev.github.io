@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.4s;
+            margin-bottom: 24px;
+        }
+
+        .active,
+        .accordion:hover {}
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Решение 8 задач Python</h1>
+        <h2>Проверь свои знания</h2>
+        <div class="exercise">
+            <p>алгоритм решения 8й задачи</p>
+            <pre class="blur">
+from itertools import *
+k = 0
+for s in product('0123', repeat = 5):
+for s in permutations('АБВГД', r = 5):
+    s = ''.join(s)</pre>
+            <textarea name="" id="" cols="50" rows="5"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>2 четных числа не стоят рядом</p>
+            <pre class="blur">
+for x in '0246ace':
+    s = s.replace(x, 'Ч')
+if 'ЧЧ' not in s:</pre>
+            <textarea name="" id="" cols="50" rows="3"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>никакие 2 одинаковые цифры не стоят рядом</p>
+            <pre class="blur">
+all(s[i] != s[i+1] for i in range(4))</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>хотя бы 2 четные стоят рядом</p>
+            <pre class="blur">
+any(s[i]%2==0 and s[i+1]%2==0 for i in range(5))</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>никакая нечетная не стоит рядом с 2</p>
+            <pre class="blur">
+all(c not in s for c in ['12', '32', '21', '23'])</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>одна буква гласная</p>
+            <pre class="blur">
+s.count('А') + s.count('О') == 1</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>первая буква может быть среди гласных АУ</p>
+            <pre class="blur">
+if s[0] in 'АУ'</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>слова не начинаются с нечетных и не оканчиваются четными</p>
+            <pre class="blur">
+s[0] not in '01357' and s[-1] not in '02468'</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>четные и нечетные чередуются</p>
+            <pre class="blur">
+(s[i] + s[i+1])%2 != 0</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        
+        
+        <div class="task">
+            <div class="number">
+                12459
+            </div>
+            <ol class="">
+                <li>Строится четверичная запись числа N</li>
+                <li>Если количество значащих цифр в четверичной записи числа чётное, то к этой записи в середину дописывается 0</li>
+                <li>Если количество значащих цифр в четверичной записи числа нечётное, то запись не изменяется</li>
+                <li>Например, для исходного числа 6<sub>10</sub> = 102<sub>4</sub></li>
+                <li>Укажите максимальное число N, после обработки которого с помощью этого алгоритма, получается число R, не большее, чем 180. В ответе запишите это число в десятичной системе счисления</li>
+            </ol>
+        </div>
+        <button class="accordion">Решение</button>
+        <pre class="panel">
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%4) + s
+        x //= 4
+    return s
+
+for n in range(1,100):
+    n4 = cc(n)
+    if len(n4) % 2 == 0:
+        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
+    r = int(n4)
+    if r <= 180:
+        print(n)
+		</pre>
+    </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.4s;
+            margin-bottom: 24px;
+        }
+
+        .active,
+        .accordion:hover {}
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Решение 5 задач Python</h1>
+        <h2>Проверь свои знания</h2>
+        
+        <div class="exercise">
+            <p>алгоритм перевода в сс с 3-9</p>
+            <pre class="blur">
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%3) + s
+        x // = 3
+    return s</pre>
+            <textarea name="" id="" cols="50" rows="6"></textarea>
+        </div>
+        
+        <div class="exercise">
+            <p>алгоритм перевода в сс с 11-36</p>
+            <pre class="blur">
+def cc(x):
+    a = '01234567890A'
+    s = ''
+    while x>0:
+        s = a[x%11] + s
+        x // = 11
+    return s</pre>
+            <textarea name="" id="" cols="50" rows="7"></textarea>
+        </div>
+        
+        <div class="exercise">
+            <p>В середину числа дописывается 0</p>
+            <pre class="blur">
+n = n[:len(n)//2] + '0' + n[len(n)//2:]</pre>
+            <textarea name="" id="" cols="50" rows="1"></textarea>
+        </div>
+        
+        <div class="exercise">
+            <p>Посчитать количество четных цифр</p>
+            <pre class="blur">
+for a in b:
+    if a % 2 == 0:
+        k += 1</pre>
+            <textarea name="" id="" cols="50" rows="3"></textarea>
+        </div>
+
+        <div class="task">
+            <div class="number">
+                12459
+            </div>
+            <ol class="">
+                <li>Строится четверичная запись числа N</li>
+                <li>Если количество значащих цифр в четверичной записи числа чётное, то к этой записи в середину дописывается 0</li>
+                <li>Если количество значащих цифр в четверичной записи числа нечётное, то запись не изменяется</li>
+                <li>Например, для исходного числа 6<sub>10</sub> = 102<sub>4</sub></li>
+                <li>Укажите максимальное число N, после обработки которого с помощью этого алгоритма, получается число R, не большее, чем 180. В ответе запишите это число в десятичной системе счисления</li>
+            </ol>
+        </div>
+        <button class="accordion">Решение</button>
+        <pre class="panel">
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%4) + s
+        x //= 4
+    return s
+
+for n in range(1,100):
+    n4 = cc(n)
+    if len(n4) % 2 == 0:
+        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
+    r = int(n4)
+    if r <= 180:
+        print(n)
+		</pre>
+    </div>
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
