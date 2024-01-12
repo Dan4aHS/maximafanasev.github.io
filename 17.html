@@ -47,7 +47,6 @@ for i in range(len(a) - 1):
     if () + () + () == 1
         ans.append(x+y+z)
 print(len(ans), max(ans))</pre>
-            <textarea name="" id="" cols="50" rows="5"></textarea>
         </div>
         
         
@@ -58,7 +57,6 @@ s = 0
 for n in a:
     sd = sum(int(x) for x in str(n))
     s += sd</pre>
-            <textarea name="" id="" cols="50" rows="4"></textarea>
         </div>
         
         
@@ -66,7 +64,6 @@ for n in a:
             <p>элемент оканчивается на 0x0F</p>
             <pre class="blur">
 if x%100 == 0x0F</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -74,7 +71,6 @@ if x%100 == 0x0F</pre>
             <p>хотя бы один из двух</p>
             <pre class="blur">
 (x or y or z)</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -82,7 +78,6 @@ if x%100 == 0x0F</pre>
             <p>не более 1 элемента</p>
             <pre class="blur">
 () + () <= 1</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -90,7 +85,6 @@ if x%100 == 0x0F</pre>
             <p>хотя бы 2 из 3х</p>
             <pre class="blur">
 () + () + () <= 2</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -98,7 +92,6 @@ if x%100 == 0x0F</pre>
             <p>число оканчивается на 18</p>
             <pre class="blur">
 x % 100 == 18</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -106,145 +99,8 @@ x % 100 == 18</pre>
             <p>число оканчивается на 8</p>
             <pre class="blur">
 x % 10 == 8</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
-        </div>
-        
-        
-        
-        <div class="task">
-            <div class="number">
-                12459
-            </div>
-            <ol class="">
-                <li>Строится четверичная запись числа N</li>
-                <li>Если количество значащих цифр в четверичной записи числа чётное, то к этой записи в середину дописывается 0</li>
-                <li>Если количество значащих цифр в четверичной записи числа нечётное, то запись не изменяется</li>
-                <li>Например, для исходного числа 6<sub>10</sub> = 102<sub>4</sub></li>
-                <li>Укажите максимальное число N, после обработки которого с помощью этого алгоритма, получается число R, не большее, чем 180. В ответе запишите это число в десятичной системе счисления</li>
-            </ol>
-        </div>
-        <button class="accordion">Решение</button>
-        <pre class="panel">
-def cc(x):
-    s = ''
-    while x>0:
-        s = str(x%4) + s
-        x //= 4
-    return s
-
-for n in range(1,100):
-    n4 = cc(n)
-    if len(n4) % 2 == 0:
-        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
-    r = int(n4)
-    if r <= 180:
-        print(n)
-		</pre>
-    </div>
     </div>
 
     <script>

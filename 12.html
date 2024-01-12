@@ -43,7 +43,6 @@ for n in range(4,1000):
     s = '3' + n*'5'
     while '333' in s or '555' in s:
            s = s.replace('555','3', 1)</pre>
-            <textarea name="" id="" cols="50" rows="3"></textarea>
         </div>
         
         
@@ -52,41 +51,8 @@ for n in range(4,1000):
             <pre class="blur">
 m = 0
 m = max(m, sum(map(int, s)))</pre>
-            <textarea name="" id="" cols="50" rows="2"></textarea>
-        </div>       
-        
-        
-        <div class="task">
-            <div class="number">
-                12459
-            </div>
-            <ol class="">
-                <li>Строится четверичная запись числа N</li>
-                <li>Если количество значащих цифр в четверичной записи числа чётное, то к этой записи в середину дописывается 0</li>
-                <li>Если количество значащих цифр в четверичной записи числа нечётное, то запись не изменяется</li>
-                <li>Например, для исходного числа 6<sub>10</sub> = 102<sub>4</sub></li>
-                <li>Укажите максимальное число N, после обработки которого с помощью этого алгоритма, получается число R, не большее, чем 180. В ответе запишите это число в десятичной системе счисления</li>
-            </ol>
-        </div>
-        <button class="accordion">Решение</button>
-        <pre class="panel">
-def cc(x):
-    s = ''
-    while x>0:
-        s = str(x%4) + s
-        x //= 4
-    return s
-
-for n in range(1,100):
-    n4 = cc(n)
-    if len(n4) % 2 == 0:
-        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
-    r = int(n4)
-    if r <= 180:
-        print(n)
-		</pre>
-    </div>
-    </div>
+        </div>   
+	</div>    
 
     <script>
         var acc = document.getElementsByClassName("accordion");

@@ -44,7 +44,6 @@ k = 0
 for s in product('0123', repeat = 5):
 for s in permutations('АБВГД', r = 5):
     s = ''.join(s)</pre>
-            <textarea name="" id="" cols="50" rows="5"></textarea>
         </div>
         
         
@@ -54,7 +53,6 @@ for s in permutations('АБВГД', r = 5):
 for x in '0246ace':
     s = s.replace(x, 'Ч')
 if 'ЧЧ' not in s:</pre>
-            <textarea name="" id="" cols="50" rows="3"></textarea>
         </div>
         
         
@@ -62,7 +60,6 @@ if 'ЧЧ' not in s:</pre>
             <p>никакие 2 одинаковые цифры не стоят рядом</p>
             <pre class="blur">
 all(s[i] != s[i+1] for i in range(4))</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -70,7 +67,6 @@ all(s[i] != s[i+1] for i in range(4))</pre>
             <p>хотя бы 2 четные стоят рядом</p>
             <pre class="blur">
 any(s[i]%2==0 and s[i+1]%2==0 for i in range(5))</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -78,7 +74,6 @@ any(s[i]%2==0 and s[i+1]%2==0 for i in range(5))</pre>
             <p>никакая нечетная не стоит рядом с 2</p>
             <pre class="blur">
 all(c not in s for c in ['12', '32', '21', '23'])</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -86,7 +81,6 @@ all(c not in s for c in ['12', '32', '21', '23'])</pre>
             <p>одна буква гласная</p>
             <pre class="blur">
 s.count('А') + s.count('О') == 1</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -94,7 +88,6 @@ s.count('А') + s.count('О') == 1</pre>
             <p>первая буква может быть среди гласных АУ</p>
             <pre class="blur">
 if s[0] in 'АУ'</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -102,7 +95,6 @@ if s[0] in 'АУ'</pre>
             <p>слова не начинаются с нечетных и не оканчиваются четными</p>
             <pre class="blur">
 s[0] not in '01357' and s[-1] not in '02468'</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
@@ -110,7 +102,6 @@ s[0] not in '01357' and s[-1] not in '02468'</pre>
             <p>четные и нечетные чередуются</p>
             <pre class="blur">
 (s[i] + s[i+1])%2 != 0</pre>
-            <textarea name="" id="" cols="50" rows="1"></textarea>
         </div>
         
         
