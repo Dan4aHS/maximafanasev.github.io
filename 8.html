@@ -48,53 +48,200 @@ for s in permutations('АБВГД', r = 5):
         
         
         <div class="exercise">
-            <p>2 четных числа не стоят рядом</p>
+            <p>12240 никакие две одинаковые цифры не стоят рядом</p>
             <pre class="blur">
-for x in '0246ace':
-    s = s.replace(x, 'Ч')
-if 'ЧЧ' not in s:</pre>
+s[i] != s[i+1] for i in range(4)</pre>
         </div>
         
         
         <div class="exercise">
-            <p>никакие 2 одинаковые цифры не стоят рядом</p>
+            <p>11657 хотя бы две чётные стоят рядом</p>
             <pre class="blur">
-all(s[i] != s[i+1] for i in range(4))</pre>
+x[i]%2==0 and x[i+1]%2==0 for i in range(5)</pre>
         </div>
         
         
         <div class="exercise">
-            <p>хотя бы 2 четные стоят рядом</p>
+            <p>последнее слово с нечётным номером</p>
             <pre class="blur">
-any(s[i]%2==0 and s[i+1]%2==0 for i in range(5))</pre>
+n % 2 != 0</pre>
         </div>
         
         
         <div class="exercise">
-            <p>никакая нечетная не стоит рядом с 2</p>
+            <p>10090 никакие две чётные или две нечётные цифры не стоят рядом</p>
             <pre class="blur">
-all(c not in s for c in ['12', '32', '21', '23'])</pre>
+if '00' not in s and '33' not in s</pre>
         </div>
         
         
         <div class="exercise">
-            <p>одна буква гласная</p>
-            <pre class="blur">
-s.count('А') + s.count('О') == 1</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>первая буква может быть среди гласных АУ</p>
+            <p>9695 пятибуквенные слова из букв слова УДАЧ. Первая буква может быть только гласной</p>
             <pre class="blur">
 if s[0] in 'АУ'</pre>
         </div>
         
         
         <div class="exercise">
-            <p>слова не начинаются с нечетных и не оканчиваются четными</p>
+            <p>9155 Сколько слов, оканчивающихся на Ь, запишет Катя, если заполнит список до 387 позиции</p>
             <pre class="blur">
-s[0] not in '01357' and s[-1] not in '02468'</pre>
+from itertools import *
+k = 0
+c = 0
+m = 0
+for s in product('ЬРПЛЕА', repeat = 4):
+    k+=1
+    if s[-1] == 'Ь':
+        c += 1
+    if k == 387:
+        m=c
+print(m) 
+   </pre>
+            <pre class="blur">
+from itertools import *
+k = 0
+for i, s in enumerate(product('ЬРПЛЕА', repeat = 4)):
+    if s[-1] == 'Ь':
+        k += 1
+    if i == 387:
+        break
+print(k) 
+   </pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>Игорь использует 6-буквенные слова, в которых есть только буквы М, А, С, Л, О. причём в кодовом слове должна встречаться ровно одна гласная</p>
+            <pre class="blur">
+s.count('А') + s.count('О') == 1</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>7673 Какое количество слов находятся между словами ЕГЭ2023 и 2023ЕГЭ</p>
+            <pre class="blur">
+from itertools import *
+k = 0
+for s in product('ГЕЭ023', repeat = 7):
+    s = ''.join(s)
+    k+=1
+    if s == 'ЕГЭ2023':
+        print(k)
+    if s == '2023ЕГЭ':
+        print(k)
+print(216255-50250)</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>никакая нечётная цифра не стоит рядом с цифрой 2</p>
+            <pre class="blur">
+all(c not in s for c in ['12', '32', '21', '23'])</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
         </div>
         
         
@@ -105,37 +252,6 @@ s[0] not in '01357' and s[-1] not in '02468'</pre>
         </div>
         
         
-        
-        <div class="task">
-            <div class="number">
-                12459
-            </div>
-            <ol class="">
-                <li>Строится четверичная запись числа N</li>
-                <li>Если количество значащих цифр в четверичной записи числа чётное, то к этой записи в середину дописывается 0</li>
-                <li>Если количество значащих цифр в четверичной записи числа нечётное, то запись не изменяется</li>
-                <li>Например, для исходного числа 6<sub>10</sub> = 102<sub>4</sub></li>
-                <li>Укажите максимальное число N, после обработки которого с помощью этого алгоритма, получается число R, не большее, чем 180. В ответе запишите это число в десятичной системе счисления</li>
-            </ol>
-        </div>
-        <button class="accordion">Решение</button>
-        <pre class="panel">
-def cc(x):
-    s = ''
-    while x>0:
-        s = str(x%4) + s
-        x //= 4
-    return s
-
-for n in range(1,100):
-    n4 = cc(n)
-    if len(n4) % 2 == 0:
-        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
-    r = int(n4)
-    if r <= 180:
-        print(n)
-		</pre>
-    </div>
     </div>
 
     <script>
