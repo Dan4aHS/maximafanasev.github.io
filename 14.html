@@ -34,27 +34,80 @@
 
 <body>
     <div class="wrapper">
-        <h1>Решение 15 задач Python</h1>
+        <h1>Решение 12 задач Python</h1>
         <h2>Проверь свои знания</h2>
+        
         <div class="exercise">
-            <p>алгоритм решения 15й задачи</p>
+            <p>11317 </p>
             <pre class="blur">
-def f(x):
-    return ...
-for a in range(1,1000):
-    if all(f(x) for x in range(100)):
-        print(a)</pre>
+for x in '0123456789ABCDEFG':
+    s = int(f'7AC{x}53D', 17) + int(f'83BG94{x}D', 17) + int(f'C5{x}D', 17) + int(f'C4BBF{x}4', 17) + int(f'7{x}79', 17)
+    if s%16==0:
+        print(x, s//16)</pre>
         </div>
         
-        
+        <div class="exercise">
+            <p>12246 </p>
+            <pre class="blur">
+n = 2*729**333 + 2*243**334  - 81**335 + 2*27**336 - 2*9**337 - 338
+k=0
+while n>0:
+    if n%9>0:
+        k+=1
+    n//=9
+print(k)</pre>
+        </div>
         
         <div class="exercise">
-            <p></p>
+            <p>249 </p>
             <pre class="blur">
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%3) + s
+        x //= 3
+    return s
+
+for x in range(21,30):
+    print(x, cc(x))</pre>
+        </div>
+        
+        <div class="exercise">
+            <p>8951</p>
+            <pre class="blur">
+for N in range(6, 37):
+    x = 7**500 - int('53', N)
+    if x%6 == 0:
+        print(N)
+        break</pre>
+        </div>
+        
+        <div class="exercise">
+            <p>255 </p>
+            <pre class="blur">
+for n in range(2,37):
+    if 50//n//n == 0:
+        print(n)
+        break
 </pre>
         </div>
         
-    </div>
+        <div class="exercise">
+            <p>253</p>
+            <pre class="blur">
+for  n in range(1,100):
+    if 41%n == 2 and 131%n==1:
+        print(n)</pre>
+        </div>
+        
+        <div class="exercise">
+            <p>250</p>
+            <pre class="blur">
+for x in range(1, 41):
+    print(x, bin(x)[2:])
+</pre>
+        </div>
+        
 
     <script>
         var acc = document.getElementsByClassName("accordion");
