@@ -47,6 +47,106 @@ for n in range(4,1000):
         
         
         <div class="exercise">
+            <p>12244 Определите наибольшее возможное значение суммы числовых значений цифр в строке, которая может быть результатом выполнения программы</p>
+            <pre class="blur">
+m=0
+m = max(m, sum(map(int, s)))</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>11947 Определите наименьшее значение n, при котором после выполнения программы в преддверии новогодней ночи на Северном полюсе количество цифр 4 в строке уменьшится в 18 раз</p>
+            <pre class="blur">
+s.count('4') * 18 == n</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>11661 Определите наибольшее значение n ∈ [210; 300), при котором сумма числовых значений цифр строки, получившейся в результате выполнения программы, кратна 15</p>
+            <pre class="blur">
+if sum(map(int, s)) % 15 == 0</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>10714 Определите наибольшую длину строки</p>
+            <pre class="blur">
+m = -10**20
+if len(s) > m:
+   m = len(s)</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>7700 Определите наименьшее значение n, при котором сумма числовых значений цифр строки, получившейся в результате выполнения программы, является  трехзначным числом, состоящем из трех одинаковых цифр</p>
+            <pre class="blur">
+for n in range(1,1000):
+    s = '3' + 40*'0' + n*'1' + 40*'2'
+    while '31' in s or '32' in s or '30' in s:
+        s = s.replace('31','223',1)
+        s = s.replace('32','23',1)
+        s = s.replace('30','13',1)
+    s = s.replace('3', '0')
+    sm = sum(map(int, s))
+    if 100<=sm<=999 and str(sm)[0]==str(sm)[1]==str(sm)[2]:
+        print(n)
+
+
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>7262 Определите, какие цифры будут находиться на 25-м, 75-м и 150-м местах строки</p>
+            <pre class="blur">
+s[26] + s[76] + s[151]</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>6747 </p>
+            <pre class="blur">
+for n in range(1,1000):
+    s = 104*'7'
+    while '33333' in s or '777' in s:
+        if '33333' in s:
+            s = s.replace('33333', '7', 1)
+        else:
+            s = s.replace('777','3',1)
+print(s)
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p>6044 </p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
+            <p></p>
+            <pre class="blur">
+</pre>
+        </div>
+        
+        
+        <div class="exercise">
             <p>найти наибольшее возможное значение суммы</p>
             <pre class="blur">
 m = 0
