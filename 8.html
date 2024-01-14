@@ -2,89 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 6px 12px;
-            border-radius: 10px;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 20px;
-            transition: 0.4s;
-            margin-bottom: 24px;
-        }
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 6px 12px;
+			border-radius: 10px;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 20px;
+			transition: 0.4s;
+			margin-bottom: 24px;
+		}
 
-        .active,
-        .accordion:hover {}
+		.active,
+		.accordion:hover {}
 
-        .panel {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-        }
-
-    </style>
+		.panel {
+			padding: 0 18px;
+			display: none;
+			overflow: hidden;
+		}
+	</style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1>Решение 8 задач Python</h1>
-        <h2>Проверь свои знания</h2>
-        <div class="exercise">
-            <p>алгоритм решения 8й задачи</p>
-            <pre class="blur">
+	<div class="wrapper">
+		<h1>Решение 8 задач Python</h1>
+		<button id="deleteBtn">Убрать ответы</button>
+		<button id="blurBtn">Убрать размытие</button>
+		<h2>Проверь свои знания</h2>
+		<div class="exercise">
+			<p>алгоритм решения 8й задачи</p>
+			<pre class="blur">
 from itertools import *
 k = 0
 for s in product('0123', repeat = 5):
 for s in permutations('АБВГД', r = 5):
     s = ''.join(s)</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>12240 никакие две одинаковые цифры не стоят рядом</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>12240 никакие две одинаковые цифры не стоят рядом</p>
+			<pre class="blur">
 s[i] != s[i+1] for i in range(4)</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>11657 хотя бы две чётные стоят рядом</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>11657 хотя бы две чётные стоят рядом</p>
+			<pre class="blur">
 x[i]%2==0 and x[i+1]%2==0 for i in range(5)</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>последнее слово с нечётным номером</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>11300 последнее слово с нечётным номером</p>
+			<pre class="blur">
 n % 2 != 0</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>10090 никакие две чётные или две нечётные цифры не стоят рядом</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>10090 никакие две чётные или две нечётные цифры не стоят рядом</p>
+			<pre class="blur">
 if '00' not in s and '33' not in s</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>9695 пятибуквенные слова из букв слова УДАЧ. Первая буква может быть только гласной</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>9695 пятибуквенные слова из букв слова УДАЧ. Первая буква может быть только гласной</p>
+			<pre class="blur">
 if s[0] in 'АУ'</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>9155 Сколько слов, оканчивающихся на Ь, запишет Катя, если заполнит список до 387 позиции</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>9155 Сколько слов, оканчивающихся на Ь, запишет Катя, если заполнит список до 387 позиции</p>
+			<pre class="blur">
 from itertools import *
 k = 0
 c = 0
@@ -97,7 +98,7 @@ for s in product('ЬРПЛЕА', repeat = 4):
         m=c
 print(m) 
    </pre>
-            <pre class="blur">
+			<pre class="blur">
 from itertools import *
 k = 0
 for i, s in enumerate(product('ЬРПЛЕА', repeat = 4)):
@@ -107,19 +108,19 @@ for i, s in enumerate(product('ЬРПЛЕА', repeat = 4)):
         break
 print(k) 
    </pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>Игорь использует 6-буквенные слова, в которых есть только буквы М, А, С, Л, О. причём в кодовом слове должна встречаться ровно одна гласная</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>Игорь использует 6-буквенные слова, в которых есть только буквы М, А, С, Л, О. причём в кодовом слове должна встречаться ровно одна гласная</p>
+			<pre class="blur">
 s.count('А') + s.count('О') == 1</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>7673 Какое количество слов находятся между словами ЕГЭ2023 и 2023ЕГЭ</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>7673 Какое количество слов находятся между словами ЕГЭ2023 и 2023ЕГЭ</p>
+			<pre class="blur">
 from itertools import *
 k = 0
 for s in product('ГЕЭ023', repeat = 7):
@@ -130,148 +131,104 @@ for s in product('ГЕЭ023', repeat = 7):
     if s == '2023ЕГЭ':
         print(k)
 print(216255-50250)</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>никакая нечётная цифра не стоит рядом с цифрой 2</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>6892 никакая нечётная цифра не стоит рядом с цифрой 2</p>
+			<pre class="blur">
 all(c not in s for c in ['12', '32', '21', '23'])</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>6496 Гатс составляет слово из букв Б, Е, Р, С, К. Слово может иметь длину от 5 до 7 букв. Сколько слов может составить Гатс?</p>
+			<pre class="blur">
+5*5 + 6*6 + 7*7</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>4258 Словом считается любая допустимая последовательность букв, не обязательно осмысленная</p>
+			<pre class="blur">
+permutations</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>4099 Под каким номером в списке идёт последнее слово, в котором все буквы различны?</p>
+			<pre class="blur">
+if len(set(s)) == 4:</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>2798 Код должен состоять из 8 букв, и каждая буква в нём должна встречаться столько же раз, сколько в имени Светлана</p>
+			<pre class="blur">
+permutations
+print(k/2)</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>2670 на первом и последнем месте в слове могут стоять только согласные буквы</p>
+			<pre class="blur">
+5*8*8*8*5</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>2350 </p>
+			<pre class="blur">
 </pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p></p>
-            <pre class="blur">
-</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>четные и нечетные чередуются</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>четные и нечетные чередуются</p>
+			<pre class="blur">
 (s[i] + s[i+1])%2 != 0</pre>
-        </div>
-        
-        
-    </div>
+		</div>
 
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
+	</div>
 
-    </script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
 
-</body>
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
 
-</html>
+		var deleteBtn = document.getElementById("deleteBtn");
+		var blur = document.getElementsByClassName("blur");
+		var n;
+		deleteBtn.addEventListener("click", function() {
+			for (n = 0; n < blur.length; n++) {
+				blur[n].style.display = "none";
+			}
+		});
+
+		var blurBtn = document.getElementById("blurBtn");
+		var blur = document.getElementsByClassName("blur");
+		var с;
+		blurBtn.addEventListener("click", function() {
+			for (c = 0; c < blur.length + 1; c = c + 1) {
+				console.log(blur)
+				console.log(blur[c])
+				console.log(blur.length)
+				blur[c].classList.remove('blur')
+			}
+		});
+	</script>
+
+</body></html>
