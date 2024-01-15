@@ -16,7 +16,7 @@
             <p>12247 подразрядная конъюнкция</p>
             <pre class="blur">
 def f(x):
- return (x&a=0) or (not(x&37==0)) or (not(x%12==0))
+ return (x&#38;a=0) or (not(x&#38;37==0)) or (not(x%12==0))
        
 for a in range(1,1000):
  if all(f(x) for x in range(1,100000)):
@@ -38,7 +38,7 @@ for a in range(1, 100000):
             <p>11607 ДЕЛ</p>
             <pre class="blur">
 def f(x):
-    return (not((x%263 == 0)) <= (x%a == 0)) and (x%71 == 0)
+    return (not((x%263 == 0)) &#60;= (x%a == 0)) and (x%71 == 0)
 
 for a in range(1, 100000):
     if all(f(x) == 0 for x in range(100000)):
@@ -49,7 +49,7 @@ for a in range(1, 100000):
             <p>11234 отрезок B = [120; 130]</p>
             <pre class="blur">
 def f(x):
-    return ((120 <= x <= 130) <= (not (x % 7 == 0))) or (a > 2 * x)
+    return ((120 &#60;= x &#60;= 130) &#60;= (not (x % 7 == 0))) or (a > 2 * x)
 
 for a in range(1, 10000):
     if all(f(x) for x in range(1, 100000)):
@@ -64,7 +64,7 @@ def treug(n,m,k):
     return max(n,m,k) < sum([n,m,k]) - max(n,m,k)
 
 for a in range(1,10000):
-    if all(not((treug(x, 11, 18) == (not (max(x,5) > 68))) and (treug(x, a, 5))) for x in range(1, 100000)):
+    if all(not((treug(x, 11, 18) == (not (max(x,5) &#62; 68))) and (treug(x, a, 5))) for x in range(1, 100000)):
         print(a)</pre>
         </div>
         
@@ -72,7 +72,7 @@ for a in range(1,10000):
             <p>8677 ДЕЛ + отрезок</p>
             <pre class="blur">
 def f(x):
-    return (x%17==0) <= (not(80<=x<=100) or (a < x + 30))
+    return (x%17==0) &#60;= (not(80&#60;=x&#60;=100) or (a < x + 30))
 
 for a in range(1, 100000):
     if all(f(x) == 1 for x in range(1,10000)):
@@ -83,7 +83,7 @@ for a in range(1, 100000):
             <p>8005 x E [15,30]</p>
             <pre class="blur">
 def f(x):
-    return (x&29==0) or ((x&11 == 0) <= (not(x&a == 0)))
+    return (x&#38;29==0) or ((x&#38;11 == 0) &#60;= (not(x&#38;a == 0)))
 for a in range(1,100):
     if all(f(x) == 1 for x in range(15,30)):
         print (a)</pre>
@@ -93,7 +93,7 @@ for a in range(1,100):
             <p>1017 для любых целых неотрицательных значений x и y</p>
             <pre class="blur">
 def f(x,y):
-    return (2*x + 3*y != 150) or (x<a) or (y<a)
+    return (2*x + 3*y != 150) or (x&#60;a) or (y&#60;a)
 
 for a in range(1,10000):
     if all(f(x,y) > 0 for x in range(1,1000) for y in range(1,1000)):
@@ -102,7 +102,7 @@ for a in range(1,10000):
         </div>
         
         <div class="exercise">
-            <p>1011</p>
+            <p></p>
             <pre class="blur">
 </pre>
         </div>
