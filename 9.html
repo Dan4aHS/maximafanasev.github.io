@@ -5,31 +5,6 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 6px 12px;
-            border-radius: 10px;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 20px;
-            transition: 0.4s;
-            margin-bottom: 24px;
-        }
-
-        .active,
-        .accordion:hover {}
-
-        .panel {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -90,7 +65,7 @@ if sum(a)*5 == 18</pre>
         <div class="exercise">
             <p>6999 в строке ровно три числа кратных трем</p>
             <pre class="blur">
-a3 = [x for x in a x % 3]
+a3 = [x for x in if a x % 3]
 if len(a3) == 3</pre>
         </div>
         
@@ -140,23 +115,6 @@ if len(a2) > 0</pre>
         
     </div>
 
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-
-    </script>
 
 </body>
 

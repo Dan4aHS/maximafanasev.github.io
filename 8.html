@@ -5,30 +5,6 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
-	<style>
-		.accordion {
-			background-color: #eee;
-			color: #444;
-			cursor: pointer;
-			padding: 6px 12px;
-			border-radius: 10px;
-			border: none;
-			text-align: left;
-			outline: none;
-			font-size: 20px;
-			transition: 0.4s;
-			margin-bottom: 24px;
-		}
-
-		.active,
-		.accordion:hover {}
-
-		.panel {
-			padding: 0 18px;
-			display: none;
-			overflow: hidden;
-		}
-	</style>
 </head>
 
 <body>
@@ -49,14 +25,14 @@ for s in permutations('АБВГД', r = 5):
 		<div class="exercise">
 			<p>12240 никакие две одинаковые цифры не стоят рядом</p>
 			<pre class="blur">
-s[i] != s[i+1] for i in range(4)</pre>
+all(s[i] != s[i+1] for i in range(4))</pre>
 		</div>
 
 
 		<div class="exercise">
 			<p>11657 хотя бы две чётные стоят рядом</p>
 			<pre class="blur">
-x[i]%2==0 and x[i+1]%2==0 for i in range(5)</pre>
+any(x[i]%2==0 and x[i+1]%2==0 for i in range(5))</pre>
 		</div>
 
 
@@ -188,45 +164,7 @@ print(k/2)</pre>
 (s[i] + s[i+1])%2 != 0</pre>
 		</div>
 
-
 	</div>
 
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.display === "block") {
-					panel.style.display = "none";
-				} else {
-					panel.style.display = "block";
-				}
-			});
-		}
-
-		var deleteBtn = document.getElementById("deleteBtn");
-		var blur = document.getElementsByClassName("blur");
-		var n;
-		deleteBtn.addEventListener("click", function() {
-			for (n = 0; n < blur.length; n++) {
-				blur[n].style.display = "none";
-			}
-		});
-
-		var blurBtn = document.getElementById("blurBtn");
-		var blur = document.getElementsByClassName("blur");
-		var с;
-		blurBtn.addEventListener("click", function() {
-			for (c = 0; c < blur.length + 1; c = c + 1) {
-				console.log(blur)
-				console.log(blur[c])
-				console.log(blur.length)
-				blur[c].classList.remove('blur')
-			}
-		});
-	</script>
 
 </body></html>
