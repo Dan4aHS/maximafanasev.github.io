@@ -71,12 +71,12 @@ ul.tasks li a {
     padding: 20px;
 }
 
-ul li:hover {
+ul.tasks li:hover {
     background-color: #fff;
     color: #222;
 }
 
-ul li:hover a{
+ul.tasks li:hover a{
     text-decoration: none;
     color: #222;
 }
