@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: roboto, sans-serif;
     font-size: 22px;
+    padding: 0 32px;
 }
 
 .wrapper {
