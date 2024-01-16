@@ -68,6 +68,7 @@ ul.tasks li {
 
 ul.tasks li a {
     display: block;
+    border-radius: 5px;
     padding: 20px;
 }
 
@@ -93,6 +94,15 @@ ul.tasks li:hover a{
     left: 0;
     background: green;
     border-radius: 0 0 5px 5px;
+}
+
+.not-available {
+    background: darkgray;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+.not-available::before {
+    background: darkgray;
 }
 
 pre {
