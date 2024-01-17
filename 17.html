@@ -2,77 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
-        <h1>Решение 17 задач Python</h1>
-        <h2>Проверь свои знания</h2>
-        <div class="exercise">
-            <p>алгоритм решения 17й задачи</p>
-            <pre class="blur">
-a = [int(x) for x in open('17.txt')]
-m = max(x for x in a if ...)
-ans = []
-for i in range(len(a) - 1):
-    x,y,z = a[i], a[i+1], a[i+2]
-    if () + () + () == 1
+	<div class="wrapper">
+		<span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
+		<h1>Решение 17 задач Python</h1>
+
+		<div class="exercise">
+			<p><span class="number">12249</span> В файле содержится последовательность целых чисел. Элементы последовательности могут принимать целые значения от —100 000 до 100 000 включительно. Определите количество троек элементов последовательности, в которых хотя бы один из трёх элементов оканчивается на 3, а сумма элементов тройки не больше максимального элемента последовательности, являющегося пятизначным числом, которое оканчивается на 3. В ответе запишите количество найденных троек чисел, затем максимальную из сумм элементов таких троек. В данной задаче под тройкой подразумевается три идущих подряд элемента последовательности.
+			<a class="download" href="17/17_10719.txt" download>17_12249.txt</a></p>
+			<pre class="blur">
+a = [int(x) for x in open('17_12249.txt')]
+m = max(x for x in a if 10000 &#60;= abs(x) &#60;= 99999 and abs(x)%10 == 3)
+ans=[]
+for i in range(len(a) - 2):
+    x,y,z = a[i],a[i+1],a[i+2]
+    if (abs(x)%10 == 3 or abs(y)%10 == 3 or abs(z)%10 == 3) and \
+       (x+y+z) &#60;= m:
         ans.append(x+y+z)
 print(len(ans), max(ans))</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>12249 хотя бы один из трёх элементов</p>
-            <pre class="blur">
-(x or y or z)</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>8954 элемент оканчивается на 0x0F</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>8954 элемент оканчивается на 0x0F</p>
+			<pre class="blur">
 if x%100 == 0x0F</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>2238 хотя бы 2 из 3х</p>
-            <pre class="blur">
+		</div>
+
+
+		<div class="exercise">
+			<p>2238 хотя бы 2 из 3х</p>
+			<pre class="blur">
 () + () + () &#60;= 2</pre>
-        </div>
-        
-        <div class="exercise">
-            <p>найти сумму всех чисел в файле</p>
-            <pre class="blur">
+		</div>
+
+		<div class="exercise">
+			<p>найти сумму всех чисел в файле</p>
+			<pre class="blur">
 s = 0
 for n in a:
     sd = sum(int(x) for x in str(n))
     s += sd</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>не более 1 элемента</p>
-            <pre class="blur">
-() + () &#60;= 1</pre>
-        </div>
-        
-        
-        <div class="exercise">
-            <p>11703 число оканчивается на 18</p>
-            <pre class="blur">
-x % 100 == 18</pre>
-        </div>
-        
-    </div>
-        </div>
-    </div>
-</body>
+		</div>
 
-</html>
+
+		<div class="exercise">
+			<p>не более 1 элемента</p>
+			<pre class="blur">
+() + () &#60;= 1</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>11703 число оканчивается на 18</p>
+			<pre class="blur">
+x % 100 == 18</pre>
+		</div>
+
+	</div>
+	</div>
+	</div>
+</body></html>
