@@ -27,6 +27,21 @@ for a1,a2,a3,a4 in product([0,1], repeat=4):
            if [f(**dict(zip(p,r))) for r in table]==[1,1,1]:
                print(p)</pre>
         </div>
+        
+        <img src="2/1.png" alt="решение задачи">
+<pre>
+from itertools import *
+
+def f(x,y,w,z):
+    return (not(y &#60;= (x==w)) and (z&#60;=x))
+
+for a1,a2,a3,a4,a5 in product([0,1], repeat=5):
+    table = [(a1,1,1,a2),(0,a3,a4,0),(a5,0,1,0)]
+    if len(table)==len(set(table)):
+        for p in permutations('xywz'):
+            if [f(**dict(zip(p,r))) for r in table]==[1,1,1]:
+                print(p)
+</pre>
 
     </div>
 </body>

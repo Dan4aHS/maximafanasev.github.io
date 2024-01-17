@@ -13,7 +13,7 @@
         <span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
         <h1>Решение 5 задач Python</h1>
         <h2>Проверь свои знания</h2>
-        
+
         <div class="exercise">
             <p>алгоритм перевода в сс с 3-9</p>
             <pre class="blur">
@@ -24,7 +24,7 @@ def cc(x):
         x // = 3
     return s</pre>
         </div>
-        
+
         <div class="exercise">
             <p>алгоритм перевода в сс с 11-36</p>
             <pre class="blur">
@@ -36,13 +36,27 @@ def cc(x):
         x // = 11
     return s</pre>
         </div>
-        
+
         <div class="exercise">
-            <p>12459 В середину числа дописывается 0</p>
+            <img src="5/12459.png" alt="решение задачи">
             <pre class="blur">
-n = n[:len(n)//2] + '0' + n[len(n)//2:]</pre>
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%4) + s
+        x //= 4
+    return s
+
+for n in range(1,1000):
+    n4 = cc(n)
+    if len(n4)%2==0:
+        n4 = n4[:len(n4)//2] + '0' + n4[len(n4)//2:]
+    r = int(n4, 4)
+    if r&#60;=180:
+        print(n)</pre>
         </div>
-        
+
+
         <div class="exercise">
             <p>7670 Посчитать количество четных цифр</p>
             <pre class="blur">
@@ -50,68 +64,68 @@ for a in b:
     if a % 2 == 0:
         k += 1</pre>
         </div>
-        
+
         <div class="exercise">
             <p>12237 к этой записи дописываются две последние двоичные цифры</p>
             <pre class="blur">
 b += b[-2:]</pre>
         </div>
-        
+
         <div class="exercise">
             <p>8463 слева дописываются первые три цифры</p>
             <pre class="blur">
 b = b[:3] + b</pre>
         </div>
-        
+
         <div class="exercise">
             <p>8942 Если сумма двоичных разрядов кратна 4</p>
             <pre class="blur">
 if b.count('1') % 4 == 0</pre>
         </div>
-        
+
         <div class="exercise">
             <p>8550 справа дописываются 1, а первые две цифры заменяются на 10</p>
             <pre class="blur">
 b = b + '1'
 b = '10' + b[2:]</pre>
         </div>
-        
+
         <div class="exercise">
             <p>7882 справа дописывается остаток от деления числа N на 3, а слева остаток от деления N на 2</p>
             <pre class="blur">
 b = str(a%2) + b + str(a%3)</pre>
         </div>
-        
+
         <div class="exercise">
             <p>7670 В полученной записи все цифры А16 заменяются на 1<sub>16</sub></p>
             <pre class="blur">
 b = b.replace('a', '1')</pre>
         </div>
-        
+
         <div class="exercise">
-            <p>6885  справа приписывается в двоичном виде сумма цифр его двоичной записи</p>
+            <p>6885 справа приписывается в двоичном виде сумма цифр его двоичной записи</p>
             <pre class="blur">
 n += bin(n.count('1'))[2:]</pre>
         </div>
-        
+
         <div class="exercise">
             <p>5427 слева дописывается три младших разряда</p>
             <pre class="blur">
 b = b[-3:] + b</pre>
         </div>
-        
+
         <div class="exercise">
             <p>5058 В полученной записи все нули заменяются на единицы, все единицы – на нули. Из полученного числа удаляются ведущие нули</p>
             <pre class="blur">
 b = b.replace('1','2').replace('0', '1').replace('2','0')</pre>
         </div>
-        
+
         <div class="exercise">
             <p>4255 складываются все цифры двоичной записи числа N, и остаток от деления суммы на 2 дописывается в конец числа (справа)</p>
             <pre class="blur">
 b = b + str(n.count('1')%2)</pre>
         </div>
-        
+
         <div class="exercise">
             <p>3146 </p>
             <pre class="blur">

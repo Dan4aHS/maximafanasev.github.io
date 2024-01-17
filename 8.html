@@ -13,6 +13,16 @@
         <span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
 		<h1>Решение 8 задач Python</h1>
 		<h2>Проверь свои знания</h2>
+		
+		
+		<div class="exercise">
+			<p>Основные ошибки</p>
+			<pre class="blur">
+1) при работе с числами забыть про s[0]!=0 или s[0]!='0'
+2) </pre>
+		</div>
+		
+		
 		<div class="exercise">
 			<p>алгоритм решения 8й задачи</p>
 			<pre class="blur">
@@ -25,9 +35,16 @@ for s in permutations('АБВГД', r = 5):
 
 
 		<div class="exercise">
-			<p>12240 никакие две одинаковые цифры не стоят рядом</p>
+			<p>12240 Сколько существует девятеричных пятизначных чисел, содержащих в своей записи ровно одну цифру 5, в которых никакие две одинаковые цифры не стоят рядом?</p>
 			<pre class="blur">
-all(s[i] != s[i+1] for i in range(4))</pre>
+from itertools import *
+k=0
+for s in product('012345678', repeat=5):
+    s = ''.join(s)
+    if s.count('5') == 1 and s[0]!='0' and \
+       all(s[i]!= s[i+1] for i in range(4)):
+            k+=1
+print(k)</pre>
 		</div>
 
 

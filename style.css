@@ -4,6 +4,8 @@ body {
     font-family: roboto, sans-serif;
     font-size: 22px;
     padding: 0 32px;
+    padding-bottom: 24px;
+    overflow-x: hidden;
 }
 
 .wrapper {
