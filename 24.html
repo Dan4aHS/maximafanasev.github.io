@@ -36,5 +36,77 @@ s = open('24_1874.txt').readline()
 s = s.replace('QW', 'Q W')
 print(max(len(c) for c in s.split()))
 </pre>
+
+		<p>Текстовый файл состоит из символов латинского алфавита (A..Z). Определите максимальное количество идущих подряд символов, среди которых нет сочетания символов KEGE.</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.replace('KEGE', 'KEG EGE')
+print(max(len(c) for c in s.split()))
+</pre>
+
+		<p>Текстовый файл состоит из символов латинского алфавита (A..Z). Определите максимальное количество идущих подряд символов, среди которых нет сочетания символов PPP.</p>
+		<pre>
+s = open('24.txt').readline()
+while 'PPP' in s: s = s.replace('PPP', 'PP PP')
+print(max(len(c) for c in s.split()))
+</pre>
+
+		<p>Текстовый файл состоит из X Y Z. Определите максимальное количество идущих подряд пар символов ZX или ZY.</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.replace('ZX', '*').replace('ZY', '*')
+s = s.replace('X', ' ').replace('Y', ' ').replace('Z', ' ')
+print(max(len(c) for c in s.split()))
+</pre>
+
+		<p>Текстовый файл состоит из A B C 1 2 3. Определите максимальное количество идущих подряд троек буква + цифра + цифра</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.replace('B', 'A').replace('C', 'A').replace('2', '1').replace('3', '1')
+s = s.replace('A11', '*').replace('A', ' ').replace('1', ' ')
+print(max(len(c) for c in s.split()))
+</pre>
+
+		<p>Текстовый файл состоит из A B C 8 9. Определите максимальное количество идущих подряд символов, среди которых ни одна буква не стоит рядом с буквой а цифра с цифрой</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.replace('B', 'A').replace('C', 'A').replace('9', '8').replace('3', '1')
+while 'AA' in s: s = s.replace('AA', 'A A')
+while '88' in s: s = s.replace('88', '8 8')
+print(max(len(c) for c in s.split()))
+</pre>
+
+		<p>Текстовый файл состоит из A B C D E. Определите максимальное количество идущих подряд символов, среди которых символ А встречается не более 3 раз</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.split('A')
+m=0
+for i in range(len(s) - 3):
+ c = s[i] + 'A' + s[i+1] + 'A' + s[i+2] + 'A'+ s[i+3]
+ m = max(m, len(c))
+print(m)
+</pre>
+
+		<p>Текстовый файл состоит из A B C D E. Определите МИНИМАЛЬНОЕ количество идущих подряд символов, среди которых символ А встречается 35 раз</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.split('A')
+m=0
+for i in range(len(s) - 3):
+ c = 'A' + s[i+1] + 'A' + s[i+2] + 'A'
+ m = max(m, len(c))
+print(m)
+</pre>
+
+		<p>Текстовый файл состоит из A B C D E. Определите МИНИМАЛЬНОЕ количество идущих подряд символов, среди которых символ А встречается 35 раз</p>
+		<pre>
+s = open('24.txt').readline()
+s = s.split('A')
+m=10000
+for i in range(len(s) - 35):
+ c = A.join(s[i:i+36])
+ m = min(m, len(c) - len(s[i]) - len(s[i+35]))
+print(m)
+</pre>
 	</div>
 </body></html>
