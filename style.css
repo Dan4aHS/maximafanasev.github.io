@@ -54,6 +54,10 @@ a.download {
 	font-size: 20px;
 }
 
+a.golden {
+	color: gold
+}
+
 .title-link {
 	font-size: 30px;
 	text-decoration: underline;
@@ -172,6 +176,10 @@ table tbody tr td {
 table tbody tr th {
 	padding: 5px;
 	border-right: 1px solid #fff;
+}
+
+table.tasks td{
+	background: #213521;
 }
 
 .block {

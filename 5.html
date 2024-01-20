@@ -2,31 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
-        <h1>Решение 5 задач Python</h1>
+	<div class="wrapper">
+		<span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
+		<h1>Решение 5 задач Python</h1>
 
-        <div class="exercise">
-            <p>алгоритм перевода в сс с 3-9</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>алгоритм перевода в сс с 3-9</p>
+			<pre class="blur">
 def cc(x):
     s = ''
     while x>0:
         s = str(x%3) + s
         x // = 3
     return s</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>алгоритм перевода в сс с 11-36</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>алгоритм перевода в сс с 11-36</p>
+			<pre class="blur">
 def cc(x):
     a = '01234567890A'
     s = ''
@@ -34,11 +34,11 @@ def cc(x):
         s = a[x%11] + s
         x // = 11
     return s</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <img src="5/12459.png" alt="решение задачи">
-            <pre class="blur">
+		<div class="exercise">
+			<img src="5/12459.png" alt="решение задачи">
+			<pre class="blur">
 def cc(x):
     s = ''
     while x>0:
@@ -53,12 +53,12 @@ for n in range(1,1000):
     r = int(n4, 4)
     if r&#60;=180:
         print(n)</pre>
-        </div>
+		</div>
 
 
-        <div class="exercise">
-            <img src="5/7670.png" alt="решение задачи">
-            <pre class="blur">
+		<div class="exercise">
+			<img src="5/7670.png" alt="решение задачи">
+			<pre class="blur">
 ans = []
 for n in range(151,1000):
     n16 = hex(n)[2:]
@@ -77,76 +77,79 @@ for n in range(151,1000):
 print(min(ans))
     
 </pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>12237 к этой записи дописываются две последние двоичные цифры</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>12237 к этой записи дописываются две последние двоичные цифры</p>
+			<pre class="blur">
 b += b[-2:]</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>8463 слева дописываются первые три цифры</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>8463 слева дописываются первые три цифры</p>
+			<pre class="blur">
 b = b[:3] + b</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>8942 Если сумма двоичных разрядов кратна 4</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>8942 Если сумма двоичных разрядов кратна 4</p>
+			<pre class="blur">
 if b.count('1') % 4 == 0</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>8550 справа дописываются 1, а первые две цифры заменяются на 10</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>8550 справа дописываются 1, а первые две цифры заменяются на 10</p>
+			<pre class="blur">
 b = b + '1'
 b = '10' + b[2:]</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>7882 справа дописывается остаток от деления числа N на 3, а слева остаток от деления N на 2</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>7882 справа дописывается остаток от деления числа N на 3, а слева остаток от деления N на 2</p>
+			<pre class="blur">
 b = str(a%2) + b + str(a%3)</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>7670 В полученной записи все цифры А16 заменяются на 1<sub>16</sub></p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>7670 В полученной записи все цифры А16 заменяются на 1<sub>16</sub></p>
+			<pre class="blur">
 b = b.replace('a', '1')</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>6885 справа приписывается в двоичном виде сумма цифр его двоичной записи</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>6885 справа приписывается в двоичном виде сумма цифр его двоичной записи</p>
+			<pre class="blur">
 n += bin(n.count('1'))[2:]</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>5427 слева дописывается три младших разряда</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>5427 слева дописывается три младших разряда</p>
+			<pre class="blur">
 b = b[-3:] + b</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>5058 В полученной записи все нули заменяются на единицы, все единицы – на нули. Из полученного числа удаляются ведущие нули</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>5058 В полученной записи все нули заменяются на единицы, все единицы – на нули. Из полученного числа удаляются ведущие нули</p>
+			<pre class="blur">
 b = b.replace('1','2').replace('0', '1').replace('2','0')</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>4255 складываются все цифры двоичной записи числа N, и остаток от деления суммы на 2 дописывается в конец числа (справа)</p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>4255 складываются все цифры двоичной записи числа N, и остаток от деления суммы на 2 дописывается в конец числа (справа)</p>
+			<pre class="blur">
 b = b + str(n.count('1')%2)</pre>
-        </div>
+		</div>
 
-        <div class="exercise">
-            <p>3146 </p>
-            <pre class="blur">
+		<div class="exercise">
+			<p>3146 </p>
+			<pre class="blur">
 </pre>
-        </div>
-    </div>
 
-</body>
 
-</html>
+			<img src="5/3.png" alt="решение задачи">
+			<img src="5/4.png" alt="решение задачи">
+			<img src="5/5.png" alt="решение задачи">
+		</div>
+	</div>
+
+</body></html>
