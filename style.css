@@ -13,6 +13,10 @@ body {
 	margin: 0 auto;
 }
 
+.done {
+	background: green;
+}
+
 p {
 	line-height: 31px;
 }
