@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="wrapper">
+	<h1>Проекты <a href="https://github.com/MaximAfanasev/python/tree/main" target="_blank">ссылка на github</a></h1>
+	<h4>Для запуска нужно:</h4>
+		<ol>
+			<li>Установить python <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+			<li>При установке выбрать пункт Add python.exe to Path <img class="instruction-img" src="img/instruction.png" alt="решение задачи"></li>
+			<li>Установить git <a href="https://git-scm.com/">https://git-scm.com/</a></li>
+			<li>Как установить пакеты для проектов
+			<img src="img/instr.gif" alt="">
+			<ol>
+				<li>Создать папку</li>
+				<li>В ней правой кнопкой мыши нажать на Open git Bash here</li>
+				<li>написать pip install и нужный пакет</li>
+				<li>Например pip install moviepy</li>
+				<li>Если выдаст ошибку, значит переустановить питон и не забыть поставить галочку в пункте 2!</li>
+			</ol></li>
+				
+		</ol>
+		<span>19.01.24</span>
+		<h4>Выключение компьютера</h4>
+		<pre>
+import os
+
+choice = input("shutdown? (y or n)")
+
+if choice == 'y' or choice == 'Y':
+    os.system('shutdown /r')
+else:
+    print('exiting')</pre>
+		<span>20.01.24</span>
+		<h4>Извлечь аудио из видео файла</h4>
+		<pre>
+#для работы модуль editor (может работать с субтитрами)
+import moviepy.editor
+from pathlib import Path
+
+video_file = Path('my_video.mp4')
+# обращаемся к классу VideoFileClip
+# и передаем путь до файла
+video = moviepy.editor.VideoFileClip(f'{video_file}')
+# вырежем аудиодорожку из видео
+audio = video.audio
+#stem - обрезает формат после точки и добавляем mp3
+audio.write_audiofile(f'{video_file.stem}.mp3')</pre>
+		<h4>Шифрование файла с текстом семмитричным шифрованием</h4>
+<pre>
+import pyAesCrypt
+
+#нужно ввести пароль для шифрования
+password = input('Введите пароль для файла:')
+
+#encrypt
+pyAesCrypt.encryptFile('data.txt', 'data.txt.aes', password)
+
+#decrypt
+pyAesCrypt.decryptFile('data.txt.aes', 'dataout.txt', password)</pre>
+		<h4>Шифрование pdf файла</h4>
+		<pre>
+from PyPDF2 import PdfWriter, PdfReader
+from getpass import getpass
+#создаем объекты классов
+pdfwriter = PdfWriter()
+pdf = PdfReader('api.pdf')
+
+#получаем все страницы файла
+for page in range(len(pdf.pages)):
+    #читаем и добавляем каждую страницу
+    pdfwriter.add_page(pdf.pages[page])
+#создадим пароль
+password = getpass(prompt='Введите пароль: ')
+#шифруем файл
+pdfwriter.encrypt(password)
+
+#открываем файл на запись в бинарном режиме
+with open('protected.pdf', 'wb') as file:
+    #записываем с помощью метода write
+    pdfwriter.write(file)</pre>
+		<h4>Шифрование pdf файла паролем</h4>
+		<pre>
+from PyPDF2 import PdfWriter, PdfReader
+from getpass import getpass
+#создаем объекты классов
+pdfwriter = PdfWriter()
+pdf = PdfReader('api.pdf')
+
+#получаем все страницы файла
+for page in range(len(pdf.pages)):
+    #читаем и добавляем каждую страницу
+    pdfwriter.add_page(pdf.pages[page])
+#создадим пароль
+password = getpass(prompt='Введите пароль: ')
+#шифруем файл
+pdfwriter.encrypt(password)
+
+#открываем файл на запись в бинарном режиме
+with open('protected.pdf', 'wb') as file:
+    #записываем с помощью метода write
+    pdfwriter.write(file)</pre>
+</body>
+
+</html>

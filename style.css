@@ -33,15 +33,12 @@ img {
 	margin-bottom: 24px;
 }
 
-span {
-	color: #fff;
-	font-size: 15px;
+.instruction-img {
+	width: fit-content;
 }
 
 a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 15px;
+	color: gold;
 }
 
 a:hover {
@@ -88,6 +85,8 @@ ul.tasks li a {
 	display: block;
 	border-radius: 5px;
 	padding: 20px;
+	text-decoration: none;
+	color: #fff;
 }
 
 ul.tasks li:hover {
@@ -178,7 +177,7 @@ table tbody tr th {
 	border-right: 1px solid #fff;
 }
 
-table.tasks td{
+table.tasks td {
 	background: #213521;
 }
 
