@@ -10,7 +10,7 @@
 
 <body>
 	<div class="wrapper">
-		<span>&#60; </span><a href="ege.html">Вернуться к списку задач</a>
+		<span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
 		<h1>Решение 5 задач Python</h1>
 
 		<div class="exercise">
@@ -35,6 +35,19 @@ def cc(x):
         x // = 11
     return s</pre>
 		</div>
+
+		<pre>
+две последние двоичные цифры
+слева дописываются первые три цифры
+первые две цифры заменяются на 10
+слева дописывается три младших разряда b[-3:]
+a = '123456'
+print(a[:2]) 12
+print(a[:-2]) 1234
+print(a[2:]) 3456
+print(a[-2:]) 56
+print(a[:len(a)//2]) 123
+print(a[len(a)//2:]) 456</pre>
 
 		<div class="exercise">
 			<img src="5/12459.png" alt="решение задачи">
@@ -80,28 +93,9 @@ print(min(ans))
 		</div>
 
 		<div class="exercise">
-			<p>12237 к этой записи дописываются две последние двоичные цифры</p>
-			<pre class="blur">
-b += b[-2:]</pre>
-		</div>
-
-		<div class="exercise">
-			<p>8463 слева дописываются первые три цифры</p>
-			<pre class="blur">
-b = b[:3] + b</pre>
-		</div>
-
-		<div class="exercise">
 			<p>8942 Если сумма двоичных разрядов кратна 4</p>
 			<pre class="blur">
 if b.count('1') % 4 == 0</pre>
-		</div>
-
-		<div class="exercise">
-			<p>8550 справа дописываются 1, а первые две цифры заменяются на 10</p>
-			<pre class="blur">
-b = b + '1'
-b = '10' + b[2:]</pre>
 		</div>
 
 		<div class="exercise">
@@ -111,21 +105,9 @@ b = str(a%2) + b + str(a%3)</pre>
 		</div>
 
 		<div class="exercise">
-			<p>7670 В полученной записи все цифры А16 заменяются на 1<sub>16</sub></p>
-			<pre class="blur">
-b = b.replace('a', '1')</pre>
-		</div>
-
-		<div class="exercise">
 			<p>6885 справа приписывается в двоичном виде сумма цифр его двоичной записи</p>
 			<pre class="blur">
 n += bin(n.count('1'))[2:]</pre>
-		</div>
-
-		<div class="exercise">
-			<p>5427 слева дописывается три младших разряда</p>
-			<pre class="blur">
-b = b[-3:] + b</pre>
 		</div>
 
 		<div class="exercise">
@@ -140,16 +122,11 @@ b = b.replace('1','2').replace('0', '1').replace('2','0')</pre>
 b = b + str(n.count('1')%2)</pre>
 		</div>
 
-		<div class="exercise">
-			<p>3146 </p>
-			<pre class="blur">
-</pre>
-
-
-			<img src="5/3.png" alt="решение задачи">
-			<img src="5/4.png" alt="решение задачи">
-			<img src="5/5.png" alt="решение задачи">
-		</div>
+		<img src="5/3.png" alt="решение задачи">
+		<img src="5/4.png" alt="решение задачи">
+		<img src="5/5.png" alt="решение задачи">
 	</div>
 
-</body></html>
+</body>
+
+</html>
