@@ -93,7 +93,7 @@ ul.tasks li a {
 	color: #fff;
 }
 
-ul.tasks li:hover {
+ul.tasks li:hover a {
 	background-color: #fff;
 	color: #222;
 }
