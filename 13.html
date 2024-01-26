@@ -46,11 +46,11 @@
 					if f'{ip:b}'
 				</div>
 			</div>
-			<div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+			<div class="example-dropzone example-dropzone-1" ondragover="onDragOver(event);" ondrop="onDrop(event);">
 				В эту область в правильном порядке
 			</div>
 		</div>
-		
+
 		<table>
 			<tr>
 				<th>IP адрес полный (например 192.168.32.48)</th>
@@ -184,6 +184,35 @@ print(k)</pre>
 
 		<h2>2 тип заданий (полный ip / адрес сети + условие)</h2>
 		<img src="13/2.png" alt="решение задач">
+
+		<div class="example-parent">
+			<div class="example-origin">
+				Перетащи элементы
+
+
+				<div id="draggable-8" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					for mask in range(33):
+				</div>
+				<div id="draggable-9" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					addr = ip_address('___.___.___.___')
+				</div>
+				<div id="draggable-10" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if addr == net.network_address:
+				</div>
+				<div id="draggable-11" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					print()
+				</div>
+				<div id="draggable-12" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					net = ip_network(f'___.___.___.___/{mask}', 0)
+				</div>
+				<div id="draggable-13" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					from ipaddress import *
+				</div>
+			</div>
+			<div class="example-dropzone example-dropzone-2" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+				В эту область в правильном порядке
+			</div>
+		</div>
 		<table>
 			<tr>
 				<th>IP адрес полный (например 192.168.32.48)</th>
@@ -281,6 +310,42 @@ for mask in range(33):
 		<p>11794 Сеть, в которой содержится узел с IP-адресом 223.167.A.167, задана маской сети 255.255.255.192, где A - некоторое допустимое для записи IP-адреса число. Определите максимальное значение
 			A, для которого для всех IP-адресов этой сети в двоичной записи IP-адреса суммарное количество нулей в левых двух байтах не больше суммарного количества нулей в правых двух байтах.
 			В ответе укажите только число.</p>
+		<img src="13/3.png" alt="решение задач">
+
+		<div class="example-parent">
+			<div class="example-origin">
+				Перетащи элементы
+
+
+    
+    
+       
+           
+           
+
+				<div id="draggable-14" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					print(A)
+				</div>
+				<div id="draggable-15" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					for A in range(256):
+				</div>
+				<div id="draggable-16" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if net not in [net.network_address, net.broadcast_address]:
+				</div>
+				<div id="draggable-17" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if all( f'{ip:b}'[:16].count('0') &#60;= f'{ip:b}'[16:].count('0') for ip in net):
+				</div>
+				<div id="draggable-18" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					from ipaddress import *
+				</div>
+				<div id="draggable-19" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					net = ip_network(f'___.___.{A}.___/___.___.___.___', 0)
+				</div>
+			</div>
+			<div class="example-dropzone example-dropzone-3" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+				В эту область в правильном порядке
+			</div>
+		</div>
 		<pre>
 from ipaddress import *
 for A in range(256):
@@ -306,7 +371,7 @@ for mask in range(33):
                print(net.netmask)</pre>
 
 	</div>
-	
+
 	<style>
 		.example-parent {
 			margin-bottom: 48px;
@@ -332,15 +397,26 @@ for mask in range(33):
 		}
 
 		.example-dropzone {
-			min-height: 430px;
 			background-color: #444;
 			border-radius: 12px;
 			flex-basis: 100%;
 			flex-grow: 1;
 			padding: 10px;
 		}
+
+		.example-dropzone-1 {
+			min-height: 430px;
+		}
+
+		.example-dropzone-2 {
+			min-height: 340px;
+		}
+
+		.example-dropzone-3 {
+			min-height: 460px;
+		}
 	</style>
-	
+
 	<script>
 		function onDragStart(event) {
 			event
@@ -370,6 +446,4 @@ for mask in range(33):
 		}
 	</script>
 
-</body>
-
-</html>
+</body></html>
