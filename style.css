@@ -40,9 +40,9 @@ h1 {
 }
 
 img {
-	width: 100%;
-	max-width: 1200px;
 	margin-bottom: 24px;
+	width: 100%;
+	max-width: fit-content;
 }
 
 .books {
@@ -58,11 +58,6 @@ img {
 .books img {
 	width: 200px;
 	height: 270px;
-}
-
-.screen {
-	width: 100%;
-	max-width: fit-content;
 }
 
 a {
