@@ -350,9 +350,42 @@ for A in range(256):
            print(A)</pre>
 
 		<h2>4 тип заданий (полный ip / неполная маска)</h2>
+		<img src="13/4.png" alt="решение задач">
+		
+		<div class="example-parent">
+			<div class="example-origin">
+				Перетащи элементы
 
-		<p>11791 Сеть, в которой содержится узел с IP-адресом 246.51.128.202, задана маской сети 255.255.
-			A.0, где A - некоторое допустимое для записи маски число. Определите минимальное значение A, для которого для всех IP-адресов этой сети в двоичной записи IP-адреса суммарное количество нулей в левых двух байтах не более суммарного количества нулей в правых двух байтах. В ответе укажите только число</p>
+				<div id="draggable-20" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					from fnmatch import *
+				</div>
+				<div id="draggable-21" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					print(net.netmask)
+				</div>
+				<div id="draggable-22" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					from ipaddress import *
+				</div>
+				<div id="draggable-23" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					net = ip_network(f'246.51.128.202/{mask}', 0)
+				</div>
+				<div id="draggable-24" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if all(f'{ip:b}'[:16].count('0') &#60;= f'{ip:b}'[16:].count('0') for ip in net):
+				</div>
+				<div id="draggable-25" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					for mask in range(33):
+				</div>
+				<div id="draggable-26" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if net not in [net.network_address, net.broadcast_address]:
+				</div>
+				<div id="draggable-27" class="example-draggable" draggable="true" ondragstart="onDragStart(event);">
+					if fnmatch(str(net.netmask), '255.255.*.0'):
+				</div>
+			</div>
+			<div class="example-dropzone example-dropzone-3" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+				В эту область в правильном порядке
+			</div>
+		</div>
+		<p>11791 Сеть, в которой содержится узел с IP-адресом 246.51.128.202, задана маской сети 255.255.A.0, где A - некоторое допустимое для записи маски число. Определите минимальное значение A, для которого для всех IP-адресов этой сети в двоичной записи IP-адреса суммарное количество нулей в левых двух байтах не более суммарного количества нулей в правых двух байтах. В ответе укажите только число</p>
 		<pre>
 from ipaddress import *
 from fnmatch import *
@@ -409,6 +442,7 @@ for mask in range(33):
 		.example-dropzone-3 {
 			min-height: 460px;
 		}
+
 	</style>
 
 	<script>
@@ -438,6 +472,9 @@ for mask in range(33):
 				.dataTransfer
 				.clearData();
 		}
+
 	</script>
 
-</body></html>
+</body>
+
+</html>
