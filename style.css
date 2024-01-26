@@ -17,6 +17,14 @@ body {
 	background: green;
 }
 
+h1 {
+    color: gold;
+}
+
+h2 {
+    color: gold;
+}
+
 p {
 	line-height: 31px;
 }
@@ -58,7 +66,7 @@ img {
 }
 
 a {
-	color: gold;
+	color: #b349e9;
 }
 
 a:hover {
@@ -194,7 +202,7 @@ table tbody tr td {
 
 table tbody tr th {
 	padding: 5px;
-	border-right: 1px solid #fff;
+	border: 1px solid #fff;
 }
 
 table.tasks td {
