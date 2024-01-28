@@ -243,4 +243,6 @@ table.tasks td {
 b {
 	background: darkgreen;
 	font-weight: normal;
+	border-radius: 7px;
+	padding: 0px 7px;
 }
