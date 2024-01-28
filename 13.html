@@ -240,30 +240,25 @@ print(k)</pre>
 			</tr>
 			<tr>
 				<td>11771 Чему равно наибольшее количество возможных адресов в этой сети?</td>
-				<td>if addr == net.network_address:
-					print(net.num_addresses)</td>
+				<td>print(net.num_addresses)</td>
 			</tr>
 			<tr>
 				<td>11770 Для скольких различных значений маски это возможно? </td>
-				<td>if addr == net.network_address:
-					print(net.num_addresses)</td>
+				<td>print(net.netmask)</td>
 			</tr>
 			<tr>
 				<td>11769 Чему равно наименьшее возможное значение третьего слева байта маски?</td>
-				<td>if addr == net.network_address:
-					print(net.netmask)</td>
+				<td>print(net.netmask)</td>
 			</tr>
 			<tr>
 				<td>11766 Каково наибольшее возможное количество нулей в двоичной записи маски?
 					В ответе укажите только число</td>
-				<td> if addr == net.network_address:
-					print(32 - mask)</td>
+				<td>print(32 - mask)</td>
 			</tr>
 			<tr>
 				<td>11765 Каково наибольшее возможное количество единиц в двоичной записи маски?
 					В ответе укажите только число.</td>
-				<td>if addr == net.network_address:
-					print(mask)</td>
+				<td>print(mask)</td>
 			</tr>
 		</table>
 		<p>11771 Для узла с IP-адресом 121.74.179.135 адрес сети равен 121.74.179.128. Чему равно наибольшее количество возможных адресов в этой сети?</p>
@@ -273,16 +268,22 @@ addr = ip_address('121.74.179.128')
 for mask in range(33):
    net = ip_network(f'121.74.179.135/{mask}', 0)
    if addr == net.network_address:
-       print(net.num_addresses)</pre>
+       print(net.num_addresses)
+128
+64
+32
+16
+8</pre>
 
-		<p>11770 Для узла с IP-адресом 251.211.38.240 адрес сети равен 251.211.38.0. Для скольких различных значений маски это возможно? </p>
+		<p>11770 Для узла с IP-адресом 251.211.38.240 адрес сети равен 251.211.38.0. Для скольких различных значений маски это возможно? <b>На сайте kompege решение с ошибкой, спрашивают про маску а не адреса сети..</b></p>
 		<pre>
 from ipaddress import *
-addr = ip_address('251.211.38.0')
+addr = ip_address('76.155.48.0')
 for mask in range(33):
-   net = ip_network(f'251.211.38.240/{mask}', 0)
+   net = ip_network(f'76.155.48.1/{mask}', 0)
    if addr == net.network_address:
-        print(net.num_addresses)</pre>
+       print(net.netmask)
+</pre>
 
 		<p>11769 Для узла с IP-адресом 157.17.164.129 адрес сети равен 157.17.128.0. Чему равно наименьшее возможное значение третьего слева байта маски?</p>
 		<pre>
@@ -291,7 +292,9 @@ addr = ip_address('157.17.128.0')
 for mask in range(33):
    net = ip_network(f'157.17.164.129/{mask}', 0)
    if addr == net.network_address:
-       print(net.netmask)</pre>
+       print(net.netmask)
+512
+256</pre>
 
 		<p>11766 Для узла с IP-адресом 132.243.87.85 адрес сети равен 132.243.64.0. Каково наибольшее возможное количество нулей в двоичной записи маски?
 			В ответе укажите только число</p>
