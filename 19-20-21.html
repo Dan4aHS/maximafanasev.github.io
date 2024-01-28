@@ -140,9 +140,6 @@ print([s for s in range(1, 41) if not f(4, s, 2) and f(4,s,4)])
 			<p>– у Вани нет стратегии, которая позволит ему гарантированно выиграть первым ходом</p>
 
 		<pre>
-[21]
-[22, 23, 31, 41, 42]
-[24]
 def f(a, b, m):
  if a + b &#60;= 20: return m%2 == 0
  if m == 0: return 0
@@ -151,7 +148,11 @@ def f(a, b, m):
  
 print([s for s in range(11, 1000) if f(10, s, 2)])
 print([s for s in range(11, 1000) if not f(10, s, 1) and f(10,s,3)])
-print([s for s in range(11, 1000) if not f(10, s, 2) and f(10,s,4)])</pre>
+print([s for s in range(11, 1000) if not f(10, s, 2) and f(10,s,4)])
+
+[21]
+[22, 23, 31, 41, 42]
+[24]</pre>
 
 
 
@@ -175,9 +176,6 @@ print([s for s in range(11, 1000) if not f(10, s, 2) and f(10,s,4)])</pre>
 		
 
 		<pre>
-[9, 11, 15, 17]
-[9, 11, 13, 15, 17]
-[5, 7, 19, 21]
 def f(a, b, m):
  if a == b: return m%2 == 0
  if m == 0: return 0
@@ -187,11 +185,14 @@ def f(a, b, m):
  
 print([s for s in range(1, 24) if not f(13,s,0) and f(13, s, 2)])
 print([s for s in range(1, 24) if not f(13,s,1) and f(13, s, 2)])
-print([s for s in range(1, 24) if not f(13,s,2) and f(13, s, 4)])</pre>
+print([s for s in range(1, 24) if not f(13,s,2) and f(13, s, 4)])
+
+[9, 11, 15, 17]
+[9, 11, 13, 15, 17]
+[5, 7, 19, 21]</pre>
 
 		Проверим 3е условие для победы первым ходом
 		<pre>
-[7, 9, 11, 15, 17, 19]
 def f(a, b, m):
  if a == b: return m%2 == 0
  if m == 0: return 0
@@ -199,7 +200,9 @@ def f(a, b, m):
  else: h = [(f(a, b+1, m-1),f(a, b+3, m-1)]
  return any(h) if (m-1)%2 == 0 else any(h)
  
-print([s for s in range(1, 24) if not f(13,s,0) and f(13, s, 2)])</pre>
+print([s for s in range(1, 24) if not f(13,s,0) and f(13, s, 2)])
+	
+[7, 9, 11, 15, 17, 19]</pre>
 		<p><b>! сравним два ответа
 				[5, 7, 19, 21] и [7, 9, 11, 15, 17, 19], ответом на 21е задание будут числа 7 и 19, тк они оба есть в массивах</b></p>
 	</div>
