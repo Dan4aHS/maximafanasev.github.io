@@ -239,3 +239,8 @@ table.tasks td {
 .youtube {
 	color: red;
 }
+
+b {
+	background: darkgreen;
+	font-weight: normal;
+}
