@@ -189,6 +189,7 @@ blur {
 
 table {
 	border-collapse: collapse;
+	margin-bottom: 24px;
 }
 
 table tbody tr td {
