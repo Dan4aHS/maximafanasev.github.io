@@ -33,8 +33,7 @@ for x in '0123456789ABCDEFG':
 n = abs(18*7**108 - 5*49**76 + 343**35 - 50)
 sm = 0
 while n>0:
-    d = n%49
-    sm += d
+    sm += n%49
     n //=49
 print(sm)</pre>
 
