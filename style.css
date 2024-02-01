@@ -228,6 +228,11 @@ table.tasks td {
 	background-color: red;
 }
 
+.flex-dir {
+	display: flex;
+	flex-direction: column;
+}
+
 .flex {
 	display: flex;
 	flex-wrap: wrap;
