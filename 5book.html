@@ -16,11 +16,196 @@
 		</h1>
 
 		<div class="flex-dir">
-
-			<img src="img/books/5/1.png" alt="книга">
-			<img src="img/books/5/2.png" alt="книга">
-			<img src="img/books/5/3.png" alt="книга">
+	<h2>Поздороваться</h2>
+		<pre>
+print('Hello world!')
+print('What is your name?') # ask for their name
+myName = input()
+print('It is good to meet you, ' + myName)
+print('The length of your name is:')
+print(len(myName))
+print('What is your age?') # ask for their age
+myAge = input()
+print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+</pre>
 			
+	<h2>Введите пароль</h2>
+			<pre>name = ''
+while name != 'пароль':
+    print('Пожалуйста, введите пароль.')
+    name = input()
+print('Спасибо!')
+</pre>
+	
+	
+	<h2>Пароль swordfish</h2>
+	<pre>while True:
+    print('Who are you?')
+    name = input()
+    if name != 'Joe':
+        continue
+    print('Hello, Joe. What is the password? (It is a fish.)')
+    password = input()
+    if password == 'swordfish':
+        break
+print('Access granted.')
+	</pre>
+	
+	<h2>Угадай число</h2>
+	<pre>
+# This is a guess the number game.
+import random
+secretNumber = random.randint(1, 20)
+print('I am thinking of a number between 1 and 20.')
+
+# Ask the player to guess 6 times.
+for guessesTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print('Your guess is too low.')
+    elif guess > secretNumber:
+        print('Your guess is too high.')
+    else:
+        break # This condition is the correct guess!
+
+if guess == secretNumber:
+    print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
+else:
+    print('Nope. The number I was thinking of was ' + str(secretNumber))</pre>
+    
+    <h2>Все мои кошки</h2>
+    <pre>
+catNames = []
+while True:
+    print('Enter the name of cat ' + str(len(catNames) + 1) + ' (Or enter nothing to stop.):')
+    name = input()
+    if name == '':
+        break
+    catNames = catNames + [name]  # list concatenation
+print('The cat names are:')
+for name in catNames:
+    print('  ' + name)</pre>
+    
+    
+    <h2>Волшебный шар 8</h2>
+    <pre>
+import random
+
+messages = ['It is certain',
+    'It is decidedly so',
+    'Yes definitely',
+    'Reply hazy try again',
+    'Ask again later',
+    'Concentrate and ask again',
+    'My reply is no',
+    'Outlook not so good',
+    'Very doubtful']
+
+print(messages[random.randint(0, len(messages) - 1)])</pre>
+    
+    
+    <h2>Проверка дня рождения</h2>
+    <pre>
+birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+while True:
+    print('Enter a name: (blank to quit)')
+    name = input()
+    if name == '':
+        break
+
+    if name in birthdays:
+        print(birthdays[name] + ' is the birthday of ' + name)
+    else:
+        print('I do not have birthday information for ' + name)
+        print('What is their birthday?')
+        bday = input()
+        birthdays[name] = bday
+        print('Birthday database updated.')</pre>
+    
+    
+    <h2>Крестики нолики</h2>
+    <pre>
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+            'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+            'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+turn = 'X'
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    move = input()
+    theBoard[move] = turn
+    if turn == 'X':
+        turn = 'O'
+    else:
+        turn = 'X'
+printBoard(theBoard)</pre>
+    
+    
+    <h2>Парольная защита</h2>
+    <pre>
+#! python3
+# pw.py - An insecure password locker program.
+
+PASSWORDS = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',
+             'blog': 'VmALvQyKAxiVH5G8v01if1MLZF3sdt',
+             'luggage': '12345'}
+
+import sys, pyperclip
+if len(sys.argv) < 2:
+    print('Usage: py pw.py [account] - copy account password')
+    sys.exit()
+
+account = sys.argv[1] # first command line arg is the account name
+
+if account in PASSWORDS:
+    pyperclip.copy(PASSWORDS[account])
+    print('Password for ' + account + ' copied to clipboard.')
+else:
+    print('There is no account named ' + account)
+
+    </pre>
+    
+    
+    <h2></h2>
+    <pre>
+
+    </pre>
+    
+    
+    <h2></h2>
+    <pre>
+
+    </pre>
+    
+    
+    <h2></h2>
+    <pre>
+
+    </pre>
+    
+    
+    <h2></h2>
+    <pre>
+
+    </pre>
+    
+    
+    
+    
+    
+    
+    
+    
 		</div>
 
 
