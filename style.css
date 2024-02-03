@@ -35,6 +35,10 @@ ul {
 	padding: 0;
 }
 
+ol li {
+	margin-bottom: 10px;
+}
+
 h1 {
 	font-size: 30px;
 }
