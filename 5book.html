@@ -15,9 +15,50 @@
 		<h1>Автоматизация рутиных задач
 		</h1>
 
+		<h2>Регулярные выражения</h2>
+			<ul>
+				<li>re.compile - шаблон</li>
+				<li>search поиск по переданному выражению</li>
+				<li>.group возвращает либо группу, либо весь найденный текст</li>
+				<li>.groups</li>
+				<li>(r'Batman|Tina Fey')</li>
+				<li>.findall</li>
+				<li>(r'[свой символьный класс]')</li>
+				<li>.sub замена строк</li>
+				<li>комбо команд через |</li>
+				<li>re.DOTALL | re.IGNORCASE | re.VERBOSE</li>
+		</ul>
+		
+		<img src="img/books/5/0.png" alt="">
+		
+		<h2>Глава 8 Чтение и запись файлов</h2>
+		<ul>
+			<li>import os</li>
+			<li>os.getcwd() текущий каталог</li>
+			<li>os.chdir изменение папки</li>
+			<li>os.makedirs создание папки</li>
+			<li>os.path</li>
+			<li>os.path.abspath абсолютный путь</li>
+			<li>os.path.isabs проверка на абсолютность</li>
+			<li>os.path.relpath</li>
+			<li>os.path.basepath</li>
+			<li>os.path.dirname(path) строка пути</li>
+			<li>os.path.getsize размер файла</li>
+			<li>os.path.exist проверка существования</li>
+			<li>os.path.isfile проверка на файл</li>
+			<li>os.path.isdir папка существует</li>
+			<li>open() открыть файл</li>
+			<li>read() чтение файла</li>
+			<li>readlines() по строкам</li>
+			<li>shelve двоичные хранилища</li>
+			<li>pprint.pformat() красивый вывод</li>
+		</ul>
+		
+		<h2>Глава 9 Управление файлами</h2>
+			
 		<div class="flex-dir">
-	<h2>Поздороваться</h2>
-		<pre>
+			<h2>Поздороваться</h2>
+			<pre>
 print('Hello world!')
 print('What is your name?') # ask for their name
 myName = input()
@@ -28,18 +69,18 @@ print('What is your age?') # ask for their age
 myAge = input()
 print('You will be ' + str(int(myAge) + 1) + ' in a year.')
 </pre>
-			
-	<h2>Введите пароль</h2>
+
+			<h2>Введите пароль</h2>
 			<pre>name = ''
 while name != 'пароль':
     print('Пожалуйста, введите пароль.')
     name = input()
 print('Спасибо!')
 </pre>
-	
-	
-	<h2>Пароль swordfish</h2>
-	<pre>while True:
+
+
+			<h2>Пароль swordfish</h2>
+			<pre>while True:
     print('Who are you?')
     name = input()
     if name != 'Joe':
@@ -50,9 +91,9 @@ print('Спасибо!')
         break
 print('Access granted.')
 	</pre>
-	
-	<h2>Угадай число</h2>
-	<pre>
+
+			<h2>Угадай число</h2>
+			<pre>
 # This is a guess the number game.
 import random
 secretNumber = random.randint(1, 20)
@@ -74,9 +115,9 @@ if guess == secretNumber:
     print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
 else:
     print('Nope. The number I was thinking of was ' + str(secretNumber))</pre>
-    
-    <h2>Все мои кошки</h2>
-    <pre>
+
+			<h2>Все мои кошки</h2>
+			<pre>
 catNames = []
 while True:
     print('Enter the name of cat ' + str(len(catNames) + 1) + ' (Or enter nothing to stop.):')
@@ -87,10 +128,10 @@ while True:
 print('The cat names are:')
 for name in catNames:
     print('  ' + name)</pre>
-    
-    
-    <h2>Волшебный шар 8</h2>
-    <pre>
+
+
+			<h2>Волшебный шар 8</h2>
+			<pre>
 import random
 
 messages = ['It is certain',
@@ -104,10 +145,10 @@ messages = ['It is certain',
     'Very doubtful']
 
 print(messages[random.randint(0, len(messages) - 1)])</pre>
-    
-    
-    <h2>Проверка дня рождения</h2>
-    <pre>
+
+
+			<h2>Проверка дня рождения</h2>
+			<pre>
 birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
 
 while True:
@@ -124,10 +165,10 @@ while True:
         bday = input()
         birthdays[name] = bday
         print('Birthday database updated.')</pre>
-    
-    
-    <h2>Крестики нолики</h2>
-    <pre>
+
+
+			<h2>Крестики нолики</h2>
+			<pre>
 theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
@@ -149,20 +190,20 @@ for i in range(9):
     else:
         turn = 'X'
 printBoard(theBoard)</pre>
-    
-    
-    <h2>Парольная защита</h2>
-    <ol>
-    	<li><a href="https://git-scm.com/download/win" target="_blank">установить git</a></li>
-    	<li><a href="https://www.python.org/downloads/" target="_blank">установить python</a></li>
-    	<li>создать проект и сохранить как pw.py</li>
-    	<li>создать папку и добавить туда проект</li>
-    	<li>внутри папки правой кнопкой мыши нажать Open git bash here</li>
-    	<li>напечатать команду pip install pyperclip</li>
-    	<li>напечатать команду py pw.py email</li>
-    	<li>пароль от email скопирован в буфер обмена</li>
-    </ol>
-    <pre>
+
+
+			<h2>Парольная защита</h2>
+			<ol>
+				<li><a href="https://git-scm.com/download/win" target="_blank">установить git</a></li>
+				<li><a href="https://www.python.org/downloads/" target="_blank">установить python</a></li>
+				<li>создать проект и сохранить как pw.py</li>
+				<li>создать папку и добавить туда проект</li>
+				<li>внутри папки правой кнопкой мыши нажать Open git bash here</li>
+				<li>напечатать команду pip install pyperclip</li>
+				<li>напечатать команду py pw.py email</li>
+				<li>пароль от email скопирован в буфер обмена</li>
+			</ol>
+			<pre>
 PASSWORDS = {'email': 'F7min@Bx_!#_!#@xFtjVB6',
              'blog': 'VmALvQ)!*!#@!_01MF3sdt',
              'vk': '3(*&$@$JSDFSK++!0935'}
@@ -179,10 +220,10 @@ if account in PASSWORDS:
     print('Пароль для ' + account + ' скопирован.')
 else:
     print('Нет такого пароля для ' + account)</pre>
-    
-    
-    <h2>Добавляет * в начало каждой строки скопированного текста</h2>
-    <pre>
+
+
+			<h2>Добавляет * в начало каждой строки скопированного текста</h2>
+			<pre>
 import pyperclip
 text = pyperclip.paste()
 
@@ -192,10 +233,10 @@ for i in range(len(lines)):
     lines[i] = '* ' + lines[i]
 text = '\n'.join(lines)
 pyperclip.copy(text)</pre>
-    
-    
-    <h2>Поиск телефонного номера без регулярных выражений</h2>
-    <pre>
+
+
+			<h2>Поиск телефонного номера без регулярных выражений</h2>
+			<pre>
 def isPhoneNumber(text):
     if len(text) != 12:
         return False  
@@ -218,29 +259,141 @@ print('415-555-4242 is a phone number:')
 print(isPhoneNumber('415-555-4242'))
 print('Some Number is a phone number:')
 print(isPhoneNumber('Some Number'))</pre>
-    
-			<img src="img/books/5/1.png" alt="книга">
-    
-    <h2></h2>
-    <pre>
 
-    </pre>
-    
-    
-    <h2></h2>
-    <pre>
+			<h2>Поиск телефонов и email в скопированном тексте</h2>
+			<pre>
+import pyperclip, re
 
-    </pre>
-    
-    
-    
-    
-    
-    
-    
-    
+phoneRegex = re.compile(r'''(
+    (\d{3}|\(\d{3}\))? # area code
+    (\s|-|\.)?         # separator
+    (\d{3})              # first 3 digits
+    (\s|-|\.)          # separator
+    (\d{4})              # last 4 digits
+    (\s*(ext|x|ext.)\s*(\d{2,5}))?  # extension
+    )''', re.VERBOSE)
+
+# Create email regex.
+emailRegex = re.compile(r'''(
+    [a-zA-Z0-9._%+-]+      # username
+    @                      # @ symbol
+    [a-zA-Z0-9.-]+         # domain name
+    (\.[a-zA-Z]{2,4}){1,2} # dot-something
+    )''', re.VERBOSE)
+
+# Find matches in clipboard text.
+text = str(pyperclip.paste())
+
+matches = []
+for groups in phoneRegex.findall(text):
+    phoneNum = '-'.join([groups[1], groups[3], groups[5]])
+    if groups[8] != '':
+        phoneNum += ' x' + groups[8]
+    matches.append(phoneNum)
+for groups in emailRegex.findall(text):
+    matches.append(groups[0])
+
+# Copy results to the clipboard.
+if len(matches) > 0:
+    pyperclip.copy('\n'.join(matches))
+    print('Copied to clipboard:')
+    print('\n'.join(matches))
+else:
+    print('No phone numbers or email addresses found.')</pre>
+
+			<h2>Генератор квиза</h2>
+			<pre>
+#! python3
+# randomQuizGenerator.py - Creates quizzes with questions and answers in
+# random order, along with the answer key.
+
+import random
+
+# The quiz data. Keys are states and values are their capitals.
+capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 
+'Arizona': 'Phoenix', 'Arkansas': 'Little Rock', 'California': 
+'Sacramento', 'Colorado': 'Denver', 'Connecticut': 'Hartford', 
+'Delaware': 'Dover', 'Florida': 'Tallahassee', 'Georgia': 
+'Atlanta', 'Hawaii': 'Honolulu', 'Idaho': 'Boise', 'Illinois':
+ 'Springfield', 'Indiana': 'Indianapolis', 'Iowa': 'Des Moines',
+  'Kansas': 'Topeka', 'Kentucky': 'Frankfort', 'Louisiana': 
+  'Baton Rouge', 'Maine': 'Augusta', 'Maryland': 'Annapolis',
+   'Massachusetts': 'Boston', 'Michigan': 'Lansing', 'Minnesota':
+    'Saint Paul', 'Mississippi': 'Jackson', 'Missouri': 
+    'Jefferson City', 'Montana': 'Helena', 'Nebraska': 
+    'Lincoln', 'Nevada': 'Carson City', 'New Hampshire': 
+    'Concord', 'New Jersey': 'Trenton', 'New Mexico': 
+    'Santa Fe', 'New York': 'Albany', 'North Carolina': 
+    'Raleigh', 'North Dakota': 'Bismarck', 'Ohio': 'Columbus',
+     'Oklahoma': 'Oklahoma City', 'Oregon': 'Salem', 
+     'Pennsylvania': 'Harrisburg', 'Rhode Island': 
+     'Providence', 'South Carolina': 'Columbia', 
+     'South Dakota': 'Pierre', 'Tennessee': 'Nashville', 
+     'Texas': 'Austin', 'Utah': 'Salt Lake City', 
+     'Vermont': 'Montpelier', 'Virginia': 'Richmond', 
+     'Washington': 'Olympia', 'West Virginia': 'Charleston', 
+     'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
+capitalsItems = list(capitals.items())
+
+# Generate 35 quiz files.
+for quizNum in range(35): 
+    # Create the quiz and answer key files.
+    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
+    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
+
+    # Write out the header for the quiz.
+    quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
+    quizFile.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quizNum + 1))
+    quizFile.write('\n\n')
+
+    # Shuffle the order of the states.
+    states = list(capitals.keys()) # get all states in a list
+    random.shuffle(states) # randomize the order of the states
+
+    # Loop through all 50 states, making a question for each.
+    for questionNum in range(50):
+
+        # Get right and wrong answers.
+        correctAnswer = capitals[states[questionNum]]
+        wrongAnswers = list(capitals.values()) # get a complete list of answers
+        del wrongAnswers[wrongAnswers.index(correctAnswer)] # remove the right answer
+        wrongAnswers = random.sample(wrongAnswers, 3) # pick 3 random ones
+
+        answerOptions = wrongAnswers + [correctAnswer]
+        random.shuffle(answerOptions) # randomize the order of the answers
+
+        # Write the question and answer options to the quiz file.
+        quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
+        for i in range(4):
+            quizFile.write('    %s. %s\n' % ('ABCD'[i], answerOptions[i]))
+        quizFile.write('\n')
+
+        # Write out the answer key to a file.
+        answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+    quizFile.close()
+    answerKeyFile.close()</pre>
+
+			<h2>Открытие карт и поиск адреса введенного в строку</h2>
+			<p>Например py mapIt.py Moscow red square</p>
+			<pre>
+#! python3
+# mapIt.py - Launches a map in the browser using an address from the
+# command line or clipboard.
+
+import webbrowser, sys, pyperclip
+
+if len(sys.argv) > 1:
+    # Get address from command line.
+    address = ' '.join(sys.argv[1:])
+else:
+    # Get address from clipboard.
+    address = pyperclip.paste()
+
+webbrowser.open('https://www.google.com/maps/place/' + address)</pre>
 		</div>
 
 
 	</div>
-</body></html>
+</body>
+
+</html>
