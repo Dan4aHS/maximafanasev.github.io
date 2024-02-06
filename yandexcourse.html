@@ -14,12 +14,400 @@
 		<span>&#60; </span><a href="index.html">Вернуться на главную</a>
 		<h1>Подготовительный курс по Python
 		</h1>
+		<h2>Ввод, Вывод и арифметика</h2>
 
-		<div class="flex-dir">
-			<img src="img/books/00/1.png" alt="">
-			<img src="img/books/00/2.png" alt="">
-			<img src="img/books/00/3.png" alt="">
-			<img src="img/books/00/4.png" alt="">
-		</div>
+		<h4>Что выведет?</h4>
+		<pre>
+print("Hello, world!")
+print("23 + 16")
+print(42)
+print(1, "я — строка", '8А')
+print("print(42)")
+print(10, 'новых строк')
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+Hello, world!
+23 + 16
+42
+1 я — строка 8А
+print(42)
+10 новых строк
+</pre>
+
+		<h4>Найдите ошибки</h4>
+		<pre>
+print("Строка')
+print(Число)
+print(''С праздником!'')
+print('Возможно 'правильно'')
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+print("Строка")
+print("Число")
+print('С праздником!')
+print('Возможно правильно')
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+lesson = 'Информатика'
+year = 11
+print(lesson, year, 'класс')
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+Информатика 11 класс
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+name = 'Вася'
+greeting = "Привет" + name
+print(greeting) 
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+ПриветВася
+</pre>
+	
+	
+
+		<h4>Что выведет?</h4>
+		<pre>
+print('Аа' * 5)
+print(('S' + '!') * 3)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+АаАаАаАаАа
+S!S!S!
+</pre>
+
+		<h4>Подставь нужные математич. операции. Чтобы получилось выражение У-у-у-у-у! У-у-у-у-у!</h4>
+		<pre>
+scream = 'У' + ('-' ??? 'у') ??? 4 + '!'
+print(scream, scream)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+scream = 'У' + ('-' + 'у') * 4 + '!'
+print(scream, scream)
+</pre>
+
+		<h4>Длина строки</h4>
+		<pre>
+name = "Вася"
+length = len(name)
+print(length)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+4
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+word = 'слова'
+text = (word + ' ') * 3
+print(text)
+print(len(word))
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+слова слова слова 
+5
+</pre>
+
+		<h4>Что выведет? Если напечатаю Max</h4>
+		<pre>
+name = input()
+print('Привет,', name)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+Привет, Max
+</pre>
+
+		<h4>Что выведет? Если напечатать: Привет</h4>
+		<pre>
+print(input() + '!')
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+Привет!
+</pre>
+
+		<h4>Задача №1</h4>
+
+		<pre>
+Даны два слова. Выведите их в одну строчку, разделив пробелом.
+</pre>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>Хочу<br>
+					спать</td>
+				<td>Хочу спать</td>
+			</tr>
+			<tr>
+				<td>Очень<br>
+					скучно</td>
+				<td>Очень скучно</td>
+			</tr>
+		</table>
+
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+print(input() + ' ' + input())
+</pre>
+
+		<h4>Выведите число: сколько символов во фразе, повторённой трижды.</h4>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>ТРУД</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>За дело!</td>
+				<td>24</td>
+			</tr>
+		</table>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+print(len(input())*3)
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+print(1 + 2)
+print(10 + 3 - 2 * 5)
+print(5 * (4 - 2))
+print(2 ** 5)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+3
+3
+10
+32
+</pre>
+
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+print(25 // 6)
+print(25 % 6)
+</pre>
+		<img src="img/books/00/1.webp" alt="">
+		<h4>Ответ</h4>
+		<pre class="blur2">
+4
+1
+</pre>
+
+
+
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+print(15 // 2 * 4)
+print(15 * 4 // 2)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+28
+30
+</pre>
+
+
+
+
+
+
+		<h4>Соедини линии</h4>
+
+		<img src="img/books/00/2.png" alt="">
+		<h4>Ответ</h4>
+		<img class="blur2" src="img/books/00/3.png" alt="">
+
+
+
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+number = input()
+print(number // 2)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+Такой код закончится ошибкой, поскольку input() всегда возвращает строку, а строку нельзя поделить на 2.
+</pre>
+
+
+
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+string = "135"
+number = int(string)
+print(number // 2)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+67
+</pre>
+
+
+
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+number = 15
+three_numbers = str(number) * 3
+print(three_numbers)
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+151515
+</pre>
+
+
+
+		<h4>Есть число n. Выведите n в степени n.</h4>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>27</td>
+			</tr>
+		</table>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+n = input()
+print(int(n)**int(n))
+</pre>
+
+
+
+
+
+
+		<h4>Известно, что ax - b = 0. Даны числа a и b. Выведите x.</h4>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>24</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+a = int(input())
+b = int(input())
+
+print(int(b/a))
+</pre>
+
+
+
+
+
+
+		<h4>Коля разводит насекомых. Сейчас у него живут N тараканов (у них по 6 ног) и M сороконожек.
+Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Ног 190, голов 9.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+a = int(input())
+b = int(input())
+print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
+</pre>
+
+
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+
+		<h4>Ответ</h4>
+		<pre class="blur2">
+
+</pre>
+
+
+
+
 	</div>
 </body></html>
