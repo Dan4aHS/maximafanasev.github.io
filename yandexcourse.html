@@ -71,8 +71,6 @@ print(greeting)
 		<pre class="blur2">
 ПриветВася
 </pre>
-	
-	
 
 		<h4>Что выведет?</h4>
 		<pre>
@@ -162,7 +160,6 @@ print(input() + '!')
 			</tr>
 		</table>
 
-
 		<pre class="blur2">
 print(input() + ' ' + input())
 </pre>
@@ -203,9 +200,6 @@ print(2 ** 5)
 32
 </pre>
 
-
-
-
 		<h4>Что выведет</h4>
 		<pre>
 print(25 // 6)
@@ -216,11 +210,6 @@ print(25 % 6)
 4
 1
 </pre>
-
-
-
-
-
 
 		<h4>Что выведет</h4>
 		<pre>
@@ -233,21 +222,10 @@ print(15 * 4 // 2)
 30
 </pre>
 
-
-
-
-
-
 		<h4>Соедини линии</h4>
 
-		<img src="img/books/00/2.png" alt="">
-		<h4>Ответ</h4>
+		<img src="img/books/00/2.png" alt=""><br>
 		<img class="blur2" src="img/books/00/3.png" alt="">
-
-
-
-
-
 
 		<h4>Что выведет</h4>
 		<pre>
@@ -258,11 +236,6 @@ print(number // 2)
 		<pre class="blur2">
 Такой код закончится ошибкой, поскольку input() всегда возвращает строку, а строку нельзя поделить на 2.
 </pre>
-
-
-
-
-
 
 		<h4>Что выведет</h4>
 		<pre>
@@ -275,11 +248,6 @@ print(number // 2)
 67
 </pre>
 
-
-
-
-
-
 		<h4>Что выведет</h4>
 		<pre>
 number = 15
@@ -290,8 +258,6 @@ print(three_numbers)
 		<pre class="blur2">
 151515
 </pre>
-
-
 
 		<h4>Есть число n. Выведите n в степени n.</h4>
 
@@ -315,11 +281,6 @@ n = input()
 print(int(n)**int(n))
 </pre>
 
-
-
-
-
-
 		<h4>Известно, что ax - b = 0. Даны числа a и b. Выведите x.</h4>
 
 		<table>
@@ -333,7 +294,6 @@ print(int(n)**int(n))
 			</tr>
 			<tr>
 				<td>24</td>
-				<td></td>
 			</tr>
 		</table>
 
@@ -344,13 +304,8 @@ b = int(input())
 print(int(b/a))
 </pre>
 
-
-
-
-
-
 		<h4>Коля разводит насекомых. Сейчас у него живут N тараканов (у них по 6 ног) и M сороконожек.
-Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
+			Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
 
 		<table>
 			<tr>
@@ -363,7 +318,6 @@ print(int(b/a))
 			</tr>
 			<tr>
 				<td>4</td>
-				<td></td>
 			</tr>
 		</table>
 
@@ -373,13 +327,521 @@ b = int(input())
 print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 </pre>
 
+		<h2>Условия</h2>
+		<img src="img/books/00/41.png" alt="">
+		<img src="img/books/00/4.png" alt="">
+		<img src="img/books/00/42.png" alt="">
+		<img src="img/books/00/5.png" alt="">
+		<img src="img/books/00/6.png" alt="">
 
+		<h4>a = 3, b = 14, c = 1592. Условия верные?</h4>
+		<pre>
+a== b
+a + b > c
+int(str(a)*2) != c
+c &#60;= c
+</pre>
+
+		<pre class="blur2">
+False
+False
+True
+True
+</pre>
+
+
+		<h4>Что выведет, если ввести число 4</h4>
+		<pre>
+x = int(input())
+if x % 2 == 0:
+    print('x — чётное число!')
+else:
+    print('x — нечётное число!')
+</pre>
+		<pre class="blur2">
+x — чётное число!
+</pre>
+
+
+
+		<h4>Что выведет, если ввести число 7</h4>
+		<pre>
+chocolates = int(input())
+if chocolates // 3 >= 4:
+    print('Если съедать по 3 шоколадки в день, хватит на 4 дня.')
+print('Я вовсе не объемся!') 
+</pre>
+		<pre class="blur2">
+Я вовсе не объемся!
+</pre>
+
+		<h4>Что выведет, если ввести Français</h4>
+		<pre>
+language = input()
+if language == 'Русский':
+    print('Привет!')
+elif language == 'English':
+    print('Hi!')
+elif language == 'Français':
+    print('Salut!')
+elif language == 'Deutsch':
+    print('Hallo!')
+else:
+    print('Не знаю такого языка.') 
+</pre>
+		<pre class="blur2">
+Salut!
+</pre>
+
+		<h4>Что выведет, если ввести пёс 5</h4>
+		<pre>
+animal_type = input()
+animal_age = int(input())
+
+if animal_type == 'кот':
+    if animal_age > 2:
+        print('Взрослый кот')
+    else:
+        print('Маленький котёнок')
+elif animal_type == 'пёс':
+    if animal_age > 2:
+        print('Взрослая собака')
+    else:
+        print('Маленький щенок')
+else:
+    print('Не знаю такого животного')
+</pre>
+		<pre class="blur2">
+Взрослая собака
+</pre>
+
+		<h4>Даны четыре числа: x, y, A и B. Выведите А, если x больше y, или В, если y больше x.</h4>
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+x = int(input())
+y = int(input())
+A = int(input())
+B = int(input())
+if x > y:
+    print(A)
+else: print(B)
+</pre>
+
+		<h4>Напишите программу-фильтр, которая принимает число и выводит «Оценка: (число)», только если оно меньше или равно 5, а иначе выводит предупреждение: «Слишком большое число»</h4>
+
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Оценка: 4</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Слишком большое число</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+x = int(input())
+if x&#60;=5: print('Оценка: ' + str(x))
+else: print('Слишком большое число')
+</pre>
+
+		<h4>Даны два числа. Если первое делится на второе, выведите две строки:
+Делится
+Частное: (значение)
+а если не делится, то:
+Не делится
+Частное: (значение), остаток: (значение)
+</h4>
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>Не делится</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Частное: 2, остаток: 3</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+x = int(input())
+y = int(input())
+if x%y==0:
+    print('Делится')
+    print('Частное: ' + str(x//y))
+else:
+    print('Не делится')
+    print('Частное: ' + str(x//y) + ', остаток: ' + str(x%y))
+</pre>
+
+		<h4>Что выведет, если ввести Софья Иванова 4</h4>
+		<pre>
+first_name = input()
+last_name = input()
+grade = int(input())
+
+if first_name == 'Софья':
+    if last_name == 'Иванова':
+        print('Это Сонина работа')
+        if grade == 5:
+            print('Соня довольна оценкой')
+        if grade == 4:
+            print('Соня довольна оценкой')
+</pre>
+		<pre class="blur2">
+Это Сонина работа
+Соня довольна оценкой
+</pre>
+		<h3>Составные условия</h3>
+		
+		<img src="img/books/00/7.png" alt="">
+		<img src="img/books/00/8.png" alt="">
+		<h4>Что выведет, если ввести Софья Иванова 4</h4>
+		<pre>
+first_name = input()
+last_name = input()
+grade = int(input())
+
+if first_name == 'Софья' and last_name == 'Иванова':
+    print('Это Сонина работа')
+    if grade == 5 or grade == 4:
+        print('Соня довольна оценкой')
+</pre>
+		<pre class="blur2">
+Это Сонина работа
+Соня довольна оценкой
+</pre>
+
+		<h4>Напишите программу. Если число делится одновременно на 2, 3 и 5, мы называем его интересным. Выведи число х, если оно неинтересное</h4>
+
+		<pre class="blur2">
+if not (x % 2 == 0 and x % 3 == 0 and x % 5 == 0):
+    print(x)
+</pre>
+		
+		<img src="img/books/00/9.png" alt="">
+		<img class="blur2" src="img/books/00/10.png" alt="">
+
+		<h4>Что выведет</h4>
+		<pre>
+a = 7
+b = 6
+a_is_even = a % 2 == 0
+b_is_even = b % 2 == 0
+both_even = a_is_even and b_is_even
+print(a_is_even, b_is_even, both_even)
+</pre>
+		<pre class="blur2">
+False True False
+True
+</pre>
+
+		<h4>Что выведет, если ввести 30</h4>
+		<pre>
+a = int(input())
+a_divisible_235 = a % 2 == 0 and a % 3 == 0 and a % 5 == 0
+if a_divisible_235:
+    print('Ваше число делится на 2, 3 и 5!')
+</pre>
+		<pre class="blur2">
+Ваше число делится на 2, 3 и 5!
+</pre>
+		<img src="img/books/00/11.png" alt="">
+		<img class="blur2" src="img/books/00/12.png" alt="">
+		<h3>Выберите выражение</h3>
+		<img src="img/books/00/13.png" alt="">
+		<pre class="blur2">
+2
+</pre>
+		<img src="img/books/00/14.png" alt=""><br>
+		<img class="blur2" src="img/books/00/15.png" alt="">
+		<h4>Дано название урока. Если это "Информатика" или "Программирование", то выведите "Петя берёт с собой компьютер", если другой предмет — то "Петя берёт с собой тетрадь".</h4>
+		
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>Информатика</td>
+				<td>Петя берёт с собой компьютер</td>
+			</tr>
+			<tr>
+				<td>Математика</td>
+				<td>Петя берёт с собой тетрадь</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+x = input()
+
+if x == 'Информатика' or  x == 'Программирование':
+    print("Петя берёт с собой компьютер")
+else: print("Петя берёт с собой тетрадь")
+</pre>
+
+		<h4>Даны четыре числа: a, b, q и r. Если q — это неполное частное при делении a на b, а r — остаток, выведите "правильно", а иначе — "неправильно".</h4>
+		
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>правильно</td>
+			</tr>
+			<tr>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>неправильно</td>
+			</tr>
+			<tr>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+a = int(input())
+b = int(input())
+q = int(input())
+r = int(input())
+if q == a//b and r == a%b:
+    print('правильно')
+else: print('неправильно')
+</pre>
+
+		<h4>Дано слово. Если в нём от 10 букв (включительно) или чётное количество букв, то выведите "ДА", а иначе — "НЕТ".</h4>
+		
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>аббревиатура</td>
+				<td>ДА</td>
+			</tr>
+			<tr>
+				<td>турка</td>
+				<td>НЕТ</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+a = input()
+
+if len(a)>=10 or len(a)%2==0:
+    print('ДА')
+else: print('НЕТ')
+</pre>
+
+		<h4>Даны имена и оценки двух учеников (имя, число). Выведите имена всех, кто получил 3 или 4.</h4>
+		
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>Петя</td>
+				<td>Вася</td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Вася</td>
+			</tr>
+			<tr>
+				<td>4</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>Маша</td>
+				<td>Маша</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Соня</td>
+			</tr>
+			<tr>
+				<td>Соня</td>
+			</tr>
+			<tr>
+				<td>4</td>
+			</tr>
+		</table>
+		<pre class="blur2">
+name1 = input()
+ex1 = int(input())
+name2 = input()
+ex2 = int(input())
+if ex1 == 3 or ex1 == 4:
+    print(name1)
+if ex2 == 3 or ex2 == 4:
+    print(name2)
+</pre>
+
+		<h4>Даны длины трёх карандашей a, b, c. Если из них можно сложить треугольник, выведите "ДА", если нельзя — "НЕТ".</h4>
+		
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>ДА</td>
+			</tr>
+			<tr>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>5</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<th>Ввод</th>
+				<th>Вывод</th>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>НЕТ</td>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>3</td>
+			</tr>
+		</table>
+		<table>
+		<pre class="blur2">
+a = int(input())
+b = int(input())
+c = int(input())
+if a+b > c  and b + c > a and a+c > b:
+    print('ДА')
+else: print('НЕТ')
+</pre>
 
 		<h4>Что выведет</h4>
 		<pre>
 
 </pre>
+		<pre class="blur2">
 
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
+		<pre class="blur2">
+
+</pre>
+
+		<h4>Что выведет</h4>
+		<pre>
+
+</pre>
 		<pre class="blur2">
 
 </pre>
@@ -388,4 +850,6 @@ print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 
 
 	</div>
-</body></html>
+</body>
+
+</html>
