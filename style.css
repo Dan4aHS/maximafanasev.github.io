@@ -21,7 +21,8 @@ body {
 	background: green;
 }
 
-h1,h2 {
+h1,
+h2 {
 	font-size: 35px;
 	color: #49bb49;
 }
@@ -194,7 +195,8 @@ textarea {
 	cursor: help;
 }
 
-.blur2:hover {
+.blur2:hover,
+.blur2:active {
 	filter: none;
 }
 
