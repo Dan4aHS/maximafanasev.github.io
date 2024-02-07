@@ -189,15 +189,14 @@ textarea {
 	border-radius: 4px;
 }
 
-@media(min-width: 720px) {
-	.blur2 {
-		filter: blur(5px);
-		transition: 0.3s;
-		cursor: help;
-	}
+.blur2 {
+	filter: blur(5px);
+	transition: 0.3s;
+	cursor: help;
 }
 
-.blur2:hover {
+.blur2:hover,
+.blur2:active {
 	filter: none;
 }
 
