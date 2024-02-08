@@ -190,7 +190,7 @@ textarea {
 }
 
 .blur2 {
-	filter: blur(15px);
+	filter: blur(5px);
 	transition: 0.3s;
 	cursor: help;
 }
