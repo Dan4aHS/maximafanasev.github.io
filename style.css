@@ -207,6 +207,7 @@ table {
 	margin-bottom: 24px;
 	overflow: hidden;
 	width: 100%;
+	max-width: fit-content;
 }
 
 table tbody tr td {
