@@ -3011,7 +3011,336 @@ for i in range(a-1):
 сеанс
 </pre>
 		<pre class="blur2">
+a = int(input())
+c = [input() for i in range(a)]
+for elem in c[::-1]:
+    print(elem)
+</pre>
 
+		<h4>Дано число N и 2N записей: в одной строке фамилия ученика, а в другой — его оценка.
+После информации об оценках записан балл — число от 2 до 5.
+Выведите массив с фамилиями детей, которые получили такой балл.</h4>
+		<pre>
+Ввод	
+4
+Васильев
+5
+Иванов
+4
+Петров
+3
+Силаева
+4
+4
+Вывод
+['Иванов', 'Силаева']
+</pre>
+		<pre class="blur2">
+a = int(input())
+c = [input() for i in range(2*a)]
+b = input()
+s = []
+for i in range(len(c)-1):
+    if c[i+1] == b:
+        s.append(c[i])
+print(s)
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = ["Петя", "Катя", "Наташа", "Сева"]
+for elem in A:
+    if elem == "Катя":
+        print("Катя есть в списке имён")
+</pre>
+		<pre class="blur2">
+Катя есть в списке имён
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = ["Петя", "Катя", "Наташа", "Сева"]
+for elem in A:
+    if elem == "Катя":
+        print("Катя есть в списке имён")
+    else:
+        print("Кати в списке нет")
+</pre>
+		<pre class="blur2">
+Кати в списке нет
+Катя есть в списке имён
+Кати в списке нет
+Кати в списке нет
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = ["Петя", "Катя", "Наташа", "Сева"]
+name_found = False
+
+for elem in A:
+    if elem == "Катя":
+        name_found = True
+
+if name_found:
+    print("Катя есть в списке имён")
+else:
+    print("Кати в списке нет")
+</pre>
+		<pre class="blur2">
+Катя есть в списке имён
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = ["Петя", "Катя", "Наташа", "Сева"]
+ind = 0
+while ind &#60; len(A) and A[ind] != 'Катя':
+    ind = ind + 1 
+if ind &#60; len(A): 
+    print("Катя есть в списке имён")
+else:
+    print("Кати в списке нет")
+</pre>
+		<pre class="blur2">
+Катя есть в списке имён
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = ["Петя", "Катя", "Наташа", "Сева"]
+name_found = False
+
+for elem in A:
+    if elem == "Катя":
+        name_found = True
+        break
+
+if name_found:
+    print("Катя есть в списке имён")
+else:
+    print("Кати в списке нет")
+</pre>
+		<pre class="blur2">
+Катя есть в списке имён
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+speed = [100, 56, 89, 90, 101, 37, 111, 98]
+car_found = False
+
+for v in speed:
+    if v &#60; 40 or v > 110:
+        car_found = True
+        break
+
+if car_found:
+    print("На трассе есть слишком медленная или слишком быстрая машина")
+else:
+    print("Все машины едут с приемлемой скоростью")
+</pre>
+		<pre class="blur2">
+На трассе есть слишком медленная или слишком быстрая машина
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = [4, 15, -3, -94, 15, 15, 34]
+value = 15
+elem_index = -1
+for k in range(len(A)):
+    if A[k] == value:
+        elem_index = k
+        break
+print(elem_index)
+</pre>
+		<pre class="blur2">
+1
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = [4, 15, -3, -94, 15, 15, 34]
+value = 15
+index = 0
+while index &#60; len(A) and A[index] != value:
+    index = index + 1
+print(index)
+</pre>
+		<pre class="blur2">
+1
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+N = int(input())
+A = []
+for k in range(N): # прочитали массив
+    A.append(int(input()))
+
+max_value = A[0] 
+for element in A: 
+    if element > max_value: 
+        max_value = element
+
+print(max_value)
+
+Ввод
+5
+3
+2
+7
+9
+8
+</pre>
+		<pre class="blur2">
+9
+</pre>
+
+		<h4>Поиск индекса</h4>
+		<pre>
+indmax = 0
+for k in range(len(A)):
+    if A[k] > A[indmax]:
+        indmax = k
+</pre>
+
+		<h4>Что нужно дописать после цикла, чтобы поменять местами максимальный элемент и элемент в начале массива?</h4>
+		<pre>
+indmax = 0
+for k in range(len(A)):
+    if A[k] > A[indmax]:
+        indmax = k
+...
+</pre>
+		<pre class="blur2">
+A[0], A[ind_max] = A[ind_max], A[0]
+</pre>
+
+		<h4>Что выведет?</h4>
+		<pre>
+A = [5, 10, 3, 10, 4, 10, -8, 4, 6]
+ind_max = 0
+for k in range(len(A)):
+    if A[k] > A[ind_max]:
+        ind_max = k
+print(ind_max)
+</pre>
+		<pre class="blur2">
+1
+</pre>
+
+		<h4>Как можно переписать программу, чтобы она искала индекс самого правого максимального элемента?</h4>
+		<pre>
+ind_max = 0
+for k in range(len(A)):
+    if A[k] >= A[ind_max]:
+        ind_max = k
+print(ind_max)
+</pre>
+		<pre class="blur2">
+ind_max = len(A) - 1
+for k in range(len(A)-1,-1,-1):
+    if A[k] >= A[ind_max]:
+        ind_max = k
+print(ind_max)
+</pre>
+
+		<h4>Дано число N и N строк с именами. Затем записана ещё одна строка с именем. Программа должна вывести "ДА", если это имя есть среди N строк, иначе вывести "НЕТ".</h4>
+		<pre>
+Ввод	
+5
+Паша
+Нина
+Оля
+Коля
+Рома
+Оля
+Вывод
+ДА
+</pre>
+		<pre class="blur2">
+a = int(input())
+c = [input() for _ in range(a)]
+b = input()
+name_found = False
+for elem in c:
+    if elem == b:
+        name_found = True
+if name_found:
+    print("ДА")
+else:
+    print("НЕТ")
+</pre>
+
+		<h4>Дано число N, затем элементы массива — N строк с именами. Затем записана ещё одна строка с именем.
+Сколько раз встречается эта строка в массиве?</h4>
+		<pre>
+Ввод	
+5
+Анна
+Нина
+Анна
+Анна-Мария
+Рома
+Анна
+
+Вывод
+2
+</pre>
+		<pre class="blur2">
+a = int(input())
+c = [input() for _ in range(a)]
+b = input()
+k=0
+for elem in c:
+    if elem == b:
+        k+=1
+print(k)
+</pre>
+
+		<h4>Дано число N, затем элементы массива — N строк с целыми числами. Все числа разные. Поменять в этом массиве местами наименьший элемент с наибольшим и вывести полученный массив.</h4>
+		<pre>
+Ввод	
+5
+7
+2
+6
+-4
+1
+Вывод
+[-4, 2, 6, 7, 1]
+</pre>
+		<pre class="blur2">
+a = int(input())
+c = [int(input()) for _ in range(a)]
+
+b = max(c)
+e = min(c)
+if c.index(b) &#60; c.index(e):
+    c[c.index(e)], c[c.index(b)] = c[c.index(b)], c[c.index(e)]
+else: 
+    c[c.index(b)], c[c.index(e)] = c[c.index(e)], c[c.index(b)]
+print(c) 
+</pre>
+
+		<h4>Дана строка, содержащая заглавные латинские буквы и пробелы. Выведите наименьшую и наибольшую букву из данной строки.</h4>
+		<pre>
+Ввод	
+HELLO WORLD	
+Вывод
+D W
+Ввод	
+AAAAAAAA
+Вывод
+A A
+</pre>
+		<pre class="blur2">
+a = input()
+c = a.split()
+b = ''.join(c)
+print(min(b), max(b))
 </pre>
 
 		<h4>Что выведет?</h4>
@@ -3021,7 +3350,6 @@ for i in range(a-1):
 		<pre class="blur2">
 
 </pre>
-
 
 
 
