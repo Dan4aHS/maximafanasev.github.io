@@ -31,7 +31,11 @@ h3,
 h4,
 h5,
 h6 {
-	color: gold;
+	color: #ef9712;
+}
+
+h4 {
+	margin: 0 0 24px 0;
 }
 
 p {
@@ -189,12 +193,10 @@ textarea {
 	border-radius: 4px;
 }
 
-@media(min-width: 720px) {
-	.blur {
-		filter: blur(5px);
-		transition: 0.3s;
-		cursor: help;
-	}
+.blur2 {
+	background: #1d7d32;
+	transition: 0.3s;
+	cursor: help;
 }
 
 .blur2:hover,
@@ -208,6 +210,7 @@ table {
 	overflow: hidden;
 	width: 100%;
 	max-width: fit-content;
+	margin-right: 24px;
 }
 
 table tbody tr td {
@@ -262,6 +265,24 @@ table.tasks td {
 
 .flex table {
 	margin-right: 24px;
+}
+
+.border {
+	width: 100%;
+	max-width: fit-content;
+	padding: 24px 24px 0 24px;
+	border: 1px dashed #999;
+	border-radius: 10px;
+	margin-bottom: 40px;
+}
+
+.flex-pre {
+	display: flex;
+	flex-wrap: wrap;
+
+	pre {
+		margin-right: 20px;
+	}
 }
 
 .youtube {

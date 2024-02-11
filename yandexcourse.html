@@ -16,8 +16,9 @@
 		</h1>
 		<h2>Ввод, Вывод и арифметика</h2>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print("Hello, world!")
 print("23 + 16")
 print(42)
@@ -25,7 +26,7 @@ print(1, "я — строка", '8А')
 print("print(42)")
 print(10, 'новых строк')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Hello, world!
 23 + 16
 42
@@ -33,299 +34,294 @@ Hello, world!
 print(42)
 10 новых строк
 </pre>
+			</div>
+		</div>
 
-		<h4>Найдите ошибки</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print("Строка')
 print(Число)
 print(''С праздником!'')
 print('Возможно 'правильно'')
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 print("Строка")
 print("Число")
 print('С праздником!')
 print('Возможно правильно')
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 lesson = 'Информатика'
 year = 11
 print(lesson, year, 'класс')
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 Информатика 11 класс
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
-name = 'Вася'
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+name = 'Макс'
 greeting = "Привет" + name
 print(greeting) 
 </pre>
-
-		<pre class="blur2">
-ПриветВася
+				<pre class="blur2">
+ПриветМакс
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('Аа' * 5)
 print(('S' + '!') * 3)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 АаАаАаАаАа
 S!S!S!
 </pre>
+			</div>
+		</div>
 
-		<h4>Подставь нужные математич. операции. Чтобы получилось выражение У-у-у-у-у! У-у-у-у-у!</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+Подставь нужные математич. операции. 
+Чтобы получилось выражение 
+У-у-у-у-у! У-у-у-у-у!
 scream = 'У' + ('-' ??? 'у') ??? 4 + '!'
 print(scream, scream)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 scream = 'У' + ('-' + 'у') * 4 + '!'
 print(scream, scream)
 </pre>
+			</div>
+		</div>
 
-		<h4>Длина строки</h4>
-		<pre>
-name = "Вася"
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+name = "Макс"
 length = len(name)
 print(length)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 4
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 word = 'слова'
 text = (word + ' ') * 3
 print(text)
 print(len(word))
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 слова слова слова 
 5
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Если напечатаю Max</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+Max
 name = input()
 print('Привет,', name)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 Привет, Max
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Если напечатать: Привет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print(input() + '!')
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 Привет!
 </pre>
+			</div>
+		</div>
 
-		<h4>Задача №1</h4>
-
-		<pre>
-Даны два слова. Выведите их в одну строчку, разделив пробелом.
-</pre>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>Хочу<br>
-					спать</td>
-				<td>Хочу спать</td>
-			</tr>
-			<tr>
-				<td>Очень<br>
-					скучно</td>
-				<td>Очень скучно</td>
-			</tr>
-		</table>
-
-		<pre class="blur2">
-print(input() + ' ' + input())
-</pre>
-
-		<h4>Выведите число: сколько символов во фразе, повторённой трижды.</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>ТРУД</td>
-				<td>12</td>
-			</tr>
-			<tr>
-				<td>За дело!</td>
-				<td>24</td>
-			</tr>
-		</table>
-
-		<pre class="blur2">
+		<div class="border">
+			<h4>Выведите число: сколько
+				символов во фразе, повторённой трижды</h4>
+			<div class="flex-pre">
+				<pre>
+Ввод	
+ТРУД
+Вывод 
+12</pre>
+				<pre class="blur2">
 print(len(input())*3)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print(1 + 2)
 print(10 + 3 - 2 * 5)
 print(5 * (4 - 2))
 print(2 ** 5)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 3
 3
 10
 32
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print(25 // 6)
 print(25 % 6)
 </pre>
-		<img src="img/books/00/1.webp" alt="">
-		<pre class="blur2">
+				<pre class="blur2">
 4
 1
 </pre>
-
-		<h4>Что выведет</h4>
-		<pre>
+			</div>
+		</div>
+		<img src="img/books/00/1.webp" alt="">
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print(15 // 2 * 4)
 print(15 * 4 // 2)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 28
 30
 </pre>
-
-		<h4>Соедини линии</h4>
+			</div>
+		</div>
 
 		<img src="img/books/00/2.png" alt=""><br>
 		<img class="blur2" src="img/books/00/3.png" alt="">
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 number = input()
 print(number // 2)
 </pre>
-
-		<pre class="blur2">
-Такой код закончится ошибкой, поскольку input() всегда возвращает строку, а строку нельзя поделить на 2.
+				<pre class="blur2">
+Ошибка
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 string = "135"
 number = int(string)
 print(number // 2)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 67
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 number = 15
 three_numbers = str(number) * 3
 print(three_numbers)
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 151515
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть число n. Выведите n в степени n.</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>27</td>
-			</tr>
-		</table>
-
-		<pre class="blur2">
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+Ввод
+2
+Вывод
+4</pre>
+				<pre class="blur2">
 n = input()
 print(int(n)**int(n))
 </pre>
-
-		<h4>Известно, что ax - b = 0. Даны числа a и b. Выведите x.</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>24</td>
-			</tr>
-		</table>
-
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Известно, что ax - b = 0. Даны числа a и b. Выведите x.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>24</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = int(input())
 b = int(input())
 
 print(int(b/a))
 </pre>
-
-		<h4>Коля разводит насекомых. Сейчас у него живут N тараканов (у них по 6 ног) и M сороконожек.
-			Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>Ног 190, голов 9.</td>
-			</tr>
-			<tr>
-				<td>4</td>
-			</tr>
-		</table>
-
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Коля разводит насекомых. Сейчас у него живут N тараканов (у них по 6 ног) и M сороконожек.
+				Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Ног 190, голов 9.</td>
+					</tr>
+					<tr>
+						<td>4</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = int(input())
 b = int(input())
 print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 </pre>
-
+			</div>
+		</div>
 		<h2>Условия</h2>
 		<img src="img/books/00/41.png" alt="">
 		<img src="img/books/00/4.png" alt="">
@@ -333,15 +329,17 @@ print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 		<img src="img/books/00/5.png" alt="">
 		<img src="img/books/00/6.png" alt="">
 
-		<h4>a = 3, b = 14, c = 1592. Условия верные?</h4>
-		<pre>
+
+		<div class="border">
+			<h4>a = 3, b = 14, c = 1592. Условия верные?</h4>
+			<div class="flex-pre">
+				<pre>
 a== b
 a + b > c
 int(str(a)*2) != c
 c &#60;= c
 </pre>
-
-		<pre class="blur2">
+				<pre class="blur2">
 False
 False
 True
@@ -349,33 +347,44 @@ True
 </pre>
 
 
-		<h4>Что выведет, если ввести число 4</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести число 4</h4>
+			<div class="flex-pre">
+				<pre>
 x = int(input())
 if x % 2 == 0:
     print('x — чётное число!')
 else:
     print('x — нечётное число!')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 x — чётное число!
 </pre>
 
 
 
-		<h4>Что выведет, если ввести число 7</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести число 7</h4>
+			<div class="flex-pre">
+				<pre>
 chocolates = int(input())
 if chocolates // 3 >= 4:
     print('Если съедать по 3 шоколадки в день, хватит на 4 дня.')
 print('Я вовсе не объемся!') 
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Я вовсе не объемся!
 </pre>
-
-		<h4>Что выведет, если ввести Français</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести Français</h4>
+			<div class="flex-pre">
+				<pre>
 language = input()
 if language == 'Русский':
     print('Привет!')
@@ -388,12 +397,15 @@ elif language == 'Deutsch':
 else:
     print('Не знаю такого языка.') 
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Salut!
 </pre>
-
-		<h4>Что выведет, если ввести пёс 5</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести пёс 5</h4>
+			<div class="flex-pre">
+				<pre>
 animal_type = input()
 animal_age = int(input())
 
@@ -410,31 +422,34 @@ elif animal_type == 'пёс':
 else:
     print('Не знаю такого животного')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Взрослая собака
 </pre>
-
-		<h4>Даны четыре числа: x, y, A и B. Выведите А, если x больше y, или В, если y больше x.</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>4</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Даны четыре числа: x, y, A и B. Выведите А, если x больше y, или В, если y больше x.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 x = int(input())
 y = int(input())
 A = int(input())
@@ -443,51 +458,56 @@ if x > y:
     print(A)
 else: print(B)
 </pre>
-
-		<h4>Напишите программу-фильтр, которая принимает число и выводит «Оценка: (число)», только если оно меньше или равно 5, а иначе выводит предупреждение: «Слишком большое число»</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>Оценка: 4</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>Слишком большое число</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Напишите программу-фильтр, которая принимает число и выводит «Оценка: (число)», только если оно меньше или равно 5, а иначе выводит предупреждение: «Слишком большое число»</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Оценка: 4</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>Слишком большое число</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 x = int(input())
 if x&#60;=5: print('Оценка: ' + str(x))
 else: print('Слишком большое число')
 </pre>
-
-		<h4>Даны два числа. Если первое делится на второе, выведите две строки:
-			Делится
-			Частное: (значение)
-			а если не делится, то:
-			Не делится
-			Частное: (значение), остаток: (значение)
-		</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>15</td>
-				<td>Не делится</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>Частное: 2, остаток: 3</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Даны два числа. Если первое делится на второе, выведите две строки:
+				Делится
+				Частное: (значение)
+				а если не делится, то:
+				Не делится
+				Частное: (значение), остаток: (значение)
+			</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td>Не делится</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Частное: 2, остаток: 3</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 x = int(input())
 y = int(input())
 if x%y==0:
@@ -497,9 +517,12 @@ else:
     print('Не делится')
     print('Частное: ' + str(x//y) + ', остаток: ' + str(x%y))
 </pre>
-
-		<h4>Что выведет, если ввести Софья Иванова 4</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести Софья Иванова 4</h4>
+			<div class="flex-pre">
+				<pre>
 first_name = input()
 last_name = input()
 grade = int(input())
@@ -512,16 +535,22 @@ if first_name == 'Софья':
         if grade == 4:
             print('Соня довольна оценкой')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Это Сонина работа
 Соня довольна оценкой
 </pre>
+			</div>
+		</div>
+
 		<h3>Составные условия</h3>
 
 		<img src="img/books/00/7.png" alt="">
 		<img src="img/books/00/8.png" alt="">
-		<h4>Что выведет, если ввести Софья Иванова 4</h4>
-		<pre>
+
+		<div class="border">
+			<h4>Что выведет, если ввести Софья Иванова 4</h4>
+			<div class="flex-pre">
+				<pre>
 first_name = input()
 last_name = input()
 grade = int(input())
@@ -531,23 +560,27 @@ if first_name == 'Софья' and last_name == 'Иванова':
     if grade == 5 or grade == 4:
         print('Соня довольна оценкой')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Это Сонина работа
 Соня довольна оценкой
 </pre>
-
-		<h4>Напишите программу. Если число делится одновременно на 2, 3 и 5, мы называем его интересным. Выведи число х, если оно неинтересное</h4>
-
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Напишите программу. Если число делится одновременно на 2, 3 и 5, мы называем его интересным. Выведи число х, если оно неинтересное</h4>
+			<div class="flex-pre">
+				<pre class="blur2">
 if not (x % 2 == 0 and x % 3 == 0 and x % 5 == 0):
     print(x)
 </pre>
-
+			</div>
+		</div>
 		<img src="img/books/00/9.png" alt="">
 		<img class="blur2" src="img/books/00/10.png" alt="">
 
-		<h4>Что выведет</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 a = 7
 b = 6
 a_is_even = a % 2 == 0
@@ -555,21 +588,28 @@ b_is_even = b % 2 == 0
 both_even = a_is_even and b_is_even
 print(a_is_even, b_is_even, both_even)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 False True False
 True
 </pre>
-
-		<h4>Что выведет, если ввести 30</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Что выведет, если ввести 30</h4>
+			<div class="flex-pre">
+				<pre>
 a = int(input())
 a_divisible_235 = a % 2 == 0 and a % 3 == 0 and a % 5 == 0
 if a_divisible_235:
     print('Ваше число делится на 2, 3 и 5!')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Ваше число делится на 2, 3 и 5!
 </pre>
+			</div>
+		</div>
+
+
 		<img src="img/books/00/11.png" alt=""><br>
 		<img class="blur2" src="img/books/00/12.png" alt=""><br>
 		<img src="img/books/00/13.png" alt="">
@@ -578,71 +618,76 @@ if a_divisible_235:
 </pre>
 		<img src="img/books/00/14.png" alt=""><br>
 		<img class="blur2" src="img/books/00/15.png" alt="">
-		<h4>Дано название урока. Если это "Информатика" или "Программирование", то выведите "Петя берёт с собой компьютер", если другой предмет — то "Петя берёт с собой тетрадь".</h4>
 
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>Информатика</td>
-				<td>Петя берёт с собой компьютер</td>
-			</tr>
-			<tr>
-				<td>Математика</td>
-				<td>Петя берёт с собой тетрадь</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+
+		<div class="border">
+			<h4>Дано название урока. Если это "Информатика" или "Программирование", то выведите "Петя берёт с собой компьютер", если другой предмет — то "Петя берёт с собой тетрадь".</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>Информатика</td>
+						<td>Петя берёт с собой компьютер</td>
+					</tr>
+					<tr>
+						<td>Математика</td>
+						<td>Петя берёт с собой тетрадь</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 x = input()
 
 if x == 'Информатика' or  x == 'Программирование':
     print("Петя берёт с собой компьютер")
 else: print("Петя берёт с собой тетрадь")
 </pre>
-
-		<h4>Даны четыре числа: a, b, q и r. Если q — это неполное частное при делении a на b, а r — остаток, выведите "правильно", а иначе — "неправильно".</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>правильно</td>
-			</tr>
-			<tr>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>1</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>неправильно</td>
-			</tr>
-			<tr>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>2</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Даны четыре числа: a, b, q и r. Если q — это неполное частное при делении a на b, а r — остаток, выведите "правильно", а иначе — "неправильно".</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>правильно</td>
+					</tr>
+					<tr>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>1</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>неправильно</td>
+					</tr>
+					<tr>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>2</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = int(input())
 b = int(input())
 q = int(input())
@@ -651,73 +696,77 @@ if q == a//b and r == a%b:
     print('правильно')
 else: print('неправильно')
 </pre>
-
-		<h4>Дано слово. Если в нём от 10 букв (включительно) или чётное количество букв, то выведите "ДА", а иначе — "НЕТ".</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>аббревиатура</td>
-				<td>ДА</td>
-			</tr>
-			<tr>
-				<td>турка</td>
-				<td>НЕТ</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Дано слово. Если в нём от 10 букв (включительно) или чётное количество букв, то выведите "ДА", а иначе — "НЕТ".</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>аббревиатура</td>
+						<td>ДА</td>
+					</tr>
+					<tr>
+						<td>турка</td>
+						<td>НЕТ</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = input()
 
 if len(a)>=10 or len(a)%2==0:
     print('ДА')
 else: print('НЕТ')
 </pre>
-
-		<h4>Даны имена и оценки двух учеников (имя, число). Выведите имена всех, кто получил 3 или 4.</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>Петя</td>
-				<td>Вася</td>
-			</tr>
-			<tr>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>Вася</td>
-			</tr>
-			<tr>
-				<td>4</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>Маша</td>
-				<td>Маша</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Соня</td>
-			</tr>
-			<tr>
-				<td>Соня</td>
-			</tr>
-			<tr>
-				<td>4</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Даны имена и оценки двух учеников (имя, число). Выведите имена всех, кто получил 3 или 4.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>Петя</td>
+						<td>Макс</td>
+					</tr>
+					<tr>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>Макс</td>
+					</tr>
+					<tr>
+						<td>4</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>Маша</td>
+						<td>Маша</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Соня</td>
+					</tr>
+					<tr>
+						<td>Соня</td>
+					</tr>
+					<tr>
+						<td>4</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 name1 = input()
 ex1 = int(input())
 name2 = input()
@@ -727,42 +776,44 @@ if ex1 == 3 or ex1 == 4:
 if ex2 == 3 or ex2 == 4:
     print(name2)
 </pre>
-
-		<h4>Даны длины трёх карандашей a, b, c. Если из них можно сложить треугольник, выведите "ДА", если нельзя — "НЕТ".</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>ДА</td>
-			</tr>
-			<tr>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>5</td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>НЕТ</td>
-			</tr>
-			<tr>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>3</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+			</div>
+		</div>
+		<div class="border">
+			<h4>Даны длины трёх карандашей a, b, c. Если из них можно сложить треугольник, выведите "ДА", если нельзя — "НЕТ".</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>ДА</td>
+					</tr>
+					<tr>
+						<td>4</td>
+					</tr>
+					<tr>
+						<td>5</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>НЕТ</td>
+					</tr>
+					<tr>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = int(input())
 b = int(input())
 c = int(input())
@@ -770,31 +821,32 @@ if a+b > c  and b + c > a and a+c > b:
     print('ДА')
 else: print('НЕТ')
 </pre>
+			</div>
+		</div>
 
 		<h2>Циклы</h2>
 
-		<h4>For</h4>
-		<pre>
-for переменная in range(целое число):
-    команды
-</pre>
-
-		<h4>Что выведет? +</h4>
-		<pre>
+		<div class="border">
+			<h4>+</h4>
+			<div class="flex-pre">
+				<pre>
 symbol = input()
 for i in range(5):
     print(symbol * 5)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 +++++
 +++++
 +++++
 +++++
 +++++
 </pre>
-
-		<h4>Что выведет? Ввод 2</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>Ввод 2</h4>
+			<div class="flex-pre">
+				<pre>
 n = int(input())
 for i in range(n):
     print('  •  ')
@@ -804,7 +856,7 @@ for i in range(n):
     print(' •-• ')
 print('  •  ')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
   •  
  •-• 
 •---•
@@ -817,9 +869,12 @@ print('  •  ')
  •-• 
   • 
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('--x--')
 for k in range(2):
     print('-x-x-')
@@ -827,7 +882,7 @@ for k in range(2):
 print('-x-x-')
 print('--x--')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 --x--
 -x-x-
 x---x
@@ -836,201 +891,235 @@ x---x
 -x-x-
 --x--
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 n = int(input())
 for j in range(n):
     element = input()
     print(element)
 </pre>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>вчера</td>
-			</tr>
-			<tr>
-				<td>сегодня</td>
-			</tr>
-			<tr>
-				<td>завтра</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>вчера</td>
+					</tr>
+					<tr>
+						<td>сегодня</td>
+					</tr>
+					<tr>
+						<td>завтра</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 вчера
 сегодня
 завтра
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 n = int(input())
 for k in range(n):
     element = int(input())
     if element % 2 == 0:
         print(element)
 </pre>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td>10</td>
-			</tr>
-			<tr>
-				<td>9</td>
-			</tr>
-			<tr>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>7</td>
-			</tr>
-			<tr>
-				<td>2</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td>7</td>
+					</tr>
+					<tr>
+						<td>2</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 10
 8
 2
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть число n и n названий цветов. Выведите эту последовательность, удалив все слова «розовый».</h4>
-		<pre class="blur2">
+		<div class="border">
+				<h4>Есть число n и n названий цветов. Выведите эту последовательность, удалив все слова «розовый».</h4>
+			<div class="flex-pre">
+				<pre class="blur2">
 n = int(input())
 for j in range(n):
     color = input()
     if color != 'розовый':
         print(color)
 </pre>
+			</div>
+		</div>
 
-		<h4>Даны символ s и число n. Выведите символ s в столбик n раз.</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>+</td>
-				<td>+</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>+</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>+</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+				<h4>Даны символ s и число n. Выведите символ s в столбик n раз.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>+</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = input()
 b = int(input())
 for n in range(b):
     print(a)
 </pre>
+			</div>
+		</div>
 
-		<h4>Даны число n и n слов в столбик. Выведите все слова, в которых 12 или более букв.</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>превосходительство</td>
-			</tr>
-			<tr>
-				<td>превосходительство</td>
-				<td>первомайский</td>
-			</tr>
-			<tr>
-				<td>стол</td>
-			</tr>
-			<tr>
-				<td>стул</td>
-			</tr>
-			<tr>
-				<td>первомайский</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+				<h4>Даны число n и n слов в столбик. Выведите все слова, в которых 12 или более букв.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>превосходительство</td>
+					</tr>
+					<tr>
+						<td>превосходительство</td>
+						<td>первомайский</td>
+					</tr>
+					<tr>
+						<td>стол</td>
+					</tr>
+					<tr>
+						<td>стул</td>
+					</tr>
+					<tr>
+						<td>первомайский</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 a = int(input())
 for i in range(a):
     i = input()
     if len(i)>=12:
         print(i)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 for j in range(5):
     print(j)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 0
 1
 2
 3
 4
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Ввод !</h4>
-		<pre>
+		<div class="border">
+				<h4>? Ввод !</h4>
+			<div class="flex-pre">
+				<pre>
 symbol = input()
 for j in range(5):
     print(j * symbol)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 !
 !!
 !!!
 !!!!
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 symbol = '+'
 for k in range(4):
     print((4 - k) * symbol)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 ++++
 +++
 ++
 +
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 candies = 2
 candies = candies + 5
 print(candies)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 7
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 candies = 0
 for i in range(3):
     candies = candies + 5
     print('Итерация', i + 1)
     print('Значение переменной:', candies)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Итерация 1
 Значение переменной: 5
 Итерация 2
@@ -1038,9 +1127,12 @@ for i in range(3):
 Итерация 3
 Значение переменной: 15
 </pre>
-
-		<h4>Что выведет? Ввод 5</h4>
-		<pre>
+			</div>
+		</div>
+		<div class="border">
+			<h4>? Ввод 5</h4>
+			<div class="flex-pre">
+				<pre>
 n = int(input())
 summa = 0
 for i in range(n):
@@ -1048,163 +1140,196 @@ for i in range(n):
     summa = summa + number
 print(summa)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 15
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = ''
 for j in range(3):
     word = input()
     s = s + word + ' ' 
 print(s)
 </pre>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>вчера</td>
-			</tr>
-			<tr>
-				<td>сегодня</td>
-			</tr>
-			<tr>
-				<td>завтра</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>вчера</td>
+					</tr>
+					<tr>
+						<td>сегодня</td>
+					</tr>
+					<tr>
+						<td>завтра</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 вчера сегодня завтра
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть число n. Выведите числа от 1 до n.</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>3</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Есть число n. Выведите числа от 1 до n.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>3</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 n = int(input())
 for i in range(n):
     i+=1
     print(i)
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть число n и символ s. Выведите n строк: в первой один символ s, во второй — два, в n-й строке — n символов s.</h4>
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>+</td>
-			</tr>
-			<tr>
-				<td>+</td>
-				<td>++</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>+++</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Есть число n и символ s. Выведите n строк: в первой один символ s, во второй — два, в n-й строке — n символов s.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>++</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>+++</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 n = int(input())
 x = input()
 for i in range(1,n+1):
     print(x*i)
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть число n. Выведите число от 0 до n, записанные слитно: 0123...</h4>
-
-		<table>
-			<tr>
-				<th>Ввод</th>
-				<th>Вывод</th>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>01234</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Есть число n. Выведите число от 0 до n, записанные слитно: 0123...</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<th>Ввод</th>
+						<th>Вывод</th>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>01234</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 n = int(input())
 s = ''
 for i in range(n):
     s = s + str(i)
 print(s)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 for i in range(3, 5):
     print(i)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 3
 4
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 for i in range(2, 10, 4):
     print(i)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 2
 6
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 for temp in range(27, 24, -1): 
     print(temp)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 27
 26
 25
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 result = 'Я записываю чётные числа:'
 for j in range(2, n + 1, 2):
     result = result + " " + str(j)
 print(result + '!')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Я записываю чётные числа: 2 4 6!
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 for symbol in '+-':  
     print(symbol)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 +
 -
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Ввод Вася</h4>
-		<pre>
+		<div class="border">
+			<h4>? Ввод Макс</h4>
+			<div class="flex-pre">
+				<pre>
 name = input() 
 new_name1 = '' 
 new_name2 = '' 
@@ -1214,13 +1339,17 @@ for letter in name:
 print(new_name1) 
 print(new_name2)
 </pre>
-		<pre class="blur2">
-Вася
-ясаВ
+				<pre class="blur2">
+Макс
+ксаМ
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Ввод "4 4 3 5 3 2 2"</h4>
-		<pre>
+		<div class="border">
+			<h4>? Ввод "4 4 3 5 3 2 2"</h4>
+			<div class="flex-pre">
+				<pre>
 string_with_grades = input()
 fives = 0
 for symbol in string_with_grades:
@@ -1228,36 +1357,40 @@ for symbol in string_with_grades:
         fives = fives + 1
 print(fives)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 1
 </pre>
+			</div>
+		</div>
 
-		<h4>Дана фраза. Выведите каждый её символ в отдельной строке.</h4>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Дана фраза. Выведите каждый её символ в отдельной строке.</h4>
+			<div class="flex-pre">
+				<pre class="blur2">
 x = input()
 for i in range(len(x)):
     print(x[i])
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано слово. Выведите каждую входящую в него букву столько раз, сколько всего знаков в слове.
-		</h4>
-		<pre>
-x = input()
 
-for i in range(len(x)):
-    print(x[i]*len(x))
-</pre>
-
-		<h4>Выведите сумму всех пятизначных чисел.</h4>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Выведите сумму всех пятизначных чисел.</h4>
+			<div class="flex-pre">
+				<pre class="blur2">
 summ = 0
 for i in range(10000, 100000):
     summ = summ + i
 print(summ)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет? Ввод 42</h4>
-		<pre>
+		<div class="border">
+			<h4>? Ввод 42</h4>
+			<div class="flex-pre">
+				<pre>
 x = int(input())
 summa = 0
 n = 0
@@ -1266,29 +1399,32 @@ while summa &#60; x:
     summa = summa + n
 print(n)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 9
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<table>
-			<tr>
-				<td>Ввод</td>
-			</tr>
-			<tr>
-				<td>один</td>
-			</tr>
-			<tr>
-				<td>два</td>
-			</tr>
-			<tr>
-				<td>три</td>
-			</tr>
-			<tr>
-				<td>ааа</td>
-			</tr>
-		</table>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<td>Ввод</td>
+					</tr>
+					<tr>
+						<td>один</td>
+					</tr>
+					<tr>
+						<td>два</td>
+					</tr>
+					<tr>
+						<td>три</td>
+					</tr>
+					<tr>
+						<td>ааа</td>
+					</tr>
+				</table>
+				<pre>
 word = input()
 n = 1
 while word != "ааа":
@@ -1296,12 +1432,15 @@ while word != "ааа":
     n = n + 1
 print("Слово под номером", n, "— «ааа»")
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Слово под номером 4 — «ааа»
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 n = 4
 symbol = '*'
 line_of_symbols = symbol
@@ -1309,14 +1448,18 @@ while len(line_of_symbols) &#60; n:
     print(line_of_symbols)
     line_of_symbols = line_of_symbols + symbol
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 *
 **
 ***
 </pre>
+			</div>
+		</div>
 
-		<h4>Сколько раз выполнится тело цикла, если пользователь введёт 2? А если 5?</h4>
-		<pre>
+		<div class="border">
+			<h4>Сколько раз выполнится тело цикла, если пользователь введёт 2? А если 5?</h4>
+			<div class="flex-pre">
+				<pre>
 n = int(input())
 cats = ''
 j = 1
@@ -1325,19 +1468,22 @@ while len(cats) &#60;= n:
     j = j + 1
 print(cats)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 2
 3
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 text = input()
 while text != 'стоп':
     print(text)
     text = input()
 </pre>
-		<pre>
+				<pre>
 Ввод
 слово
 место
@@ -1350,7 +1496,7 @@ while text != 'стоп':
 уже 
 не читает
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 слово
 место
 корабль
@@ -1358,9 +1504,13 @@ while text != 'стоп':
 одеяло
 океан
 </pre>
+			</div>
+		</div>
 
-		<h4>Дана последовательность слов. Она заканчивается словом "стоп". Выведи все слова (кроме "стоп") через пробел.</h4>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Дана последовательность слов. Она заканчивается словом "стоп". Выведи все слова (кроме "стоп") через пробел.</h4>
+			<div class="flex-pre">
+				<pre class="blur2">
 string = ''
 word = input()
 while word != 'стоп':
@@ -1368,15 +1518,19 @@ while word != 'стоп':
     word = input()
 print(string)
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть последовательность слов, заканчивающаяся строкой «стоп». Выведите все слова (кроме «стоп»), добавив восклицательный знак после каждого.</h4>
-		<pre>
+		<div class="border">
+			<h4>Есть последовательность слов, заканчивающаяся строкой «стоп». Выведите все слова (кроме «стоп»), добавив восклицательный знак после каждого.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 привет
 сегодня
 стоп
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 string = ''
 word = input()
 while word != 'стоп':
@@ -1384,10 +1538,14 @@ while word != 'стоп':
     print(word)
     word = input()
 </pre>
+			</div>
+		</div>
 
-		<h4>Есть список положительных чисел, заканчивающийся нулём. Выведите, сколько в нём двоек.
-		</h4>
-		<pre>
+		<div class="border">
+			<h4>Есть список положительных чисел, заканчивающийся нулём. Выведите, сколько в нём двоек.
+			</h4>
+			<div class="flex-pre">
+				<pre>
 5
 4
 2
@@ -1398,7 +1556,7 @@ while word != 'стоп':
 0
 Вывод 3
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 number = int(input())
 k=0
 while number > 0:
@@ -1407,103 +1565,128 @@ while number > 0:
     number = int(input())
 print(k)
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася играет в игру: берёт строку, считает, сколько в ней символов, записывает их количество отдельной строкой и повторяет снова. Он продолжает, пока не получит 1.
-			Дана строка. Выведите в столбик полученные Васей числа.</h4>
-		<table>
-			<tr>
-				<td>Вася играет в игру</td>
-				<td>18</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>1</td>
-			</tr>
-		</table>
-		<pre class="blur2">
+		<div class="border">
+			<h4>Макс играет в игру: берёт строку, считает, сколько в ней символов, записывает их количество отдельной строкой и повторяет снова. Он продолжает, пока не получит 1.
+				Дана строка. Выведите в столбик полученные Васей числа.</h4>
+			<div class="flex-pre">
+				<table>
+					<tr>
+						<td>Макс играет в игру</td>
+						<td>18</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>1</td>
+					</tr>
+				</table>
+				<pre class="blur2">
 s = input()
  
 while s != '1':
     s = str( len(s) )
     print(s)
 </pre>
-
+			</div>
+		</div>
 
 		<h2>Строки</h2>
 
 		<img src="img/books/00/16.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 Ввод
 питон
 1
 4</pre>
-		<pre>
+				<pre>
 word = input()
 n = int(input())
 k = int(input())
 print(word[n], word[n - 1])
 print(word[k])
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 и п
 н
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = 'колба'
 print(s[3] + s[1] + s[0] + s[4] + s[2])
 
 print('привет'[2], "мир"[1] * 3)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 бокал
 и иии
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s1 = "Идет большой динозавр: ТОП, ТОП, ТОП."
 s2 = "За ним маленький динозаврик: топ-топ-топ."
 print(s1[-2] + s2[4] + s2[-4] + s2[-3] + s2[3])
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Питон
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано слово. Выведите его первую и последнюю букву через дефис.</h4>
-		<pre>
+		<div class="border">
+			<h4>Дано слово. Выведите его первую и последнюю букву через дефис.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод секунда Вывод с-а
 Ввод мяу Вывод м-у
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 print(a[0] + '-' + a[len(a)-1])
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано слово с нечётным количеством букв. Выведите букву посередине.</h4>
-		<pre>
+		<div class="border">
+			<h4>Дано слово с нечётным количеством букв. Выведите букву посередине.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод огонь Вывод о
 Ввод чудесно Вывод е
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 print(a[len(a)//2])
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано сообщение. Если оно заканчивается точкой, выведите "серьёзно", если вопросительным знаком — "вопрос", если восклицательным знаком — "ура", а иначе — "непонятно".</h4>
-		<pre>
+		<div class="border">
+			<h4>Дано сообщение. Если оно заканчивается точкой, выведите "серьёзно", если вопросительным знаком — "вопрос", если восклицательным знаком — "ура", а иначе — "непонятно".</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод Привет! Вывод ура
 Ввод Как дела? Вывод вопрос
 Ввод Хорошо Вывод непонятно
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 if a[-1] == '!':
     print('ура')
@@ -1513,9 +1696,13 @@ elif a[-1] == '.':
     print('серьезно')
 else: print('непонятно')
 </pre>
+			</div>
+		</div>
 
-		<h4>Дана последовательность слов, заканчивающаяся словом «стоп». Выведите слово, составленное из последних букв каждого слова последовательности (кроме «стоп»).</h4>
-		<pre>
+		<div class="border">
+			<h4>Дана последовательность слов, заканчивающаяся словом «стоп». Выведите слово, составленное из последних букв каждого слова последовательности (кроме «стоп»).</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 Сегодня
 Котелок
@@ -1525,7 +1712,7 @@ else: print('непонятно')
 стоп
 Вывод якорь
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 s = ''
 while a != 'стоп':
@@ -1533,9 +1720,12 @@ while a != 'стоп':
     a = input()
 print(s)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = "около дома!"
 print(s[0:3])
 print(s[1:4])
@@ -1543,16 +1733,19 @@ print(s[6:9])
 print(s[4:9])
 print(s[9:11])
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 око
 кол
 дом
 о дом
 а!
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 word = "лаконизм"
 print(word[-4:-1])
 print(word[-5:-2])
@@ -1561,7 +1754,7 @@ print(word[0:-5])
 print(word[3:-5])
 print(word[7:-7])
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 низ
 они
 кони
@@ -1570,45 +1763,61 @@ print(word[7:-7])
 
 
 </pre>
-
+			</div>
+		</div>
 		<img src="img/books/00/17.png" alt="">
 		<img src="img/books/00/18.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('веслонос'[5:])
 print('котлован'[:3])  
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 нос
 кот
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = "Воткнулся ухом в дупло бегемот!"
 print(s[:3], s[-4:]) 
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Вот мот!
 </pre>
+			</div>
+		</div>
 		<img src="img/books/00/19.png" alt="">
-		<h4>new_string = string[start:end:step]</h4>
-		<h4>Что выведет?</h4>
-		<pre>
+
+
+		<div class="border">
+			<h4>new_string = string[start:end:step]</h4>
+			<div class="flex-pre">
+
+				<pre>
 s = "колосит перенос"
 print(s[4:0:-1])
 print(s[:7:3])
 print(s[-7::3])
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 соло
 кот
 пес
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано число n и строка. Выведите первые n символов строки.</h4>
-		<pre>
+		<div class="border">
+			<h4>Дано число n и строка. Выведите первые n символов строки.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 5
 Lorem ipsum
@@ -1616,24 +1825,32 @@ Lorem ipsum
 Вывод
 Lorem
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = int(input())
 b = input()
 print(b[:a])
 </pre>
+			</div>
+		</div>
 
-		<h4>Дано предложение, заканчивающееся точкой. Выведите его с вопросительным знаком.</h4>
-		<pre>
+		<div class="border">
+			<h4>Дано предложение, заканчивающееся точкой. Выведите его с вопросительным знаком.</h4>
+			<div class="flex-pre">
+				<pre>
 Привет.
 Привет?
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 print(a[:len(a)-1] + '?')
 </pre>
+			</div>
+		</div>
 
-		<h4>Дана строка. Выведите каждый третий символ строки.</h4>
-		<pre>
+		<div class="border">
+			<h4>Дана строка. Выведите каждый третий символ строки.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 Привет
 
@@ -1646,42 +1863,51 @@ print(a[:len(a)-1] + '?')
 Вывод
 иыднйет
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 print(a[2::3])
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('а' &#60; 'я')
 print('в' > 'к')
 print('о' &#60; 'о')
 print('с' >= 'р')
 print('ь' &#60;= 'ь')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 True
 False
 False
 True
 True
 </pre>
-
+			</div>
+		</div>
 		<img src="img/books/00/20.png" alt="">
-		<h4>Что выведет?</h4>
-		<pre>
+
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('полусухой' > 'полумесяц')
 print('пёс' &#60; 'кот')
 print('крыса' > 'крот')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 True
 False
 True
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('кот' &#60; 'котлован')
 print('веслонос' > 'весло')
 print('полумесяц' > 'пол')
@@ -1690,7 +1916,7 @@ print('b' >= 'b')
 print('hello' &#60; 'world')
 print('catnip' >= 'cat')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 True
 True
 True
@@ -1699,9 +1925,12 @@ True
 True
 True
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('А' &#60; 'а')
 print('b' > 'D')
 print('Я' &#60; 'а')
@@ -1709,7 +1938,7 @@ print("Элегантный" &#60; "Эму")
 print("уЧИЛ" > "АНГЛИЙСКИЙ")
 print("HELLO" &#60; "hE")
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 True
 True
 True
@@ -1717,32 +1946,38 @@ True
 True
 True
 </pre>
-
+			</div>
+		</div>
 		<img src="img/books/00/21.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('1' &#60; '8')
 print('5555' > '5554')
 print('123' &#60; '12345')
 print('177' &#60; '8')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 True
 True
 True
 True
 </pre>
+			</div>
+		</div>
 
-		<h4>Даны два слова. Выведите то, что позже по алфавиту.</h4>
-		<pre>
+		<div class="border">
+			<h4>Даны два слова. Выведите то, что позже по алфавиту.</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 привет
 мир
 Вывод
 привет
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 b = input()
 if a>b:
@@ -1750,10 +1985,14 @@ if a>b:
 else:
     print(b)
 </pre>
+			</div>
+		</div>
 
-		<h4>Васе очень нравятся слова, которые в алфавитном порядке расположены между «Василий» и «Вася».
-			Дано слово с большой буквы. Нравится ли оно Васе? Выведите "ДА" или "НЕТ".</h4>
-		<pre>
+		<div class="border">
+			<h4>Васе очень нравятся слова, которые в алфавитном порядке расположены между «Василий» и «Макс».
+				Дано слово с большой буквы. Нравится ли оно Васе? Выведите "ДА" или "НЕТ".</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 Слово
 Вывод
@@ -1763,15 +2002,19 @@ else:
 Вывод
 ДА
 </pre>
-		<pre class="blur2">
-if 'Василий' &#60; input() &#60; 'Вася': print('ДА')
+				<pre class="blur2">
+if 'Василий' &#60; input() &#60; 'Макс': print('ДА')
 else: print('НЕТ')
 </pre>
+			</div>
+		</div>
 
-		<h4>Дана последовательность слов и строка "стоп". Все слова последовательности разные. Выведите номер первого слова в последовательности, которую расставили по алфавиту.
-			Используйте такой алгоритм: чтобы понять, на каком месте стоит слово word в списке, нужно сравнить его со всеми остальными словами, найти, сколько слов меньше word (т. е. стоят раньше word), и прибавить единицу.
-		</h4>
-		<pre>
+		<div class="border">
+			<h4>Дана последовательность слов и строка "стоп". Все слова последовательности разные. Выведите номер первого слова в последовательности, которую расставили по алфавиту.
+				Используйте такой алгоритм: чтобы понять, на каком месте стоит слово word в списке, нужно сравнить его со всеми остальными словами, найти, сколько слов меньше word (т. е. стоят раньше word), и прибавить единицу.
+			</h4>
+			<div class="flex-pre">
+				<pre>
 Ввод
 кот
 пёс
@@ -1784,7 +2027,7 @@ else: print('НЕТ')
 Ввод
 Алиса
 Соня
-Вася
+Макс
 Эмилия
 Максимилиан
 стоп
@@ -1792,7 +2035,7 @@ else: print('НЕТ')
 Вывод
 1
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 a = input()
 k = 0
 b = input()
@@ -1802,54 +2045,66 @@ while b != 'стоп':
     b = input()
 print(k+1)
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
-print('Вася нашёл раз котёнка,'.find('котё'))
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
+print('Макс нашёл раз котёнка,'.find('котё'))
 print('От папы он спрятал его,'.find('кот'))
 print('Кормил он кота колбасой,'.find('ко'))
 print('Пока тот Васю не укусил.'.find('к'))
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 15
 -1
 10
 2
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print('Динозавр: ТОП-ТОП-ТОП!'.find('ТОП'))
 print('Динозавр: ТОП-ТОП-ТОП!'.rfind('ТОП'))
 print('Динозаврик: топ-топ-топ!'.find('топ'))
 print('Динозаврик: топ-топ-топ!'.rfind('топ'))
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 10
 18
 12
 20
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 'ахахаха'.count('аха')
 s1 = 'Кот украл котлету, кот её съел'
 print(s1.count('кот '))
 s2 = 'котлеты нет, котлета в коте'
 print(s2.count('котлет'))
 s3 = 'поужинал в итоге только кот'
-print(s3.count('Вася'))
+print(s3.count('Макс'))
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 2
 1
 2
 0
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 txt1 = '«мяу-мяу-мяу», — говорит кот'
 txt2 = '«гав-гав-гав», — говорит собачка'
 txt3 = '«делай домашку», — говорит Васе совесть'
@@ -1858,67 +2113,90 @@ woofs = txt2.count('гав')
 homeworks = txt3.count('домашка')
 print(meows + woofs + homeworks)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 6
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 text1 = 'Макс достал бутерброд и съел бутерброд.'
 text2 = text1.replace('бутерброд', 'учебник')
 print(text2)
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 Макс достал учебник и съел учебник.
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = 'папа Васи, папа Сони и папа Саши'
 print(s.replace('папа', 'мама'))
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 мама Васи, мама Сони и мама Саши
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 name = input()
 x = int(input())
 y = int(input())
-text = f"Кот {name} объелся и просит пить. Папа налил {x}, а Вася {y} кружки воды. Пока они наливали {x+y} кружек, кот доел их ужин."
+text = f"Кот {name} объелся и просит пить. 
+Папа налил {x}, а Макс {y} кружки воды. 
+Пока они наливали {x+y} кружек, кот доел их ужин."
 print(text)
 </pre>
-		<pre>
+				<pre>
 Ввод
 Мурзик
 3
 2
 	</pre>
-		<pre class="blur2">
-Кот Мурзик объелся и просит пить. Папа налил 3, а Вася 2 кружки воды. Пока они наливали 5 кружек, кот доел их ужин.
+				<pre class="blur2">
+Кот Мурзик объелся и просит пить. 
+Папа налил 3, а Макс 2 кружки воды. 
+Пока они наливали 5 кружек, кот доел их ужин.
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 s = "+п+о+з+д+р+а+в+л+я+ю+"
 plus = '+'
 print(f'В строке {s} {s.count(plus)} знаков «{plus}»!')
 </pre>
-		<pre class="blur2">
+				<pre class="blur2">
 В строке +п+о+з+д+р+а+в+л+я+ю+ 11 знаков «+»!
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
-		<pre>
+		<div class="border">
+			<div class="flex-pre">
+				<pre>
 print(f"{{{{: {4 // 2} скобки")
 </pre>
-		<pre class="blur2">
-		{{: 2 скобки
+				<pre class="blur2">
+{{: 2 скобки
 </pre>
+			</div>
+		</div>
 
+		<div class="border">
 		<h4>Для шифровки сообщения используется строка-пароль. Каждый символ сообщения изменяется на индекс первого употребления этого символа в строке-пароле.
 Дана строка-пароль и сообщение, которое нужно зашифровать. Выведите зашифрованную фразу.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 съешь ещё этих мягких французских булок да выпей же чаю
@@ -1938,8 +2216,12 @@ for i in t:
 
 print(x)
 </pre>
+			</div>
+		</div>
 
+		<div class="border">
 		<h4>Дана строка. Поменяйте в ней все буквы «Ё» на «Е» (и строчные, и прописные).</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 Ёж под ёлкой.
@@ -1951,8 +2233,12 @@ a = input()
 s = a.replace('Ё', 'Е').replace('ё', 'е')
 print(s)
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася ведёт математический кружок в начальной школе. Для каждой задачи он пишет программу, которая подставляет числа в выражение и считает ответ. Даны числа a, b, c. Выведите a * (b + c).</h4>
+		<div class="border">
+		<h4>Макс ведёт математический кружок в начальной школе. Для каждой задачи он пишет программу, которая подставляет числа в выражение и считает ответ. Даны числа a, b, c. Выведите a * (b + c).</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 1
@@ -1968,9 +2254,13 @@ b = int(input())
 c = int(input())
 print(a*(b+c))
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася программирует нового робота. Каждая строчка программы не длиннее 10 символов (Вася очень лаконичен). Пока он спал, его кошка Таня коварно добавила перед каждой строчкой столько пробелов, чтобы было ровно 10 символов.
+		<div class="border">
+		<h4>Макс программирует нового робота. Каждая строчка программы не длиннее 10 символов (Макс очень лаконичен). Пока он спал, его кошка Таня коварно добавила перед каждой строчкой столько пробелов, чтобы было ровно 10 символов.
 Дана строка длиной не более 10 символов. Добавьте в начале строки столько пробелов, чтобы её длина составила 10 символов.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 function()	
@@ -1984,9 +2274,13 @@ if len(a) &#60;= 10:
     s = ((10 - len(a)) * ' ') + a
 print(s)
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася распределил своих учеников по четырём группам. У каждой группы есть номер (1, 2, 3 и 4) и цвет: первая группа взяла себе красный, вторая — синий, третья — жёлтый, четвертая — белый.
+		<div class="border">
+		<h4>Макс распределил своих учеников по четырём группам. У каждой группы есть номер (1, 2, 3 и 4) и цвет: первая группа взяла себе красный, вторая — синий, третья — жёлтый, четвертая — белый.
 Дан цвет. Выведите номер группы. Обратите внимание, что «жёлтый» пишется через «ё».</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 красный 
@@ -2009,11 +2303,14 @@ elif a[0] == 'с':
 elif a[0] == 'ж':
     print(3)
 else: print(4)
-
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася написал для детей много задач. Теперь он только подставляет в них разные числа. В каждую задачу нужно подставить два положительных числа — a и b. Хотя бы одно из них должно быть чётным.
+		<div class="border">
+		<h4>Макс написал для детей много задач. Теперь он только подставляет в них разные числа. В каждую задачу нужно подставить два положительных числа — a и b. Хотя бы одно из них должно быть чётным.
 Даны два числа. Подойдут ли они для Васиной задачи? Выведите "ДА" или "НЕТ".</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 1
@@ -2034,9 +2331,13 @@ if a > 0 and b > 0 and (a%2==0 or b%2==0):
     print('ДА')
 else: print('НЕТ')
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася выдал ученикам бумажки, на которых в одну строку слитно написаны произвольные цифры. Справа от каждой цифры нужно добавить знак «плюс», а в конце строки — 1. Пробелов добавлять не надо.
-Дана строка с заданием, которое подготовил Вася. Выведите, что получится у учеников.</h4>
+		<div class="border">
+		<h4>Макс выдал ученикам бумажки, на которых в одну строку слитно написаны произвольные цифры. Справа от каждой цифры нужно добавить знак «плюс», а в конце строки — 1. Пробелов добавлять не надо.
+Дана строка с заданием, которое подготовил Макс. Выведите, что получится у учеников.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 12345
@@ -2052,9 +2353,13 @@ for i in a:
     s = s + i + '+'
 print(s + '1')
 </pre>
+			</div>
+		</div>
 
-		<h4>У Васи в кружке n учеников. На каждом занятии они пишут свои имена в столбик. Вечером Вася переносит их в свой журнал. Имён много, переносить скучно. Чтобы скрасить это занятие, Вася считает буквы в каждом имени и загадывает: дойду до первого имени, количество букв в котором делится на 3, и съем шоколадку.
+		<div class="border">
+		<h4>У Васи в кружке n учеников. На каждом занятии они пишут свои имена в столбик. Вечером Макс переносит их в свой журнал. Имён много, переносить скучно. Чтобы скрасить это занятие, Макс считает буквы в каждом имени и загадывает: дойду до первого имени, количество букв в котором делится на 3, и съем шоколадку.
 Дано число n и n имён. Выведите номер первого имени, длина которого делится на 3, или "НЕТ", если такого имени нет. Нумерация начинается с единицы.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 3
@@ -2075,12 +2380,16 @@ if k > 0:
     print(k)
 else: print('НЕТ')
 </pre>
+			</div>
+		</div>
 
-		<h4>Каждую задачу для учеников Вася записывает так:
+		<div class="border">
+		<h4>Каждую задачу для учеников Макс записывает так:
 Задача. Посчитай сумму чисел от 10 до 20.
 Самые сложные он хочет отметить вот так:
 Задача (сложная). Посчитай сумму чисел от 10 до 20.
 Дано условие Васиной задачи. Добавьте в него строку "(сложная)".</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 Задача. Посчитай сумму чисел от 10 до 20.
@@ -2091,9 +2400,13 @@ else: print('НЕТ')
 a = input()
 print(a[0:6] + ' (сложная).' + a[7:len(a)])
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася аккуратно записывал тему занятий в кружке и оценки каждого ученика. С файлом, где у него были итоги последнего занятия, что-то произошло: там появились лишние символы. Где-то в середине файла есть слово «Занятие», все цифры после которого — это оценки. Вася пытается разобрать, сколько было оценок и каких.
+		<div class="border">
+		<h4>Макс аккуратно записывал тему занятий в кружке и оценки каждого ученика. С файлом, где у него были итоги последнего занятия, что-то произошло: там появились лишние символы. Где-то в середине файла есть слово «Занятие», все цифры после которого — это оценки. Макс пытается разобрать, сколько было оценок и каких.
 Дан текст из Васиного файла. Выведите, сколько учеников получили пятёрки.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 Ð112 ASXN Ð335°ÑЗанятиеÑ Ð¿ÑСоняÐŸÐ²Ñ5Ð» ÐºÐŸКостяÐœÑ Ñ3ajjÐŸÐASL»
@@ -2104,9 +2417,13 @@ b = a.split('Занятие')
 c = b[1]
 print(c.count('5'))
 </pre>
+			</div>
+		</div>
 
-		<h4>Вася рассказал новую тему и продиктовал несколько новых терминов. Соня записала их «ёлочкой». «Ёлочка» шириной в 3 буквы выглядит так:
+		<div class="border">
+		<h4>Макс рассказал новую тему и продиктовал несколько новых терминов. Соня записала их «ёлочкой». «Ёлочка» шириной в 3 буквы выглядит так:
 </h4>
+			<div class="flex-pre">
 		<pre>
 с
  т
@@ -2128,12 +2445,16 @@ b = int(input())
 for i in range(len(a)):
     print( ' ' * (i%b) + a[i])
 </pre>
-
-		<h4>Вася провёл в кружке контрольную и в столбик записал результаты: имя, фамилия, оценка через пробел. Например, так:
+			</div>
+		</div>
+		
+		<div class="border">
+		<h4>Макс провёл в кружке контрольную и в столбик записал результаты: имя, фамилия, оценка через пробел. Например, так:
 Соня Иванова пять
-Он хочет переписать их так, чтобы можно было показать родителям. Для этого между фамилией и оценкой Вася добавляет слово «получил» или «получила», а в конце ставит точку. Выходит так:
+Он хочет переписать их так, чтобы можно было показать родителям. Для этого между фамилией и оценкой Макс добавляет слово «получил» или «получила», а в конце ставит точку. Выходит так:
 Соня Иванова получила пять.
-Дано число n и n записей Васи про его учеников. Выведите, что Вася отправил родителям, если известно, что всех девочек в Васином кружке зовут Соня либо Маша.</h4>
+Дано число n и n записей Васи про его учеников. Выведите, что Макс отправил родителям, если известно, что всех девочек в Васином кружке зовут Соня либо Маша.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 3
@@ -2151,15 +2472,14 @@ for i in range(int(input())):
     a = input().split()
     print(f'{a[0]} {a[1]} {"получила" if a[0] in ["Соня", "Маша"] else "получил"} {a[-1]}.')
 </pre>
+			</div>
+		</div>
+		
 		
 		<h2>Числа</h2>
-
-		<h4>Тип float</h4>
-		<pre>
-3.14157, 2.00734, 100.0076
-</pre>
-
-		<h4>Что выведет?</h4>
+		
+		<div class="border">
+			<div class="flex-pre">
 		<pre>
 print(12.01 + 13.34)
 print(42.3333 - 14.5)
@@ -2172,8 +2492,12 @@ print(0.16 ** 0.5)
 60.363
 0.4
 </pre>
-
+			</div>
+		</div>
+		
+		<div class="border">
 		<h4>Значения типа int и float можно смешивать. В таком случае ответ будет иметь тип float</h4>
+			<div class="flex-pre">
 		<pre>
 print(9 ** 0.5)
 print(31.5 - 2)
@@ -2182,8 +2506,12 @@ print(31.5 - 2)
 3.0
 29.5
 </pre>
-
+			</div>
+		</div>
+		
+		<div class="border">
 		<h4>Операцию деления / можно использовать как с целыми числами, так и с действительными, но ответ всегда будет значением типа float</h4>
+			<div class="flex-pre">
 		<pre>
 print (12 / 4)
 print (3.0 / 2)
@@ -2198,9 +2526,12 @@ print (123.8 / 7.1)
 16.4
 17.43661971830986
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 5.17
 string = input()
 number = float(string)
@@ -2209,9 +2540,12 @@ print(type(number))
 		<pre class="blur2">
 class 'float'
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 n1 = float('42.75')
 n2 = int(n1)
 n3 = float(3)
@@ -2222,8 +2556,12 @@ print(n1, n2, n3, n4, n5)
 		<pre class="blur2">
 42.75 42 3.0 -23 3
 </pre>
-
-		<h4>Дано число N. В следующих N строках N целых или действительных чисел. Выведите их среднее арифметическое.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N. В следующих N строках N целых или действительных чисел. Выведите их среднее арифметическое.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 4
@@ -2242,8 +2580,12 @@ for i in range(a):
     k = k + b
 print(k/a)
 </pre>
-
-		<h4>Даны числа A и P. Чему будет равно P процентов от A?</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Даны числа A и P. Чему будет равно P процентов от A?</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 57   
@@ -2256,8 +2598,12 @@ a = int(input())
 p = int(input())
 print((p/100)*a)
 </pre>
-
-		<h4>Дано число N и последовательность из N чисел. Выведите сумму последовательности</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и последовательность из N чисел. Выведите сумму последовательности</h4>
+			<div class="flex-pre">
 		<pre>
 4
 1.1
@@ -2274,8 +2620,12 @@ for i in range(a):
     c+= float(input())
 print(c)
 </pre>
-
-		<h4>Даны длины катетов прямоугольного треугольника a и b. Выведите его площадь. Площадь прямоугольного треугольника с катетами a и b можно посчитать по формуле: S = 1/2 ab</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Даны длины катетов прямоугольного треугольника a и b. Выведите его площадь. Площадь прямоугольного треугольника с катетами a и b можно посчитать по формуле: S = 1/2 ab</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 3
@@ -2288,8 +2638,12 @@ a = float(input())
 b = float(input())
 print(0.5*a*b)
 </pre>
-
-		<h4>Дано число. Выведите его корень. Для вычисления корня числа можно возвести его в степень 0.5.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число. Выведите его корень. Для вычисления корня числа можно возвести его в степень 0.5.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 16
@@ -2298,11 +2652,15 @@ print(0.5*a*b)
 		<pre class="blur2">
 print(int(input())**0.5)
 </pre>
+			</div>
+		</div>
+		
 		
 		<h2>Массив</h2>
-
-		<h4>Что выведет?</h4>
-		<pre>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 print([2, 3, 5])
 print(["Теперь", "можно", "хранить", "отдельные", "слова"])
 </pre>
@@ -2310,8 +2668,12 @@ print(["Теперь", "можно", "хранить", "отдельные", "с
 [2, 3, 5]
 ['Теперь', 'можно', 'хранить', 'отдельные', 'слова']
 </pre>
+			</div>
+		</div>
 
-		<h4>Что выведет?</h4>
+		<div class="border">
+			<div class="flex-pre">
+			
 		<pre>
 numbers = [1, 2, 3]
 words = ["Теперь", "можно", "хранить", "отдельные", "слова"]
@@ -2322,9 +2684,12 @@ print(len(words))
 3
 5
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+			<div class="flex-pre">
+<pre>
 a = ["Две", "части"]
 b = ["одного", "массива"]
 c = a + b
@@ -2339,9 +2704,12 @@ print(z)
 ['Две', 'части', 'одного', 'массива']
 [2, 3, 7, -2, 20]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 a = [1, 2, 3] + "число"	
 a = [1, 2, 3] + "4"	
 a = [1, 2, 3] + 4	это ошибка
@@ -2351,8 +2719,12 @@ a = [1, 2, 3] + [4]	так можно
 это ошибка
 это ошибка
 </pre>
-
-		<h4>Если число отрицательное или равно нулю, то результат — это пустой массив.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Если число отрицательное или равно нулю, то результат — это пустой массив.</h4>
+			<div class="flex-pre">
 		<pre>
 a = [0] * 5
 print(a)
@@ -2368,9 +2740,12 @@ print(c)
 [1, 12, 123, 1, 12, 123, 1, 12, 123]
 ['2х2=4', '2х2=4', '2х2=4']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 a = [0]
 b = [42]
 c = (a + b) * len(a + b)
@@ -2379,8 +2754,12 @@ print(c)
 		<pre class="blur2">
 [0, 42, 0, 42]
 </pre>
-
-		<h4>Дано число N. Выведите массив из N чисел N.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N. Выведите массив из N чисел N.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 3
@@ -2391,8 +2770,12 @@ print(c)
 a = int(input())
 print([a]*a)
 </pre>
-
-		<h4>Даны три строки. Выведите массив с ними.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Даны три строки. Выведите массив с ними.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 жёлтое
@@ -2407,9 +2790,13 @@ b = input()
 c = input()
 print([a, b, c])
 </pre>
-
-		<h4>Даны 2 натуральных числа A и B.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Даны 2 натуральных числа A и B.
 Выведите массив из B чисел A и A чисел B. Числа в массиве должны быть расположены по возрастанию.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 4
@@ -2422,9 +2809,12 @@ a = int(input())
 b = int(input())
 print(sorted([b]*a + [a]*b))
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 a = []        
 a.append(45)        
 print(a)
@@ -2435,18 +2825,24 @@ print(a)
 [45]
 [45, -203]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 a = [1, 9, 7, 3]        
 a.append(11, 12)
 </pre>
 		<pre class="blur2">
 TypeError: list.append() takes exactly one argument (2 given)
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 birthday = []        # создаём массив
 for k in range(7):        # цикл сработает 7 раз
     name = input()        # считываем имя
@@ -2465,9 +2861,12 @@ print(birthday)        # после цикла печатаем результа
 		<pre class="blur2">
 ['Алиса', 'Соня', 'Макс', 'Эмилия', 'Фрэнк', 'Антон', 'Рома']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 s = "ПОКА ЭТО СТРОКА"        # создаём строку
 A = list(s)        # делаем массив, состоящий из её отдельных символов
 print(A)
@@ -2475,9 +2874,12 @@ print(A)
 		<pre class="blur2">
 ['П', 'О', 'К', 'А', ' ', 'Э', 'Т', 'О', ' ', 'С', 'Т', 'Р', 'О', 'К', 'А']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 from random import randint
 
 stat = []
@@ -2492,9 +2894,13 @@ print(stat2)
 [2, 5, 3, 5, 3, 1, 3, 4, 6, 1, 6, 2, 4, 1, 3, 6, 3, 2, 1, 6]
 [5, 11, 10, 7, 4, 6, 7, 3, 3, 8, 8, 4, 6, 2, 5, 6, 7, 7, 3, 8]
 </pre>
-
-		<h4>Дано число N и затем N слов по одному в строке.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и затем N слов по одному в строке.
 Выведите массив из этих слов.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 4
@@ -2513,9 +2919,13 @@ for  i in range(a):
     c.append(b)
 print(c)
 </pre>
-
-		<h4>Дано число N и N целых чисел, записанных по одному в строке.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и N целых чисел, записанных по одному в строке.
 Сделайте массив из этих чисел и выведите его.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 4
@@ -2535,9 +2945,14 @@ for i in range(a):
     c.append(b)
 print(c)
 </pre>
-	
+			</div>
+		</div>
+		
+		<div class="border">
 		<h4>Дано число N и N чисел.
 Создайте и выведите массив из всех чётных из них. Если чётных нет, выведите пустой массив.</h4>
+			<div class="flex-pre">
+	
 		<pre>
 Ввод
 3
@@ -2555,11 +2970,14 @@ for i in range(a):
     if b % 2 == 0:
         c.append(b)
 print(c)
-    
 </pre>
-
-		<h4>Дана строка из оценок.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дана строка из оценок.
 Выведите массив, каждый элемент которого — это строка с оценкой.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 55435455443
@@ -2569,8 +2987,12 @@ print(c)
 		<pre class="blur2">
 print(list(input()))
 </pre>
-
-		<h4>Дано число N. Выведите массив из чисел от 1 до N.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N. Выведите массив из чисел от 1 до N.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 4
@@ -2584,10 +3006,14 @@ for i in range(a):
     c.append(i+1)
 print(c)
 </pre>
+			</div>
+		</div>
+		
 		
 		<h2>Линейные алгоритмы на массивах</h2>
 
-		<h4>Что выведет?</h4>
+		<div class="border">
+			<div class="flex-pre">
 		<pre>
 a = [1, 23, 432, -34, 0, 999, 1024]
 x = a[1]
@@ -2597,9 +3023,12 @@ print(x, y)
 		<pre class="blur2">
 23 999
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [2, 3, 5, 7, 11]
 print(A[5])
 print(A[-6])
@@ -2607,9 +3036,12 @@ print(A[-6])
 		<pre class="blur2">
 IndexError: list index out of range
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [1, 2, 0, 4, 5, 6, 7]
 A[2] = 3
 print(A)
@@ -2617,9 +3049,12 @@ print(A)
 		<pre class="blur2">
 [1, 2, 3, 4, 5, 6, 7]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 k = 4
 A = [1, 2, 3, 4, 5, 6, 7]
 A[k] = A[k - 1] + A[k + 1]
@@ -2628,9 +3063,12 @@ print(A)
 		<pre class="blur2">
 [1, 2, 3, 4, 10, 6, 7]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [1, 2, 3, 4, 5, 6, 7, 8]
 A[3], A[5] = A[5], A[3]
 print(A)
@@ -2638,9 +3076,12 @@ print(A)
 		<pre class="blur2">
 [1, 2, 3, 6, 5, 4, 7, 8]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [1, 2, 3, 4, 5, 6]
 A[3] = 7
 A[4] = -4
@@ -2651,11 +3092,16 @@ print(A)
 		<pre class="blur2">
 14 2 3 7 8 6
 </pre>
+			</div>
+		</div>
+		
 		
 		<img src="img/books/00/22.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+		
+		<div class="border">
+			<div class="flex-pre">
+<pre>
 A = [3, 4, 5, 4, 2, 3, 3, 2, 3, 5, 5]
 A[3:7] = [5, 5, 5, 5]
 print(A)
@@ -2663,9 +3109,12 @@ print(A)
 		<pre class="blur2">
 [3, 4, 5, 5, 5, 5, 5, 2, 3, 5, 5]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [3, 4, 5, 4, 2, 3, 3, 2, 3, 5, 5]
 A[3:7] = [7, 7, 7, 7, 7]
 print(A)
@@ -2673,10 +3122,15 @@ print(A)
 		<pre class="blur2">
 [3, 4, 5, 7, 7, 7, 7, 7, 2, 3, 5, 5]
 </pre>
+			</div>
+		</div>
+		
 		<img src="img/books/00/23.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+		
+		<div class="border">
+			<div class="flex-pre">
+<pre>
 people_count = int(input())
 people = []
 for k in range(people_count):
@@ -2692,8 +3146,12 @@ print(people)
 		<pre class="blur2">
 [18, 42, 61, 42]
 </pre>
-
-		<h4> сколько было человек определённого возраста</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4> сколько было человек определённого возраста</h4>
+			<div class="flex-pre">
 		<pre>
 people_count = int(input())
 people = [0] * 150
@@ -2703,10 +3161,28 @@ for k in range(people_count):
 print(people)
 </pre>
 		<pre class="blur2">
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 </pre>
-
-		<h4>Программа считает количество выпавших единиц, двоек, троек, четвёрок, пятёрок, шестёрок на игральном кубике.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Программа считает количество выпавших единиц, двоек, троек, четвёрок, пятёрок, шестёрок на игральном кубике.</h4>
+			<div class="flex-pre">
 		<pre>
 from random import randint
 
@@ -2718,8 +3194,12 @@ print(stat)
 		<pre class="blur2">
 [0, 177, 158, 170, 178, 159, 158]
 </pre>
-
-		<h4>программа «бросает» два кубика, считает сумму выпавших очков и добавляет единичку к статистике с такой суммой</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>программа «бросает» два кубика, считает сумму выпавших очков и добавляет единичку к статистике с такой суммой</h4>
+			<div class="flex-pre">
 		<pre>
 from random import randint
 
@@ -2733,8 +3213,12 @@ print(stat)
 		<pre class="blur2">
 [0, 0, 31, 52, 73, 108, 152, 173, 145, 113, 75, 49, 29]
 </pre>
-
-		<h4>Дано число N, N строк с таинственными подарками и номер подарка k, который выбрала Соня. Что достанется Соне?</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N, N строк с таинственными подарками и номер подарка k, который выбрала Соня. Что достанется Соне?</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 3
@@ -2753,8 +3237,12 @@ for i in range(a):
     c.append(b)
 print(c[int(input())-1])
 </pre>
-
-		<h4>Дано число N, затем N названий книг и два индекса книг, которые поменяли местами. Выведите массив с названиями книг в получившемся расположении.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N, затем N названий книг и два индекса книг, которые поменяли местами. Выведите массив с названиями книг в получившемся расположении.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод
 4
@@ -2765,7 +3253,8 @@ print(c[int(input())-1])
 0
 1
 Вывод
-['Гарри Поттер и узник Азкабана', 'Одиссея капитана Блада', 'Мелкие боги', 'Никогде']
+['Гарри Поттер и узник Азкабана', 
+'Одиссея капитана Блада', 'Мелкие боги', 'Никогде']
 </pre>
 		<pre class="blur2">
 a = int(input())
@@ -2781,8 +3270,12 @@ c[d] = j
 c[e] = k
 print(c)
 </pre>
-
-		<h4>31 декабря Соня решила поменять один из заготовленных подарков на другой. Дано число N, затем N строк с названиями подарков, индекс изменённого подарка и новое название. Выведите массив с подарками после Сониного вмешательства.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>31 декабря Соня решила поменять один из заготовленных подарков на другой. Дано число N, затем N строк с названиями подарков, индекс изменённого подарка и новое название. Выведите массив с подарками после Сониного вмешательства.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	Вывод
 3
@@ -2806,9 +3299,13 @@ e = input()
 c[d] = e
 print(c)
 </pre>
-
-		<h4>Дано число N, затем N строк с элементами массива, затем индекс.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N, затем N строк с элементами массива, затем индекс.
 Если индекс правильный (то есть в этом массиве есть элемент с таким индексом) — вывести квадрат соответствующего этому индексу элемента, иначе вывести сообщение об ошибке (см. пример).</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 3
@@ -2841,9 +3338,12 @@ try:
 except:
     print('Элемента с таким индексом в этом массиве нет.')
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [5, 6, 2, 1, 4, 5, 8, 7, 3]
 for elem in A:
     print(elem)
@@ -2859,9 +3359,12 @@ for elem in A:
 7
 3
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Ох!", "Ах!", "Ух!!", "М?", "Правда?", "Круто!"]
 result = []
 for elem in A:
@@ -2872,9 +3375,12 @@ print(result)
 		<pre class="blur2">
 ['Ох!', 'Ах!', 'Ух!!', 'Круто!']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [23, 101, 100, 200, 97, -1, 123, 99]
 for k in range(len(A)):
     if A[k] > 100:
@@ -2884,9 +3390,12 @@ print(A)
 		<pre class="blur2">
 [23, 100, 100, 100, 97, -1, 100, 99]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [23, 101, 100, 200, 97, -1, 123, 99]
 for elem in A:
     if elem > 100:
@@ -2896,9 +3405,12 @@ print(A)
 		<pre class="blur2">
 [23, 101, 100, 200, 97, -1, 123, 99]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [13, 12, 8, 10, 2, 3, 7, 16]
 for k in range(len(A)):
     if k % 2 == 0:
@@ -2907,9 +3419,12 @@ for k in range(len(A)):
 		<pre class="blur2">
 13 8 2 7
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [13, 12, 8, 10, 2, 3, 7, 16]
 for k in range(len(A)):
     if A[k] % 2 == 0:
@@ -2918,9 +3433,12 @@ for k in range(len(A)):
 		<pre class="blur2">
 1 2 3 4 7
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [5, -6, 2, -1, -4, -5, 8, 7, -3]
 neg_numbers = []
 for k in range(len(A) - 1, -1, -1):
@@ -2931,30 +3449,39 @@ print(neg_numbers)
 		<pre class="blur2">
 [-3, -5, -4, -1, -6]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-A = ["Вася", "Катя", "Маша", "Петя", "Оля", "Оксана", "Даша", "Женя", "Кирилл", "Боря"]
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
+A = ["Макс", "Катя", "Маша", "Петя", "Оля", "Оксана", "Даша", "Женя", "Кирилл", "Боря"]
 orgs = []
 for k in range(0, len(A), 3):
     orgs.append(A[k])
 print(orgs)
 </pre>
 		<pre class="blur2">
-['Вася', 'Петя', 'Даша', 'Боря']
+['Макс', 'Петя', 'Даша', 'Боря']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-A = ["Вася", "Катя", "Маша", "Петя", "Оля", "Оксана", "Даша", "Женя", "Кирилл", "Боря"]
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
+A = ["Макс", "Катя", "Маша", "Петя", "Оля", "Оксана", "Даша", "Женя", "Кирилл", "Боря"]
 print(A[::3])
 </pre>
 		<pre class="blur2">
-['Вася', 'Петя', 'Даша', 'Боря']
+['Макс', 'Петя', 'Даша', 'Боря']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [5, 6, 2, 1, 4, 5, 8, 7, 3]
 cnt_greater = 0
 for k in range(1, len(A) - 1): # исключаем из рассмотрения крайние элементы
@@ -2965,9 +3492,13 @@ print(cnt_greater)
 		<pre class="blur2">
 2
 </pre>
-
-		<h4>Дано число N и N чисел по одному в строке.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и N чисел по одному в строке.
 Выведите те из них, которые меньше последнего числа.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 4
@@ -2991,10 +3522,14 @@ for i in range(a-1):
     if c[i] &#60; c[a-1]:
         print(c[i])
 </pre>
-
-		<h4>Дано число N и N строк.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и N строк.
 Выведите их в обратном порядке. Последнее слово надо вывести первым, предпоследнее — вторым и т. д.
 </h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 5
@@ -3016,10 +3551,14 @@ c = [input() for i in range(a)]
 for elem in c[::-1]:
     print(elem)
 </pre>
-
-		<h4>Дано число N и 2N записей: в одной строке фамилия ученика, а в другой — его оценка.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и 2N записей: в одной строке фамилия ученика, а в другой — его оценка.
 После информации об оценках записан балл — число от 2 до 5.
 Выведите массив с фамилиями детей, которые получили такой балл.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 4
@@ -3045,9 +3584,12 @@ for i in range(len(c)-1):
         s.append(c[i])
 print(s)
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Петя", "Катя", "Наташа", "Сева"]
 for elem in A:
     if elem == "Катя":
@@ -3056,9 +3598,12 @@ for elem in A:
 		<pre class="blur2">
 Катя есть в списке имён
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Петя", "Катя", "Наташа", "Сева"]
 for elem in A:
     if elem == "Катя":
@@ -3072,9 +3617,12 @@ for elem in A:
 Кати в списке нет
 Кати в списке нет
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Петя", "Катя", "Наташа", "Сева"]
 name_found = False
 
@@ -3090,9 +3638,12 @@ else:
 		<pre class="blur2">
 Катя есть в списке имён
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Петя", "Катя", "Наташа", "Сева"]
 ind = 0
 while ind &#60; len(A) and A[ind] != 'Катя':
@@ -3105,9 +3656,12 @@ else:
 		<pre class="blur2">
 Катя есть в списке имён
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = ["Петя", "Катя", "Наташа", "Сева"]
 name_found = False
 
@@ -3124,9 +3678,12 @@ else:
 		<pre class="blur2">
 Катя есть в списке имён
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 speed = [100, 56, 89, 90, 101, 37, 111, 98]
 car_found = False
 
@@ -3143,9 +3700,12 @@ else:
 		<pre class="blur2">
 На трассе есть слишком медленная или слишком быстрая машина
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [4, 15, -3, -94, 15, 15, 34]
 value = 15
 elem_index = -1
@@ -3158,9 +3718,12 @@ print(elem_index)
 		<pre class="blur2">
 1
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [4, 15, -3, -94, 15, 15, 34]
 value = 15
 index = 0
@@ -3171,9 +3734,12 @@ print(index)
 		<pre class="blur2">
 1
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 N = int(input())
 A = []
 for k in range(N): # прочитали массив
@@ -3197,16 +3763,24 @@ print(max_value)
 		<pre class="blur2">
 9
 </pre>
-
-		<h4>Поиск индекса</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+			<div class="flex-pre">
+<pre>Поиск индекса</pre>
 		<pre>
 indmax = 0
 for k in range(len(A)):
     if A[k] > A[indmax]:
         indmax = k
 </pre>
-
+			</div>
+		</div>
+		
+		<div class="border">
 		<h4>Что нужно дописать после цикла, чтобы поменять местами максимальный элемент и элемент в начале массива?</h4>
+			<div class="flex-pre">
 		<pre>
 indmax = 0
 for k in range(len(A)):
@@ -3217,9 +3791,12 @@ for k in range(len(A)):
 		<pre class="blur2">
 A[0], A[ind_max] = A[ind_max], A[0]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 A = [5, 10, 3, 10, 4, 10, -8, 4, 6]
 ind_max = 0
 for k in range(len(A)):
@@ -3230,8 +3807,12 @@ print(ind_max)
 		<pre class="blur2">
 1
 </pre>
-
-		<h4>Как можно переписать программу, чтобы она искала индекс самого правого максимального элемента?</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Как можно переписать программу, чтобы она искала индекс самого правого максимального элемента?</h4>
+			<div class="flex-pre">
 		<pre>
 ind_max = 0
 for k in range(len(A)):
@@ -3246,8 +3827,12 @@ for k in range(len(A)-1,-1,-1):
         ind_max = k
 print(ind_max)
 </pre>
-
-		<h4>Дано число N и N строк с именами. Затем записана ещё одна строка с именем. Программа должна вывести "ДА", если это имя есть среди N строк, иначе вывести "НЕТ".</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N и N строк с именами. Затем записана ещё одна строка с именем. Программа должна вывести "ДА", если это имя есть среди N строк, иначе вывести "НЕТ".</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 5
@@ -3273,9 +3858,13 @@ if name_found:
 else:
     print("НЕТ")
 </pre>
-
-		<h4>Дано число N, затем элементы массива — N строк с именами. Затем записана ещё одна строка с именем.
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N, затем элементы массива — N строк с именами. Затем записана ещё одна строка с именем.
 Сколько раз встречается эта строка в массиве?</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 5
@@ -3299,8 +3888,12 @@ for elem in c:
         k+=1
 print(k)
 </pre>
-
-		<h4>Дано число N, затем элементы массива — N строк с целыми числами. Все числа разные. Поменять в этом массиве местами наименьший элемент с наибольшим и вывести полученный массив.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дано число N, затем элементы массива — N строк с целыми числами. Все числа разные. Поменять в этом массиве местами наименьший элемент с наибольшим и вывести полученный массив.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 5
@@ -3324,8 +3917,12 @@ else:
     c[c.index(b)], c[c.index(e)] = c[c.index(e)], c[c.index(b)]
 print(c) 
 </pre>
-
-		<h4>Дана строка, содержащая заглавные латинские буквы и пробелы. Выведите наименьшую и наибольшую букву из данной строки.</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+<h4>Дана строка, содержащая заглавные латинские буквы и пробелы. Выведите наименьшую и наибольшую букву из данной строки.</h4>
+			<div class="flex-pre">
 		<pre>
 Ввод	
 HELLO WORLD	
@@ -3342,9 +3939,12 @@ c = a.split()
 b = ''.join(c)
 print(min(b), max(b))
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 print("Катя Ваня".split(" "))
 print("12 3 455".split(" "))
 print("192.168.0.1".split("."))
@@ -3356,9 +3956,12 @@ print("Казань, Мурманск, Краснодар".split(", "))
 ['192', '168', '0', '1']
 ['Казань', 'Мурманск', 'Краснодар']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 print("кофе...чай".split("."))
 print(" Python  Pascal ".split(" "))
 </pre>
@@ -3366,18 +3969,24 @@ print(" Python  Pascal ".split(" "))
 ['кофе', '', '', 'чай']
 ['', 'Python', '', 'Pascal', '']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 s = "   Катя   Ваня     "
 print(s.split())
 </pre>
 		<pre class="blur2">
 ['Катя', 'Ваня']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 x = ["кит", "акула", "скат"]
 y = ["1", "2", "4", "8"]
 print(", ".join(x))
@@ -3389,11 +3998,16 @@ print(" + ".join(y))
 кит.акула.скат
 1 + 2 + 4 + 8
 </pre>
+			</div>
+		</div>
+		
 		
 		<img src="img/books/00/24.png" alt="">
 
-		<h4>Что выведет?</h4>
-		<pre>
+		
+		<div class="border">
+			<div class="flex-pre">
+<pre>
 s = "1 2 3 4 5 6 7 8"
 print(s.split(maxsplit=2))
 print(s.split(maxsplit=5))
@@ -3402,9 +4016,12 @@ print(s.split(maxsplit=5))
 ['1', '2', '3 4 5 6 7 8']
 ['1', '2', '3', '4', '5', '6 7 8']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+<div class="flex-pre">
+<pre>
 s = "    John   Paul  George    Ringo  "
 t = s.split()
 print(" ".join(t))
@@ -3412,18 +4029,24 @@ print(" ".join(t))
 		<pre class="blur2">
 John Paul George Ringo
 </pre>
-
-		<h4>Что выведет?</h4>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
 		<pre>
-Чтобы полученный с помощью метода split() массив строк превратить в массив чисел, можно написать цикл.
-</pre>
-		<pre class="blur2">
 for k in range(len(x)):
     x[k] = int(x[k])
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+		<pre class="blur2">
+массив строк превратится в массив чисел
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
 x = input().split()
 print(x)
 Ввод
@@ -3432,9 +4055,12 @@ print(x)
 		<pre class="blur2">
 ['19', '12', '3', '134', '542', '1']
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
 x = input().split()
 for k in range(len(x)):
     x[k] = int(x[k])
@@ -3445,170 +4071,8 @@ print(x)
 		<pre class="blur2">
 [19, 12, 3, 134, 542, 1]
 </pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-		<h4>Что выведет?</h4>
-		<pre>
-
-</pre>
-		<pre class="blur2">
-
-</pre>
-
-
-
-
+			</div>
+		</div>
 
 
 	</div>
