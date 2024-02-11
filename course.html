@@ -4034,18 +4034,6 @@ John Paul George Ringo
 		
 		<div class="border">
   <div class="flex-pre">
-		<pre>
-for k in range(len(x)):
-    x[k] = int(x[k])
-</pre>
-		<pre class="blur2">
-массив строк превратится в массив чисел
-</pre>
-			</div>
-		</div>
-		
-		<div class="border">
-  <div class="flex-pre">
 <pre>
 x = input().split()
 print(x)
@@ -4070,6 +4058,400 @@ print(x)
 </pre>
 		<pre class="blur2">
 [19, 12, 3, 134, 542, 1]
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+		<h4>Первоклассник Петя учится складывать числа.
+Есть число N и N строк с неотрицательными целыми числами.
+Выведите выражение, которое записал Петя, — сумму элементов последовательности. Поскольку число 0 не влияет на сумму, его записывать не надо. В списке обязательно есть хотя бы одно положительное число.
+Пробелов между числами и плюсами Петя не ставил.</h4>
+  <div class="flex-pre">
+<pre>
+Ввод	
+7
+32
+1
+118
+4
+42
+0
+33
+
+Вывод
+32+1+118+4+42+33
+</pre>
+		<pre class="blur2">
+a = int(input())
+c = [input() for _ in range(a)]
+
+for i in range(len(c)):
+    if '0' in c :
+        c.remove('0')
+
+
+print('+'.join(c))
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [2, 3, 5, 7, 11, 13, 17]
+print(x.index(5))
+</pre>
+		<pre class="blur2">
+2
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+y = ["Кострома", "Нижний Новгород", "Уфа", "Чебоксары", "Новгород", "Уфа"]
+print(y.index("Новгород"))
+print(y.index("Уфа"))
+</pre>
+		<pre class="blur2">
+4
+2
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = ["Кострома", "Нижний Новгород", "Уфа", "Чебоксары", "Новгород", "Уфа"]
+print(x.count("Кострома"))
+print(x.count("Уфа"))
+print(x.count("Новгород"))
+print(x.count("город"))
+</pre>
+		<pre class="blur2">
+1
+2
+1
+0
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = ["11", "12", "13", "11"]
+print(x.count(11))
+print(x.count("11"))
+</pre>
+		<pre class="blur2">
+0
+2
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [5, 7, 1, 8, 5, 6, 2, 3]
+value = x.pop(5)
+print(x)
+print(value)
+</pre>
+		<pre class="blur2">
+[5, 7, 1, 8, 5, 2, 3]
+6
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [34, 5, 23, -3, 56, 19, 70]        
+x.pop(4)        
+print(x)
+value = x.pop(5)        
+print(value)
+print(x)
+value = x.pop()        # удаляется последний элемент массива
+print(value)
+print(x)
+x.pop(7)        # ошибка (в массиве нет элемента с таким индексом)
+</pre>
+		<pre class="blur2">
+[34, 5, 23, -3, 19, 70]
+70
+[34, 5, 23, -3, 19]
+19
+[34, 5, 23, -3]
+IndexError: pop index out of range
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+A = [5, 8, 4, 3, 4, 1, 6, 4]
+A.remove(4)
+print(A)
+</pre>
+		<pre class="blur2">
+[5, 8, 3, 4, 1, 6, 4]
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [5, 7, 1, 8, 5, 2, 3]
+x.insert(3, 6)
+print(x)
+</pre>
+		<pre class="blur2">
+[5, 7, 1, 6, 8, 5, 2, 3]
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+		<h4>
+Результаты контрольной записаны в двух строках. В первой строке записаны фамилии и имена учеников, разделённые запятой и пробелом. Во второй — их оценки в том же порядке, что и фамилии.
+В третьей строке записано число X — интересующая учителя оценка.
+Выведите имя первого ученика по списку, который написал контрольную на оценку X.</h4>
+  <div class="flex-pre">
+<pre>
+Ввод
+Петров Пётр, Александрова Александра, Сонина Софья
+4 5 5
+5
+Вывод
+Александрова Александра
+</pre>
+		<pre class="blur2">
+a = input()
+b = input()
+c = input()
+d = a.split(', ')
+e = b.split(' ')
+j = e.index(c)
+
+print(d[j])
+</pre>
+			</div>
+		</div>
+		
+		
+		<div class="border">
+		<h4>В первой строке записаны фамилии и имена учеников, разделённые запятой и пробелом. Во второй строке — номер ученика K. Список пронумерован с 1.
+Выведите имя ученика с номером K и получившийся массив после удаления из него ученика с номером К.</h4>
+  <div class="flex-pre">
+<pre>
+Ввод
+Петров Пётр, Александрова Александра, Сонина Софья
+1
+Вывод
+Петров Пётр
+['Александрова Александра', 'Сонина Софья']
+</pre>
+		<pre class="blur2">
+a = input()
+b = int(input())
+c = a.split(', ')
+print(c.pop(b-1))
+print(c)
+</pre>
+			</div>
+		</div>
+		
+		<img src="img/books/00/25.png" alt="">
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+s = "TABLE"
+print(min(s))
+print(max(s))
+
+s2 = "2385"
+print(min(s2))
+print(max(s2))
+</pre>
+		<pre class="blur2">
+A
+T
+2
+8
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+s = "Hello!"
+print(min(s))
+print(max(s))
+</pre>
+		<pre class="blur2">
+!
+o
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = ["Казань", "Архангельск", "Владивосток", "Краснодар"]
+if "Воркута" in x:
+    print("Да, Воркута есть в перечне городов")
+else:
+    print("К сожалению, в вашем городе нет нашего филиала")
+</pre>
+		<pre class="blur2">
+К сожалению, в вашем городе нет нашего филиала
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+s = hello!
+if '!' in s:
+    print("Символ '!' есть в этой строке.")
+else:
+    print("Символа '!' нет в этой строке.")
+</pre>
+		<pre class="blur2">
+Символ '!' есть в этой строке.
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+A = []
+for k in range(13):
+    value = int(input())
+    if value not in A:
+        A.append(value)
+for elem in A:
+    print(elem, end = " ")
+    
+Ввод
+4
+5
+6
+4
+5
+3
+4
+5
+4
+3
+7
+6
+5
+</pre>
+		<pre class="blur2">
+4 5 6 3 7
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [3, 4, -1, 6]
+print(sum(x))
+</pre>
+		<pre class="blur2">
+12
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = ["3", "4", "-1", "6"]
+print(sum(x))
+</pre>
+		<pre class="blur2">
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [4, -1, 3, 6, -3, 2, 7]
+
+# сумма первых четырёх элементов
+print(sum(x[:4]))
+
+# сумма последних трёх элементов
+print(sum(x[-3:]))
+</pre>
+		<pre class="blur2">
+12
+6
+5
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [4, -1, 3, 6, -3, 2, 7]
+print(max(x[:4]))
+print(min(x[-3:]))
+print(-1 in x[1:4])
+print(4 in x[2:])
+</pre>
+		<pre class="blur2">
+6
+-3
+True
+False
+</pre>
+			</div>
+		</div>
+		
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+x = [2, 3, 5, 7]
+print(x[2:].index(7))
+
+# Уберите комментарий с команды, чтобы увидеть ошибку
+# print(x[2:].index(2))
+</pre>
+		<pre class="blur2">
+
+</pre>
+			</div>
+		</div>
+x = [2, 3, 5, 7]
+print(x[2:].index(7))
+		<div class="border">
+  <div class="flex-pre">
+<pre>
+1
+</pre>
+		<pre class="blur2">
+
 </pre>
 			</div>
 		</div>

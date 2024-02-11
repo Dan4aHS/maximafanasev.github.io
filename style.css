@@ -195,14 +195,8 @@ textarea {
 
 .blur2 {
 	background: #1d7d32;
-	transition: 0.3s;
-	cursor: help;
 }
 
-.blur2:hover,
-.blur2:active {
-	filter: none;
-}
 
 table {
 	border-collapse: collapse;
