@@ -11,8 +11,17 @@
 
 <body>
 	<div class="wrapper">
-		<h1>Курс по Python
+		<span>&#60; </span><a href="index.html">Вернуться на главную</a>
+		<h1 id="start">Курс по Python
 		</h1>
+		<ul>
+			<li><a href="#ifelse">Условия</a></li>
+			<li><a href="#for">Циклы</a></li>
+			<li><a href="#str">Строки</a></li>
+			<li><a href="#num">Числа</a></li>
+			<li><a href="#arr">Массив</a></li>
+			<li><a href="#alg">Алгоритмы</a></li>
+		</ul>
 		<h2>Ввод, Вывод и арифметика</h2>
 
 		<div class="border">
@@ -94,6 +103,7 @@ S!S!S!
 		</div>
 
 		<div class="border">
+			<h4>Сложение и умножение строк</h4>
 			<div class="flex-pre">
 				<pre>
 Подставь нужные математич. операции. 
@@ -110,6 +120,7 @@ print(scream, scream)
 		</div>
 
 		<div class="border">
+			<h4>Длина строки</h4>
 			<div class="flex-pre">
 				<pre>
 name = "Макс"
@@ -194,6 +205,7 @@ print(2 ** 5)
 		</div>
 
 		<div class="border">
+			<h4>Остаток и неполное частное</h4>
 			<div class="flex-pre">
 				<pre>
 print(25 // 6)
@@ -321,7 +333,7 @@ print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 </pre>
 			</div>
 		</div>
-		<h2>Условия</h2>
+		<h2 id="ifelse">Условия</h2>
 		<img src="img/books/00/41.png" alt="">
 		<img src="img/books/00/4.png" alt="">
 		<img src="img/books/00/42.png" alt="">
@@ -823,7 +835,7 @@ else: print('НЕТ')
 			</div>
 		</div>
 
-		<h2>Циклы</h2>
+		<h2 id="for">Циклы</h2>
 
 		<div class="border">
 			<h4>+</h4>
@@ -969,7 +981,7 @@ for k in range(n):
 		</div>
 
 		<div class="border">
-				<h4>Есть число n и n названий цветов. Выведите эту последовательность, удалив все слова «розовый».</h4>
+			<h4>Есть число n и n названий цветов. Выведите эту последовательность, удалив все слова «розовый».</h4>
 			<div class="flex-pre">
 				<pre class="blur2">
 n = int(input())
@@ -982,7 +994,7 @@ for j in range(n):
 		</div>
 
 		<div class="border">
-				<h4>Даны символ s и число n. Выведите символ s в столбик n раз.</h4>
+			<h4>Даны символ s и число n. Выведите символ s в столбик n раз.</h4>
 			<div class="flex-pre">
 				<table>
 					<tr>
@@ -1012,7 +1024,7 @@ for n in range(b):
 		</div>
 
 		<div class="border">
-				<h4>Даны число n и n слов в столбик. Выведите все слова, в которых 12 или более букв.</h4>
+			<h4>Даны число n и n слов в столбик. Выведите все слова, в которых 12 или более букв.</h4>
 			<div class="flex-pre">
 				<table>
 					<tr>
@@ -1064,7 +1076,7 @@ for j in range(5):
 		</div>
 
 		<div class="border">
-				<h4>? Ввод !</h4>
+			<h4>? Ввод !</h4>
 			<div class="flex-pre">
 				<pre>
 symbol = input()
@@ -1595,7 +1607,7 @@ while s != '1':
 			</div>
 		</div>
 
-		<h2>Строки</h2>
+		<h2 id="str">Строки</h2>
 
 		<img src="img/books/00/16.png" alt="">
 
@@ -2187,7 +2199,7 @@ print(f'В строке {s} {s.count(plus)} знаков «{plus}»!')
 print(f"{{{{: {4 // 2} скобки")
 </pre>
 				<pre class="blur2">
-{{: 2 скобки
+				{{: 2 скобки
 </pre>
 			</div>
 		</div>
@@ -2475,7 +2487,7 @@ for i in range(int(input())):
 		</div>
 		
 		
-		<h2>Числа</h2>
+		<h2 id="num">Числа</h2>
 		
 		<div class="border">
 			<div class="flex-pre">
@@ -2655,7 +2667,7 @@ print(int(input())**0.5)
 		</div>
 		
 		
-		<h2>Массив</h2>
+		<h2 id="arr">Массив</h2>
 		
 		<div class="border">
 <div class="flex-pre">
@@ -3009,7 +3021,7 @@ print(c)
 		</div>
 		
 		
-		<h2>Линейные алгоритмы на массивах</h2>
+		<h2 id="alg">Линейные алгоритмы на массивах</h2>
 
 		<div class="border">
 			<div class="flex-pre">
@@ -4814,8 +4826,7 @@ for key,val in sorted(dct.items()):
 </pre>
 			</div>
 		</div>
-		
-
-
 	</div>
+	
+	
 </body></html>
