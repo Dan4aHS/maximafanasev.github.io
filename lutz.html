@@ -111,11 +111,11 @@
 			</tr>
 			<tr>
 				<td>х or у</td>
-				<td>Дает истину, если истинным является либо X, либо Y</td>
+				<td>Дает истину, если истинным является либо X, либо y</td>
 			</tr>
 			<tr>
 				<td>х and у</td>
-				<td>Дает истину, если истинными являются и X, и Y</td>
+				<td>Дает истину, если истинными являются и X, и y</td>
 			</tr>
 			<tr>
 				<td>not x
@@ -124,19 +124,19 @@
 			</tr>
 			<tr>
 				<td>х in у</td>
-				<td></td>
+				<td>Проверить элемент на наличие в списке</td>
 			</tr>
 			<tr>
 				<td>x not in у </td>
-				<td></td>
+				<td>Проверить элемент на отсутствие в списке</td>
 			</tr>
 			<tr>
 				<td>x is у</td>
-				<td></td>
+				<td>одно и то же?</td>
 			</tr>
 			<tr>
-				<td>x is not у </td>
-				<td></td>
+				<td>x is not у</td>
+				<td>разное?</td>
 			</tr>
 			<tr>
 				<td>x &#60; у</td>
@@ -147,23 +147,23 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>x >= у </td>
+				<td>x >= у</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>х == у</td>
-				<td></td>
+				<td>равны друг другу?</td>
 			</tr>
 			<tr>
 				<td>х != у </td>
-				<td></td>
+				<td>не равны друг другу?</td>
 			</tr>
 			<tr>
 				<td>x / у</td>
 				<td>(5 / 2) , (5 / 2.0) , (5 / -2.0) , (5 / -2) (2.5, 2.5, -2.5, -2.5)</td>
 			</tr>
 			<tr>
-				<td>X // у</td>
+				<td>x // у</td>
 				<td>(5 // 2) , (5 // 2.0), (5 // -2.0) , (5 // -2) (2, 2.0, -3.0, -3)</td>
 			</tr>
 			<tr>
@@ -175,7 +175,7 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>X [1: j : к]
+				<td>x[1: j : к]
 				</td>
 				<td></td>
 			</tr>
@@ -189,11 +189,12 @@
 			</tr>
 			<tr>
 				<td>a, b, c, d = 'spam'</td>
-				<td></td>
+				<td>a - это s<br>б - это p<br>c - это a<br>d - это m<br></td>
 			</tr>
 			<tr>
 				<td>a, *b = 'spam'</td>
-				<td></td>
+				<td>а - это 's’<br> 
+				b - это [ 'р', ’ а ’, 'т' ]</td>
 			</tr>
 			<tr>
 				<td>spam = ham = ' lunch '</td>
@@ -304,7 +305,7 @@
 			</tr>
 			<tr>
 				<td>while</td>
-				<td>while X > Y:<br>
+				<td>while x > y:<br>
 					print('hello1)</td>
 			</tr>
 			<tr>
@@ -382,7 +383,7 @@
 			</tr>
 			<tr>
 				<td>assert Отладочные проверки</td>
-				<td>assert X > Y, 'X too small'</td>
+				<td>assert x > y, 'x too small'</td>
 			</tr>
 			<tr>
 				<td>with/as Диспетчеры контекста
@@ -411,18 +412,19 @@
 			</tr>
 			<tr>
 				<td>print (х, у, file=afile)</td>
-				<td></td>
+				<td>Отправляет текст методу afile.write,
+а не sys.stdout.write</td>
 			</tr>
 			<tr>
 				<td>yield х ** 2</td>
-				<td></td>
+				<td>возвращает аргументы send (...) в генераторах</td>
 			</tr>
 		</table>
 
 		<h2>Строки</h2>
 		<table>
 			<tr>
-				<td>S = 'spam's' </td>
+				<td>S = 'spam's'</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -752,15 +754,15 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>L.insert(i, X)</td>
+				<td>L.insert(i, x)</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>L.index(X)</td>
+				<td>L.index(x)</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>L.count(X)</td>
+				<td>L.count(x)</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -784,7 +786,7 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>L.remove(X)</td>
+				<td>L.remove(x)</td>
 				<td></td>
 			</tr>
 			<tr>
