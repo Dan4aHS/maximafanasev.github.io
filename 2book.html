@@ -15,35 +15,1242 @@
 		<h1>Марк Лутц Изучаем Python
 		</h1>
 
-		<div class="flex-dir">
+		<h2>Типы данных</h2>
 
-			<img src="img/books/1/numbers.png" alt="книга">
-			<img src="img/books/1/numbers2.png" alt="книга">
-			<img src="img/books/1/numbers3.png" alt="книга">
-			<img src="img/books/1/numbers4.png" alt="книга">
-			<img src="img/books/1/numbers5.png" alt="книга">
-			<img src="img/books/1/numbers6.png" alt="книга">
-			<img src="img/books/1/numbers7.png" alt="книга">
-			<img src="img/books/1/numbers8.png" alt="книга">
-			<img src="img/books/1/strings.png" alt="книга">
-			<img src="img/books/1/strings2.png" alt="книга">
-			<img src="img/books/1/strings3.png" alt="книга">
-			<img src="img/books/1/strings4.png" alt="книга">
-			<img src="img/books/1/arr.png" alt="книга">
-			<img src="img/books/1/arr2.png" alt="книга">
-			<img src="img/books/1/arr3.png" alt="книга">
-			<img src="img/books/1/obj.png" alt="книга">
-			<img src="img/books/1/obj2.png" alt="книга">
-			<img src="img/books/1/5.png" alt="книга">
-			<img src="img/books/1/6.png" alt="книга">
-			<img src="img/books/1/7.png" alt="книга">
-			<img src="img/books/1/8.png" alt="книга">
-			<img src="img/books/1/9.png" alt="книга">
-			<img src="img/books/1/17.png" alt="книга">
-			<img src="img/books/1/18.png" alt="книга">
-			<img src="img/books/1/19.png" alt="книга">
-			
-		</div>
+		<table>
+			<tr>
+				<th>Тип объекта</th>
+				<th>Изменяемый?</th>
+			</tr>
+			<tr>
+				<td>Числа</td>
+				<td>Нет</td>
+			</tr>
+			<tr>
+				<td>Кортежи</td>
+				<td>Нет</td>
+			</tr>
+			<tr>
+				<td>frozenset</td>
+				<td>Нет</td>
+			</tr>
+			<tr>
+				<td>Строки</td>
+				<td>Нет</td>
+			</tr>
+			<tr>
+				<td>Списки</td>
+				<td>Да</td>
+			</tr>
+			<tr>
+				<td>Словари</td>
+				<td>Да</td>
+			</tr>
+			<tr>
+				<td>Файлы</td>
+				<td>Да</td>
+			</tr>
+			<tr>
+				<td>Множества</td>
+				<td>Да</td>
+			</tr>
+			<tr>
+				<td>bytearray</td>
+				<td>Да</td>
+			</tr>
+		</table>
+
+		<h2>True or False</h2>
+		<table>
+			<tr>
+				<td>"str"</td>
+				<td>True</td>
+			</tr>
+			<tr>
+				<td>[1, 2]</td>
+				<td>True</td>
+			</tr>
+			<tr>
+				<td>{’а’: 1}</td>
+				<td>True</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>True</td>
+			</tr>
+			<tr>
+				<td>""</td>
+				<td>False</td>
+			</tr>
+			<tr>
+				<td>[]</td>
+				<td>False</td>
+			</tr>
+			<tr>
+				<td>{}</td>
+				<td>False</td>
+			</tr>
+			<tr>
+				<td>0.0</td>
+				<td>False</td>
+			</tr>
+			<tr>
+				<td>None</td>
+				<td>False</td>
+			</tr>
+		</table>
+
+		<h2>Числа</h2>
+		<table>
+			<tr>
+				<td>1.23, 1., 3.14e-10, 4E210, 4.0e+210</td>
+				<td>Числа с плавающей точкой</td>
+			</tr>
+			<tr>
+				<td>0о177, 0x9ff, 0b01010</td>
+				<td>Восьмеричный, шестнадцатеричный и двоичный литералы</td>
+			</tr>
+			<tr>
+				<td>34-4 j, 3.0+4.0 j, 3J</td>
+				<td>Литералы комплексных чисел
+				</td>
+			</tr>
+			<tr>
+				<td>set ('spain'), {1, 2, 3, 4}</td>
+				<td>Множества: формы создания</td>
+			</tr>
+			<tr>
+				<td>Decimal ('1.0'), Fraction (1, 3)</td>
+				<td>Типы расширений десятичных и дробных чисел</td>
+			</tr>
+			<tr>
+				<td>bool(X), True, False</td>
+				<td>Булевский тип и константы</td>
+			</tr>
+		</table>
+
+		<h2>Операторы</h2>
+		<table>
+			<tr>
+				<td>х if у else z </td>
+				<td>Тернарный выбор (х оценивается, только если у истинно)</td>
+			</tr>
+			<tr>
+				<td>х or у</td>
+				<td>Логическое “ИЛИ” (у оценивается, только если х ложно)</td>
+			</tr>
+			<tr>
+				<td>х and у </td>
+				<td>Логическое “И” (у оценивается, только если х истинно)</td>
+			</tr>
+			<tr>
+				<td>not X
+				</td>
+				<td>Логическое “НЕ”</td>
+			</tr>
+			<tr>
+				<td>х in у, x not in у </td>
+				<td>Членство (итерируемые объекты, множества)</td>
+			</tr>
+			<tr>
+				<td>x is у, x is not у </td>
+				<td>Проверки идентичности объектов</td>
+			</tr>
+			<tr>
+				<td>x &#60; у, x &#60;= у, x > у, x >= у </td>
+				<td>Сравнение по абсолютной величине, проверка на подмножество и надмножество</td>
+			</tr>
+			<tr>
+				<td>х == у, х != у </td>
+				<td>Операции равенства значений</td>
+			</tr>
+			<tr>
+				<td>X / у, X // у</td>
+				<td>Деление: настоящее и с округлением в меньшую сторон</td>
+			</tr>
+			<tr>
+				<td>x ** у </td>
+				<td>Возведение в степень</td>
+			</tr>
+			<tr>
+				<td>х[1] </td>
+				<td>Индексация (последовательности, отображения и т.д.)</td>
+			</tr>
+			<tr>
+				<td>X [1: j : к]
+				</td>
+				<td>Нарезание</td>
+			</tr>
+			<tr>
+				<td>х(...)
+				</td>
+				<td>Вызов (функции, метода, класса и прочих вызываемых
+					объектов)</td>
+			</tr>
+			<tr>
+				<td>(. ..) </td>
+				<td>Кортеж, выражение, выражение генератора</td>
+			</tr>
+			<tr>
+				<td>[...] </td>
+				<td>Список, списковое включение</td>
+			</tr>
+			<tr>
+				<td>{...} </td>
+				<td>Словарь, множество, включения множеств и словарей</td>
+			</tr>
+		</table>
+
+		<h2>Операторы</h2>
+		<table>
+			<tr>
+				<td>Присваивания</td>
+				<td>Создание ссылок</td>
+				<td>a, b = ’good’, ’bad’</td>
+			</tr>
+			<tr>
+				<td>Вызовы и другие выражения</td>
+				<td>Выполнение функций</td>
+				<td>log.write("spam, ham")</td>
+			</tr>
+			<tr>
+				<td>Вызовы print </td>
+				<td>Вывод объектов</td>
+				<td>print('The Killer', joke)</td>
+			</tr>
+			<tr>
+				<td>if/elif/else </td>
+				<td>Выбор действий</td>
+				<td>if "python" in text:<br>
+					print(text)</td>
+			</tr>
+			<tr>
+				<td>for/else</td>
+				<td>Итерация</td>
+				<td>for x in mylist:<br>
+					print(x)</td>
+			</tr>
+			<tr>
+				<td>while/else </td>
+				<td>Универсальные циклы</td>
+				<td>while X > Y:<br>
+					print('hello1)</td>
+			</tr>
+			<tr>
+				<td>pass </td>
+				<td>Пустой заполнитель</td>
+				<td>while True:<br>
+					pass</td>
+			</tr>
+			<tr>
+				<td>break </td>
+				<td>Выход из цикла</td>
+				<td>while True:<br>
+					if exittest(): break</td>
+			</tr>
+			<tr>
+				<td>continue </td>
+				<td>Продолжение цикла</td>
+				<td>while True:<br>
+					if skiptest () : continue</td>
+			</tr>
+			<tr>
+				<td>def </td>
+				<td>Функции и методы</td>
+				<td>def f (a, b, c=l, *d) :<br>
+					print(a+b+c+d[0])</td>
+			</tr>
+			<tr>
+				<td>return </td>
+				<td>Результаты функций</td>
+				<td>def f (a, b, c=l, *d) :<br>
+					return a+b+c+d[0]</td>
+			</tr>
+			<tr>
+				<td>yield
+				</td>
+				<td>Генераторные функции</td>
+				<td>def gen (n) :<br>
+					for i in n: yield i*2</td>
+			</tr>
+			<tr>
+				<td>global </td>
+				<td>Пространства имен</td>
+				<td>х - 'old’<br>
+					def function():<br>
+					global xf у; x = 'new'</td>
+			</tr>
+			<tr>
+				<td>nonlocal
+				</td>
+				<td>Пространства имен</td>
+				<td>def outer():<br>
+					x = 'old'<br>
+					def function():<br>
+					nonlocal x; x = 'new'</td>
+			</tr>
+			<tr>
+				<td>import</td>
+				<td>Доступ к модулям</td>
+				<td>import sys</td>
+			</tr>
+			<tr>
+				<td>from </td>
+				<td>Доступ к атрибутам</td>
+				<td>from sys import stdin</td>
+			</tr>
+			<tr>
+				<td>class Построение объектов class Subclass(Superclass):<br>
+					staticData = [ ]<br>
+					def method (self) : pass
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>try/except/
+					finally
+				</td>
+				<td>Перехват исключений</td>
+				<td>try:
+					action()<br>
+					except:<br>
+					print(’action error’)</td>
+			</tr>
+			<tr>
+				<td>raise </td>
+				<td>Генерация исключений</td>
+				<td>raise EndSearch(location)</td>
+			</tr>
+			<tr>
+				<td>assert
+				</td>
+				<td>Отладочные проверки</td>
+				<td>assert X > Y, 'X too small’</td>
+			</tr>
+			<tr>
+				<td>with/as
+				</td>
+				<td>Диспетчеры контекста</td>
+				<td>with open ('data ’) asmyfile:<br>
+					process(myfile)</td>
+			</tr>
+			<tr>
+				<td>del
+				</td>
+				<td>Удаление ссылок</td>
+				<td>del data[k]<br>
+					del data[i:j]<br>
+					del obj.attr<br>
+					del variable<br></td>
+		</table>
+
+		<h2>Присваивание</h2>
+		<table>
+			<tr>
+				<td>spam = ’Spam’ Б</td>
+				<td>Базовая форма</td>
+			</tr>
+			<tr>
+				<td>spam, ham = ’yum’, ’YUM’</td>
+				<td>Присваивание кортежа (позиционное)</td>
+			</tr>
+			<tr>
+				<td>[spam, ham] = [’yum’, ’YUM’]</td>
+				<td>Присваивание списка (позиционное)</td>
+			</tr>
+			<tr>
+				<td>a, b, c, d = ’spam’</td>
+				<td>Присваивание последовательности, обобщенное</td>
+			</tr>
+			<tr>
+				<td>a, *b = ’spam’</td>
+				<td>Расширенная распаковка последовательности</td>
+			</tr>
+			<tr>
+				<td>spam = ham = ’ lunch ’</td>
+				<td>Групповое присваивание</td>
+			</tr>
+			<tr>
+				<td>spams +=42</td>
+				<td>Дополненное присваивание (эквивалентно
+					spams = spams + 42)
+				</td>
+		</table>
+
+		<h2>Операторы выражений</h2>
+		<table>
+			<tr>
+				<td>spam (eggs, ham)</td>
+				<td>Вызовы функций</td>
+			</tr>
+			<tr>
+				<td>spam, ham (eggs)</td>
+				<td>Вызовы методов</td>
+			</tr>
+			<tr>
+				<td>spam</td>
+				<td>Вывод переменных в интерактивном интерпретаторе</td>
+			</tr>
+			<tr>
+				<td>print (а, b, с, sep=’ ’)</td>
+				<td>Вывод результатов операций </td>
+			</tr>
+			<tr>
+				<td>print (х, у, file=afile)</td>
+				<td>Отправляет текст методу afile.write,
+					а не sys.stdout.write</td>
+			</tr>
+			<tr>
+				<td>yield х ** 2</td>
+				<td>Выдача значений в операторах выражений</td>
+			</tr>
+		</table>
+
+		<h2>Операции</h2>
+		<table>
+			<tr>
+				<td>А * В + С * D</td>
+				<td>Смешанные операции следуют старшинству операций</td>
+			</tr>
+			<tr>
+				<td>X + (Y * Z)</td>
+				<td>Круглые скобки группируют подвыражения</td>
+			</tr>
+			<tr>
+				<td>40 + 3.14 = 43.14</td>
+				<td>Разнородные типы преобразуются
+				</td>
+			</tr>
+			<tr>
+				<td>int(3.1415)</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>float(3)</td>
+				<td>3.0</td>
+			</tr>
+			<tr>
+				<td>а = 3 Ь = 4</td>
+				<td>Имя создается: не объявляется заранее</td>
+			</tr>
+			<tr>
+				<td>b * 3, b / 2</td>
+				<td>(12, 2. 0)</td>
+			</tr>
+			<tr>
+				<td>1/3.0</td>
+				<td>0.3333333333333333</td>
+			</tr>
+			<tr>
+				<td>'{0:4.2f}'.format(num)</td>
+				<td>’0.33’</td>
+			</tr>
+			<tr>
+				<td>10 // 4</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>math, floor (2.5)</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>math, trunc (2.5)</td>
+				<td>2 Усечение дробной части (в сторону нуля)</td>
+			</tr>
+			<tr>
+				<td>(5 / 2) , (5 / 2.0) , (5 / -2.0) , (5 / -2)</td>
+				<td>(2.5, 2.5, -2.5, -2.5)</td>
+			</tr>
+			<tr>
+				<td>(5 // 2) , (5 // 2.0), (5 // -2.0) , (5 // -2)</td>
+				<td>(2, 2.0, -3.0, -3)</td>
+			</tr>
+			<tr>
+				<td>import math</td>
+				<td>math.pi, math.e</td>
+			</tr>
+			<tr>
+				<td>math.sin(2 * math.pi / 180)</td>
+				<td>math.sqrt(144)</td>
+			</tr>
+			<tr>
+				<td>pow(2, 4)</td>
+				<td>abs(-42.0)</td>
+			</tr>
+			<tr>
+				<td>min(3, 1, 2, 4), </td>
+				<td>max(3, 1, 2, 4)</td>
+			</tr>
+			<tr>
+				<td>round(2.567)</td>
+				<td>(3</td>
+			</tr>
+			<tr>
+				<td>import random</td>
+				<td>random.random ()</td>
+			</tr>
+			<tr>
+				<td>decimal.Decimal(7)</td>
+				<td>Глобальная установка точности для десятичных чисел</td>
+			</tr>
+			<tr>
+				<td>from fractions import Fraction</td>
+				<td>Дробный тип</td>
+			</tr>
+			<tr>
+				<td>set([1, 2, 3, 4])</td>
+				<td>множества</td>
+			</tr>
+			<tr>
+				<td>set('spam')</td>
+				<td>{’s’, ’а’, ’р’, ’m'}</td>
+			</tr>
+			<tr>
+				<td>{х ** 2 for х in [1, 2, 3, 4]}</td>
+				<td>{16, 1, 4, 9}</td>
+			</tr>
+			<tr>
+				<td>{х for х in ’ spain’}</td>
+				<td>{’m', ’s’, 'p’, ’a’}</td>
+			</tr>
+		</table>
+
+		<h2>Строки</h2>
+		<table>
+			<tr>
+				<td>S = "spam’s" </td>
+				<td>Двойные кавычки; то же самое, что и одинарные</td>
+			</tr>
+			<tr>
+				<td>S = 's\np\ta\x00m’ </td>
+				<td>Управляющие последовательности</td>
+			</tr>
+			<tr>
+				<td>S = " " " .. .много строк. . . " </td>
+				<td>Блочные строки в утроенных кавычках</td>
+			</tr>
+			<tr>
+				<td>S = r’\temp\spam’</td>
+				<td>Неформатированные строки (без управляющих символов)</td>
+			</tr>
+			<tr>
+				<td>U = u’sp\u00c4m'</td>
+				<td>Строки Unicode</td>
+			</tr>
+			<tr>
+				<td>SI + S2, S*3</td>
+				<td>Конкатенация, повторение</td>
+			</tr>
+			<tr>
+				<td>S[i] S[i:j] len (S)</td>
+				<td>Индекс, срез, длина</td>
+			</tr>
+			<tr>
+				<td>"a %s parrot" % kind </td>
+				<td>Выражение форматирования строки</td>
+			</tr>
+			<tr>
+				<td>"a {0} parrot".format(kind)S.find(’pa’)</td>
+				<td>Метод форматирования строки</td>
+			</tr>
+			<tr>
+				<td>S.find(’ра’)</td>
+				<td>поиск
+			</tr>
+			<tr>
+				<td>S.rstrip()</td>
+				<td>удаление пробельных символов,
+			</tr>
+			<tr>
+				<td>S.replace(’pa’, 'хх')</td>
+				<td>замена,
+			</tr>
+			<tr>
+				<td>S.split(',’)</td>
+				<td>разбиение по разделителю,
+			</tr>
+			<tr>
+				<td>S.isdigit()</td>
+				<td>проверка содержимого,
+			</tr>
+			<tr>
+				<td>S.lower()</td>
+				<td>преобразование регистра символов
+			</tr>
+			<tr>
+				<td>S.endswith(’spam’)</td>
+				<td>проверка конца
+			</tr>
+			<tr>
+				<td>’spam’.join(strlist)</td>
+				<td>объединение с разделителем
+			</tr>
+			<tr>
+				<td>S.encode('latin-1’)</td>
+				<td>кодирование Unicode
+			</tr>
+			<tr>
+				<td>B.decode(’utf8’)</td>
+				<td>декодирование Unicode
+			</tr>
+			<tr>
+				<td>for x in S: print(x)
+					’spam’ in S
+					[c * 2 for c in S]
+					map(ord, S)</td>
+				<td>Итерация, членство</td>
+			</tr>
+		</table>
+
+		<h2>Методы строк</h2>
+		<table>
+			<tr>
+			<tr>
+				<td>S.capitalize()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.casefold()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.center(width [, fill])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.count(sub [, start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.encode([encoding [,errors]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.endswith(suffix [r start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.expandtabs([tabsize])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.find(sub [, start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.format(fmtstr, *args, **kwargs)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.index(sub [, start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isalnum()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isalpha()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isdecimal()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isdigit()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isidentifier()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.islower()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isnumeric()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isprintable()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isspace()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.istitle()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.isupper()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.join(iterable)</td>
+				<td></td>
+			</tr>
+			<td>S.1just(width [, fill])</td>
+			<td></td>
+			<tr>
+				<td>S.lower()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.lstrip([chars])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.maketrans (x [, y[, z] ] )</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.partition(sep)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.replace(old, new [, count])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rfind(sub [,start [,end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rindex(sub [, start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rjust(width [, fill])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rpartition(sep)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rsplit([sep[, maxsplit]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.rstrip([chars])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.split([sep [,maxsplit]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.splitlines([keepends])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.startswith(prefix [, start [, end]])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.strip([chars])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.swapcase()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.title()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.translate(map)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.upper()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>S.zfill(width)</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h2>Словари</h2>
+		<table>
+			<tr>
+				<td>L = [] </td>
+				<td>Пустой список</td>
+			</tr>
+			<tr>
+				<td>L = [123, ’abc’, 1.23, {}]</td>
+				<td>Четыре элемента: индексы 0..3</td>
+			</tr>
+			<tr>
+				<td>L = [’Bob’, 40.0, [’dev’, ’mgr']] </td>
+				<td>Вложенные подсписки</td>
+			</tr>
+			<tr>
+				<td>L = list(’spam’)</td>
+				<td>Список элементов итерируемого объекта</td>
+			</tr>
+			<tr>
+				<td>L = list(range(-4, 4))</td>
+				<td>список последовательных целых чисел</td>
+			</tr>
+			<tr>
+				<td>L[i]</td>
+				<td>Индекс</td>
+			</tr>
+			<tr>
+				<td>L[i] [j]</td>
+				<td>индекс индекса</td>
+			</tr>
+			<tr>
+				<td>L[i:j]</td>
+				<td>срез</td>
+			</tr>
+			<tr>
+				<td>len(L)</td>
+				<td>длина</td>
+			</tr>
+			<tr>
+				<td>LI + L2</td>
+				<td>Конкатенация</td>
+			</tr>
+			<tr>
+				<td>L * 3</td>
+				<td>повторение</td>
+			</tr>
+			<tr>
+				<td>for х in L: print (х)</td>
+				<td>Итерация</td>
+			</tr>
+			<tr>
+				<td>3 in L</td>
+				<td>членство</td>
+			</tr>
+			<tr>
+				<td>L. append(4)</td>
+				<td>увеличение</td>
+			</tr>
+			<tr>
+				<td>L.extend([5,6,7] )</td>
+				<td>увеличение</td>
+			</tr>
+			<tr>
+				<td>L.insert(i, X)</td>
+				<td>увеличение</td>
+			</tr>
+			<tr>
+				<td>L.index(X)</td>
+				<td>поиск</td>
+			</tr>
+			<tr>
+				<td>L.count(X)</td>
+				<td>поиск</td>
+			</tr>
+			<tr>
+				<td>L.sort()</td>
+				<td>сортировка</td>
+			</tr>
+			<tr>
+				<td>L.reverse()</td>
+				<td>обращение</td>
+			</tr>
+			<tr>
+				<td>L.copy()</td>
+				<td>копирование</td>
+			</tr>
+			<tr>
+				<td>L.clear()</td>
+				<td>очистка</td>
+			</tr>
+			<tr>
+				<td>L.pop(i)</td>
+				<td>уменьшение</td>
+			</tr>
+			<tr>
+				<td>L.remove(X)</td>
+				<td>уменьшение</td>
+			</tr>
+			<tr>
+				<td>del L[i]</td>
+				<td>уменьшение</td>
+			</tr>
+			<tr>
+				<td>del L[i:j]</td>
+				<td>уменьшение</td>
+			</tr>
+			<tr>
+				<td>L[i:j] = []</td>
+				<td>уменьшение</td>
+			</tr>
+			<tr>
+				<td>L[i] = 3</td>
+				<td>Присваивание по индексу</td>
+			</tr>
+			<tr>
+				<td>L[i:j] = [4,5,6]</td>
+				<td>присваивание по срезу</td>
+			</tr>
+			<tr>
+				<td>L = [x**2 for x in range (5) ]</td>
+				<td>Списковые включения</td>
+			</tr>
+			<tr>
+				<td>list(map(ord, 'spam’))</td>
+				<td>отображения</td>
+			</tr>
+		</table>
+
+		<h2>Словари</h2>
+
+		<table>
+			<tr>
+				<td>D = {}</td>
+				<td>Пустой словарь</td>
+			</tr>
+			<tr>
+				<td>D= {’name’: ’Bob’, ’age’: 40}</td>
+				<td>Двухэлементный словарь</td>
+			</tr>
+			<tr>
+				<td>E = {’cto’:
+					{’name’: ’Bob’, ’age’: 40}}</td>
+				<td>Вложение</td>
+			</tr>
+			<tr>
+				<td>D = diet(name=’Bob’, age=40)</td>
+				<td>Альтернативные методики создания ключевые слова</td>
+			</tr>
+			<tr>
+				<td>D = diet([(’name’, ’Bob’),
+					(’age’, 40)])</td>
+				<td>пары “ключ/значение”</td>
+			</tr>
+			<tr>
+				<td>D = diet(zip(keyslist, valueslist))</td>
+				<td>упакованные пары “ключ/значение”</td>
+			</tr>
+			<tr>
+				<td>D = diet. fromkeys ([ ’ name ’, ’ age ’ ] )</td>
+				<td>списки ключей</td>
+			</tr>
+			<tr>
+				<td>D['name’]</td>
+				<td>Индексирование по ключу</td>
+			</tr>
+			<tr>
+				<td>Е['cto’][’age’]</td>
+				<td>Индексирование по ключу</td>
+			</tr>
+			<tr>
+				<td>' age ’ in D </td>
+				<td>проверка присутствия ключа</td>
+			</tr>
+			<tr>
+				<td>D.keys ()</td>
+				<td>все ключи</td>
+			</tr>
+			<tr>
+				<td>D.values()</td>
+				<td>все значения</td>
+			</tr>
+			<tr>
+				<td>D.items()</td>
+				<td>все значения</td>
+			</tr>
+			<tr>
+				<td>D.copy()</td>
+				<td>все кортежи ключ+значение</td>
+			</tr>
+			<tr>
+				<td>D.clear()</td>
+				<td>копирование (верхнего уровня)</td>
+			</tr>
+			<tr>
+				<td>D.update(D2)</td>
+				<td>очистка (удаление всех элементов)</td>
+			</tr>
+			<tr>
+				<td>D.get(key, default?)</td>
+				<td>объединение по ключам</td>
+			</tr>
+			<tr>
+				<td>D.pop(key, default?)</td>
+				<td>извлечение по ключу</td>
+			</tr>
+			<tr>
+				<td>D.setdefault(key, default?)</td>
+				<td>установка по ключу</td>
+			</tr>
+			<tr>
+				<td>D.popitem()</td>
+				<td>удаление/возвращение любой пары</td>
+			</tr>
+			<tr>
+				<td>len(D)</td>
+				<td>Длина: количество сохраненных элементов</td>
+			</tr>
+			<tr>
+				<td>D[key] = 42</td>
+				<td>Добавление ключей, изменение значений, связанных с ключами</td>
+			</tr>
+			<tr>
+				<td>del D[key]</td>
+				<td>Удаление элементов по ключу</td>
+			</tr>
+			<tr>
+				<td>list(D.keys())</td>
+				<td>Словарные представления</td>
+			</tr>
+			<tr>
+				<td>D = {x: x*2 for x in range (10) }</td>
+				<td>Включения словаря</td>
+			</tr>
+		</table>
+
+		<h2>Кортеж</h2>
+
+		<table>
+			<tr>
+				<td>()</td>
+				<td>Пустой кортеж</td>
+			</tr>
+			<tr>
+				<td>т = (О,)</td>
+				<td>Одноэлементный кортеж (не выражение)</td>
+			</tr>
+			<tr>
+				<td>Т = (0, 'Ni', 1.2, 3)</td>
+				<td>Четырехэлементный кортеж</td>
+			</tr>
+			<tr>
+				<td>Т = О, 'Ni', 1.2, 3</td>
+				<td>Еще один четырехэлементный кортеж
+					(такой же, как в предыдущей строке)</td>
+			</tr>
+			<tr>
+				<td>Т = (’Bob’, (’dev', 'mgr'))</td>
+				<td>Вложенные кортежи</td>
+			</tr>
+			<tr>
+				<td>Т = tuple('spam')</td>
+				<td>Кортеж из элементов итерируемого объекта</td>
+			</tr>
+			<tr>
+				<td>T[i]</td>
+				<td>Индекс</td>
+			</tr>
+			<tr>
+				<td>T[i][j]</td>
+				<td>индекс индекса</td>
+			</tr>
+			<tr>
+				<td>T[i:j]</td>
+				<td>срез</td>
+			</tr>
+			<tr>
+				<td>len(T)</td>
+				<td>длина</td>
+			</tr>
+			<tr>
+				<td>T1 + T2</td>
+				<td>Конкатенация</td>
+			</tr>
+			<tr>
+				<td>T*3</td>
+				<td>повторение</td>
+			</tr>
+			<tr>
+				<td>for x in T: print (x)</td>
+				<td>Итерация</td>
+			</tr>
+			<tr>
+				<td>'spam' in T</td>
+				<td>членство</td>
+			</tr>
+			<tr>
+				<td>[x ** 2 for x in T]</td>
+				<td>Итерация</td>
+			</tr>
+			<tr>
+				<td>T.index('Ni')
+				</td>
+				<td>поиск</td>
+			</tr>
+			<tr>
+				<td>T.count('Ni')</td>
+				<td>подсчет</td>
+			</tr>
+		</table>
+
+		<h2>Файлы</h2>
+		<table>
+			<tr>
+				<td>output = open(г’С:\spam', ’w’)</td>
+				<td>Создает выходной файл
+					(’ w' означает write — запись)</td>
+			</tr>
+			<tr>
+				<td>input = open (’data1, ’г’)</td>
+				<td>Создает входной файл
+					(’ r ’ означает read — чтение)</td>
+			</tr>
+			<tr>
+				<td>input = open('data')</td>
+				<td>То же, что и в предыдущей строке
+					(’ r ’ выбирается по умолчанию)
+				</td>
+			</tr>
+			<tr>
+				<td>aString = input.read()</td>
+				<td>Читает целый файл в одиночную строку</td>
+			</tr>
+			<tr>
+				<td>aString = input.read(N)</td>
+				<td>Читает до N следующих символов (или
+					байтов) в строку
+				</td>
+			</tr>
+			<tr>
+				<td>aString = input.readline()</td>
+				<td>Читает следующую строку файла (включая
+					символ новой строки \п) в строку</td>
+			</tr>
+			<tr>
+				<td>aList - input.readlines()</td>
+				<td>Читает целый файл в список строк
+					(с символами \n)</td>
+			</tr>
+			<tr>
+				<td>output.write(aString)</td>
+				<td>Записывает строку символов (или байтов)
+					в файл</td>
+			</tr>
+			<tr>
+				<td>output.writelines(aList)</td>
+				<td>Записывает все строки из списка в файл</td>
+			</tr>
+			<tr>
+				<td>output.close()</td>
+				<td>Вручную закрывает файл (это делается
+					автоматически, когда файловый объект
+					подвергается сборке мусора)</td>
+			</tr>
+			<tr>
+				<td>output.flush()</td>
+				<td>Сбрасывает буфер вывода на диск, не закрывая файл</td>
+			</tr>
+			<tr>
+				<td>anyFile.seek(N)</td>
+				<td>Изменяет позицию на N для следующей
+					операции
+				</td>
+			</tr>
+			<tr>
+				<td>for line in open (’data'):</td>
+				<td>Файловые итераторы, читающие строку
+					за строкой</td>
+			</tr>
+			<tr>
+				<td>open('f.txt1, encoding=’latin-1’)</td>
+				<td>Текстовые файлы Unicode в Python З.Х
+					(строки str)</td>
+			</tr>
+			<tr>
+				<td>open(’f.bin’, 1rb’)</td>
+				<td>Байтовые файлы в Python З.Х
+					(строки bytes)</td>
+			</tr>
+			<tr>
+				<td>codecs.open(’f.txt’, encoding=’utf8’)</td>
+				<td>Текстовые файлы Unicode в Python 2.Х
+					(строки unicode)</td>
+			</tr>
+			<tr>
+				<td>open(’f.bin * , ’rb’)</td>
+				<td>Байтовые файлы в Python 2.Х (строки str)</td>
+			</tr>
+		</table>
+
+		<h2>Документация</h2>
+
+		<table>
+			<tr>
+				<td>#</td>
+				<td>Внутрифайловая документация</td>
+			</tr>
+			<tr>
+				<td>dir</td>
+				<td>Списки атрибутов, доступных в объектах</td>
+			</tr>
+			<tr>
+				<td>__doc__
+				</td>
+				<td>Внутрифайловая документация, присоединенная к объектам</td>
+			</tr>
+			<tr>
+				<td>help</td>
+				<td>Интерактивная справка для объектов</td>
+			</tr>
+		</table>
+
+		<h2>Зарезервированные слова</h2>
+
+		<pre>
+False class finally is return
+None continue for lambda try
+True def from nonlocal while
+and del global not with
+as elif if or yield
+assert else import pass
+break except in raise
+</pre>
+
+		<h2>Функции</h2>
+
+		<table>
+			<tr>
+				<td>Выражения вызовов</td>
+				<td>myfunc(’spam’, ’eggs’, meat=ham, *rest)</td>
+			</tr>
+			<tr>
+				<td>def</td>
+				<td>def printer(message) :<br>
+					print(’Hello ’ + message)</td>
+			</tr>
+			<tr>
+				<td>return</td>
+				<td>def adder(a, b=l, *c):<br>
+					return a + b + c [ 0 ]</td>
+			</tr>
+			<tr>
+				<td>global</td>
+				<td>x = 'old’<br>
+					def changer():<br>
+					global x; x = ’new’</td>
+			</tr>
+			<tr>
+				<td>nonlocal</td>
+				<td>def outer():<br>
+					x = ’old'<br>
+					def changer ():<br>
+					nonlocal x; x = 'new'
+				</td>
+			</tr>
+			<tr>
+				<td>yield</td>
+				<td>def squares(x):<br>
+					for i in range (x): yield i ** 2</td>
+			</tr>
+			<tr>
+				<td>lambda</td>
+				<td>funcs = [lambda x: x**2, lambda x: x**3]</td>
+		</table>
 
 
 	</div>
