@@ -15,16 +15,22 @@
 		<h1>Марк Лутц Изучаем Python
 		</h1>
 
+
+
 		<h2>Типы данных</h2>
 
 		<table>
 			<tr>
 				<th>Тип объекта</th>
 				<th>Изменяемый?</th>
+				<th>True</th>
+				<th>False</th>
 			</tr>
 			<tr>
 				<td>Числа</td>
 				<td>Нет</td>
+				<td>True</td>
+				<td>0 = False</td>
 			</tr>
 			<tr>
 				<td>Кортежи</td>
@@ -37,14 +43,20 @@
 			<tr>
 				<td>Строки</td>
 				<td>Нет</td>
+				<td>True</td>
+				<td>"" = False</td>
 			</tr>
 			<tr>
 				<td>Списки</td>
 				<td>Да</td>
+				<td>True</td>
+				<td>[] = False</td>
 			</tr>
 			<tr>
 				<td>Словари</td>
 				<td>Да</td>
+				<td>True</td>
+				<td>{} = False</td>
 			</tr>
 			<tr>
 				<td>Файлы</td>
@@ -57,46 +69,6 @@
 			<tr>
 				<td>bytearray</td>
 				<td>Да</td>
-			</tr>
-		</table>
-
-		<h2>True or False</h2>
-		<table>
-			<tr>
-				<td>"str"</td>
-				<td>True</td>
-			</tr>
-			<tr>
-				<td>[1, 2]</td>
-				<td>True</td>
-			</tr>
-			<tr>
-				<td>{’а’: 1}</td>
-				<td>True</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>True</td>
-			</tr>
-			<tr>
-				<td>""</td>
-				<td>False</td>
-			</tr>
-			<tr>
-				<td>[]</td>
-				<td>False</td>
-			</tr>
-			<tr>
-				<td>{}</td>
-				<td>False</td>
-			</tr>
-			<tr>
-				<td>0.0</td>
-				<td>False</td>
-			</tr>
-			<tr>
-				<td>None</td>
-				<td>False</td>
 			</tr>
 		</table>
 
@@ -199,154 +171,6 @@
 				<td>{...} </td>
 				<td>Словарь, множество, включения множеств и словарей</td>
 			</tr>
-		</table>
-
-		<h2>Операторы</h2>
-		<table>
-			<tr>
-				<td>Присваивания</td>
-				<td>Создание ссылок</td>
-				<td>a, b = ’good’, ’bad’</td>
-			</tr>
-			<tr>
-				<td>Вызовы и другие выражения</td>
-				<td>Выполнение функций</td>
-				<td>log.write("spam, ham")</td>
-			</tr>
-			<tr>
-				<td>Вызовы print </td>
-				<td>Вывод объектов</td>
-				<td>print('The Killer', joke)</td>
-			</tr>
-			<tr>
-				<td>if/elif/else </td>
-				<td>Выбор действий</td>
-				<td>if "python" in text:<br>
-					print(text)</td>
-			</tr>
-			<tr>
-				<td>for/else</td>
-				<td>Итерация</td>
-				<td>for x in mylist:<br>
-					print(x)</td>
-			</tr>
-			<tr>
-				<td>while/else </td>
-				<td>Универсальные циклы</td>
-				<td>while X > Y:<br>
-					print('hello1)</td>
-			</tr>
-			<tr>
-				<td>pass </td>
-				<td>Пустой заполнитель</td>
-				<td>while True:<br>
-					pass</td>
-			</tr>
-			<tr>
-				<td>break </td>
-				<td>Выход из цикла</td>
-				<td>while True:<br>
-					if exittest(): break</td>
-			</tr>
-			<tr>
-				<td>continue </td>
-				<td>Продолжение цикла</td>
-				<td>while True:<br>
-					if skiptest () : continue</td>
-			</tr>
-			<tr>
-				<td>def </td>
-				<td>Функции и методы</td>
-				<td>def f (a, b, c=l, *d) :<br>
-					print(a+b+c+d[0])</td>
-			</tr>
-			<tr>
-				<td>return </td>
-				<td>Результаты функций</td>
-				<td>def f (a, b, c=l, *d) :<br>
-					return a+b+c+d[0]</td>
-			</tr>
-			<tr>
-				<td>yield
-				</td>
-				<td>Генераторные функции</td>
-				<td>def gen (n) :<br>
-					for i in n: yield i*2</td>
-			</tr>
-			<tr>
-				<td>global </td>
-				<td>Пространства имен</td>
-				<td>х - 'old’<br>
-					def function():<br>
-					global xf у; x = 'new'</td>
-			</tr>
-			<tr>
-				<td>nonlocal
-				</td>
-				<td>Пространства имен</td>
-				<td>def outer():<br>
-					x = 'old'<br>
-					def function():<br>
-					nonlocal x; x = 'new'</td>
-			</tr>
-			<tr>
-				<td>import</td>
-				<td>Доступ к модулям</td>
-				<td>import sys</td>
-			</tr>
-			<tr>
-				<td>from </td>
-				<td>Доступ к атрибутам</td>
-				<td>from sys import stdin</td>
-			</tr>
-			<tr>
-				<td>class Построение объектов class Subclass(Superclass):<br>
-					staticData = [ ]<br>
-					def method (self) : pass
-				</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>try/except/
-					finally
-				</td>
-				<td>Перехват исключений</td>
-				<td>try:
-					action()<br>
-					except:<br>
-					print(’action error’)</td>
-			</tr>
-			<tr>
-				<td>raise </td>
-				<td>Генерация исключений</td>
-				<td>raise EndSearch(location)</td>
-			</tr>
-			<tr>
-				<td>assert
-				</td>
-				<td>Отладочные проверки</td>
-				<td>assert X > Y, 'X too small’</td>
-			</tr>
-			<tr>
-				<td>with/as
-				</td>
-				<td>Диспетчеры контекста</td>
-				<td>with open ('data ’) asmyfile:<br>
-					process(myfile)</td>
-			</tr>
-			<tr>
-				<td>del
-				</td>
-				<td>Удаление ссылок</td>
-				<td>del data[k]<br>
-					del data[i:j]<br>
-					del obj.attr<br>
-					del variable<br></td>
-		</table>
-
-		<h2>Присваивание</h2>
-		<table>
 			<tr>
 				<td>spam = ’Spam’</td>
 				<td>Базовая форма</td>
@@ -376,39 +200,6 @@
 				<td>Дополненное присваивание (эквивалентно
 					spams = spams + 42)
 				</td>
-		</table>
-
-		<h2>Операторы выражений</h2>
-		<table>
-			<tr>
-				<td>spam (eggs, ham)</td>
-				<td>Вызовы функций</td>
-			</tr>
-			<tr>
-				<td>spam, ham (eggs)</td>
-				<td>Вызовы методов</td>
-			</tr>
-			<tr>
-				<td>spam</td>
-				<td>Вывод переменных в интерактивном интерпретаторе</td>
-			</tr>
-			<tr>
-				<td>print (а, b, с, sep=’ ’)</td>
-				<td>Вывод результатов операций </td>
-			</tr>
-			<tr>
-				<td>print (х, у, file=afile)</td>
-				<td>Отправляет текст методу afile.write,
-					а не sys.stdout.write</td>
-			</tr>
-			<tr>
-				<td>yield х ** 2</td>
-				<td>Выдача значений в операторах выражений</td>
-			</tr>
-		</table>
-
-		<h2>Операции</h2>
-		<table>
 			<tr>
 				<td>А * В + С * D</td>
 				<td>Смешанные операции следуют старшинству операций</td>
@@ -514,6 +305,148 @@
 				<td>{х for х in ’ spain’}</td>
 				<td>{’m', ’s’, 'p’, ’a’}</td>
 			</tr>
+			<tr>
+				<td>Создание ссылок</td>
+				<td>a, b = ’good’, ’bad’</td>
+			</tr>
+			<tr>
+				<td>Выполнение функций</td>
+				<td>log.write("spam, ham")</td>
+			</tr>
+			<tr>
+				<td>Вывод объектов</td>
+				<td>print('The Killer', joke)</td>
+			</tr>
+			<tr>
+				<td>if/elif/else</td>
+				<td>if "python" in text:<br>
+					print(text)</td>
+			</tr>
+			<tr>
+				<td>for/else</td>
+				<td>for x in mylist:<br>
+					print(x)</td>
+			</tr>
+			<tr>
+				<td>while/else </td>
+				<td>while X > Y:<br>
+					print('hello1)</td>
+			</tr>
+			<tr>
+				<td>pass Пустой заполнитель</td>
+				<td>while True:<br>
+					pass</td>
+			</tr>
+			<tr>
+				<td>break </td>
+				<td>while True:<br>
+					if exittest(): break</td>
+			</tr>
+			<tr>
+				<td>continue </td>
+				<td>while True:<br>
+					if skiptest () : continue</td>
+			</tr>
+			<tr>
+				<td>def </td>
+				<td>def f (a, b, c=l, *d) :<br>
+					print(a+b+c+d[0])</td>
+			</tr>
+			<tr>
+				<td>return </td>
+				<td>def f (a, b, c=l, *d) :<br>
+					return a+b+c+d[0]</td>
+			</tr>
+			<tr>
+				<td>yield
+				</td>
+				<td>def gen (n) :<br>
+					for i in n: yield i*2</td>
+			</tr>
+			<tr>
+				<td>global </td>
+				<td>х - 'old’<br>
+					def function():<br>
+					global xf у; x = 'new'</td>
+			</tr>
+			<tr>
+				<td>nonlocal
+				</td>
+				<td>def outer():<br>
+					x = 'old'<br>
+					def function():<br>
+					nonlocal x; x = 'new'</td>
+			</tr>
+			<tr>
+				<td>import</td>
+				<td>import sys</td>
+			</tr>
+			<tr>
+				<td>from </td>
+				<td>from sys import stdin</td>
+			</tr>
+			<tr>
+				<td>class <br>
+					def method (self) : pass
+				</td>
+				<td>class Subclass(Superclass):<br>
+					staticData = [ ]</td>
+			</tr>
+			<tr>
+				<td>try/except/
+					finally
+				</td>
+				<td>try:
+					action()<br>
+					except:<br>
+					print(’action error’)</td>
+			</tr>
+			<tr>
+				<td>raise Генерация исключений</td>
+				<td>raise EndSearch(location)</td>
+			</tr>
+			<tr>
+				<td>assert Отладочные проверки</td>
+				<td>assert X > Y, 'X too small’</td>
+			</tr>
+			<tr>
+				<td>with/as Диспетчеры контекста
+				</td>
+				<td>with open ('data ’) asmyfile:<br>
+					process(myfile)</td>
+			</tr>
+			<tr>
+				<td>del Удаление ссылок
+				</td>
+				<td>del data[k]<br>
+					del data[i:j]<br>
+					del obj.attr<br>
+					del variable<br></td>
+			<tr>
+				<td>spam (eggs, ham)</td>
+				<td>Вызовы функций</td>
+			</tr>
+			<tr>
+				<td>spam, ham (eggs)</td>
+				<td>Вызовы методов</td>
+			</tr>
+			<tr>
+				<td>spam</td>
+				<td>Вывод переменных в интерактивном интерпретаторе</td>
+			</tr>
+			<tr>
+				<td>print (а, b, с, sep=’ ’)</td>
+				<td>Вывод результатов операций </td>
+			</tr>
+			<tr>
+				<td>print (х, у, file=afile)</td>
+				<td>Отправляет текст методу afile.write,
+					а не sys.stdout.write</td>
+			</tr>
+			<tr>
+				<td>yield х ** 2</td>
+				<td>Выдача значений в операторах выражений</td>
+			</tr>
 		</table>
 
 		<h2>Строки</h2>
@@ -601,10 +534,6 @@
 					map(ord, S)</td>
 				<td>Итерация, членство</td>
 			</tr>
-		</table>
-
-		<h2>Методы строк</h2>
-		<table>
 			<tr>
 			<tr>
 				<td>S.capitalize()</td>
@@ -778,7 +707,7 @@
 			</tr>
 		</table>
 
-		<h2>Словари</h2>
+		<h2>Списки</h2>
 		<table>
 			<tr>
 				<td>L = [] </td>
