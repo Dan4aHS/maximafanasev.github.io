@@ -218,15 +218,15 @@ table {
 }
 
 table tbody tr td {
-	padding: 20px 15px;
-	border: 1px dashed #999;
+	padding: 10px 15px;
+	border: 1px solid #999;
 	border-radius: 5px;
 	word-break: break-all;
 }
 
 table tbody tr th {
 	padding: 5px;
-	border: 1px dashed #999;
+	border: 1px solid #999;
 	border-radius: 5px;
 	word-break: break-all;
 }
