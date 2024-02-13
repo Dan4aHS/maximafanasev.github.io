@@ -227,7 +227,7 @@ table tbody tr td {
 
 table tbody tr th {
 	padding: 5px;
-	border: 1px solid #999;
+	border: 1px dotted #999;
 	border-radius: 5px;
 	word-break: break-all;
 }
