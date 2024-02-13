@@ -452,95 +452,95 @@
 			</tr>
 			<tr>
 				<td>S.capitalize()</td>
-				<td>txt = "hello, and welcome to my world."<br>
+				<td>txt = "<b>h</b>ello, and welcome to my world."<br>
 					x = txt.capitalize()<br>
 					print (x)<br>
-					Hello, and welcome to my world.</td>
+					<b>H</b>ello, and welcome to my world.</td>
 			</tr>
 			<tr>
 				<td>S.casefold()</td>
-				<td>txt = "Hello, And Welcome To My World!"<br>
+				<td>txt = "<b>Hello, And Welcome To My World!</b>"<br>
 
 					x = txt.casefold()<br>
 
 					print(x)<br>
-					hello, and welcome to my world!</td>
+					<b>hello, and welcome to my world!</b></td>
 			</tr>
 			<tr>
 				<td>S.center(width [, fill])</td>
-				<td>txt = "banana"<br>
+				<td>txt = "<b>banana</b>"<br>
 					x = txt.center(20, "O")<br>
 					print(x)<br>
-					OOOOOOObananaOOOOOOO</td>
+					<b>OOOOOOObananaOOOOOOO</b></td>
 			</tr>
 			<tr>
 				<td>S.count(sub [, start [, end]])</td>
-				<td>fruits = ["apple", "banana", "cherry"]<br>
+				<td>fruits = ["apple", "banana", "<b>cherry</b>"]<br>
 
 					x = fruits.count("cherry")<br>
 
 					print(x)<br>
-					1
+					<b>1</b>
 				</td>
 			</tr>
 			<tr>
 				<td>S.encode([encoding [,errors]])</td>
-				<td>txt = "My name is Ståle"<br>
+				<td>txt = "My name is St<b>å</b>le"<br>
 
 					x = txt.encode()<br>
 
 					print(x)<br>
-					b'My name is St\xc3\xe5le'
+					b'My name is St<b>\xc3\x</b>e5le'
 				</td>
 			</tr>
 			<tr>
 				<td>S.endswith(suffix [r start [, end]])</td>
-				<td>txt = "Hello, welcome to my world."<br>
+				<td>txt = "<b>Hello, welcome to my world.</b>"<br>
 					x = txt.endswith(".")<br>
 
 					print(x)<br>
-					True</td>
+					<b>True</b></td>
 			</tr>
 			<tr>
 				<td>S.expandtabs([tabsize])</td>
-				<td>txt = "H\te\tl\tl\to"<br>
+				<td>txt = "<b>H\te\tl\tl\to</b>"<br>
 					x = txt.expandtabs(2)<br>
 					print(x)<br>
-					H e l l o</td>
+					<b>H e l l o</b></td>
 			</tr>
 			<tr>
 				<td>S.find</td>
-				<td>txt = 'Hello, welcome to my world.'<br>
+				<td>txt = '<b>Hello, welcome to my world.</b>'<br>
 					x = txt.find('welcome')<br>
-					print(x)<br> 7</td>
+					print(x)<br> <b>7</b></td>
 			</tr>
 			<tr>
 				<td>S.rfind(sub [,start [,end]])</td>
-				<td>txt = "Mi casa, su casa."<br>
+				<td>txt = "Mi casa, su <b>casa</b>."<br>
 					x = txt.rfind("casa")<br>
 					print(x)<br>
-					12
+					<b>12</b>
 				</td>
 			</tr>
 			<tr>
 				<td>S.format(fmtstr, *args, **kwargs)</td>
-				<td>txt = "For only {price:.2f} dollars!"<br>
+				<td>txt = "For only <b>{price:.2f}</b> dollars!"<br>
 					print(txt.format(price = 49))<br>
-					For only 49.00 dollars!</td>
+					For only <b>49.00</b> dollars!</td>
 			</tr>
 			<tr>
 				<td>S.index(sub [, start [, end]])</td>
-				<td>fruits = ['apple', 'banana', 'cherry']<br>
+				<td>fruits = ['apple', 'banana', '<b>cherry</b>']<br>
 					x = fruits.index("cherry")<br>
 					print(x)<br>
-					2</td>
+					<b>2</b></td>
 			</tr>
 			<tr>
 				<td>S.rindex(sub [, start [, end]])</td>
-				<td>txt = "Mi casa, su casa."<br>
+				<td>txt = "Mi casa, su <b>casa</b>."<br>
 					x = txt.rindex("casa")<br>
 					print(x)<br>
-					12</td>
+					<b>12</b></td>
 			</tr>
 			<tr>
 				<td>S.isalnum()</td>
@@ -560,11 +560,11 @@
 			</tr>
 			<tr>
 				<td>S.isidentifier()</td>
-				<td></td>
+				<td>является ли строка действительным идентификатором</td>
 			</tr>
 			<tr>
 				<td>S.islower()</td>
-				<td>является ли строка действительным идентификатором</td>
+				<td>все ли символы в тексте написаны строчными буквами</td>
 			</tr>
 			<tr>
 				<td>S.isnumeric()</td>
@@ -588,84 +588,87 @@
 			</tr>
 			<tr>
 				<td>S.join(iterable)</td>
-				<td>myTuple = ("John", "Peter", "Vicky")<br>
+				<td>myTuple = (<b>"John", "Peter", "Vicky"</b>)<br>
 					x = "#".join(myTuple)<br>
 					print(x)<br>
-					John#Peter#Vicky
+					<b>John#Peter#Vicky</b>
 				</td>
 			</tr>
 			<tr>
-				<td>S.just(width [, fill])</td>
-				<td></td>
-			</tr>
-			<tr>
 				<td>S.rjust(width [, fill])</td>
-				<td>txt = "banana"<br>
+				<td>txt = "<b>banana</b>"<br>
 					x = txt.rjust(20)<br>
 					print(x, "is my favorite fruit.")<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana is my favorite fruit.
+					<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana</b> is my favorite fruit.
 				</td>
 			</tr>
 			<tr>
 				<td>S.lower()</td>
-				<td>txt = "Hello my FRIENDS"<br>
+				<td>txt = "<b>Hello my FRIENDS</b>"<br>
 					x = txt.lower()<br>
 					print(x)<br>
-					hello my friends
+					<b>hello my friends</b>
 				</td>
 			</tr>
 			<tr>
 				<td>S.lstrip([chars])</td>
-				<td>txt = "&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;"<br>
+				<td>txt = "<b>&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;</b>"<br>
 
 					x = txt.lstrip()<br>
 
 					print("of all fruits", x, "is my favorite")<br>
-					of all fruits banana&nbsp;&nbsp;&nbsp;&nbsp;is my favorite</td>
+					of all fruits <b>banana&nbsp;&nbsp;&nbsp;&nbsp;</b> is my favorite</td>
 			</tr>
 			<tr>
 				<td>S.maketrans(x [, y[, z] ] )</td>
-				<td>txt = "Hello Sam!"<br>
+				<td>txt = "<b>Hello Sam!</b>"<br>
 					mytable = str.maketrans("S", "P")<br>
 					print(txt.translate(mytable))<br>
-					Hello Pam!</td>
+					<b>Hello Pam!</b></td>
 			</tr>
 			<tr>
 				<td>S.partition(sep)</td>
-				<td>txt = "I could eat bananas all day"
-					x = txt.partition("bananas")
-					print(x)</td>
+				<td>txt = "<b>I could eat bananas all day</b>"<br>
+					x = txt.partition("bananas")<br>
+					print(x)<br>
+					(<b>'I could eat ', 'bananas', ' all day'</b>)</td>
+					
 			</tr>
 			<tr>
 				<td>S.replace</td>
-				<td>s = a.replace('Ё', 'Е').replace('ё', 'е')</td>
+				<td>s = '<b>Ёёж</b>'<br> 
+				s = a.replace('Ё', 'Е').replace('ё', 'е')<br>
+				print(s)<br>
+					'<b>Ееж</b>'
+				</td>
 			</tr>
 			<tr>
 				<td>S.split([sep [,maxsplit]])</td>
-				<td>txt = "welcome to the jungle"<br>
+				<td>txt = "<b>welcome to the jungle</b>"<br>
 					x = txt.split()<br>
 					print(x)<br>
-					['welcome', 'to', 'the', 'jungle']
+					[<b>'welcome', 'to', 'the', 'jungle'</b>]
 				</td>
 			</tr>
 			<tr>
 				<td>S.splitlines([keepends])</td>
-				<td>txt = "Thank you for the music\nWelcome to the jungle"<br>
+				<td>txt = "<b>Thank you for the music\nWelcome to the jungle</b>"<br>
 					x = txt.splitlines()<br>
 					print(x)<br>
-					['Thank you for the music', 'Welcome to the jungle']
+					[<b>'Thank you for the music', 'Welcome to the jungle'</b>]
 				</td>
 			</tr>
 			<tr>
 				<td>S.rstrip()</td>
-				<td>' spacious&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.rstrip() <br> ' spacious'</td>
+				<td>'<b>spacious&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>'.rstrip() <br> 
+					<b>' spacious'</b></td>
 			</tr>
 			<tr>
 				<td>S.strip([chars])</td>
-				<td>txt = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-					x = txt.strip()
-					print("of all fruits", x, "is my favorite")
-					of all fruits banana is my favorite</td>
+				<td>txt = "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>"<br>
+					x = txt.strip()<br>
+					print(x)<br>
+					<b>banana</b></td>
 			</tr>
 			<tr>
 				<td>S.startswith(prefix [, start [, end]])</td>
@@ -676,39 +679,39 @@
 			</tr>
 			<tr>
 				<td>S.swapcase()</td>
-				<td>txt = "Hello My Name Is PETER"<br>
+				<td>txt = "<b>Hello My Name Is PETER</b>"<br>
 					x = txt.swapcase()<br>
 					print(x)<br>
-					hELLO mY nAME iS peter
+					<b>hELLO mY nAME iS peter</b>
 				</td>
 			</tr>
 			<tr>
 				<td>S.title()</td>
-				<td>txt = "Welcome to my world"<br>
+				<td>txt = "<b>Welcome to my world</b>"<br>
 					x = txt.title()<br>
 					print(x)<br>
-					Welcome To My World</td>
+					<b>Welcome To My World</b></td>
 			</tr>
 			<tr>
 				<td>S.translate(map)</td>
 				<td>mydict = {83: 80}<br>
-					txt = "Hello Sam!"<br>
+					txt = "<b>Hello Sam!</b>"<br>
 					print(txt.translate(mydict))<br>
-					Hello Pam!</td>
+					<b>Hello Pam!</b></td>
 			</tr>
 			<tr>
 				<td>S.upper()</td>
-				<td>txt = "Hello my friends"<br>
+				<td>txt = "<b>Hello my friends</b>"<br>
 					x = txt.upper()<br>
 					print(x)<br>
-					HELLO MY FRIENDS</td>
+					<b>HELLO MY FRIENDS</b></td>
 			</tr>
 			<tr>
 				<td>S.zfill(width)</td>
-				<td>txt = "50"<br>
+				<td>txt = "<b>50</b>"<br>
 					x = txt.zfill(10)<br>
 					print(x)<br>
-					0000000050</td>
+					<b>0000000050</b></td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
@@ -835,11 +838,19 @@
 				<td></td>
 			</tr>
 			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>L.index(x)</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>L.count(x)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
 				<td></td>
 			</tr>
 			<tr>
