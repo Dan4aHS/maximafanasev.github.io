@@ -14,7 +14,7 @@
 		<span>&#60; </span><a href='index.html'>Вернуться на главную</a>
 		<h1>Марк Лутц Изучаем Python
 		</h1>
-		
+
 		<ul>
 			<li><a href="#operators">Операторы</a></li>
 			<li><a href="#type">Типы данных</a></li>
@@ -29,7 +29,7 @@
 			<li><a href="#zar">Зарезервированные слова</a></li>
 			<li><a href="#func">Функции</a></li>
 		</ul>
-		
+
 
 		<h2 id="operators">Операторы</h2>
 		<table>
@@ -266,6 +266,10 @@
 				<td>2**2 = 4</td>
 			</tr>
 			<tr>
+				<td>pow(2, 2)</td>
+				<td>4</td>
+			</tr>
+			<tr>
 				<td>&nbsp;</td>
 				<td></td>
 			</tr>
@@ -279,12 +283,20 @@
 				</td>
 			</tr>
 			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>int(3.1415)</td>
 				<td>3</td>
 			</tr>
 			<tr>
 				<td>float(3)</td>
 				<td>3.0</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>'{0:4.2f}'.format(num)</td>
@@ -295,19 +307,23 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>math, floor (2.5)</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>math, trunc (2.5)</td>
-				<td>2</td>
-			</tr>
-			<tr>
 				<td>import math</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>math.pi, math.e</td>
+				<td>math.floor (2.5)</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>math.trunc (2.5)</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>math.pi</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>math.e</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -316,11 +332,7 @@
 			</tr>
 			<tr>
 				<td>math.sqrt(144)</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>pow(2, 4)</td>
-				<td></td>
+				<td>12</td>
 			</tr>
 			<tr>
 				<td>abs(-42.0)</td>
@@ -328,11 +340,11 @@
 			</tr>
 			<tr>
 				<td>min(3, 1, 2, 4)</td>
-				<td></td>
+				<td>1</td>
 			</tr>
 			<tr>
 				<td>max(3, 1, 2, 4)</td>
-				<td></td>
+				<td>4</td>
 			</tr>
 			<tr>
 				<td>round(2.567)</td>
@@ -343,8 +355,12 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>decimal.Decimal(7)</td>
+				<td>&nbsp;</td>
 				<td></td>
+			</tr>
+			<tr>
+				<td>decimal</td>
+				<td>number = Decimal("0.1") - округление до нужного знака</td>
 			</tr>
 		</table>
 
@@ -431,100 +447,116 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>S.find('ра')</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.rstrip()</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.replace('pa', 'хх')</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.split(',')</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.isdigit()</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.lower()</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.endswith('spam')</td>
-				<td>
-			</tr>
-			<tr>
-				<td>'spam'.join(strlist)</td>
-				<td>
-			</tr>
-			<tr>
-				<td>S.encode('latin-1')</td>
-				<td>
-			</tr>
-			<tr>
-				<td>B.decode('utf8')</td>
-				<td>
+				<td>S.decode('utf8')</td>
+				<td>Декодирует байтстроку в строку, используя зарегистрированный кодек.</td>
 			</tr>
 			<tr>
 				<td>S.capitalize()</td>
-				<td></td>
+				<td>txt = "hello, and welcome to my world."<br>
+					x = txt.capitalize()<br>
+					print (x)<br>
+					Hello, and welcome to my world.</td>
 			</tr>
 			<tr>
 				<td>S.casefold()</td>
-				<td></td>
+				<td>txt = "Hello, And Welcome To My World!"<br>
+
+					x = txt.casefold()<br>
+
+					print(x)<br>
+					hello, and welcome to my world!</td>
 			</tr>
 			<tr>
 				<td>S.center(width [, fill])</td>
-				<td></td>
+				<td>txt = "banana"<br>
+					x = txt.center(20, "O")<br>
+					print(x)<br>
+					OOOOOOObananaOOOOOOO</td>
 			</tr>
 			<tr>
 				<td>S.count(sub [, start [, end]])</td>
-				<td></td>
+				<td>fruits = ["apple", "banana", "cherry"]<br>
+
+					x = fruits.count("cherry")<br>
+
+					print(x)<br>
+					1
+				</td>
 			</tr>
 			<tr>
 				<td>S.encode([encoding [,errors]])</td>
-				<td></td>
+				<td>txt = "My name is Ståle"<br>
+
+					x = txt.encode()<br>
+
+					print(x)<br>
+					b'My name is St\xc3\xe5le'
+				</td>
 			</tr>
 			<tr>
 				<td>S.endswith(suffix [r start [, end]])</td>
-				<td></td>
+				<td>txt = "Hello, welcome to my world."<br>
+					x = txt.endswith(".")<br>
+
+					print(x)<br>
+					True</td>
 			</tr>
 			<tr>
 				<td>S.expandtabs([tabsize])</td>
-				<td></td>
+				<td>txt = "H\te\tl\tl\to"<br>
+					x = txt.expandtabs(2)<br>
+					print(x)<br>
+					H e l l o</td>
 			</tr>
 			<tr>
-				<td>S.find(sub [, start [, end]])</td>
-				<td></td>
+				<td>S.find</td>
+				<td>txt = 'Hello, welcome to my world.'<br>
+					x = txt.find('welcome')<br>
+					print(x)<br> 7</td>
+			</tr>
+			<tr>
+				<td>S.rfind(sub [,start [,end]])</td>
+				<td>txt = "Mi casa, su casa."<br>
+					x = txt.rfind("casa")<br>
+					print(x)<br>
+					12
+				</td>
 			</tr>
 			<tr>
 				<td>S.format(fmtstr, *args, **kwargs)</td>
-				<td></td>
+				<td>txt = "For only {price:.2f} dollars!"<br>
+					print(txt.format(price = 49))<br>
+					For only 49.00 dollars!</td>
 			</tr>
 			<tr>
 				<td>S.index(sub [, start [, end]])</td>
-				<td></td>
+				<td>fruits = ['apple', 'banana', 'cherry']<br>
+					x = fruits.index("cherry")<br>
+					print(x)<br>
+					2</td>
+			</tr>
+			<tr>
+				<td>S.rindex(sub [, start [, end]])</td>
+				<td>txt = "Mi casa, su casa."<br>
+					x = txt.rindex("casa")<br>
+					print(x)<br>
+					12</td>
 			</tr>
 			<tr>
 				<td>S.isalnum()</td>
-				<td></td>
+				<td>все ли символы в тексте буквенно-цифровые</td>
 			</tr>
 			<tr>
 				<td>S.isalpha()</td>
-				<td></td>
+				<td>все ли символы в тексте являются буквами</td>
 			</tr>
 			<tr>
 				<td>S.isdecimal()</td>
-				<td></td>
+				<td>все ли символы в строке являются десятичными (0–9)</td>
 			</tr>
 			<tr>
 				<td>S.isdigit()</td>
-				<td></td>
+				<td>все ли символы в тексте являются цифрами</td>
 			</tr>
 			<tr>
 				<td>S.isidentifier()</td>
@@ -532,113 +564,151 @@
 			</tr>
 			<tr>
 				<td>S.islower()</td>
-				<td></td>
+				<td>является ли строка действительным идентификатором</td>
 			</tr>
 			<tr>
 				<td>S.isnumeric()</td>
-				<td></td>
+				<td>все ли символы в тексте числовые</td>
 			</tr>
 			<tr>
 				<td>S.isprintable()</td>
-				<td></td>
+				<td>все ли символы в тексте печатные</td>
 			</tr>
 			<tr>
 				<td>S.isspace()</td>
-				<td></td>
+				<td>все ли символы в тексте являются пробелами</td>
 			</tr>
 			<tr>
 				<td>S.istitle()</td>
-				<td></td>
+				<td>начинается ли каждое слово с заглавной буквы</td>
 			</tr>
 			<tr>
 				<td>S.isupper()</td>
-				<td></td>
+				<td>все ли символы в тексте в верхнем регистре</td>
 			</tr>
 			<tr>
 				<td>S.join(iterable)</td>
-				<td></td>
-			</tr>
-			<td>S.just(width [, fill])</td>
-			<td></td>
-			<tr>
-				<td>S.lower()</td>
-				<td></td>
+				<td>myTuple = ("John", "Peter", "Vicky")<br>
+					x = "#".join(myTuple)<br>
+					print(x)<br>
+					John#Peter#Vicky
+				</td>
 			</tr>
 			<tr>
-				<td>S.lstrip([chars])</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>S.maketrans (x [, y[, z] ] )</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>S.partition(sep)</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>S.replace(old, new [, count])</td>
-				<td>s = a.replace('Ё', 'Е').replace('ё', 'е')</td>
-			</tr>
-			<tr>
-				<td>S.rfind(sub [,start [,end]])</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>S.rindex(sub [, start [, end]])</td>
+				<td>S.just(width [, fill])</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>S.rjust(width [, fill])</td>
-				<td></td>
+				<td>txt = "banana"<br>
+					x = txt.rjust(20)<br>
+					print(x, "is my favorite fruit.")<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana is my favorite fruit.
+				</td>
 			</tr>
 			<tr>
-				<td>S.rpartition(sep)</td>
-				<td></td>
+				<td>S.lower()</td>
+				<td>txt = "Hello my FRIENDS"<br>
+					x = txt.lower()<br>
+					print(x)<br>
+					hello my friends
+				</td>
 			</tr>
 			<tr>
-				<td>S.rsplit([sep[, maxsplit]])</td>
-				<td></td>
+				<td>S.lstrip([chars])</td>
+				<td>txt = "&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;"<br>
+
+					x = txt.lstrip()<br>
+
+					print("of all fruits", x, "is my favorite")<br>
+					of all fruits banana&nbsp;&nbsp;&nbsp;&nbsp;is my favorite</td>
 			</tr>
 			<tr>
-				<td>S.rstrip([chars])</td>
-				<td></td>
+				<td>S.maketrans(x [, y[, z] ] )</td>
+				<td>txt = "Hello Sam!"<br>
+					mytable = str.maketrans("S", "P")<br>
+					print(txt.translate(mytable))<br>
+					Hello Pam!</td>
+			</tr>
+			<tr>
+				<td>S.partition(sep)</td>
+				<td>txt = "I could eat bananas all day"
+					x = txt.partition("bananas")
+					print(x)</td>
+			</tr>
+			<tr>
+				<td>S.replace</td>
+				<td>s = a.replace('Ё', 'Е').replace('ё', 'е')</td>
 			</tr>
 			<tr>
 				<td>S.split([sep [,maxsplit]])</td>
-				<td></td>
+				<td>txt = "welcome to the jungle"<br>
+					x = txt.split()<br>
+					print(x)<br>
+					['welcome', 'to', 'the', 'jungle']
+				</td>
 			</tr>
 			<tr>
 				<td>S.splitlines([keepends])</td>
-				<td></td>
+				<td>txt = "Thank you for the music\nWelcome to the jungle"<br>
+					x = txt.splitlines()<br>
+					print(x)<br>
+					['Thank you for the music', 'Welcome to the jungle']
+				</td>
 			</tr>
 			<tr>
-				<td>S.startswith(prefix [, start [, end]])</td>
-				<td></td>
+				<td>S.rstrip()</td>
+				<td>' spacious&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.rstrip() <br> ' spacious'</td>
 			</tr>
 			<tr>
 				<td>S.strip([chars])</td>
-				<td></td>
+				<td>txt = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+					x = txt.strip()
+					print("of all fruits", x, "is my favorite")
+					of all fruits banana is my favorite</td>
+			</tr>
+			<tr>
+				<td>S.startswith(prefix [, start [, end]])</td>
+				<td>txt = "Hello, welcome to my world."<br>
+					x = txt.startswith("Hello")<br>
+					print(x)<br>
+					True</td>
 			</tr>
 			<tr>
 				<td>S.swapcase()</td>
-				<td></td>
+				<td>txt = "Hello My Name Is PETER"<br>
+					x = txt.swapcase()<br>
+					print(x)<br>
+					hELLO mY nAME iS peter
+				</td>
 			</tr>
 			<tr>
 				<td>S.title()</td>
-				<td></td>
+				<td>txt = "Welcome to my world"<br>
+					x = txt.title()<br>
+					print(x)<br>
+					Welcome To My World</td>
 			</tr>
 			<tr>
 				<td>S.translate(map)</td>
-				<td></td>
+				<td>mydict = {83: 80}<br>
+					txt = "Hello Sam!"<br>
+					print(txt.translate(mydict))<br>
+					Hello Pam!</td>
 			</tr>
 			<tr>
 				<td>S.upper()</td>
-				<td></td>
+				<td>txt = "Hello my friends"<br>
+					x = txt.upper()<br>
+					print(x)<br>
+					HELLO MY FRIENDS</td>
 			</tr>
 			<tr>
 				<td>S.zfill(width)</td>
-				<td></td>
+				<td>txt = "50"<br>
+					x = txt.zfill(10)<br>
+					print(x)<br>
+					0000000050</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
@@ -1141,7 +1211,7 @@
 					if skiptest () : continue</td>
 			</tr>
 		</table>
-		
+
 		<h2 id="files">Файлы</h2>
 		<table>
 			<tr>
