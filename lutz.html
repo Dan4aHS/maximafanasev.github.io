@@ -419,7 +419,7 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>S[i] </td>
+				<td>S[i]</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -459,7 +459,8 @@
 				<td>txt = "<b>h</b>ello, and welcome to my world."<br>
 					x = txt.capitalize()<br>
 					print (x)<br>
-					<b>H</b>ello, and welcome to my world.</td>
+					<b>H</b>ello, and welcome to my world.
+				</td>
 			</tr>
 			<tr>
 				<td>S.casefold()</td>
@@ -468,14 +469,16 @@
 					x = txt.casefold()<br>
 
 					print(x)<br>
-					<b>hello, and welcome to my world!</b></td>
+					<b>hello, and welcome to my world!</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.center(width [, fill])</td>
 				<td>txt = "<b>banana</b>"<br>
 					x = txt.center(20, "O")<br>
 					print(x)<br>
-					<b>OOOOOOObananaOOOOOOO</b></td>
+					<b>OOOOOOObananaOOOOOOO</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.count(sub [, start [, end]])</td>
@@ -503,14 +506,16 @@
 					x = txt.endswith(".")<br>
 
 					print(x)<br>
-					<b>True</b></td>
+					<b>True</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.expandtabs([tabsize])</td>
 				<td>txt = "<b>H\te\tl\tl\to</b>"<br>
 					x = txt.expandtabs(2)<br>
 					print(x)<br>
-					<b>H e l l o</b></td>
+					<b>H e l l o</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.find</td>
@@ -537,14 +542,16 @@
 				<td>fruits = ['apple', 'banana', '<b>cherry</b>']<br>
 					x = fruits.index("cherry")<br>
 					print(x)<br>
-					<b>2</b></td>
+					<b>2</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.rindex(sub [, start [, end]])</td>
 				<td>txt = "Mi casa, su <b>casa</b>."<br>
 					x = txt.rindex("casa")<br>
 					print(x)<br>
-					<b>12</b></td>
+					<b>12</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.isalnum()</td>
@@ -628,7 +635,8 @@
 				<td>txt = "<b>Hello Sam!</b>"<br>
 					mytable = str.maketrans("S", "P")<br>
 					print(txt.translate(mytable))<br>
-					<b>Hello Pam!</b></td>
+					<b>Hello Pam!</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.partition(sep)</td>
@@ -636,13 +644,13 @@
 					x = txt.partition("bananas")<br>
 					print(x)<br>
 					(<b>'I could eat ', 'bananas', ' all day'</b>)</td>
-					
+
 			</tr>
 			<tr>
 				<td>S.replace</td>
-				<td>s = '<b>Ёёж</b>'<br> 
-				s = a.replace('Ё', 'Е').replace('ё', 'е')<br>
-				print(s)<br>
+				<td>s = '<b>Ёёж</b>'<br>
+					s = a.replace('Ё', 'Е').replace('ё', 'е')<br>
+					print(s)<br>
 					'<b>Ееж</b>'
 				</td>
 			</tr>
@@ -664,15 +672,17 @@
 			</tr>
 			<tr>
 				<td>S.rstrip()</td>
-				<td>'<b>spacious&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>'.rstrip() <br> 
-					<b>' spacious'</b></td>
+				<td>'<b>spacious&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>'.rstrip()<br>
+					<b>' spacious'</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.strip([chars])</td>
 				<td>txt = "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>"<br>
 					x = txt.strip()<br>
 					print(x)<br>
-					<b>banana</b></td>
+					<b>banana</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.startswith(prefix [, start [, end]])</td>
@@ -680,6 +690,15 @@
 					x = txt.startswith("Hello")<br>
 					print(x)<br>
 					True</td>
+			</tr>
+			<tr>
+				<td>S.sorted()</td>
+				<td>a = '<b>sldfjskdfjls</b>'<br>
+
+					x = sorted(a)<br>
+
+					print(x)<br>
+					<b>['d', 'd', 'f', 'f', 'j', 'j', 'k', 'l', 'l', 's', 's', 's']</b></td>
 			</tr>
 			<tr>
 				<td>S.swapcase()</td>
@@ -694,28 +713,32 @@
 				<td>txt = "<b>Welcome to my world</b>"<br>
 					x = txt.title()<br>
 					print(x)<br>
-					<b>Welcome To My World</b></td>
+					<b>Welcome To My World</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.translate(map)</td>
 				<td>mydict = {83: 80}<br>
 					txt = "<b>Hello Sam!</b>"<br>
 					print(txt.translate(mydict))<br>
-					<b>Hello Pam!</b></td>
+					<b>Hello Pam!</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.upper()</td>
 				<td>txt = "<b>Hello my friends</b>"<br>
 					x = txt.upper()<br>
 					print(x)<br>
-					<b>HELLO MY FRIENDS</b></td>
+					<b>HELLO MY FRIENDS</b>
+				</td>
 			</tr>
 			<tr>
 				<td>S.zfill(width)</td>
 				<td>txt = "<b>50</b>"<br>
 					x = txt.zfill(10)<br>
 					print(x)<br>
-					<b>0000000050</b></td>
+					<b>0000000050</b>
+				</td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
@@ -858,8 +881,11 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>L.sort()</td>
-				<td></td>
+				<td>L.sorted()</td>
+				<td>a = ("b", "g", "a", "d", "f", "c", "h", "e")<br>
+					x = sorted(a)<br>
+					print(x)<br>
+					['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']</td>
 			</tr>
 			<tr>
 				<td>L.reverse()</td>
