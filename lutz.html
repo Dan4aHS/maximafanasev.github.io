@@ -14,59 +14,32 @@
 		<span>&#60; </span><a href='index.html'>Вернуться на главную</a>
 		<h1>Марк Лутц Изучаем Python
 		</h1>
-		<a href="https://learnxinyminutes.com/docs/ru-ru/python-ru/">.</a>
 		<h2>Типы данных</h2>
 
 		<table>
 			<tr>
-				<th>Тип объекта</th>
-				<th>Изменяемый?</th>
-				<th>True</th>
-				<th>False</th>
+				<th>Неизменяемый</th>
+				<th>Изменяемый</th>
 			</tr>
 			<tr>
 				<td>Числа</td>
-				<td>Нет</td>
-				<td>True</td>
-				<td>0 = False</td>
+				<td>Списки</td>
 			</tr>
 			<tr>
 				<td>Кортежи</td>
-				<td>Нет</td>
-			</tr>
-			<tr>
-				<td>frozenset</td>
-				<td>Нет</td>
+				<td>Словари</td>
 			</tr>
 			<tr>
 				<td>Строки</td>
-				<td>Нет</td>
-				<td>True</td>
-				<td>'' = False</td>
-			</tr>
-			<tr>
-				<td>Списки</td>
-				<td>Да</td>
-				<td>True</td>
-				<td>[] = False</td>
-			</tr>
-			<tr>
-				<td>Словари</td>
-				<td>Да</td>
-				<td>True</td>
-				<td>{} = False</td>
-			</tr>
-			<tr>
 				<td>Файлы</td>
-				<td>Да</td>
 			</tr>
 			<tr>
+				<td>frozenset</td>
 				<td>Множества</td>
-				<td>Да</td>
 			</tr>
 			<tr>
+				<td></td>
 				<td>bytearray</td>
-				<td>Да</td>
 			</tr>
 		</table>
 
@@ -97,112 +70,21 @@
 				<td>bool(X), True, False</td>
 				<td>Булевский тип и константы</td>
 			</tr>
-		</table>
-
-		<h2>Операторы</h2>
-		<table>
-			<tr>
-				<td>х if у else z </td>
-				<td>А = ' t ' if 'spam' else 'f'<br>
-					' t '<br>
-					А = 't' if '' else 'f'<br>
-					'f'
-				</td>
-			</tr>
-			<tr>
-				<td>х or у</td>
-				<td>Дает истину, если истинным является либо X, либо y</td>
-			</tr>
-			<tr>
-				<td>х and у</td>
-				<td>Дает истину, если истинными являются и X, и y</td>
-			</tr>
-			<tr>
-				<td>not x
-				</td>
-				<td>Дает истину, если X ложно</td>
-			</tr>
-			<tr>
-				<td>х in у</td>
-				<td>Проверить элемент на наличие в списке</td>
-			</tr>
-			<tr>
-				<td>x not in у </td>
-				<td>Проверить элемент на отсутствие в списке</td>
-			</tr>
-			<tr>
-				<td>x is у</td>
-				<td>одно и то же?</td>
-			</tr>
-			<tr>
-				<td>x is not у</td>
-				<td>разное?</td>
-			</tr>
-			<tr>
-				<td>x &#60; у</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>x &#60;= у</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>x >= у</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>х == у</td>
-				<td>равны друг другу?</td>
-			</tr>
-			<tr>
-				<td>х != у </td>
-				<td>не равны друг другу?</td>
-			</tr>
 			<tr>
 				<td>x / у</td>
-				<td>(5 / 2) , (5 / 2.0) , (5 / -2.0) , (5 / -2) (2.5, 2.5, -2.5, -2.5)</td>
+				<td>5 / 2 = 2.5</td>
 			</tr>
 			<tr>
 				<td>x // у</td>
-				<td>(5 // 2) , (5 // 2.0), (5 // -2.0) , (5 // -2) (2, 2.0, -3.0, -3)</td>
+				<td>5 // 2 = 2<br> 5 // 2.0 = 2.0<br> 5 // -2.0 = -3.0<br> 5 // -2 = -3</td>
 			</tr>
 			<tr>
 				<td>x ** у</td>
-				<td>2**2<br> 4</td>
-			</tr>
-			<tr>
-				<td>х[1]</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>x[1: j : к]
-				</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>spam, ham = 'yum', 'YUM'</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>[spam, ham] = ['yum', 'YUM']</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>a, b, c, d = 'spam'</td>
-				<td>a - это s<br>б - это p<br>c - это a<br>d - это m<br></td>
-			</tr>
-			<tr>
-				<td>a, *b = 'spam'</td>
-				<td>а - это 's’<br> 
-				b - это [ 'р', ’ а ’, 'т' ]</td>
-			</tr>
-			<tr>
-				<td>spam = ham = ' lunch '</td>
-				<td></td>
+				<td>2**2 = 4</td>
 			</tr>
 			<tr>
 				<td>spams +=42</td>
-				<td>spams = spams + 42)
+				<td>spams = spams + 42
 				</td>
 			<tr>
 				<td>40 + 3.14</td>
@@ -230,10 +112,6 @@
 				<td>'0.33'</td>
 			</tr>
 			<tr>
-				<td>10 // 4</td>
-				<td>2</td>
-			</tr>
-			<tr>
 				<td>math, floor (2.5)</td>
 				<td>2</td>
 			</tr>
@@ -243,19 +121,35 @@
 			</tr>
 			<tr>
 				<td>import math</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>math.pi, math.e</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>math.sin(2 * math.pi / 180)</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>math.sqrt(144)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>pow(2, 4)</td>
-				<td>abs(-42.0)</td>
+				<td></td>
 			</tr>
 			<tr>
-				<td>min(3, 1, 2, 4), </td>
+				<td>abs(-42.0)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>min(3, 1, 2, 4)</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>max(3, 1, 2, 4)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>round(2.567)</td>
@@ -269,89 +163,98 @@
 				<td>decimal.Decimal(7)</td>
 				<td></td>
 			</tr>
+		</table>
+
+		<h2>Операторы</h2>
+		<table>
 			<tr>
-				<td>from fractions import Fraction</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>set([1, 2, 3, 4])</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>set('spam')</td>
-				<td>{'s', 'а', 'р', 'm'}</td>
-			</tr>
-			<tr>
-				<td>{х ** 2 for х in [1, 2, 3, 4]}</td>
-				<td>{16, 1, 4, 9}</td>
-			</tr>
-			<tr>
-				<td>{х for х in ' spain'}</td>
-				<td>{'m', 's', 'p', 'a'}</td>
-			</tr>
-			<tr>
-				<td>print('The Killer')</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>if/elif/else</td>
-				<td>if 'python' in text:<br>
-					print(text)</td>
-			</tr>
-			<tr>
-				<td>for</td>
-				<td>for x in mylist:<br>
-					print(x)</td>
-			</tr>
-			<tr>
-				<td>while</td>
-				<td>while x > y:<br>
-					print('hello1)</td>
-			</tr>
-			<tr>
-				<td>pass</td>
-				<td>while True:<br>
-					pass</td>
-			</tr>
-			<tr>
-				<td>break </td>
-				<td>while True:<br>
-					if exittest(): break</td>
-			</tr>
-			<tr>
-				<td>continue </td>
-				<td>while True:<br>
-					if skiptest () : continue</td>
-			</tr>
-			<tr>
-				<td>def </td>
-				<td>def f (a, b, c=l, *d) :<br>
-					print(a+b+c+d[0])</td>
-			</tr>
-			<tr>
-				<td>return </td>
-				<td>def f (a, b, c=l, *d) :<br>
-					return a+b+c+d[0]</td>
-			</tr>
-			<tr>
-				<td>yield
+				<td>х if у else z </td>
+				<td>А = ' t ' if 'spam' else 'f'<br>
+					' t '<br>
+					А = 't' if '' else 'f'<br>
+					'f'
 				</td>
-				<td>def gen (n) :<br>
-					for i in n: yield i*2</td>
 			</tr>
 			<tr>
-				<td>global </td>
-				<td>х - 'old'<br>
-					def function():<br>
-					global xf у; x = 'new'</td>
+				<td>х or у</td>
+				<td>Дает истину, если истинным является либо X, либо y</td>
 			</tr>
 			<tr>
-				<td>nonlocal
+				<td>х and у</td>
+				<td>Дает истину, если истинными являются и X, и y</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>not x
 				</td>
-				<td>def outer():<br>
-					x = 'old'<br>
-					def function():<br>
-					nonlocal x; x = 'new'</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>х in у</td>
+				<td>Проверить элемент на наличие в списке</td>
+			</tr>
+			<tr>
+				<td>x not in у </td>
+				<td>Проверить элемент на отсутствие в списке</td>
+			</tr>
+			<tr>
+				<td>x is у</td>
+				<td>одно и то же?</td>
+			</tr>
+			<tr>
+				<td>x is not у</td>
+				<td>разное?</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>x &#60; у</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>x &#60;= у</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>x >= у</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>х == у</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>х != у </td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>spam, ham = 'yum', 'YUM'</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>spam = ham = ' lunch '</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>print('text')</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>print (а, b, с, sep=' ')</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>import</td>
@@ -398,34 +301,52 @@
 					del data[i:j]<br>
 					del obj.attr<br>
 					del variable<br></td>
-			<tr>
-				<td>spam (eggs, ham)</td>
-				<td>Вызовы функций</td>
-			</tr>
-			<tr>
-				<td>spam, ham (eggs)</td>
-				<td>Вызовы методов</td>
-			</tr>
-			<tr>
-				<td>print (а, b, с, sep=' ')</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>print (х, у, file=afile)</td>
-				<td>Отправляет текст методу afile.write,
-а не sys.stdout.write</td>
-			</tr>
-			<tr>
-				<td>yield х ** 2</td>
-				<td>возвращает аргументы send (...) в генераторах</td>
 			</tr>
 		</table>
 
+		<h2>Циклы</h2>
+		<table>
+			<tr>
+				<td>if/elif/else</td>
+				<td>if 'python' in text:<br>
+					print(text)</td>
+			</tr>
+			<tr>
+				<td>for</td>
+				<td>for x in mylist:<br>
+					print(x)</td>
+			</tr>
+			<tr>
+				<td>while</td>
+				<td>while x > y:<br>
+					print('hello1)</td>
+			</tr>
+			<tr>
+				<td>pass</td>
+				<td>while True:<br>
+					pass</td>
+			</tr>
+			<tr>
+				<td>break </td>
+				<td>while True:<br>
+					if exittest(): break</td>
+			</tr>
+			<tr>
+				<td>continue </td>
+				<td>while True:<br>
+					if skiptest () : continue</td>
+			</tr>
+
+		</table>
 		<h2>Строки</h2>
 		<table>
 			<tr>
 				<td>S = 'spam's'</td>
 				<td></td>
+			</tr>
+			<tr>
+				<td>a, b, c, d = 'spam'</td>
+				<td>a - это s<br>б - это p<br>c - это a<br>d - это m<br></td>
 			</tr>
 			<tr>
 				<td>S = 's\np\ta\x00m' </td>
@@ -702,6 +623,15 @@
 				<td></td>
 			</tr>
 			<tr>
+				<td>a, *b = 'spam'</td>
+				<td>а - это 's’<br>
+					b - это [ 'р', ’ а ’, 'т' ]</td>
+			</tr>
+			<tr>
+				<td>[spam, ham] = ['yum', 'YUM']</td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>L = ['Bob', 40.0, ['dev', 'mgr']] </td>
 				<td></td>
 			</tr>
@@ -825,6 +755,22 @@
 			<tr>
 				<td>D = {}</td>
 				<td></td>
+			</tr>
+			<tr>
+				<td>set([1, 2, 3, 4])</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>{х ** 2 for х in [1, 2, 3, 4]}</td>
+				<td>{16, 1, 4, 9}</td>
+			</tr>
+			<tr>
+				<td>{х for х in ' spain'}</td>
+				<td>{'m', 's', 'p', 'a'}</td>
+			</tr>
+			<tr>
+				<td>set('spam')</td>
+				<td>{'s', 'а', 'р', 'm'}</td>
 			</tr>
 			<tr>
 				<td>D= {'name': 'Bob', 'age': 40}</td>
@@ -1086,6 +1032,11 @@
 				<td>open('f.bin * , 'rb')</td>
 				<td>Байтовые файлы в Python 2.Х (строки str)</td>
 			</tr>
+			<tr>
+				<td>print (х, у, file=afile)</td>
+				<td>Отправляет текст методу afile.write,
+					а не sys.stdout.write</td>
+			</tr>
 		</table>
 
 		<h2>Документация</h2>
@@ -1161,6 +1112,15 @@ break except in raise
 			<tr>
 				<td>lambda</td>
 				<td>funcs = [lambda x: x**2, lambda x: x**3]</td>
+			</tr>
+			<tr>
+				<td>spam (eggs, ham)</td>
+				<td>Вызовы функций</td>
+			</tr>
+			<tr>
+				<td>spam, ham (eggs)</td>
+				<td>Вызовы методов</td>
+			</tr>
 		</table>
 
 
