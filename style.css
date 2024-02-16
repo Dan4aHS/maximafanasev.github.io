@@ -1,11 +1,11 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: #1f2022;
 	color: #fff;
-	font-family: roboto, sans-serif;
+	font-family: monospace, sans-serif;
 	font-size: 22px;
 	padding: 0 32px;
 	padding-bottom: 24px;
@@ -17,6 +17,19 @@ body {
 	letter-spacing: 1.5px;
 }
 
+.blue {
+	padding: 16px 24px;
+	border-radius: 16px;
+	background-color: rgb(233, 250, 255);
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+	border: 2px solid rgb(140, 227, 254);
+	color: #201e1e;
+	font-weight: 600;
+	width: fit-content;
+	margin-right: 32px;
+	margin-bottom: 32px;
+}
+
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -25,13 +38,16 @@ body {
 .done {
 	background: green;
 }
+
 .rocket {
 	position: sticky;
 	bottom: 0;
 }
+
 .rocket img {
 	width: 60px;
 }
+
 h1,
 h2 {
 	font-size: 35px;
@@ -61,6 +77,7 @@ ul {
 
 ul li,
 ol li {
+	font-size: 22px;
 	margin-bottom: 16px;
 }
 
