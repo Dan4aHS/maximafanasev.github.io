@@ -109,10 +109,10 @@
 						<li>len(S)</li>
 						<li>&nbsp;</li>
 						<li>'banana'.count('a') 3</li>
-						<li>'Hello, welcome to my world.'.find('welcome') 7</li>
+						<li>'Hello, welcome'.find('welcome') 7</li>
 						<li>"Mi casa, su casa.".index("casa") 4</li>
-						<li>sorted('sldfjskdfjls')
-							['d', 'd', 'f', 'f', 'j', 'j', 'k', 'l', 'l', 's', 's', 's']</li>
+						<li>sorted('cba')
+							['a', 'b', 'c']</li>
 						<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е') 'Ееж'</li>
 						<li>&nbsp;</li>
 						<li>'h'.capitalize() H</li>
@@ -151,33 +151,41 @@
 					<ul>
 						<li>L = [123, 'abc', 1.23, {}]</li>
 						<li>a, *b = 'spam' -> 's’ [ 'р', ’ а ’, 'т' ]</li>
-						<li>[spam, ham] = ['yum', 'YUM']</li>
+						<li>[a, b] = ['1', '2']</li>
 						<li>L = list('spam')</li>
 						<li>L = list(range(-4, 4))</li>
+						<li>&nbsp;</li>
 						<li>х in у</li>
 						<li>x not in у</li>
+						<li>&nbsp;</li>
 						<li>L[i]</li>
 						<li>L[i][j]</li>
 						<li>L[i:j]</li>
+						<li>&nbsp;</li>
 						<li>len(L)</li>
+						<li>&nbsp;</li>
 						<li>LI + L2</li>
 						<li>L * 3</li>
+						<li>&nbsp;</li>
 						<li>for х in L: print (х)</li>
-						<li>L.append(4)</li>
-						<li>L.extend([5,6,7] )</li>
-						<li>L.insert(i, x)</li>
-						<li>L.index(x)</li>
-						<li>L.count(x)</li>
-						<li>L.sorted()</li>
-						<li>L.reverse()</li>
-						<li>L.copy()</li>
-						<li>L.clear()</li>
-						<li>L.pop(i)</li>
-						<li>L.remove(x)</li>
+						<li>&nbsp;</li>
+						<li>[1, 2].append(3) [1,2,3]</li>
+						<li>[1, 2].extend([3, 4]) [1,2,3,4]</li>
+						<li>[1, 2].insert(1,a) [1,a,2]</li>
+						<li>[1, 2].index(2) 1</li>
+						<li>[1, 2].count(2) 1</li>
+						<li>sorted([b,c,a]) [a,b,c]</li>
+						<li>reverse([a,b,c]) [c,b,a]</li>
+						<li>x = copy([a,b,c]) [a,b,c]</li>
+						<li>[1,2].clear() []</li>
+						<li>[a,b].pop(1) a</li>
+						<li>[a,b].remove(b) [a]</li>
+						<li>&nbsp;</li>
 						<li>del L[i]</li>
 						<li>del L[i:j]</li>
 						<li>L[i:j] = []</li>
-						<li>L = [x**2 for x in range (5) ]</li>
+						<li>&nbsp;</li>
+						<li>x = 4 [x**2 for x in range(2)] [4, 4]</li>
 						<li></li>
 					</ul>
 				</div>
