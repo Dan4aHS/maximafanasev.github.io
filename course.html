@@ -20,39 +20,15 @@
 				<pre>
 print("Hello, world!")
 print("23 + 16")
-print(42)
 print(1, "я — строка", '8А')
-print("print(42)")
-print(10, 'новых строк')
 </pre>
 				<pre class="blur2">
 Hello, world!
 23 + 16
-42
 1 я — строка 8А
-print(42)
-10 новых строк
 </pre>
 			</div>
 		</div>
-
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-print("Строка')
-print(Число)
-print(''С праздником!'')
-print('Возможно 'правильно'')
-</pre>
-				<pre class="blur2">
-print("Строка")
-print("Число")
-print('С праздником!')
-print('Возможно правильно')
-</pre>
-			</div>
-		</div>
-
 
 		<div class="border">
 			<div class="flex-pre">
@@ -94,11 +70,8 @@ S!S!S!
 		</div>
 
 		<div class="border">
-			<h4>Сложение и умножение строк</h4>
 			<div class="flex-pre">
 				<pre>
-Подставь нужные математич. операции. 
-Чтобы получилось выражение 
 У-у-у-у-у! У-у-у-у-у!
 scream = 'У' + ('-' ??? 'у') ??? 4 + '!'
 print(scream, scream)
@@ -111,7 +84,6 @@ print(scream, scream)
 		</div>
 
 		<div class="border">
-			<h4>Длина строки</h4>
 			<div class="flex-pre">
 				<pre>
 name = "Макс"
@@ -127,26 +99,11 @@ print(length)
 		<div class="border">
 			<div class="flex-pre">
 				<pre>
-word = 'слова'
-text = (word + ' ') * 3
-print(text)
-print(len(word))
-</pre>
-				<pre class="blur2">
-слова слова слова 
-5
-</pre>
-			</div>
-		</div>
-
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-Max
 name = input()
 print('Привет,', name)
 </pre>
 				<pre class="blur2">
+Max
 Привет, Max
 </pre>
 			</div>
@@ -158,20 +115,19 @@ print('Привет,', name)
 print(input() + '!')
 </pre>
 				<pre class="blur2">
+Привет
 Привет!
 </pre>
 			</div>
 		</div>
 
 		<div class="border">
-			<h4>Выведите число: сколько
-				символов во фразе, повторённой трижды</h4>
 			<div class="flex-pre">
 				<pre>
-Ввод	
-ТРУД
-Вывод 
-12</pre>
+Выведите число: сколько
+символов во фразе, повторённой трижды
+ТРУД 12
+</pre>
 				<pre class="blur2">
 print(len(input())*3)
 </pre>
@@ -179,24 +135,6 @@ print(len(input())*3)
 		</div>
 
 		<div class="border">
-			<div class="flex-pre">
-				<pre>
-print(1 + 2)
-print(10 + 3 - 2 * 5)
-print(5 * (4 - 2))
-print(2 ** 5)
-</pre>
-				<pre class="blur2">
-3
-3
-10
-32
-</pre>
-			</div>
-		</div>
-
-		<div class="border">
-			<h4>Остаток и неполное частное</h4>
 			<div class="flex-pre">
 				<pre>
 print(25 // 6)
@@ -209,21 +147,6 @@ print(25 % 6)
 			</div>
 		</div>
 		<img src="img/books/00/1.webp" alt="">
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-print(15 // 2 * 4)
-print(15 * 4 // 2)
-</pre>
-				<pre class="blur2">
-28
-30
-</pre>
-			</div>
-		</div>
-
-		<img src="img/books/00/2.png" alt=""><br>
-		<img class="blur2" src="img/books/00/3.png" alt="">
 
 		<div class="border">
 			<div class="flex-pre">
@@ -233,32 +156,6 @@ print(number // 2)
 </pre>
 				<pre class="blur2">
 Ошибка
-</pre>
-			</div>
-		</div>
-
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-string = "135"
-number = int(string)
-print(number // 2)
-</pre>
-				<pre class="blur2">
-67
-</pre>
-			</div>
-		</div>
-
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-number = 15
-three_numbers = str(number) * 3
-print(three_numbers)
-</pre>
-				<pre class="blur2">
-151515
 </pre>
 			</div>
 		</div>
@@ -277,46 +174,18 @@ print(int(n)**int(n))
 			</div>
 		</div>
 		<div class="border">
-			<h4>Известно, что ax - b = 0. Даны числа a и b. Выведите x.</h4>
-			<div class="flex-pre">
-				<table>
-					<tr>
-						<th>Ввод</th>
-						<th>Вывод</th>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>4</td>
-					</tr>
-					<tr>
-						<td>24</td>
-					</tr>
-				</table>
-				<pre class="blur2">
-a = int(input())
-b = int(input())
+<pre>
+Коля разводит насекомых. Сейчас 
+у него живут N тараканов 
+(у них по 6 ног) и M сороконожек.
+Посчитайте, сколько у них суммарно 
+ног и голов, и выведите по шаблону 
+"Ног (число ног), голов (число голов)."
 
-print(int(b/a))
+5	
+4
+Ног 190, голов 9.
 </pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Коля разводит насекомых. Сейчас у него живут N тараканов (у них по 6 ног) и M сороконожек.
-				Посчитайте, сколько у них суммарно ног и голов, и выведите по шаблону "Ног (число ног), голов (число голов)."</h4>
-			<div class="flex-pre">
-				<table>
-					<tr>
-						<th>Ввод</th>
-						<th>Вывод</th>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>Ног 190, голов 9.</td>
-					</tr>
-					<tr>
-						<td>4</td>
-					</tr>
-				</table>
 				<pre class="blur2">
 a = int(input())
 b = int(input())
@@ -331,154 +200,19 @@ print('Ног '+ str(a*6 + b*40) + ', голов ' + str(a+b) + '.')
 		<img src="img/books/00/5.png" alt="">
 		<img src="img/books/00/6.png" alt="">
 
-
 		<div class="border">
-			<h4>a = 3, b = 14, c = 1592. Условия верные?</h4>
 			<div class="flex-pre">
-				<pre>
-a== b
-a + b > c
-int(str(a)*2) != c
-c &#60;= c
+<pre>
+Напишите программу-фильтр, 
+которая принимает число 
+и выводит «Оценка: (число)», 
+только если оно меньше или 
+равно 5, а иначе выводит 
+предупреждение: «Слишком 
+большое число»
+4 Оценка: 4
+7 Слишком большое число
 </pre>
-				<pre class="blur2">
-False
-False
-True
-True
-</pre>
-
-
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести число 4</h4>
-			<div class="flex-pre">
-				<pre>
-x = int(input())
-if x % 2 == 0:
-    print('x — чётное число!')
-else:
-    print('x — нечётное число!')
-</pre>
-				<pre class="blur2">
-x — чётное число!
-</pre>
-
-
-
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести число 7</h4>
-			<div class="flex-pre">
-				<pre>
-chocolates = int(input())
-if chocolates // 3 >= 4:
-    print('Если съедать по 3 шоколадки в день, хватит на 4 дня.')
-print('Я вовсе не объемся!') 
-</pre>
-				<pre class="blur2">
-Я вовсе не объемся!
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести Français</h4>
-			<div class="flex-pre">
-				<pre>
-language = input()
-if language == 'Русский':
-    print('Привет!')
-elif language == 'English':
-    print('Hi!')
-elif language == 'Français':
-    print('Salut!')
-elif language == 'Deutsch':
-    print('Hallo!')
-else:
-    print('Не знаю такого языка.') 
-</pre>
-				<pre class="blur2">
-Salut!
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести пёс 5</h4>
-			<div class="flex-pre">
-				<pre>
-animal_type = input()
-animal_age = int(input())
-
-if animal_type == 'кот':
-    if animal_age > 2:
-        print('Взрослый кот')
-    else:
-        print('Маленький котёнок')
-elif animal_type == 'пёс':
-    if animal_age > 2:
-        print('Взрослая собака')
-    else:
-        print('Маленький щенок')
-else:
-    print('Не знаю такого животного')
-</pre>
-				<pre class="blur2">
-Взрослая собака
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Даны четыре числа: x, y, A и B. Выведите А, если x больше y, или В, если y больше x.</h4>
-			<div class="flex-pre">
-				<table>
-					<tr>
-						<th>Ввод</th>
-						<th>Вывод</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>4</td>
-					</tr>
-					<tr>
-						<td>2</td>
-					</tr>
-					<tr>
-						<td>3</td>
-					</tr>
-					<tr>
-						<td>4</td>
-					</tr>
-				</table>
-				<pre class="blur2">
-x = int(input())
-y = int(input())
-A = int(input())
-B = int(input())
-if x > y:
-    print(A)
-else: print(B)
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Напишите программу-фильтр, которая принимает число и выводит «Оценка: (число)», только если оно меньше или равно 5, а иначе выводит предупреждение: «Слишком большое число»</h4>
-			<div class="flex-pre">
-				<table>
-					<tr>
-						<th>Ввод</th>
-						<th>Вывод</th>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>Оценка: 4</td>
-					</tr>
-					<tr>
-						<td>7</td>
-						<td>Слишком большое число</td>
-					</tr>
-				</table>
 				<pre class="blur2">
 x = int(input())
 if x&#60;=5: print('Оценка: ' + str(x))
@@ -486,134 +220,27 @@ else: print('Слишком большое число')
 </pre>
 			</div>
 		</div>
-		<div class="border">
-			<h4>Даны два числа. Если первое делится на второе, выведите две строки:
-				Делится
-				Частное: (значение)
-				а если не делится, то:
-				Не делится
-				Частное: (значение), остаток: (значение)
-			</h4>
-			<div class="flex-pre">
-				<table>
-					<tr>
-						<th>Ввод</th>
-						<th>Вывод</th>
-					</tr>
-					<tr>
-						<td>15</td>
-						<td>Не делится</td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>Частное: 2, остаток: 3</td>
-					</tr>
-				</table>
-				<pre class="blur2">
-x = int(input())
-y = int(input())
-if x%y==0:
-    print('Делится')
-    print('Частное: ' + str(x//y))
-else:
-    print('Не делится')
-    print('Частное: ' + str(x//y) + ', остаток: ' + str(x%y))
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести Софья Иванова 4</h4>
-			<div class="flex-pre">
-				<pre>
-first_name = input()
-last_name = input()
-grade = int(input())
 
-if first_name == 'Софья':
-    if last_name == 'Иванова':
-        print('Это Сонина работа')
-        if grade == 5:
-            print('Соня довольна оценкой')
-        if grade == 4:
-            print('Соня довольна оценкой')
-</pre>
-				<pre class="blur2">
-Это Сонина работа
-Соня довольна оценкой
-</pre>
-			</div>
-		</div>
-
-		<h3>Составные условия</h3>
+		<h2>Составные условия</h2>
 
 		<img src="img/books/00/7.png" alt="">
 		<img src="img/books/00/8.png" alt="">
 
 		<div class="border">
-			<h4>Что выведет, если ввести Софья Иванова 4</h4>
 			<div class="flex-pre">
-				<pre>
-first_name = input()
-last_name = input()
-grade = int(input())
-
-if first_name == 'Софья' and last_name == 'Иванова':
-    print('Это Сонина работа')
-    if grade == 5 or grade == 4:
-        print('Соня довольна оценкой')
-</pre>
-				<pre class="blur2">
-Это Сонина работа
-Соня довольна оценкой
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Напишите программу. Если число делится одновременно на 2, 3 и 5, мы называем его интересным. Выведи число х, если оно неинтересное</h4>
-			<div class="flex-pre">
+			<pre>
+Напишите программу. Если число 
+делится одновременно на 2, 
+3 и 5, мы называем его 
+интересным. Выведи число х, 
+если оно неинтересное</pre>
 				<pre class="blur2">
 if not (x % 2 == 0 and x % 3 == 0 and x % 5 == 0):
     print(x)
 </pre>
 			</div>
 		</div>
-		<img src="img/books/00/9.png" alt="">
-		<img class="blur2" src="img/books/00/10.png" alt="">
 
-		<div class="border">
-			<div class="flex-pre">
-				<pre>
-a = 7
-b = 6
-a_is_even = a % 2 == 0
-b_is_even = b % 2 == 0
-both_even = a_is_even and b_is_even
-print(a_is_even, b_is_even, both_even)
-</pre>
-				<pre class="blur2">
-False True False
-True
-</pre>
-			</div>
-		</div>
-		<div class="border">
-			<h4>Что выведет, если ввести 30</h4>
-			<div class="flex-pre">
-				<pre>
-a = int(input())
-a_divisible_235 = a % 2 == 0 and a % 3 == 0 and a % 5 == 0
-if a_divisible_235:
-    print('Ваше число делится на 2, 3 и 5!')
-</pre>
-				<pre class="blur2">
-Ваше число делится на 2, 3 и 5!
-</pre>
-			</div>
-		</div>
-
-
-		<img src="img/books/00/11.png" alt=""><br>
-		<img class="blur2" src="img/books/00/12.png" alt=""><br>
 		<img src="img/books/00/13.png" alt="">
 		<pre class="blur2">
 2
