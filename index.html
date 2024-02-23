@@ -10,476 +10,494 @@
 </head>
 
 <body class="wrapper">
-	<h1>Python
-	</h1>
-	<div class='wrapper'>
-		<div class="flex">
-			<div class="blue">
-				<h4>Условия</h4>
-				<ul>
-					<li>х if у else z </li>
-					<li>х or у</li>
-					<li>х and у</li>
-					<li>not x</li>
-					<li>x is у</li>
-					<li>x is not у</li>
-					<li>x &#60; у</li>
-					<li>x &#60;= у</li>
-					<li>x >= у</li>
-					<li>х == у</li>
-					<li>х != у</li>
-					<li></li>
-				</ul>
-			</div>
+	<h1>python</h1>
+		<ul class="card">
+			<li>х if у else z</li>
+			<li>х or у</li>
+			<li>х and у</li>
+			<li>not x</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Вывод данных</h4>
-				<ul>
-					<li>input() ввод данных строковый</li>
-					<li>len(input()) длина</li>
-					<li>int(input()) в число</li>
-					<li>print('text')</li>
-					<li>print(peremennaya)</li>
-					<li>print(а, b, с, sep=' ')</li>
-					<li>print(*sorted(a), sep="\n")</li>
-				</ul>
-			</div>
+				<ul class="card">
+			<li>x is у</li>
+			<li>x is not у</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Типы данных</h4>
-				<ul>
-					<li>Неизменяемый:</li>
-					<li>Числа</li>
-					<li>Кортежи</li>
-					<li>Строки</li>
-					<li>Изменяемый:</li>
-					<li>Списки</li>
-					<li>Словари</li>
-					<li>Файлы</li>
-					<li>Множества</li>
-				</ul>
-			</div>
+		<ul class="card">
+			<li>x &#60; у</li>
+			<li>x &#60;= у</li>
+			<li>x >= у</li>
+			<li>х == у</li>
+			<li>х != у</li>
+			<li></li>
+		</ul>
+		
+		<ul class="card">
+			<li>input()</li>
+			<li>int(input())</li>
+		</ul>
+	
+		<ul class="card">
+			<li>print('text')</li>
+			<li>print(а, b, с, sep=' ')</li>
+			<li>print(*sorted(a), sep="\n")</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Числа</h4>
-				<ul>
-					<li>x // у</li>
-					<li>x % у</li>
-					<li>x ** у</li>
-					<li>pow(2, 2)</li>
-					<li>int(3.1415) = 3</li>
-					<li>float(3) = 3.0</li>
-					<li>&nbsp;</li>
-					<li>math.floor(2.5) = 2</li>
-					<li>math.ceil(5.15) = 6</li>
-					<li>math.trunc(2.5) = 2</li>
-					<li>&nbsp;</li>
-					<li>min(3, 1, 2, 4) = 1</li>
-					<li>max(3, 1, 2, 4) 4</li>
-					<li>&nbsp;</li>
-					<li>math.pi</li>
-					<li>math.e</li>
-					<li>math.sin(2 * math.pi / 180)</li>
-					<li>math.sqrt(144) = 12</li>
-					<li>abs(-42.0) = 42</li>
-					<li>round(2.567) = 3</li>
-					<li>random.random()</li>
-					<li>&nbsp;</li>
-					<li>'{0:4.2f}'.format(num) = '0.33'</li>
-					<li>&nbsp;</li>
-					<li>1.23, 1., 3.14e-10, 4E210, 4.0e+210</li>
-					<li>0о177, 0x9ff, 0b01010</li>
-					<li>34-4 j, 3.0+4.0 j, 3J</li>
-					<li>Decimal ('1.0'), Fraction (1, 3)</li>
-				</ul>
-			</div>
+	<h2 id="func">Числа</h2>
+		<ul class="card">
+			<li>x // у</li>
+			<li>x % у</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Строки</h4>
-				<ul>
-					<li>a, b, c, d = 'spam'</li>
-					<li>'''много строк'''</li>
-					<li>text = f'{name}'</li>
-					<li>SI + S2</li>
-					<li>S*3</li>
-					<li>S[i]</li>
-					<li>S[i:j:k]</li>
-					<li>len(S)</li>
-					<li>&nbsp;</li>
-					<li>'banana'.count('a') 3</li>
-					<li>'Hello, welcome'.find('welcome') 7</li>
-					<li>"Mi casa, su casa.".index("casa") 4</li>
-					<li>sorted('cba')
-						['a', 'b', 'c']</li>
-					<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е') 'Ееж'</li>
-					<li>&nbsp;</li>
-					<li>'h'.capitalize() H</li>
-					<li>"Hello My Name Is PETER".swapcase()
-						hELLO mY nAME iS peter</li>
-					<li>"Welcome to my world".title()
-						Welcome To My World</li>
-					<li>"Hello my friends".upper()
-						HELLO MY FRIENDS</li>
-					<li>"Hello my FRIENDS".lower()
-						hello my friends</li>
-					<li>'Hello, And Welcome'.casefold() hello, and welcome</li>
-					<li>&nbsp;</li>
-					<li>"banana".center(20, "O")
-						OOOOOOObananaOOOOOOO</li>
-					<li>S.encode(å) \xc3\x</li>
-					<li>"H\te\tl\tl\to".expandtabs() H e l l o</li>
-					<li>"For only {price:.2f} dollars!".format(price = 49)
-						For only 49.00 dollars!</li>
-					<li>"#".join(["John", "Peter", "Vicky"]) John#Peter#Vicky</li>
-					<li>"welcome to the jungle".split() ['welcome', 'to', 'the', 'jungle']</li>
-					<li>'spacious '.rstrip()
-						' spacious'</li>
-					<li>&nbsp;</li>
-					<li>"Hello, welcome to my world.".startswith("Hello")
-						True</li>
-					<li>'world.'.endswith('.')</li>
-					<li>&nbsp;</li>
-					<li>"50".zfill(10)
-						0000000050</li>
-				</ul>
-			</div>
+		<ul class="card">
+			<li>x ** у</li>
+			<li>pow(2, 2)</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Списки</h4>
-				<ul>
-					<li>L = [123, 'abc', 1.23, {}]</li>
-					<li>a, *b = 'spam' -> 's’ [ 'р', ’ а ’, 'т' ]</li>
-					<li>[a, b] = ['1', '2']</li>
-					<li>L = list('spam')</li>
-					<li>L = list(range(-4, 4))</li>
-					<li>&nbsp;</li>
-					<li>х in у</li>
-					<li>x not in у</li>
-					<li>&nbsp;</li>
-					<li>L[i]</li>
-					<li>L[i][j]</li>
-					<li>L[i:j]</li>
-					<li>&nbsp;</li>
-					<li>len(L)</li>
-					<li>&nbsp;</li>
-					<li>LI + L2</li>
-					<li>L * 3</li>
-					<li>&nbsp;</li>
-					<li>for х in L: print (х)</li>
-					<li>&nbsp;</li>
-					<li>[1, 2].append(3) [1,2,3]</li>
-					<li>[1, 2].extend([3, 4]) [1,2,3,4]</li>
-					<li>[1, 2].insert(1,a) [1,a,2]</li>
-					<li>[1, 2].index(2) 1</li>
-					<li>[1, 2].count(2) 1</li>
-					<li>sorted([b,c,a]) [a,b,c]</li>
-					<li>reverse([a,b,c]) [c,b,a]</li>
-					<li>x = copy([a,b,c]) [a,b,c]</li>
-					<li>[1,2].clear() []</li>
-					<li>[a,b].pop(1) a</li>
-					<li>[a,b].remove(b) [a]</li>
-					<li>&nbsp;</li>
-					<li>del L[i]</li>
-					<li>del L[i:j]</li>
-					<li>L[i:j] = []</li>
-					<li>&nbsp;</li>
-					<li>x = 4 [x**2 for x in range(2)] [4, 4]</li>
-					<li></li>
-				</ul>
-			</div>
+		<ul class="card">
+			<li>int(3.1415) = 3</li>
+			<li>float(3) = 3.0</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Словари</h4>
-				<ul>
-					<li>D = {}</li>
-					<li>set([1, 2, 3, 4])</li>
-					<li>{х ** 2 for х in [1, 2, 3, 4]} {16, 1, 4, 9}</li>
-					<li>{х for х in ' spain'}</li>
-					<li>set('spam') {'s', 'а', 'р', 'm'}</li>
-					<li>D= {'name': 'Bob', 'age': 40}</li>
-					<li>D['name']</li>
-					<li>Е['cto']['age']</li>
-					<li>' age ' in D</li>
-					<li>D.keys ()</li>
-					<li>D.values()</li>
-					<li>D.items()</li>
-					<li>D.copy()</li>
-					<li>D.clear()</li>
-					<li>D.update(D2)</li>
-					<li>D.get(key, default?)</li>
-					<li>D.pop(key, default?)</li>
-					<li>D.setdefault(key, default?)</li>
-					<li>D.popitem()</li>
-					<li>len(D)</li>
-					<li>D[key] = 42</li>
-					<li>del D[key]</li>
-					<li>list(D.keys())</li>
-					<li>D = {x: x*2 for x in range (10) }</li>
-					<li></li>
-				</ul>
-			</div>
+		<ul class="card">
+			<li>math.floor(2.5) = 2</li>
+			<li>math.ceil(5.15) = 6</li>
+			<li>math.trunc(2.5) = 2</li>
+		</ul>
 
-			<div class="blue">
-				<h4>Циклы</h4>
-				<ul>
-					<li>if/elif/else</li>
-					<li>for x in mylist:</li>
-					<li>while x > y:</li>
-					<li>pass</li>
-					<li>break</li>
-					<li>continue</li>
-				</ul>
-			</div>
-		</div>
+		<ul class="card">
+			<li>min(3, 1, 2, 4) = 1</li>
+			<li>max(3, 1, 2, 4) 4</li>
+		</ul>
 
-		<h2 id="files">Файлы</h2>
-		<table>
-			<tr>
-				<td>output = open(г'С:\spam', 'w')</td>
-				<td>Создает выходной файл
-					(' w' означает write — запись)</td>
-			</tr>
-			<tr>
-				<td>input = open ('data1, 'г')</td>
-				<td>Создает входной файл
-					(' r ' означает read — чтение)</td>
-			</tr>
-			<tr>
-				<td>input = open('data')</td>
-				<td>То же, что и в предыдущей строке
-					(' r ' выбирается по умолчанию)
-				</td>
-			</tr>
-			<tr>
-				<td>aString = input.read()</td>
-				<td>Читает целый файл в одиночную строку</td>
-			</tr>
-			<tr>
-				<td>aString = input.read(N)</td>
-				<td>Читает до N следующих символов (или
-					байтов) в строку
-				</td>
-			</tr>
-			<tr>
-				<td>aString = input.readline()</td>
-				<td>Читает следующую строку файла (включая
-					символ новой строки \п) в строку</td>
-			</tr>
-			<tr>
-				<td>aList - input.readlines()</td>
-				<td>Читает целый файл в список строк
-					(с символами \n)</td>
-			</tr>
-			<tr>
-				<td>output.write(aString)</td>
-				<td>Записывает строку символов (или байтов)
-					в файл</td>
-			</tr>
-			<tr>
-				<td>output.writelines(aList)</td>
-				<td>Записывает все строки из списка в файл</td>
-			</tr>
-			<tr>
-				<td>output.close()</td>
-				<td>Вручную закрывает файл (это делается
-					автоматически, когда файловый объект
-					подвергается сборке мусора)</td>
-			</tr>
-			<tr>
-				<td>output.flush()</td>
-				<td>Сбрасывает буфер вывода на диск, не закрывая файл</td>
-			</tr>
-			<tr>
-				<td>anyFile.seek(N)</td>
-				<td>Изменяет позицию на N для следующей
-					операции
-				</td>
-			</tr>
-			<tr>
-				<td>for line in open ('data'):</td>
-				<td>Файловые итераторы, читающие строку
-					за строкой</td>
-			</tr>
-			<tr>
-				<td>open('f.txt1, encoding='latin-1')</td>
-				<td>Текстовые файлы Unicode в Python З.Х
-					(строки str)</td>
-			</tr>
-			<tr>
-				<td>open('f.bin', 1rb')</td>
-				<td>Байтовые файлы в Python З.Х
-					(строки bytes)</td>
-			</tr>
-			<tr>
-				<td>codecs.open('f.txt', encoding='utf8')</td>
-				<td>Текстовые файлы Unicode в Python 2.Х
-					(строки unicode)</td>
-			</tr>
-			<tr>
-				<td>open('f.bin * , 'rb')</td>
-				<td>Байтовые файлы в Python 2.Х (строки str)</td>
-			</tr>
-			<tr>
-				<td>print (х, у, file=afile)</td>
-				<td>Отправляет текст методу afile.write,
-					а не sys.stdout.write</td>
-			</tr>
-		</table>
+		<ul class="card">
+			<li>math.pi</li>
+			<li>math.e</li>
+			<li>math.sin(2 * math.pi / 180)</li>
+			<li>math.sqrt(144) = 12</li>
+			<li>abs(-42.0) = 42</li>
+			<li>round(2.567) = 3</li>
+			<li>random.random()</li>
+		</ul>
 
-		<h2 id="doc">Документация</h2>
-		<table>
-			<tr>
-				<td>#</td>
-				<td>Внутрифайловая документация</td>
-			</tr>
-			<tr>
-				<td>dir</td>
-				<td>Списки атрибутов, доступных в объектах</td>
-			</tr>
-			<tr>
-				<td>__doc__
-				</td>
-				<td>Внутрифайловая документация, присоединенная к объектам</td>
-			</tr>
-			<tr>
-				<td>help</td>
-				<td>Интерактивная справка для объектов</td>
-			</tr>
-		</table>
+		<ul class="card">
+			<li>'{0:4.2f}'.format(num) '0.33'</li>
+		</ul>
 
-		<h2 id="zar">Зарезервированные слова</h2>
-		<pre>
-False class finally is return
-None continue for lambda try
-True def from nonlocal while
-and del global not with
-as elif if or yield
-assert else import pass
-break except in raise
-</pre>
+	<ul class="card">
+		<li>1.23</li>
+		<li>1.</li>
+		<li>3.14e-10</li>
+		<li>4E210</li>
+		<li>4.0e+210</li>
+		<li>0о177</li>
+		<li>0x9ff</li>
+		<li>0b01010</li>
+		<li>34-4 j</li>
+		<li>3.0+4.0 j</li>
+		<li>3J</li>
+		<li>Decimal ('1.0')</li>
+		<li>Fraction (1, 3)</li>
+	</ul>
 
-		<h2 id="func">Функции</h2>
-		<table>
-			<tr>
-				<td>myfunc('spam', 'eggs', meat=ham, *rest)</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>def</td>
-				<td>def printer(message) :<br>
-					print('Hello ' + message)</td>
-			</tr>
-			<tr>
-				<td>return</td>
-				<td>def adder(a, b=l, *c):<br>
-					return a + b + c [ 0 ]</td>
-			</tr>
-			<tr>
-				<td>global</td>
-				<td>x = 'old'<br>
-					def changer():<br>
-					global x; x = 'new'</td>
-			</tr>
-			<tr>
-				<td>nonlocal</td>
-				<td>def outer():<br>
-					x = 'old'<br>
-					def changer ():<br>
-					nonlocal x; x = 'new'
-				</td>
-			</tr>
-			<tr>
-				<td>yield</td>
-				<td>def squares(x):<br>
-					for i in range (x): yield i ** 2</td>
-			</tr>
-			<tr>
-				<td>lambda</td>
-				<td>funcs = [lambda x: x**2, lambda x: x**3]</td>
-			</tr>
-			<tr>
-				<td>spam (eggs, ham)</td>
-				<td>Вызовы функций</td>
-			</tr>
-			<tr>
-				<td>spam, ham (eggs)</td>
-				<td>Вызовы методов</td>
-			</tr>
-		</table>
+	<h2 id="func">Строки</h2>
+	<div>
+		<ul class="card">
+			<li>a, b, c, d = 'spam'</li>
+			<li>'''много строк'''</li>
+			<li>text = f'{name}'</li>
+			<li>SI + S2</li>
+			<li>S*3</li>
+			<li>S[i]</li>
+			<li>S[i:j:k]</li>
+			<li>len(S)</li>
+		</ul>
 	</div>
 
-		<div class="border">
-<h4>Как можно переписать программу, чтобы она искала индекс самого правого максимального элемента?</h4>
-			<div class="flex-pre">
-		<pre>
-ind_max = 0
-for k in range(len(A)):
-    if A[k] >= A[ind_max]:
-        ind_max = k
-print(ind_max)
+		<ul class="card">
+			<li>'banana'.count('a') 3</li>
+			<li>'Hello, welcome'.find('welcome') 7</li>
+			<li>"Mi casa, su casa.".index("casa") 4</li>
+			<li>sorted('cba')
+				['a', 'b', 'c']</li>
+			<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е') 'Ееж'</li>
+		</ul>
+
+		<ul class="card">
+			<li>'h'.capitalize() H</li>
+			<li>"Hello My Name Is PETER".swapcase()
+				hELLO mY nAME iS peter</li>
+			<li>"Welcome to my world".title()
+				Welcome To My World</li>
+			<li>"Hello my friends".upper()
+				HELLO MY FRIENDS</li>
+			<li>"Hello my FRIENDS".lower()
+				hello my friends</li>
+			<li>'Hello, And Welcome'.casefold() hello, and welcome</li>
+		</ul>
+
+		<ul class="card">
+			<li>"banana".center(20, "O")
+				OOOOOOObananaOOOOOOO</li>
+			<li>S.encode(å) \xc3\x</li>
+			<li>"H\te\tl\tl\to".expandtabs() H e l l o</li>
+			<li>"For only {price:.2f} dollars!".format(price = 49)
+				For only 49.00 dollars!</li>
+			<li>"#".join(["John", "Peter", "Vicky"]) John#Peter#Vicky</li>
+			<li>"welcome to the jungle".split() ['welcome', 'to', 'the', 'jungle']</li>
+			<li>'spacious '.rstrip()
+				' spacious'</li>
+		</ul>
+
+		<ul class="card">
+			<li>"Hello, welcome to my world.".startswith("Hello")
+				True</li>
+			<li>'world.'.endswith('.')</li>
+		</ul>
+
+		<ul class="card">
+			<li>"50".zfill(10)
+				0000000050</li>
+		</ul>
+
+	<h2 id="func">Массивы</h2>
+		<ul class="card">
+			<li>L = [123, 'abc', 1.23, {}]</li>
+			<li>a, *b = 'spam' -> 's’ [ 'р', ’ а ’, 'т' ]</li>
+			<li>[a, b] = ['1', '2']</li>
+			<li>L = list('spam')</li>
+			<li>L = list(range(-4, 4))</li>
+		</ul>
+
+		<ul class="card">
+			<li>х in у</li>
+			<li>x not in у</li>
+		</ul>
+
+		<ul class="card">
+			<li>L[i]</li>
+			<li>L[i][j]</li>
+			<li>L[i:j]</li>
+		</ul>
+
+		<ul class="card">
+			<li>len(L)</li>
+		</ul>
+
+		<ul class="card">
+			<li>LI + L2</li>
+			<li>L * 3</li>
+		</ul>
+
+		<ul class="card">
+			<li>for х in L: print (х)</li>
+		</ul>
+
+		<ul class="card">
+			<li>[1, 2].append(3) [1,2,3]</li>
+			<li>[1, 2].extend([3, 4]) [1,2,3,4]</li>
+			<li>[1, 2].insert(1,a) [1,a,2]</li>
+			<li>[1, 2].index(2) 1</li>
+			<li>[1, 2].count(2) 1</li>
+			<li>sorted([b,c,a]) [a,b,c]</li>
+			<li>reverse([a,b,c]) [c,b,a]</li>
+			<li>x = copy([a,b,c]) [a,b,c]</li>
+			<li>[1,2].clear() []</li>
+			<li>[a,b].pop(1) a</li>
+			<li>[a,b].remove(b) [a]</li>
+		</ul>
+
+		<ul class="card">
+			<li>del L[i]</li>
+			<li>del L[i:j]</li>
+			<li>L[i:j] = []</li>
+		</ul>
+
+		<ul class="card">
+			<li>x = 4 [x**2 for x in range(2)] [4, 4]</li>
+			<li></li>
+		</ul>
+
+	<h2 id="func">Объекты</h2>
+		<ul class="card">
+			<li>D = {}</li>
+			<li>set([1, 2, 3, 4])</li>
+			<li>{х ** 2 for х in [1, 2, 3, 4]} {16, 1, 4, 9}</li>
+			<li>{х for х in ' spain'}</li>
+			<li>set('spam') {'s', 'а', 'р', 'm'}</li>
+			<li>D= {'name': 'Bob', 'age': 40}</li>
+			<li>D['name']</li>
+			<li>Е['cto']['age']</li>
+			<li>' age ' in D</li>
+			<li>D.keys ()</li>
+			<li>D.values()</li>
+			<li>D.items()</li>
+			<li>D.copy()</li>
+			<li>D.clear()</li>
+			<li>D.update(D2)</li>
+			<li>D.get(key, default?)</li>
+			<li>D.pop(key, default?)</li>
+			<li>D.setdefault(key, default?)</li>
+			<li>D.popitem()</li>
+			<li>len(D)</li>
+			<li>D[key] = 42</li>
+			<li>del D[key]</li>
+			<li>list(D.keys())</li>
+			<li>D = {x: x*2 for x in range (10) }</li>
+			<li></li>
+		</ul>
+
+		<ul class="card">
+			<li>if/elif/else</li>
+			<li>for x in mylist:</li>
+			<li>while x > y:</li>
+			<li>pass</li>
+			<li>break</li>
+			<li>continue</li>
+		</ul>
+
+
+	<h2 id="files">Файлы</h2>
+	<ul class="card">
+		<li>output = open(г'С:\spam', 'w')</li>
+		<li>Создает выходной файл
+			(' w' означает write — запись)</li>
+	</ul>
+	<ul class="card">
+		<li>input = open ('data1, 'г')</li>
+		<li>Создает входной файл
+			(' r ' означает read — чтение)</li>
+	</ul>
+	<ul class="card">
+		<li>input = open('data')</li>
+		<li>То же, что и в предыдущей строке
+			(' r ' выбирается по умолчанию)
+		</li>
+	</ul>
+	<ul class="card">
+		<li>aString = input.read()</li>
+		<li>Читает целый файл в одиночную строку</li>
+	</ul>
+	<ul class="card">
+		<li>aString = input.read(N)</li>
+		<li>Читает до N следующих символов (или
+			байтов) в строку
+		</li>
+	</ul>
+	<ul class="card">
+		<li>aString = input.readline()</li>
+		<li>Читает следующую строку файла (включая
+			символ новой строки \п) в строку</li>
+	</ul>
+	<ul class="card">
+		<li>aList - input.readlines()</li>
+		<li>Читает целый файл в список строк
+			(с символами \n)</li>
+	</ul>
+	<ul class="card">
+		<li>output.write(aString)</li>
+		<li>Записывает строку символов (или байтов)
+			в файл</li>
+	</ul>
+	<ul class="card">
+		<li>output.writelines(aList)</li>
+		<li>Записывает все строки из списка в файл</li>
+	</ul>
+	<ul class="card">
+		<li>output.close()</li>
+		<li>Вручную закрывает файл (это делается
+			автоматически, когда файловый объект
+			подвергается сборке мусора)</li>
+	</ul>
+	<ul class="card">
+		<li>output.flush()</li>
+		<li>Сбрасывает буфер вывода на диск, не закрывая файл</li>
+	</ul>
+	<ul class="card">
+		<li>anyFile.seek(N)</li>
+		<li>Изменяет позицию на N для следующей
+			операции
+		</li>
+	</ul>
+	<ul class="card">
+		<li>for line in open ('data'):</li>
+		<li>Файловые итераторы, читающие строку
+			за строкой</li>
+	</ul>
+	<ul class="card">
+		<li>open('f.txt1, encoding='latin-1')</li>
+		<li>Текстовые файлы Unicode в Python З.Х
+			(строки str)</li>
+	</ul>
+	<ul class="card">
+		<li>open('f.bin', 1rb')</li>
+		<li>Байтовые файлы в Python З.Х
+			(строки bytes)</li>
+	</ul>
+	<ul class="card">
+		<li>codecs.open('f.txt', encoding='utf8')</li>
+		<li>Текстовые файлы Unicode в Python 2.Х
+			(строки unicode)</li>
+	</ul>
+	<ul class="card">
+		<li>open('f.bin * , 'rb')</li>
+		<li>Байтовые файлы в Python 2.Х (строки str)</li>
+	</ul>
+	<ul class="card">
+		<li>print (х, у, file=afile)</li>
+		<li>Отправляет текст методу afile.write,
+			а не sys.stdout.write</li>
+	</ul>
+
+	<h2 id="doc">Документация</h2>
+	<ul class="card">
+		<li>#</li>
+		<li>Внутрифайловая документация</li>
+	</ul>
+	<ul class="card">
+		<li>dir</li>
+		<li>Списки атрибутов, доступных в объектах</li>
+	</ul>
+	<ul class="card">
+		<li>__doc__
+		</li>
+		<li>Внутрифайловая документация, присоединенная к объектам</li>
+	</ul>
+	<ul class="card">
+		<li>help</li>
+		<li>Интерактивная справка для объектов</li>
+	</ul>
+
+	<h2 id="zar">Зарезервированные слова</h2>
+	<ul class="card">
+		<li>False class finally is return
+			None continue for lambda try
+			True def from nonlocal while
+			and del global not with
+			as elif if or yield
+			assert else import pass
+			break except in raise</li>
+	</ul>
+
+	<h2 id="func">Функции</h2>
+	<ul class="card">
+		<li>myfunc('spam', 'eggs', meat=ham, *rest)</li>
+	</ul>
+	<ul class="card">
+		<li>def</li>
+		<li>def printer(message) :<br>
+			print('Hello ' + message)</li>
+	</ul>
+	<ul class="card">
+		<li>return</li>
+		<li>def adder(a, b=l, *c):<br>
+			return a + b + c [ 0 ]</li>
+	</ul>
+	<ul class="card">
+		<li>global</li>
+		<li>x = 'old'<br>
+			def changer():<br>
+			global x; x = 'new'</li>
+	</ul>
+	<ul class="card">
+		<li>nonlocal</li>
+		<li>def outer():<br>
+			x = 'old'<br>
+			def changer ():<br>
+			nonlocal x; x = 'new'
+		</li>
+	</ul>
+	<ul class="card">
+		<li>yield</li>
+		<li>def squares(x):<br>
+			for i in range (x): yield i ** 2</li>
+	</ul>
+	<ul class="card">
+		<li>lambda</li>
+		<li>funcs = [lambda x: x**2, lambda x: x**3]</li>
+	</ul>
+	<ul class="card">
+		<li>spam (eggs, ham)</li>
+	</ul>
+	<ul class="card">
+		<li>spam, ham (eggs)</li>
+	</ul>
+
+
+	<div class="card">
+		<div class="flex-pre">
+			<pre class="blur2">
+     0,1,2,3,4
+a = [1,2,4,3,2]
+index max elem?
+
+a = [1,2,4,3,2]
+i = len(a) - 1
+for j in range(len(a)-1,-1,-1):
+    #print(j) #4 3 2 1 0
+    #print(a[j]) #2 3 4 2 1
+    #print(a[i]) #2 2 3 4 4
+    if a[j] >= a[i]:
+        #print(a[j]) #2 3 4 
+        #print(a[i]) #2 2 3 
+        i = j
+        #print(i) #4 3 2 
+print(i) # 2
+
+
+i = len(a) - 1
+for j in range(len(a)-1,-1,-1):
+    if a[j] >= a[i]:
+        i = j
+print(i)
+2
 </pre>
-		<pre class="blur2">
-ind_max = len(A) - 1
-for k in range(len(A)-1,-1,-1):
-    if A[k] >= A[ind_max]:
-        ind_max = k
-print(ind_max)
-</pre>
-			</div>
 		</div>
-		
-		<div class="border">
-<h4>Дано число N, затем элементы массива — N строк с целыми числами. Все числа разные. Поменять в этом массиве местами наименьший элемент с наибольшим и вывести полученный массив.</h4>
-			<div class="flex-pre">
-		<pre>
-Ввод	
-5
+	</div>
+
+	<div class="card">
+		<div class="flex-pre">
+			<pre>
 7
 2
 6
 -4
 1
-Вывод
+
 [-4, 2, 6, 7, 1]
-</pre>
-		<pre class="blur2">
-a = int(input())
+
+a = int(input(5))
 c = [int(input()) for _ in range(a)]
 
 b = max(c)
 e = min(c)
 if c.index(b) &#60; c.index(e):
-    c[c.index(e)], c[c.index(b)] = c[c.index(b)], c[c.index(e)]
+    c[c.index(e)], c[c.index(b)] 
+    = c[c.index(b)], c[c.index(e)]
 else: 
-    c[c.index(b)], c[c.index(e)] = c[c.index(e)], c[c.index(b)]
+    c[c.index(b)], c[c.index(e)] 
+    = c[c.index(e)], c[c.index(b)]
 print(c) 
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-		<h4>Есть 5 строк, в которых записаны целые числа, разделённые одним или несколькими пробелами.
-Выведите 5 строк, в каждой из которых записана сумма чисел соответствующей строки.</h4>
-  <div class="flex-pre">
-<pre>
-Ввод
+	<div class="card">
+		<div class="flex-pre">
+			<pre>
    4  5 
 3
 5   7
 1 1   1
   89   98
   
-Вывод 
 9
 3
 12
 3
 187
-</pre>
-		<pre class="blur2">
+
 a = [input() for i in range(5)]
-
-
 for i in range(5):
     b = a[i].split(' ')
     for j in range(len(b)):
@@ -489,22 +507,15 @@ for i in range(5):
         b[k] = int(b[k])
     print(sum(b))
 </pre>
-			</div>
 		</div>
+	</div>
 
-	<div class="border">
-		<h4>Попугай Яша недавно научился говорить и произносит имена членов семьи, в которой живёт. Яша никого не забывает, но часто повторяется.
-			Есть строка, в которой через пробел перечислены все названные Яшей имена. У всех членов семьи они разные.
-			Выведите количество членов семьи, в которой живёт Яша.</h4>
+	<div class="card">
 		<div class="flex-pre">
 			<pre>
-Ввод	
-Катя Катя Миша Костя 
-Алёна Катя Миша Миша Костя
-Вывод
+a a c b d a c c b
 4
-</pre>
-			<pre class="blur2">
+
 a = input().split(' ')
 ans = []
 for i in a:
@@ -516,31 +527,28 @@ print(len(ans))
 	</div>
 
 
-	<div class="border">
-		<h4>В классе провели опрос — кто в какой день недели может пойти в кино.
-			Есть строка с записанными в ней результатами опроса: дни недели, разделённые пробелом.
-			Выпишите список дней недели с указанием, сколько человек может идти в кино в этот день.</h4>
+	<div class="card">
 		<div class="flex-pre">
 			<pre>
-Ввод	
-Вторник Среда Четверг Четверг Суббота Пятница Понедельник Понедельник Четверг
-Вывод
-Понедельник: 2
-Вторник: 1
-Среда: 1
-Четверг: 3
-Пятница: 1
-Суббота: 1
-Воскресенье: 0
-</pre>
-			<pre class="blur2">
-days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+b c d d 
+f e a 
+a d
+
+a: 2
+b: 1
+c: 1
+d: 3
+e: 1
+f: 1
+j: 0
+
+days = ["a", "b", "c", "d", "e", "f", "j"]
 x = input().split()
 stat = [0] * 7
 
 for day in x:
     stat[days.index(day)] += 1
-    
+
 for i in range(7):
     print(str(days[i]) + ': ' + str(stat[i]))
 </pre>
@@ -548,13 +556,13 @@ for i in range(7):
 	</div>
 
 
-	<div class="border">
+	<div class="card">
 		<h4>Учительница биологии Тамара Павловна определяет итоговую оценку по максимальной, полученной учеником в течение четверти.
 			Есть число N — количество учеников, а также в N строках оценки N школьников через пробел.
 			Выведите 4 строки: количество человек, получивших итоговую оценку 5, 4, 3 и 2 соответственно.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
+Ввод
 5
 2 3 2
 3 4 3
@@ -566,20 +574,19 @@ for i in range(7):
 4: 1
 3: 2
 2: 0
-</pre>
-			<pre class="blur2">
+
 a = int(input())
 stat = [0] * 6
 
 for i in range(a):
     x = input().split()
-    
+
     for k in range(len(x)):
         x[k] = int(x[k])
 
     ans = []
     ans.append(max(x))
-        
+
     for grade in ans:
         stat[grade] += 1
 
@@ -589,13 +596,13 @@ for i in range(5,1,-1):
 		</div>
 	</div>
 
-	<div class="border">
+	<div class="card">
 		<h4>Есть число N. Затем в N строках записаны наименования продуктов, а в следующих N строках — цены этих продуктов.
 			Все наименования продуктов разные и встречаются в списке один раз.
 			Выведите цену печенья.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
+Ввод
 3
 Конфеты
 Рыба
@@ -605,8 +612,7 @@ for i in range(5,1,-1):
 93
 Вывод
 93
-</pre>
-			<pre class="blur2">
+
 a = int(input())
 b = [input() for i in range(a)]
 c = [input() for i in range(a)]
@@ -615,23 +621,22 @@ print(c[b.index('Печенье')])
 		</div>
 	</div>
 
-	<div class="border">
+	<div class="card">
 		<h4>Есть несколько чисел, записанных через пробел, — рост игроков баскетбольной команды.
 			Нужно определить рост игроков, которые ниже обоих своих соседей (надо, чтобы были оба соседа И у этих соседей рост был больше).
 			Выведите в первой строке — сколько таких игроков, во второй — их рост в том же порядке, что и в исходном списке.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
+Ввод
 167 180 182 180 181 190 178 179
 Вывод
 2
 180 178
-</pre>
-			<pre class="blur2">
+
 a = input().split(' ')
 
 ans = []
-for k in range(1, len(a) - 1): 
+for k in range(1, len(a) - 1):
     if a[k - 1] > a[k] &#60; a[k + 1]:
         ans.append(a[k])
 print(len(ans))
@@ -640,12 +645,12 @@ print(*ans)
 		</div>
 	</div>
 
-	<div class="border">
+	<div class="card">
 		<h4>Есть строка, в которой записаны имена.
 			Для каждого имени выведите целое число — количество людей с другим именем, находящихся правее в этом списке.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
+Ввод
 Маша Ваня Маша Маша Петя Ваня
 Вывод
 3
@@ -654,8 +659,7 @@ print(*ans)
 2
 1
 0
-</pre>
-			<pre class="blur2">
+
 arr = input().split()
 for i in range(len(arr)):
     print(len([a for a in arr[i+1:] if a != arr[i]]))
@@ -663,32 +667,31 @@ for i in range(len(arr)):
 		</div>
 	</div>
 
-	<div class="border">
+	<div class="card">
 		<h4>Есть строка с выражением вида A * B * ... * C. Каждый сомножитель может быть или неполным частным двух чисел в скобках, или числом (см. примеры). Пустой строка быть не может.
 			Выведите строку, заменив выражения в скобках их значениями.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
-(61 // 13) * (23 // 7) * (4 // 2)	
+Ввод
+(61 // 13) * (23 // 7) * (4 // 2)
 Вывод
 4 * 3 * 2
 
-Ввод	
-(45 // 7)	
+Ввод
+(45 // 7)
 Вывод
 6
- 
-Ввод	
-2 * 3 * 4	
+
+Ввод
+2 * 3 * 4
 Вывод
 2 * 3 * 4
 
-Ввод	
+Ввод
 5 * (6 // 4)
-Вывод	
+Вывод
 5 * 1
-</pre>
-			<pre class="blur2">
+
 s = input()
 arr = ' * '.join(map(lambda x: str(eval(x)), s.split('*')))
 print(arr)
@@ -696,20 +699,19 @@ print(arr)
 		</div>
 	</div>
 
-	<div class="border">
+	<div class="card">
 		<h4>Витя решил стать музыкантом и сочинять музыку. Ему хочется узнать — есть ли закономерности в распределении дней рождения композиторов.
 			Есть целое число N и N строк, в каждой из которых записана дата рождения (в формате ДД.ММ.ГГГГ) и имя композитора.
 			Выведите все числа (любого месяца и года) с указанием того, сколько человек родилось такого числа.</h4>
 		<div class="flex-pre">
 			<pre>
-Ввод	
+Ввод
 2
 16.12.1770 Ludwig van Beethoven
 16.12.1932 Rodion Shchedrin
 Вывод
 16 2
-</pre>
-			<pre class="blur2">
+
 dct = {}
 for _ in range(int(input())):
     nummer = input().split('.')[0]
@@ -725,20 +727,19 @@ for key,val in sorted(dct.items()):
 	</div>
 
 
-		<div class="border">
-			<h4>Ученики увлеклись шифрованием и шифруют свои имена и фамилии, расставляя в них буквы в алфавитном порядке (отдельно в имени, отдельно в фамилии), а потом записывают их заглавными буквами, каждый ученик — в новой строке.
-Например, имя Соня Сонина превращается в НОСЯ АИННОС.
-Учеников звали Лера Иванова, Вася Сидоров и Катя Антонова. Выведите, что у них получилось.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Ученики увлеклись шифрованием и шифруют свои имена и фамилии, расставляя в них буквы в алфавитном порядке (отдельно в имени, отдельно в фамилии), а потом записывают их заглавными буквами, каждый ученик — в новой строке.
+			Например, имя Соня Сонина превращается в НОСЯ АИННОС.
+			Учеников звали Лера Иванова, Вася Сидоров и Катя Антонова. Выведите, что у них получилось.</h4>
+		<div class="flex-pre">
+			<pre>
 АЕЛР ААВВИНО
 АВСЯ ВДИООРС
 АКТЯ ААВННООТ
-</pre>
-				<pre class="blur2">
+
 a = 'Лера Иванова, Вася Сидоров, Катя Антонова'
 # строку возведем в верхний регистр
-# и разобъем в массив по разделителю 
+# и разобъем в массив по разделителю
 b = a.upper().split(', ')
 #['ЛЕРА ИВАНОВА', 'ВАСЯ СИДОРОВ', 'КАТЯ АНТОНОВА']
 for i in b:
@@ -755,14 +756,14 @@ for i in b:
     # выведем каждую строку
     print(' '.join(ans))
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Аня учит порядок цветов радуги. Чтобы дать ей потренироваться, Вася собирается расставить цвета в алфавитном порядке и предложить Ане восстановить последовательность.
-Напишите программу, выводящую в столбик все цвета радуги в алфавитном порядке и с маленьких букв.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Аня учит порядок цветов радуги. Чтобы дать ей потренироваться, Вася собирается расставить цвета в алфавитном порядке и предложить Ане восстановить последовательность.
+			Напишите программу, выводящую в столбик все цвета радуги в алфавитном порядке и с маленьких букв.</h4>
+		<div class="flex-pre">
+			<pre>
 голубой
 желтый
 зеленый
@@ -770,23 +771,22 @@ for i in b:
 оранжевый
 синий
 фиолетовый
-</pre>
-				<pre class="blur2">
-a = ['красный', 'оранжевый', 
- 'желтый', 'зеленый', 
+
+a = ['красный', 'оранжевый',
+ 'желтый', 'зеленый',
  'голубой', 'синий', 'фиолетовый']
 # печать каждого нового символа с новой строки
 print(*sorted(a), sep="\n")
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Редактор школьной газеты Костя серьезно относится к работе газеты: каждую неделю он подсчитывает, сколько заданий нужно сделать его подопечному Васе и сколько тот уже сделал.
-Костя даже написал программу, которая бы печатала текст с количеством задач, но, запустив её вечером понедельника, случайно удалил пару строк.
-Посмотрите на результат запуска и помогите Косте восстановить программу, не меняя готовых строк.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Редактор школьной газеты Костя серьезно относится к работе газеты: каждую неделю он подсчитывает, сколько заданий нужно сделать его подопечному Васе и сколько тот уже сделал.
+			Костя даже написал программу, которая бы печатала текст с количеством задач, но, запустив её вечером понедельника, случайно удалил пару строк.
+			Посмотрите на результат запуска и помогите Косте восстановить программу, не меняя готовых строк.</h4>
+		<div class="flex-pre">
+			<pre>
 Заготовка кода
 all_tasks = 99
 done_tasks = 7
@@ -796,27 +796,25 @@ print(goodbye)
 
 Из 99 дел сделано только 7
 До встречи!
-</pre>
-				<pre class="blur2">
+
 all_tasks = 99
 done_tasks = 7
-print(f'Из {all_tasks} 
+print(f'Из {all_tasks}
   дел сделано только {done_tasks}')
 goodbye = 'До встречи!'
 print(goodbye)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Вася принимает сигналы из космоса на радиоприёмник. Он уже успел записать такую последовательность символов:
-|-|--|---|----|
-Догадайтесь, какими должны быть следующие 12 символов и напишите программу, которая бы печатала дополненную последовательность.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Вася принимает сигналы из космоса на радиоприёмник. Он уже успел записать такую последовательность символов:
+			|-|--|---|----|
+			Догадайтесь, какими должны быть следующие 12 символов и напишите программу, которая бы печатала дополненную последовательность.</h4>
+		<div class="flex-pre">
+			<pre>
 |-|--|---|----|-----|------
-</pre>
-				<pre class="blur2">
+
 a = '|-|--|---|----|'
 #print(len(a)) 15
 #print(15+12) 27
@@ -831,21 +829,20 @@ for i in range(1,7):
 #print(len(s)) 27
 print(s)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Вася решил поучаствовать в школьной лотерее. Для этого ему нужно выбрать простое число до 50, но он их совсем не помнит.
-Выведите все простые числа до 50 через пробел. Переходите на новую строку при начале нового десятка (то есть, простые числа до 10 должны быть на первой строчке, а от 10 до 20 — на второй, и т.д.).</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Вася решил поучаствовать в школьной лотерее. Для этого ему нужно выбрать простое число до 50, но он их совсем не помнит.
+			Выведите все простые числа до 50 через пробел. Переходите на новую строку при начале нового десятка (то есть, простые числа до 10 должны быть на первой строчке, а от 10 до 20 — на второй, и т.д.).</h4>
+		<div class="flex-pre">
+			<pre>
 2 3 5 7
 11 13 17 19
 23 29
 31 37
 41 43 47
-</pre>
-				<pre class="blur2">
+
 ans = []
 #создаем пустой массив
 for i in range(2,51):
@@ -872,18 +869,17 @@ print(*ans[8:10], sep=" ")
 print(*ans[10:12], sep=" ")
 print(*ans[12:15], sep=" ")
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Вася снова написал какую-то программу и стёр её, оставив только два результата запуска. Восстановите программу по тому, что она выводила.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Вася снова написал какую-то программу и стёр её, оставив только два результата запуска. Восстановите программу по тому, что она выводила.</h4>
+		<div class="flex-pre">
+			<pre>
 № запуска	Ввод	Вывод
 Запуск 1	(:)	(:):(:):1)(:)(1:(:):(:)
 Запуск 2	1	1:1:1)1(1:1:1
-</pre>
-				<pre class="blur2">
+
 insa = '(:)'
 a = '(:) : (:) :1) (:) (1: (:) : (:)'
 insb = '1'
@@ -892,16 +888,15 @@ b = '1 : 1 :1) 1 (1: 1 : 1'
 c = input()
 print(c + ':' + c + ':1)' + c +'(1:' + c + ':' + c)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Саша записывает в столбик строки: Я, 1ю, 22Э, 333ь, т. д. Выведите 13-ю строку в этой последовательности.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Саша записывает в столбик строки: Я, 1ю, 22Э, 333ь, т. д. Выведите 13-ю строку в этой последовательности.</h4>
+		<div class="flex-pre">
+			<pre>
 121212121212121212121212У
-</pre>
-				<pre class="blur2">
+
 a = 'Я'
 b = '1ю'
 с = '22Э'
@@ -910,23 +905,23 @@ alf = 'ёйцукенгшщзхъфывапролджэячсмитьбю'
 # print(len(a)) 33
 soralf = sorted(alf)
 # print(soralf)
-# ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 
- 'з', 'и', 'й', 'к', 'л', 'м', 'н', 
- 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 
- 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 
+# ['а', 'б', 'в', 'г', 'д', 'е', 'ж',
+ 'з', 'и', 'й', 'к', 'л', 'м', 'н',
+ 'о', 'п', 'р', 'с', 'т', 'у', 'ф',
+ 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы',
  'ь', 'э', 'ю', 'я', 'ё']
 # какого ё после я? перенесем на место
-soralf = ['а', 'б', 'в', 'г', 'д', 
-'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 
-'л', 'м', 'н', 'о', 'п', 'р', 'с', 
-'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 
+soralf = ['а', 'б', 'в', 'г', 'д',
+'е', 'ё', 'ж', 'з', 'и', 'й', 'к',
+'л', 'м', 'н', 'о', 'п', 'р', 'с',
+'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш',
 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я']
 revalf = soralf[::-1]
 # print(revalf)
-# ['я', 'ю', 'э', 'ь', 'ы', 'ъ', 
-'щ', 'ш', 'ч', 'ц', 'х', 'ф', 'у', 
-'т', 'с', 'р', 'п', 'о', 'н', 'м', 
-'л', 'к', 'й', 'и', 'з', 'ж', 'ё', 
+# ['я', 'ю', 'э', 'ь', 'ы', 'ъ',
+'щ', 'ш', 'ч', 'ц', 'х', 'ф', 'у',
+'т', 'с', 'р', 'п', 'о', 'н', 'м',
+'л', 'к', 'й', 'и', 'з', 'ж', 'ё',
 'е', 'д', 'г', 'в', 'б', 'а']
 #print(len(revalf[:13])) 13
 ans = []
@@ -945,18 +940,17 @@ for i in revalf[:13]:
         ans.append(t)
 print(ans[12])
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Саша берёт строку и добавляет к ней слева и справа по одинаковому количеству символов + так, чтобы длина новой строки была в 3 раза больше исходной.
-Напишите программу, которая читает строку и делает это преобразование.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Саша берёт строку и добавляет к ней слева и справа по одинаковому количеству символов + так, чтобы длина новой строки была в 3 раза больше исходной.
+			Напишите программу, которая читает строку и делает это преобразование.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 1	+1+
-</pre>
-				<pre class="blur2">
+
 a = input()
 l = a[:len(a)//2]
 r = a[len(a)//2:]
@@ -967,19 +961,18 @@ r = a[len(a)//2:]
 b = len(a)*'+' +  a + len(a)*'+'
 print(b)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Вася написал секретную программу, которая шифрует текст. Он запустил её дважды, чтобы протестировать, а затем переписал в свой блокнот и стёр.
-Восстановите программу по сохранившимся результатам двух запусков:</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Вася написал секретную программу, которая шифрует текст. Он запустил её дважды, чтобы протестировать, а затем переписал в свой блокнот и стёр.
+			Восстановите программу по сохранившимся результатам двух запусков:</h4>
+		<div class="flex-pre">
+			<pre>
 Запуск №	Ввод	Вывод
 1	a	aaaaaababbabbabaaaaaa
 2	b	abaababbbbbbbbbabaaba
-</pre>
-				<pre class="blur2">
+
 c = input()
 a = 'aaaaaababbabbabaaaaaa'
 b = 'abaababbbbbbbbbabaaba'
@@ -990,21 +983,20 @@ for i in range(n):
 
 print(res)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Поезд прибывает на станцию в a часов b минут и отправляется со станции на следующие сутки в c часов d минут.
-Даны числа a, b, c, d. Выведите, сколько минут поезд стоит на станции.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Поезд прибывает на станцию в a часов b минут и отправляется со станции на следующие сутки в c часов d минут.
+			Даны числа a, b, c, d. Выведите, сколько минут поезд стоит на станции.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 23
 30
 0
 15	45
-</pre>
-				<pre class="blur2">
+
 a = int(input())
 b = int(input())
 c = int(input())
@@ -1014,67 +1006,64 @@ e = a*60 + b
 j = c*60 + d
 print(1440-e + j)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Таня завела ёжика. В день ёжик съедает k порций корма. У Тани осталось корма на n порций. Когда ей надо идти в магазин за новым кормом?
-Даны числа n и k. Выведите строку "На сколько дней хватит корма: (количество)!"</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Таня завела ёжика. В день ёжик съедает k порций корма. У Тани осталось корма на n порций. Когда ей надо идти в магазин за новым кормом?
+			Даны числа n и k. Выведите строку "На сколько дней хватит корма: (количество)!"</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 5
 3	На сколько дней хватит корма: 1!
-</pre>
-				<pre class="blur2">
-n=int(input()) 
-k=int(input()) 
+
+n=int(input())
+k=int(input())
 print("На сколько дней хватит корма: "+str(n//k )+"!")
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Миша и Витя устроили гонки радиоуправляемых машинок. Сначала Мишина машинка вырвалась вперёд на S метров. Потом Витина машинка её догнала.
-Даны числа S, V1, V2. Выведите, через сколько минут машинки поравняются, если скорость Мишиной машинки — V1 метров в минуту, а скорость Витиной машинки — V2 (V2 > V1) метров в минуту.
-Скорость, время и расстояние связаны формулой S = V * t.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Миша и Витя устроили гонки радиоуправляемых машинок. Сначала Мишина машинка вырвалась вперёд на S метров. Потом Витина машинка её догнала.
+			Даны числа S, V1, V2. Выведите, через сколько минут машинки поравняются, если скорость Мишиной машинки — V1 метров в минуту, а скорость Витиной машинки — V2 (V2 > V1) метров в минуту.
+			Скорость, время и расстояние связаны формулой S = V * t.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 45
 60
 75	3
-</pre>
-				<pre class="blur2">
+
 s = int(input())
 v1 = int(input())
 v2 = int(input())
 
 print(int(s/(v2-v1)))
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>В школе сломалась автоматическая система оценивания контрольных СОК. Теперь она ставит оценки по такому алгоритму: 2, 3, 4, 5, 2, 3, 4, 5, 2, … Только что система выставила N-ю оценку. Что это за оценка?
-Дано N. Выведите оценку.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>В школе сломалась автоматическая система оценивания контрольных СОК. Теперь она ставит оценки по такому алгоритму: 2, 3, 4, 5, 2, 3, 4, 5, 2, … Только что система выставила N-ю оценку. Что это за оценка?
+			Дано N. Выведите оценку.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 7	4
 32	5
-</pre>
-				<pre class="blur2">
+
 s = '2345'*200
 print(s[int(input())-1])
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Напишите программу, которая читает 7 цифр и выводит номер в формате ххх-хх-хх.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Напишите программу, которая читает 7 цифр и выводит номер в формате ххх-хх-хх.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 1
 7
@@ -1083,48 +1072,45 @@ print(s[int(input())-1])
 2
 4
 2	177-42-42
-</pre>
-				<pre class="blur2">
+
 s = ''
 for i in range(7):
     a = input()
     #print(a) напечатает 7 инпутов
-    s = s + a 
+    s = s + a
     #суммируем каждое новое число
-    
-print(s[:3] + '-' + s[3:5] + '-' + s[5:7]) 
-</pre>
-			</div>
-		</div>
 
-		<div class="border">
-			<h4>Соня не любит диктанты и вечно делает в них ошибки, поэтому Вася помогает ей готовиться. Он говорит слово и число n, а Соня записывает это слово через запятую n раз. Знаков препинания в конце она не ставит.
-Даны слово и число. Выведите, что написала Соня.</h4>
-			<div class="flex-pre">
-				<pre>
+print(s[:3] + '-' + s[3:5] + '-' + s[5:7])
+</pre>
+		</div>
+	</div>
+
+	<div class="card">
+		<h4>Соня не любит диктанты и вечно делает в них ошибки, поэтому Вася помогает ей готовиться. Он говорит слово и число n, а Соня записывает это слово через запятую n раз. Знаков препинания в конце она не ставит.
+			Даны слово и число. Выведите, что написала Соня.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 силуэт
 4	силуэт, силуэт, силуэт, силуэт
-</pre>
-				<pre class="blur2">
+
 slovo = input()
 n = int(input())
 otv = (slovo+ ', ')*n
 print(otv[:len(otv)-2])
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Эмилия загадала число n и записала его подряд столько раз, что в новом числе получилось ровно n цифр.
-Дано n. Выведите, что написала Эмилия.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Эмилия загадала число n и записала его подряд столько раз, что в новом числе получилось ровно n цифр.
+			Дано n. Выведите, что написала Эмилия.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 5	55555
 24	242424242424242424242424
-</pre>
-				<pre class="blur2">
+
 a= int(input())
 # если 24
 b = str(a)*a
@@ -1138,27 +1124,26 @@ b = str(a)*a
 # 48
 print(b[:(a)])
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Петя снова сел у дома в автобус, проходящий по кольцевому маршруту через N остановок, и тут же заснул.
-Через X остановок он проснулся и стал считать, что быстрее — выйти и поехать обратно или вернуться к дому по кольцу.
-Даны числа N и X. Какое минимальное количество остановок Пете нужно проехать в любую сторону, чтобы вернуться домой?</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Петя снова сел у дома в автобус, проходящий по кольцевому маршруту через N остановок, и тут же заснул.
+			Через X остановок он проснулся и стал считать, что быстрее — выйти и поехать обратно или вернуться к дому по кольцу.
+			Даны числа N и X. Какое минимальное количество остановок Пете нужно проехать в любую сторону, чтобы вернуться домой?</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 9
 21	3
 9
 18	0
-</pre>
-				<pre class="blur2">
+
 a = int(input())
 b = int(input())
 
 # 9 и 21      21//9 = 2     21 % 9 = 3
-# print((b//a)*a)   18   
+# print((b//a)*a)   18
 
 c = b - (b//a)*a # 3
 
@@ -1168,20 +1153,19 @@ else: print(a*(b//a + 1)-b)
 
 #if b % a > b//a
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Даша записывает на полях тетради числа парами. Не все числа в парах одинаковой длины. Ей кажется, что это некрасиво. Поэтому она дополняет их слева нулями.
-Даны числа A и B. Дополните нулями более короткое число так, чтобы оба стали одной длины, и выведите их в том же порядке.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Даша записывает на полях тетради числа парами. Не все числа в парах одинаковой длины. Ей кажется, что это некрасиво. Поэтому она дополняет их слева нулями.
+			Даны числа A и B. Дополните нулями более короткое число так, чтобы оба стали одной длины, и выведите их в том же порядке.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 123
 4	123
 004
-</pre>
-				<pre class="blur2">
+
 a = int(input())
 b = int(input())
 #print(int(len(b)))
@@ -1192,27 +1176,26 @@ else:
     print('0' * ( int(len(str(b))) - int(len(str(a)))) + str(a) )
     print(b)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Миша и Боря скучают на перемене. Они придумали каждый по слову и пишут эти два слова на бумажке по очереди: сначала слово одного, потом другого, и т. д. Всего мальчики написали n слов, последнее было Мишино.
-Даны Мишино слово, Борино слово и число n. Выведите, что записали ребята.
-В конце строки могут оказаться лишние пробелы. В этой задаче их можно оставить.
-</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Миша и Боря скучают на перемене. Они придумали каждый по слову и пишут эти два слова на бумажке по очереди: сначала слово одного, потом другого, и т. д. Всего мальчики написали n слов, последнее было Мишино.
+			Даны Мишино слово, Борино слово и число n. Выведите, что записали ребята.
+			В конце строки могут оказаться лишние пробелы. В этой задаче их можно оставить.
+		</h4>
+		<div class="flex-pre">
+			<pre>
 Начиная
 драку
-4	
+4
 драку Начиная драку Начиная
 
 с
 папой
-5	
+5
 с папой с папой с
-</pre>
-				<pre class="blur2">
+
 # первое слово
 a = input()
 # второе слово
@@ -1226,7 +1209,7 @@ for i in range(1, c+1):
     if i%2 != 0:
         #print(i) # 1 3
         s = s + a + ' '
-    else: 
+    else:
         #print(i) # 2 4
         s = s + b + ' '
 d = s[:-1].split(' ')
@@ -1235,21 +1218,20 @@ if c % 2 != 0 :
     print(s)
 else: print(' '.join(d))
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Миша и Боря придумали сложную игру. Сначала каждый называет число и отмечает его на числовой прямой. Затем они кидают кубик и на той же прямой отмечают красными точками все числа, кратные выпавшему числу. Выигрывает тот, чьё число ближе к красной точке.
-Даны три числа: числа игроков A и B и выпавшее на кубике d. Выведите число победителя — ближайшее к кратному d.
-Если числа A и B на одном расстоянии от кратных, то выведите меньшее из них.</h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4>Миша и Боря придумали сложную игру. Сначала каждый называет число и отмечает его на числовой прямой. Затем они кидают кубик и на той же прямой отмечают красными точками все числа, кратные выпавшему числу. Выигрывает тот, чьё число ближе к красной точке.
+			Даны три числа: числа игроков A и B и выпавшее на кубике d. Выведите число победителя — ближайшее к кратному d.
+			Если числа A и B на одном расстоянии от кратных, то выведите меньшее из них.</h4>
+		<div class="flex-pre">
+			<pre>
 Ввод	Вывод
 21
 23
 5	21
-</pre>
-				<pre class="blur2">
+
 a = int(input())
 b = int(input())
 d = int(input())
@@ -1266,28 +1248,27 @@ elif min(a2 - a, a - a1) > min(b2 - b, b - b1):
 else:
     print(min(a, b))
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4>Цикл работы светофора такой: красный (горит a секунд), красный с жёлтым (b секунд), зелёный (c секунд), жёлтый (b секунд). Затем последовательность повторяется.
-Только что включился красный. Нужно посчитать, сколько времени горит каждый свет, если известно, что светофор работал N секунд.
-Обратите внимание, что красный и жёлтый горят дважды за цикл: один раз вместе с другим цветом, второй раз отдельно. Время, когда на светофоре горят два сигнала — красный и жёлтый — «засчитывается» обоим сигналам.
-Даны числа a, b, c, N. Выведите, сколько всего секунд горел каждый сигнал светофора за N секунд его работы.
-</h4>
-			<div class="flex-pre">
-				<pre>
-Ввод	
+	<div class="card">
+		<h4>Цикл работы светофора такой: красный (горит a секунд), красный с жёлтым (b секунд), зелёный (c секунд), жёлтый (b секунд). Затем последовательность повторяется.
+			Только что включился красный. Нужно посчитать, сколько времени горит каждый свет, если известно, что светофор работал N секунд.
+			Обратите внимание, что красный и жёлтый горят дважды за цикл: один раз вместе с другим цветом, второй раз отдельно. Время, когда на светофоре горят два сигнала — красный и жёлтый — «засчитывается» обоим сигналам.
+			Даны числа a, b, c, N. Выведите, сколько всего секунд горел каждый сигнал светофора за N секунд его работы.
+		</h4>
+		<div class="flex-pre">
+			<pre>
+Ввод
 20
 5
 25
-120	
+120
 Вывод
 60
 20
 50
-</pre>
-				<pre class="blur2">
+
 red = int(input())
 yellow = int(input())
 green = int(input())
@@ -1319,20 +1300,19 @@ print(totalred + Dred)
 print(totalyellow + Dyellow)
 print(totalgreen + Dgreen)
 </pre>
-			</div>
 		</div>
+	</div>
 
-		<div class="border">
-			<h4></h4>
-			<div class="flex-pre">
-				<pre>
+	<div class="card">
+		<h4></h4>
+		<div class="flex-pre">
+			<pre>
+
+
 
 </pre>
-				<pre class="blur2">
-
-</pre>
-			</div>
 		</div>
+	</div>
 
 
 
