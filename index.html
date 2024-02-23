@@ -10,24 +10,28 @@
 </head>
 
 <body class="wrapper">
-	<h1>o_O</h1>
 	<h2>math 5</h2>
 	<ul class="card">
 		<li>1 2 3 4 5 6 7 8 9 10 натуральные</li>
 		<li>0 1/2 2/3 ненатуральные</li>
 		<li>1 2 3 4 5 6 ... в порядке возрастания - натуральный ряд</li>
 	</ul>
-	
+
 	<ul class="card">
 		<li>одна цифра - однозначное</li>
-		<li>две - двузначное или многозначное</li>
+		<li>две - двузначное или многозначное (начинается только не с 0)</li>
+		<li>17 025 543 - 543, 025, 17 - классы</li>
+		<li>543 - класс единиц 025 - класс тысяч 17 - класс миллионов</li>
+		<li>при чтении 17 миллионов 25 тысяч 543</li>
+		<li>Каждый класс разбивается на сотни десятки единицы</li>
+		<li>2 958 = 2*1000 + 9*100 + 5*10 + 8*1 сумма разрядных слагаемых</li>
 		<li></li>
 	</ul>
-	
+
 	<ul class="card">
 		<li></li>
 	</ul>
-	
+
 	<h2>python</h2>
 	<ul class="card">
 		<li>х if у else z</li>
@@ -133,49 +137,60 @@
 	</div>
 
 	<ul class="card">
-		<li>'banana'.count('a') 3</li>
-		<li>'Hello, welcome'.find('welcome') 7</li>
-		<li>"Mi casa, su casa.".index("casa") 4</li>
-		<li>sorted('cba')
-			['a', 'b', 'c']</li>
-		<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е') 'Ееж'</li>
+		<li>'banana'.count('a')</li>
+		<li> 3</li>
+		<li>'Hello, welcome'.find('welcome')</li>
+		<li>7</li>
+		<li>"Mi casa, su casa.".index("casa")</li>
+		<li>4</li>
+		<li>sorted('cba')</li>
+		<li>['a', 'b', 'c']</li>
+		<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е')</li>
+		<li>'Ееж'</li>
 	</ul>
 
 	<ul class="card">
 		<li>'h'.capitalize() H</li>
-		<li>"Hello My Name Is PETER".swapcase()
-			hELLO mY nAME iS peter</li>
-		<li>"Welcome to my world".title()
-			Welcome To My World</li>
-		<li>"Hello my friends".upper()
-			HELLO MY FRIENDS</li>
-		<li>"Hello my FRIENDS".lower()
-			hello my friends</li>
-		<li>'Hello, And Welcome'.casefold() hello, and welcome</li>
+		<li>'h'.capitalize() H</li>
+		<li>"Hello My Name Is PETER".swapcase()</li>
+		<li>hELLO mY nAME iS peter</li>
+		<li>"Welcome to my world".title()</li>
+		<li>Welcome To My World</li>
+		<li>"Hello my friends".upper()</li>
+		<li>hello my friends</li>
+		<li>"Hello my FRIENDS".lower()</li>
+		<li>hello my friends</li>
+		<li>'Hello, And Welcome'.casefold()</li>
+		<li>hello, and welcome</li>
 	</ul>
 
 	<ul class="card">
-		<li>"banana".center(20, "O")
-			OOOOOOObananaOOOOOOO</li>
-		<li>S.encode(å) \xc3\x</li>
-		<li>"H\te\tl\tl\to".expandtabs() H e l l o</li>
-		<li>"For only {price:.2f} dollars!".format(price = 49)
-			For only 49.00 dollars!</li>
-		<li>"#".join(["John", "Peter", "Vicky"]) John#Peter#Vicky</li>
-		<li>"welcome to the jungle".split() ['welcome', 'to', 'the', 'jungle']</li>
-		<li>'spacious '.rstrip()
-			' spacious'</li>
+		<li>"banana".center(20, "O")</li>
+		<li>OOOOOOObananaOOOOOOO</li>
+		<li>S.encode(å)</li>
+		<li>\xc3\x</li>
+		<li>"H\te\tl\tl\to".expandtabs()</li>
+		<li>H e l l o</li>
+		<li>"For only {price:.2f} dollars!".format(price = 49)</li>
+		<li>For only 49.00 dollars!</li>
+		<li>"#".join(["John", "Peter", "Vicky"])</li>
+		<li>John#Peter#Vicky</li>
+		<li>"welcome to the jungle".split()</li>
+		<li>['welcome', 'to', 'the', 'jungle']</li>
+		<li>'spacious '.rstrip()</li>
+		<li>'spacious'</li>
 	</ul>
 
 	<ul class="card">
-		<li>"Hello, welcome to my world.".startswith("Hello")
-			True</li>
+		<li>"Hello, welcome to my world.".startswith("Hello")</li>
+		<li>True</li>
 		<li>'world.'.endswith('.')</li>
+		<li>True</li>
 	</ul>
 
 	<ul class="card">
-		<li>"50".zfill(10)
-			0000000050</li>
+		<li>"50".zfill(10)</li>
+		<li>0000000050</li>
 	</ul>
 
 	<h2 id="func">Массивы</h2>
@@ -454,13 +469,38 @@ a = [1,2,4,3,2]
 i = len(a) - 1
 #print(i) #4
 for j in range(len(a)-1,-1,-1):
+   
     #print(j) #4 3 2 1 0
     #print(a[j]) #2 3 4 2 1
     #print(a[i]) #2 2 3 4 4
+    
     if a[j] >= a[i]:
+       
         #print(a[j]) #2 3 4 
+        
+        #1 цикл
+        #i = 4 j = 4
+        #a[4] >= a[4]?
+        #2 >= 2? true
+        #i = 4
+        
+        #2 цикл
+        #i = 4 j = 3
+        #a[3] >= a[4]
+        #3 >= 2? true
+        #i = 3
+        
+        #3 цикл
+        #4 >= 2? true
+        #i = 2
+        
+        #4 цикл
+        #2 >= 4? false
+        #ans = i = 2
         #print(a[i]) #2 2 3 
+        
         i = j
+        
         #print(i) #4 3 2 
 print(i) # 2
 </pre>
