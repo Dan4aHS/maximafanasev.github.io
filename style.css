@@ -52,26 +52,3 @@ pre {
 }
 
 
-table {
-	border-collapse: collapse;
-	margin-bottom: 24px;
-	width: 100%;
-	max-width: fit-content;
-	margin-right: 24px;
-}
-
-table tbody tr td {
-	padding: 15px 15px;
-	border: 1px dotted #999;
-	word-break: break-all;
-	background: #444;
-}
-
-table tbody tr th {
-	padding: 5px;
-	border: 1px dotted #999;
-	word-break: break-all;
-	background: #1d7d32;
-}
-
-
