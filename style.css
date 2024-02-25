@@ -14,17 +14,7 @@ body {
 .card {
 	padding: 16px 24px 0px;
 	border-radius: 16px;
-	border: 1px solid #999;
-	margin-bottom: 32px;
-}
-
-.border {
-	width: 100%;
-	max-width: fit-content;
-	padding: 24px 24px 0 24px;
-	border: 1px dashed #999;
-	border-radius: 10px;
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
 ul {
@@ -48,6 +38,10 @@ pre {
 	max-width: fit-content;
 	overflow-x: auto;
 	color: #fff;
+}
+
+b {
+	filter: blur(7px);
 }
 
 
