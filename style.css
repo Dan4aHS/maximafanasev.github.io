@@ -41,7 +41,8 @@ pre {
 }
 
 b {
-	filter: blur(7px);
+	color: lightgreen;
+	filter: blur(2px);
 }
 
 
