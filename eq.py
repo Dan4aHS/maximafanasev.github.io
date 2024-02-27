@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang='en'>
-
-<head>
-	<meta charset='UTF-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<title>Python</title>
-	<link rel='icon' href='img/favicon.ico'>
-	<link rel='stylesheet' href='style.css'>
-</head>
-
-<body class='wrapper'>
 import math
 from decimal import Decimal
 from fractions import Fraction
@@ -18,7 +6,7 @@ import copy
 print('#1', 'True' if True else 'False')
 print('#2', 'True' if False else 'False')
 print('#3', 'text')
-print('#4', 1, 2, 3, sep=' ')
+print('#4', 1, 2, 3, sep='***')
 print('#5', *[1,2,3], sep='\n')
 print('#6', (2+4)*2)
 print('#7', 2+4*2)
@@ -110,4 +98,4 @@ print('#92', [1,2].clear())
 print('#93', ['a','b'].pop(1))
 print('#94', [1,2].remove(1))
 
-</body></html>
+
