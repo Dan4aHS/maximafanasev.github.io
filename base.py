@@ -65,31 +65,6 @@ print('#ЧИСЛА', Fraction (4, 6))
 print('#ЧИСЛА', random.choice(['a', 'b', 'c']))
 
 
-print('#СТРОКИ', 'banana'.count('a'))
-print('#СТРОКИ', 'Hello, welcome'.find('welcome'))
-print('#СТРОКИ', 'Mi casa, su casa.'.index('casa'))
-print('#СТРОКИ', sorted('cba'))
-print('#СТРОКИ', 'Ёёж'.replace('Ё', 'Е').replace('ё', 'е'))
-print('#СТРОКИ', 'h'.capitalize())
-print('#СТРОКИ', 'Hello My'.swapcase())
-print('#СТРОКИ', 'Welcome to'.title())
-print('#СТРОКИ', 'Hello my friends'.upper())
-print('#СТРОКИ', 'Hello my FRIENDS'.lower())
-print('#СТРОКИ', 'Hello, And'.casefold())
-print('#СТРОКИ', 'banana'.center(20, 'O'))
-print('#СТРОКИ', 'H\te\tl\tl\to'.expandtabs())
-print('#СТРОКИ', 'For only {price:.2f} dollars!'.format(price = 49))
-print('#СТРОКИ', '#'.join(['John', 'Peter', 'Vicky']))
-print('#СТРОКИ', 'welcome to the jungle'.split())
-print('#СТРОКИ', ' spacious '.strip())
-print('#СТРОКИ', 'spacious '.rstrip())
-print('#СТРОКИ', 'Hello, welcome to my world.'.startswith('Hello'))
-print('#СТРОКИ', True)
-print('#СТРОКИ', 'world.'.endswith('.'))
-print('#СТРОКИ', True)
-print('#СТРОКИ', '50'.zfill(10))
-
-
 print('#МАССИВЫ', [1, 2].append(3))
 print('#МАССИВЫ', [1, 2].extend([3, 4]))
 print('#МАССИВЫ', [1, 2].insert(1,'a'))
@@ -101,6 +76,3 @@ print('#МАССИВЫ', copy.copy(['b','c','a']))
 print('#МАССИВЫ', [1,2].clear())
 print('#МАССИВЫ', ['a','b'].pop(1))
 print('#МАССИВЫ', [1,2].remove(1))
-
-
-
