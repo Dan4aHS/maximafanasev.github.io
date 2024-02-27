@@ -1,242 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<title>Python</title>
-	<link rel="icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="style.css">
+	<link rel='icon' href='img/favicon.ico'>
+	<link rel='stylesheet' href='style.css'>
 </head>
 
-<body class="wrapper">
-
-	<ul class="card">
-		<li></li>
-	</ul>
-
-	<ul class="card">
-		<li>1 2 3 4 5 6 7 8 9 10 нату<b>ральные</b></li>
-		<li>0 1/2 2/3 ненату<b>ральные</b></li>
-		<li>1 2 3 4 5 6 ... в порядке возрастания - нату<b>ральный ряд</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>одна цифра - одно<b>значное</b></li>
-		<li>две - дву<b>значное</b> или много<b>значное</b> (начинается c 1 и тд)</li>
-		<li>17 025 543 - 543, 025, 17 - кла<b>ссы</b></li>
-		<li>543 - класс единиц 025 - класс ты<b>сяч</b> 17 - кла<b>сс</b> милл<b>ионов</b></li>
-		<li>при чтении 17 милл<b>ионов</b> 25 ты<b>сяч</b> 543</li>
-		<li>Каждый класс разбивается на со<b>тни</b> де<b>сятки</b> еди<b>ницы</b></li>
-		<li>2 958 = 2*1000 + 9*100 + 5*10 + 8*1 сум<b>ма</b> разр<b>ядных</b> слаг<b>аемых</b></li>
-		<li></li>
-	</ul>
-
-
-	<ul class="card">
-		<li>"True" if True else "False" <b>True</b></li>
-		<li>"True" if False else "False" <b>False</b></li>
-	</ul>
-
-
-	<ul class="card">
-		<li>print('text') <b>text</b></li>
-		<li>print(1, 2, 3, sep=' ') <b>1 2 3</b></li>
-		<li>print(*[1,2,3], sep="\n") <b><br>1 <br>2 <br>3</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>(2+4)*2 <b>12</b></li>
-		<li>2+4*2 <b>10</b></li>
-		<li>2+4.0 <b>6.0</b></li>
-		<li>0.1 + 0.1 + 0.1 <b>0.30000000000000004</b></li>
-		<li>0.1 + 0.1 + 0.1 - 0.3 <b>5.551115123125783е-17</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>int(3.1415) <b>3</b></li>
-		<li>float(3) <b>3.0</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>3**2 <b>9</b></li>
-		<li>144 ** .5 <b>12.0</b></li>
-		<li>pow(144, .5) <b>12.0</b></li>
-		<li>math.sqrt(144) <b>12.0</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>4/2+3 <b>5.0</b></li>
-		<li>1/3.0 <b>0.3333333333333333</b></li>
-		<li>10/4 <b>2.5</b></li>
-		<li>10//4 <b>2</b></li>
-		<li>10//4.0 <b>2.0</b></li>
-		<li>5//-2 <b>-3</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>25%6 <b>1 (25 - 6*4)</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>math.floor(2.5) <b>2</b></li>
-		<li>math.floor(-2.5) <b>-3</b></li>
-		<li>math.trunc(2.5) <b>2</b></li>
-		<li>math.trunc(-2.5) <b>-2</b></li>
-		<li>math.pi <b>3.141592653</b></li>
-		<li>math.e <b>2.718281828</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>abs (-42.0) <b>42.0</b></li>
-		<li>sum((l, 2, 3, 4)) <b>10</b></li>
-		<li>min(3, 1, 2, 4) <b>1</b></li>
-		<li>max(3, 1, 2, 4) <b>4</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>2&#60;4 and 4&#60;6 <b>True</b></li>
-		<li>2&#60;4>6 <b>False</b></li>
-		<li>1&#60;2&#60;3.0&#60;4 <b>True</b></li>
-		<li>1>2>3.0>4 <b>False</b></li>
-		<li>1==2&#60;3 (1==2 and 2&#60;3) <b>False</b></li>
-		<li>1.1+2.2 == 3.3 <b>False</b></li>
-		<li>int(1.1+2.2) == int(3.3) <b>True</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>1j * 1J <b>(-1 + 0j)</b></li>
-		<li>2 + 1j * 3 <b>(2+3j)</b></li>
-		<li>(2+1j)*3 <b>(6+3j)</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>0o1 <b>1</b></li>
-		<li>0xFF <b>255</b></li>
-		<li>0b10000 <b>16</b></li>
-		<li>oct(64) <b>0o100</b></li>
-		<li>hex(64) <b>0x40</b></li>
-		<li>bin(64) <b>0b1000000</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>eval('64') <b>64</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>'{0:о}, {1:х}, {2 :b}'.format(64 , 64, 64) <b>'100, 40, 1000000'</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>1 &#60;&#60; 2 0001 стал <b>0100</b></li>
-		<li>1 | 2 <b>0011</b></li>
-		<li>1 & 1 <b>0001</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>'%e'%0.33333 <b>'3.333300e-01'</b></li>
-		<li>'%4.2f'%0.333333 <b>'0.33'</b></li>
-		<li>'{0:4.2f}'.format(0.333) <b>'0.33'</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3') <b>Decimal('0.0')</b></li>
-		<li>decimal.getcontext().prec = 4 <br>
-			decimal.Decimal(1) / decimal.Decimal(7) <b>Decimal('0.1429')</b></li>
-		<li>Fraction (4, 6) <b>2/3</b></li>
-	</ul>
-
-	<ul class="card">
-		<li>random.choice(['a', 'b', 'c']) <b>a, b or c</b></li>
-		<li>random.shuffle(['a', 'b', 'c']) <b>['c', 'b', 'a']</b></li>
-	</ul>
-
-	<ul class="card">
-		<li></li>
-	</ul>
-	
-	<div>
-		<ul class="card">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-
-	<ul class="card">
-		<li>'banana'.count('a')</li>
-		<li> 3</li>
-		<li>'Hello, welcome'.find('welcome')</li>
-		<li>7</li>
-		<li>"Mi casa, su casa.".index("casa")</li>
-		<li>4</li>
-		<li>sorted('cba')</li>
-		<li>['a', 'b', 'c']</li>
-		<li>'Ёёж'.replace('Ё', 'Е').replace('ё', 'е')</li>
-		<li>'Ееж'</li>
-	</ul>
-
-	<ul class="card">
-		<li>'h'.capitalize() H</li>
-		<li>'h'.capitalize() H</li>
-		<li>"Hello My Name Is PETER".swapcase()</li>
-		<li>hELLO mY nAME iS peter</li>
-		<li>"Welcome to my world".title()</li>
-		<li>Welcome To My World</li>
-		<li>"Hello my friends".upper()</li>
-		<li>hello my friends</li>
-		<li>"Hello my FRIENDS".lower()</li>
-		<li>hello my friends</li>
-		<li>'Hello, And Welcome'.casefold()</li>
-		<li>hello, and welcome</li>
-	</ul>
-
-	<ul class="card">
-		<li>"banana".center(20, "O")</li>
-		<li>OOOOOOObananaOOOOOOO</li>
-		<li>S.encode(å)</li>
-		<li>\xc3\x</li>
-		<li>"H\te\tl\tl\to".expandtabs()</li>
-		<li>H e l l o</li>
-		<li>"For only {price:.2f} dollars!".format(price = 49)</li>
-		<li>For only 49.00 dollars!</li>
-		<li>"#".join(["John", "Peter", "Vicky"])</li>
-		<li>John#Peter#Vicky</li>
-		<li>"welcome to the jungle".split()</li>
-		<li>['welcome', 'to', 'the', 'jungle']</li>
-		<li>'spacious '.rstrip()</li>
-		<li>'spacious'</li>
-	</ul>
-
-	<ul class="card">
-		<li>"Hello, welcome to my world.".startswith("Hello")</li>
-		<li>True</li>
-		<li>'world.'.endswith('.')</li>
-		<li>True</li>
-	</ul>
-
-	<ul class="card">
-		<li>"50".zfill(10)</li>
-		<li>0000000050</li>
-	</ul>
-
-
-	<ul class="card">
-		<li>[1, 2].append(3) [1,2,3]</li>
-		<li>[1, 2].extend([3, 4]) [1,2,3,4]</li>
-		<li>[1, 2].insert(1,a) [1,a,2]</li>
-		<li>[1, 2].index(2) 1</li>
-		<li>[1, 2].count(2) 1</li>
-		<li>sorted([b,c,a]) [a,b,c]</li>
-		<li>reverse([a,b,c]) [c,b,a]</li>
-		<li>x = copy([a,b,c]) [a,b,c]</li>
-		<li>[1,2].clear() []</li>
-		<li>[a,b].pop(1) a</li>
-		<li>[a,b].remove(b) [a]</li>
-	</ul>
-
+<body class='wrapper'>
+import math
+from decimal import Decimal
+from fractions import Fraction
+import random
+import copy
+print('#1', 'True' if True else 'False')
+print('#2', 'True' if False else 'False')
+print('#3', 'text')
+print('#4', 1, 2, 3, sep=' ')
+print('#5', *[1,2,3], sep='\n')
+print('#6', (2+4)*2)
+print('#7', 2+4*2)
+print('#8', 2+4.0)
+print('#9', 0.1 + 0.1 + 0.1)
+print('#10', 0.1 + 0.1 + 0.1 - 0.3)
+print('#11', int(3.1415))
+print('#12', float(3))
+print('#13', 3**2)
+print('#14', 144 ** .5)
+print('#15', pow(144, .5))
+print('#16', math.sqrt(144))
+print('#17', 4/2+3)
+print('#18', 1/3.0)
+print('#19', 10/4)
+print('#20', 10//4)
+print('#21', 10//4.0)
+print('#22', 5//-2)
+print('#23', 25%6)
+print('#24', math.floor(2.5))
+print('#25', math.floor(-2.5))
+print('#26', math.trunc(2.5))
+print('#27', math.trunc(-2.5))
+print('#28', math.pi)
+print('#29', math.e)
+print('#30', abs (-42.0))
+print('#31', sum((1, 2, 3, 4)))
+print('#32', min(3, 1, 2, 4))
+print('#33', max(3, 1, 2, 4))
+print('#34', 2<4 and 4<6)
+print('#35', 2<4>6)
+print('#36', 1<2<3.0<4)
+print('#37', 1>2>3.0>4)
+print('#38', 1==2<3 (1==2 and 2<3))
+print('#39', 1.1+2.2 == 3.3)
+print('#40', int(1.1+2.2) == int(3.3))
+print('#41', 1j * 1J)
+print('#42', 2 + 1j * 3)
+print('#43', (2+1j)*3)
+print('#44', 0o1)
+print('#45', 0xFF)
+print('#46', 0b10000)
+print('#47', oct(64))
+print('#48', hex(64))
+print('#49', bin(64))
+print('#50', eval('64'))
+print('#51', 1 << 2)
+print('#52', 1 | 2)
+print('#53', 1 & 1)
+print('#54', '%e'%0.33333)
+print('#55', '%4.2f'%0.333333)
+print('#56', '{0:4.2f}'.format(0.333))
+print('#57', Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3'))
+print('#58', Fraction (4, 6))
+print('#59', random.choice(['a', 'b', 'c']))
+print('#60', random.shuffle(['a', 'b', 'c']))
+print('#61', 'banana'.count('a'))
+print('#62', 'Hello, welcome'.find('welcome'))
+print('#63', 'Mi casa, su casa.'.index('casa'))
+print('#64', sorted('cba'))
+print('#65', 'Ёёж'.replace('Ё', 'Е').replace('ё', 'е'))
+print('#66', 'h'.capitalize())
+print('#67', 'Hello My'.swapcase())
+print('#68', 'Welcome to'.title())
+print('#69', 'Hello my friends'.upper())
+print('#70', 'Hello my FRIENDS'.lower())
+print('#71', 'Hello, And'.casefold())
+print('#72', 'banana'.center(20, 'O'))
+print('#73', 'H\te\tl\tl\to'.expandtabs())
+print('#74', 'For only {price:.2f} dollars!'.format(price = 49))
+print('#75', '#'.join(['John', 'Peter', 'Vicky']))
+print('#76', 'welcome to the jungle'.split())
+print('#77', ' spacious '.strip())
+print('#78', 'spacious '.rstrip())
+print('#79', 'Hello, welcome to my world.'.startswith('Hello'))
+print('#80', True)
+print('#81', 'world.'.endswith('.'))
+print('#82', True)
+print('#83', '50'.zfill(10))
+print('#84', [1, 2].append(3))
+print('#85', [1, 2].extend([3, 4]))
+print('#86', [1, 2].insert(1,'a'))
+print('#87', [1, 2].index(2))
+print('#88', [1, 2].count(2))
+print('#89', sorted(['b','c','a']))
+print('#90', ['b','c','a'].reverse())
+print('#91', copy.copy(['b','c','a']))
+print('#92', [1,2].clear())
+print('#93', ['a','b'].pop(1))
+print('#94', [1,2].remove(1))
 
 </body></html>
