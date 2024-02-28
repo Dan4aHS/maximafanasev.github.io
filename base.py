@@ -2,8 +2,6 @@ import math
 from decimal import Decimal
 from fractions import Fraction
 import random
-
-
 print('-----------------')
 print('#1', 'True' if True else 'False')
 print('#2', 'True' if False else 'False')
