@@ -1,10 +1,15 @@
 import pyperclip, re
 
+# скопировать в буфер обмена
+# 800-420-8000 text text info@sdfsdf.com text text
+# и запустить программу
+# она уберет все лишнее и оставит телефон и email
+
 phoneRegex = re.compile(r'''(
     (\d{3}|\(\d{3}\))? # area code
     (\s|-|\.)?         # separator
     (\d{3})              # first 3 digits
-    (\s|-|\.)          # separator
+    (\s|-|\.)          # 
     (\d{4})              # last 4 digits
     (\s*(ext|x|ext.)\s*(\d{2,5}))?  # extension
     )''', re.VERBOSE)
@@ -32,7 +37,7 @@ for groups in emailRegex.findall(text):
 # Copy results to the clipboard.
 if len(matches) > 0:
     pyperclip.copy('\n'.join(matches))
-    print('Copied to clipboard:')
+    print('Скопировано в буфер обмена:')
     print('\n'.join(matches))
 else:
-    print('No phone numbers or email addresses found.')
+    print('Не найдено телефонов или email')
