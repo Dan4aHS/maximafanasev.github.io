@@ -1,5 +1,5 @@
 import copy
-print('-----------------')
+print('------------------')
 print('#1', [1, 2].append(3))
 print('#2', [1, 2].extend([3, 4]))
 print('#3', [1, 2].insert(1,'a'))
