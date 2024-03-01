@@ -5,7 +5,6 @@ import random
 print('-----------------')
 print('#1', 'True' if True else 'False')
 print('#2', 'True' if False else 'False')
-print('#3', 'text')
 print('#4', 1, 2, 3, sep='***')
 print('#5', *[1,2,3], sep='\n')
 print('-----------------')
