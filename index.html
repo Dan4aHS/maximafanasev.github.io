@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Python практика</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="wrapper">
+	<h1>ЕГЭ по информатике</h1>
+	<h2>2</h2>
+	<img src="img/12456.png" alt="решение задачи">
+	<pre>
+from <b>itertools</b> import *
+
+<b>def</b> f(x,y,w,z):
+    return (not(y &#60;= (x==w)) and (z&#60;=x))
+
+<b>for a1,a2,a3,a4,a5 in product([0,1], repeat=5)</b>:
+    table = [(a1,1,1,a2),(0,a3,a4,0),(a5,0,1,0)]
+    if <b>len(table)==len(set(table))</b>:
+        <b>for p in permutations('xywz')</b>:
+            if <b>[f(**dict(zip(p,r))) for r in table]</b>==[1,1,1]:
+                print(p)
+</pre>
+</body></html>

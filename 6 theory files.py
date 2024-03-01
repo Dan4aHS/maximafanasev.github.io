@@ -8,8 +8,8 @@ print('#2', os.getcwd())
 print('#3', os.chdir('C:\\Windows')) 
 # каталог изменился
 print('#4', os.getcwd()) 
-# создать папку 1 раз
-# print('#5', os.makedirs('C:\\Users\\Swizi\\Desktop\\www'))
+# создать папку 1 раз TODO: разобраться почему сломалось
+# print('#5', os.makedirs('C:\\Users\\admin\\Desktop\\www'))
 print('-----------------')
 # aбсолютный путь
 print('#1', os.path.abspath('.'))
@@ -20,4 +20,6 @@ print('#3', os.path.isabs('.'))
 # возврат строки относительного пути
 print('#4', os.path.relpath('C:\\Windows'))
 print('#5', )
+
+
 
