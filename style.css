@@ -30,26 +30,31 @@ h6 {
 
 
 
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 pre {
 	border-radius: 12px;
 	box-sizing: border-box;
 	font-size: 22px;
 	line-height: 1.6;
-	margin: 0 0 24px 0;
-	padding: 5px 10px;
+	margin: 0 24px 40px 0;
+	padding: 20px;
 	width: auto;
 	max-width: fit-content;
 	overflow-x: auto;
-	background: #444;
 	color: #fff;
-	margin-right: 24px;;
+	border: 1px dotted #999;
 }
 
 
-.flex {
-	display: flex;
-	flex-wrap: wrap;
+.flex pre:nth-child(2) {
+	background: #1b1c1b;
 }
+
+
 
 img {
 	width: 100%;
