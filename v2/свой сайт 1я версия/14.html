@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Python практика</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
+		<h1>Решение 14 задач Python</h1>
+
+		<div class="exercise">
+			<img src="14/11317.png" alt="решение задачи">
+			<pre class="blur">
+for x in '0123456789ABCDEFG':
+    s = int(f'7AC{x}53D', 17) + int(f'83BG94{x}D', 17) + 
+    int(f'C5{x}D', 17) + int(f'C4BBF{x}4', 17) + int(f'7{x}79', 17)
+    if s%16==0:
+        print(x, s//16)</pre>
+		</div>
+
+		<p>18⋅7<sup>108</sup> −5⋅49<sup>76</sup> +343<sup>35</sup> −50
+
+			записали в системе счисления с основанием 49.
+
+			Для найденного выражения вычислите сумму цифр и укажите её в ответе в десятичной системе счисления.</p>
+		<pre>
+n = abs(18*7**108 - 5*49**76 + 343**35 - 50)
+sm = 0
+while n>0:
+    sm += n%49
+    n //=49
+print(sm)</pre>
+
+		<div class="exercise">
+			<img src="14/12246.png" alt="решение задачи">
+			<pre class="blur">
+n = 2*729**333 + 2*243**334  - 81**335 + 2*27**336 - 2*9**337 - 338
+k=0
+while n>0:
+    if n%9>0:
+        k+=1
+    n//=9
+print(k)</pre>
+		</div>
+
+		<div class="exercise">
+			<p>249 Найдите десятичное число x, такое что 20 &#60; x &#60; 30, запись которого в системе счисления с основанием 3 заканчивается на 11</p>
+			<pre class="blur">
+def cc(x):
+    s = ''
+    while x>0:
+        s = str(x%3) + s
+        x //= 3
+    return s
+
+for x in range(21,30):
+    print(x, cc(x))</pre>
+		</div>
+
+		<div class="exercise">
+			<img src="14/8951.png" alt="решение задачи">
+			<pre class="blur">
+for N in range(6, 37):
+    x = 7**500 - int('53', N)
+    if x%6 == 0:
+        print(N)
+        break</pre>
+		</div>
+
+		<div class="exercise">
+			<p>255 Укажите наименьшее основание системы счисления, в которой запись числа 50 двузначна.</p>
+			<pre class="blur">
+for n in range(2,37):
+    if 50//n//n == 0:
+        print(n)
+        break
+</pre>
+		</div>
+
+		<div class="exercise">
+			<p>253 В системе счисления с основанием N запись числа 41 оканчивается на 2, а запись числа 131 – на 1. Чему равно число N?</p>
+			<pre class="blur">
+for  n in range(1,100):
+    if 41%n == 2 and 131%n==1:
+        print(n)</pre>
+		</div>
+
+		<div class="exercise">
+			<p>250 Укажите наибольшее десятичное число, не превосходящее 40, запись которого в двоичной системе счисления оканчивается на 1011?</p>
+			<pre class="blur">
+for x in range(1, 41):
+    print(x, bin(x)[2:])
+</pre>
+			<img src="14/1.png" alt="решение задачи">
+			<img src="14/2.png" alt="решение задачи">
+			<img src="14/3.png" alt="решение задачи">
+			<img src="14/4.png" alt="решение задачи">
+		</div>
+	</div>
+</body></html>

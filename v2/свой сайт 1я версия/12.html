@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Python практика</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<span>&#60; </span><a href="index.html">Вернуться к списку задач</a>
+		<h1>Решение 12 задач Python</h1>
+
+		<div class="exercise">
+			<img src="12/12244.png" alt="решение задачи">
+			<pre class="blur">
+ans = []
+for n in range(4,10000):
+    s = '3' + n*'5'
+    while '333' in s or '555' in s:
+        if '555' in s:
+            s = s.replace('555','3',1)
+        else:
+            s = s.replace('333','5',1)
+    ans.append(sum(map(int, s)))
+        
+print(max(ans))
+</pre>
+		</div>
+
+
+		<div class="exercise">
+			<img src="12/11947.png" alt="решение задачи">
+			<pre class="blur">
+for n in range(3, 10000):
+    s = '5' + n*'2'
+    while '52' in s or '2222' in s or '1122' in s:
+        if '52' in s:
+            s = s.replace('52','11',1)
+        if '2222' in s:
+            s = s.replace('2222','5',1)
+        if '1122' in s:
+            s = s.replace('1122','25',1)
+    if sum(map(int, s)) == 64:
+        print(n)</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>11661 Определите наибольшее значение n ∈ [210; 300), при котором сумма числовых значений цифр строки, получившейся в результате выполнения программы, кратна 15</p>
+			<pre class="blur">
+if sum(map(int, s)) % 15 == 0</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>10714 Определите наибольшую длину строки</p>
+			<pre class="blur">
+m = -10**20
+if len(s) > m:
+   m = len(s)</pre>
+		</div>
+
+		<div class="exercise">
+			<p>7700 Определите наименьшее значение n, при котором сумма числовых значений цифр строки, получившейся в результате выполнения программы, является трехзначным числом, состоящем из трех одинаковых цифр</p>
+			<pre class="blur">
+for n in range(1,1000):
+    s = '3' + 40*'0' + n*'1' + 40*'2'
+    while '31' in s or '32' in s or '30' in s:
+        s = s.replace('31','223',1)
+        s = s.replace('32','23',1)
+        s = s.replace('30','13',1)
+    s = s.replace('3', '0')
+    sm = sum(map(int, s))
+    if 100<=sm<=999 and str(sm)[0]==str(sm)[1]==str(sm)[2]:
+        print(n)
+
+
+</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>7262 Определите, какие цифры будут находиться на 25-м, 75-м и 150-м местах строки</p>
+			<pre class="blur">
+s[26] + s[76] + s[151]</pre>
+		</div>
+
+
+		<div class="exercise">
+			<p>6747 </p>
+			<pre class="blur">
+for n in range(1,1000):
+    s = 104*'7'
+    while '33333' in s or '777' in s:
+        if '33333' in s:
+            s = s.replace('33333', '7', 1)
+        else:
+            s = s.replace('777','3',1)
+print(s)
+</pre>
+		</div>
+
+	</div>
+
+</body></html>

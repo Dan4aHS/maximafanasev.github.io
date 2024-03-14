@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Python практика</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<span>&#60; </span><a href="index.html">Вернуться на главную</a>
+		<h1>Автоматизация рутиных задач
+		</h1>
+		
+		<h3>Глава 7. Поиск по шаблону с помощью регулярных выражений</h3>
+		<ul>
+			<li>Поиск текста без регулярных выражений</li>
+			<li>поиск текста с помощью регулярных выражений</li>
+			<li>использование библиотеки re</li>
+			<li>поиск по всему выражению</li>
+			<li>поиск по группам или частям слов</li>
+			<li>поиск с необязательной частью слов</li>
+			<li>поиск по повторяющейся группе</li>
+			<li>поиск по одному или нескольким повторениям</li>
+			<li>все совпадения</li>
+			<li>символьные класс с чертой \ для поиска цифр, букв, подчеркивания, табуляция, пробел</li>
+			<li>поиск в начале текста</li>
+			<li>поиск в конце текста</li>
+			<li>поиск по всему, кроме символа новой строки</li>
+			<li>игнорирование регистра</li>
+			<li>замена строк в поиске</li>
+			<li>комбинация выражений в поиске</li>
+		</ul>
+		
+		<h3>Глава 8. Чтение и запись файлов</h3>
+		<ul>
+			<li>Работаем через консоль python</li>
+			<li>Показать папку, в которой нахожусь</li>
+			<li>Перейти в другую папку</li>
+			<li>Создать папку</li>
+			<li>Определение размеров файлов и содержимого папок</li>
+			<li>Проверить, есть ли путь к папке</li>
+			<li>Открыть файл</li>
+			<li>Прочитать</li>
+			<li>Прочитать построчно</li>
+			<li>Записать в файл</li>
+			<li>Красивый вывод информации</li>
+		</ul>
+		
+		<h3>Глава 9. Управление файлами</h3>
+		<ul>
+			<li>Копирование файлов и папок</li>
+			<li>Перемещение и переименовывание файлов и папок</li>
+			<li>Безвозвратное удаление файлов и папок</li>
+			<li>Сохранение копий удаленных файлов</li>
+			<li>Сжатие файлов</li>
+			<li>Чтение zip файлов</li>
+			<li>Извлечение zip файлов</li>
+			<li>Создание zip файлов и добавление в них файлов</li>
+		</ul>
+		
+		<h3>Глава 10. Отладка</h3>
+		<ul>
+			<li>raise Exception</li>
+			<li>Traceback</li>
+			<li>AssertionError</li>
+			<li>Протоколирование logging</li>
+			<li>Отладчик IDLE</li>
+			<li>Точки останова</li>
+		</ul>
+		
+		<h3>Глава 11. Автоматический сбор данных</h3>
+		<ul>
+			<li>Модуль для открытия окна браузера</li>
+			<li>Загрузка файлов из интернета</li>
+			<li>Сохранение файлов на жестком диске</li>
+			<li>Поиск html элементов на странице</li>
+			<li>Получение данных из атрибутов</li>
+			<li>Управление браузером</li>
+			<li>Запуск браузера</li>
+			<li>Поиск элементом на странице</li>
+			<li>Щелчок на странице</li>
+			<li>Заполнение и отправка форм</li>
+			<li>Щелчки на кнопках браузера</li>
+		</ul>
+		
+		<h3>Глава 12. EXCEL</h3>
+		<ul>
+			<li>Чтение</li>
+			<li>Открытие</li>
+			<li>Получение списока листов</li>
+			<li>Получение ячейки</li>
+			<li>Преобразования буквенных и цифровых обозначений</li>
+			<li>Получение строк и столбцов</li>
+			<li>Создание и сохранение</li>
+			<li>Создание и удаление листов</li>
+			<li>Запись значений в ячейки</li>
+			<li>Настройка шрифтов</li>
+			<li>Формулы</li>
+			<li>Слияние ячеек</li>
+			<li>Закрепление областей</li>
+			<li>Диаграммы</li>
+		</ul>
+		
+		<h3>Глава 13. PDF</h3>
+		<ul>
+			<li>Извлечение текста из pdf</li>
+			<li>Создание PDF</li>
+			<li>Поворот страниц</li>
+			<li>Наложение страниц</li>
+			<li>Шифрование документов</li>
+		</ul>
+		
+		<h3>Глава 13. WORD</h3>
+		<ul>
+			<li>Чтение</li>
+			<li>Получение текста</li>
+			<li>Изменение</li>
+			<li>Запись</li>
+			<li>Добавление заголовков, разрывов строк</li>
+			<li>Добавление изображений</li>
+		</ul>
+		
+		<h3>Глава 14. CSV & JSON</h3>
+		<ul>
+			<li>Чтение</li>
+			<li>Запись</li>
+		</ul>
+		
+		<h3>Глава 15. Даты</h3>
+		<ul>
+			<li>Запуск таймеров, секундомеров, паузы, запуск будильника</li>
+		</ul>
+		
+		<h3>Глава 16. Почта</h3>
+		<ul>
+			<li>SMTP сервер</li>
+			<li>Отправка почты</li>
+			<li>Удаление сообщений почты</li>
+			<li>Поиск сообщений</li>
+			<li>Управление компьютером с помощью почты</li>
+		</ul>
+		
+		<h3>Глава 17. Работа с изображениями</h3>
+		<ul>
+			<li>Координаты</li>
+			<li>Открытие изображений</li>
+			<li>Из png в jpg</li>
+			<li>Обрезка размеров</li>
+			<li>Копирование и вставка изображений в другие изображения</li>
+			<li>Изменение размеров</li>
+			<li>Изменение отдельных пикселей</li>
+			<li>Добавление логотипа</li>
+			<li>Рисование изображений</li>
+		</ul>
+		
+		<h3>Глава 18. Управление клавиатурой</h3>
+		<ul>
+			<li>Перемещение указателя мыши</li>
+			<li>Получение позиции указателя</li>
+			<li>Щелчки мышью</li>
+			<li>Прокрутка</li>
+			<li>Получение снимка экрана</li>
+			<li>Управление клавиатурой</li>
+		</ul>
+		
+			
+		<div class="flex-dir">
+			<h2>Поздороваться</h2>
+			<pre>
+print('Hello world!')
+print('What is your name?') # ask for their name
+myName = input()
+print('It is good to meet you, ' + myName)
+print('The length of your name is:')
+print(len(myName))
+print('What is your age?') # ask for their age
+myAge = input()
+print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+</pre>
+
+			<h2>Введите пароль</h2>
+			<pre>name = ''
+while name != 'пароль':
+    print('Пожалуйста, введите пароль.')
+    name = input()
+print('Спасибо!')
+</pre>
+
+
+			<h2>Пароль swordfish</h2>
+			<pre>while True:
+    print('Who are you?')
+    name = input()
+    if name != 'Joe':
+        continue
+    print('Hello, Joe. What is the password? (It is a fish.)')
+    password = input()
+    if password == 'swordfish':
+        break
+print('Access granted.')
+	</pre>
+
+			<h2>Угадай число</h2>
+			<pre>
+# This is a guess the number game.
+import random
+secretNumber = random.randint(1, 20)
+print('I am thinking of a number between 1 and 20.')
+
+# Ask the player to guess 6 times.
+for guessesTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print('Your guess is too low.')
+    elif guess > secretNumber:
+        print('Your guess is too high.')
+    else:
+        break # This condition is the correct guess!
+
+if guess == secretNumber:
+    print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
+else:
+    print('Nope. The number I was thinking of was ' + str(secretNumber))</pre>
+
+			<h2>Все мои кошки</h2>
+			<pre>
+catNames = []
+while True:
+    print('Enter the name of cat ' + str(len(catNames) + 1) + ' (Or enter nothing to stop.):')
+    name = input()
+    if name == '':
+        break
+    catNames = catNames + [name]  # list concatenation
+print('The cat names are:')
+for name in catNames:
+    print('  ' + name)</pre>
+
+
+			<h2>Волшебный шар 8</h2>
+			<pre>
+import random
+
+messages = ['It is certain',
+    'It is decidedly so',
+    'Yes definitely',
+    'Reply hazy try again',
+    'Ask again later',
+    'Concentrate and ask again',
+    'My reply is no',
+    'Outlook not so good',
+    'Very doubtful']
+
+print(messages[random.randint(0, len(messages) - 1)])</pre>
+
+
+			<h2>Проверка дня рождения</h2>
+			<pre>
+birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+while True:
+    print('Enter a name: (blank to quit)')
+    name = input()
+    if name == '':
+        break
+
+    if name in birthdays:
+        print(birthdays[name] + ' is the birthday of ' + name)
+    else:
+        print('I do not have birthday information for ' + name)
+        print('What is their birthday?')
+        bday = input()
+        birthdays[name] = bday
+        print('Birthday database updated.')</pre>
+
+
+			<h2>Крестики нолики</h2>
+			<pre>
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+            'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+            'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+turn = 'X'
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    move = input()
+    theBoard[move] = turn
+    if turn == 'X':
+        turn = 'O'
+    else:
+        turn = 'X'
+printBoard(theBoard)</pre>
+
+
+			<h2>Парольная защита</h2>
+			<ol>
+				<li><a href="https://git-scm.com/download/win" target="_blank">установить git</a></li>
+				<li><a href="https://www.python.org/downloads/" target="_blank">установить python</a></li>
+				<li>создать проект и сохранить как pw.py</li>
+				<li>создать папку и добавить туда проект</li>
+				<li>внутри папки правой кнопкой мыши нажать Open git bash here</li>
+				<li>напечатать команду pip install pyperclip</li>
+				<li>напечатать команду py pw.py email</li>
+				<li>пароль от email скопирован в буфер обмена</li>
+			</ol>
+			<pre>
+PASSWORDS = {'email': 'F7min@Bx_!#_!#@xFtjVB6',
+             'blog': 'VmALvQ)!*!#@!_01MF3sdt',
+             'vk': '3(*&$@$JSDFSK++!0935'}
+
+import sys, pyperclip
+if len(sys.argv) < 2:
+    print('Введите: py pw.py email')
+    sys.exit()
+
+account = sys.argv[1] 
+
+if account in PASSWORDS:
+    pyperclip.copy(PASSWORDS[account])
+    print('Пароль для ' + account + ' скопирован.')
+else:
+    print('Нет такого пароля для ' + account)</pre>
+
+
+			<h2>Добавляет * в начало каждой строки скопированного текста</h2>
+			<pre>
+import pyperclip
+text = pyperclip.paste()
+
+#Separate lines and add stars.
+lines = text.split('\n')
+for i in range(len(lines)):
+    lines[i] = '* ' + lines[i]
+text = '\n'.join(lines)
+pyperclip.copy(text)</pre>
+
+
+			<h2>Поиск телефонного номера без регулярных выражений</h2>
+			<pre>
+def isPhoneNumber(text):
+    if len(text) != 12:
+        return False  
+    for i in range(0, 3):
+        if not text[i].isdecimal():
+            return False  
+    if text[3] != '-':
+        return False  
+    for i in range(4, 7):
+        if not text[i].isdecimal():
+            return False  
+    if text[7] != '-':
+        return False  
+    for i in range(8, 12):
+        if not text[i].isdecimal():
+            return False  
+    return True  
+
+print('415-555-4242 is a phone number:')
+print(isPhoneNumber('415-555-4242'))
+print('Some Number is a phone number:')
+print(isPhoneNumber('Some Number'))</pre>
+
+			<h2>Поиск телефонов и email в скопированном тексте</h2>
+			<pre>
+import pyperclip, re
+
+phoneRegex = re.compile(r'''(
+    (\d{3}|\(\d{3}\))? # area code
+    (\s|-|\.)?         # separator
+    (\d{3})              # first 3 digits
+    (\s|-|\.)          # separator
+    (\d{4})              # last 4 digits
+    (\s*(ext|x|ext.)\s*(\d{2,5}))?  # extension
+    )''', re.VERBOSE)
+
+# Create email regex.
+emailRegex = re.compile(r'''(
+    [a-zA-Z0-9._%+-]+      # username
+    @                      # @ symbol
+    [a-zA-Z0-9.-]+         # domain name
+    (\.[a-zA-Z]{2,4}){1,2} # dot-something
+    )''', re.VERBOSE)
+
+# Find matches in clipboard text.
+text = str(pyperclip.paste())
+
+matches = []
+for groups in phoneRegex.findall(text):
+    phoneNum = '-'.join([groups[1], groups[3], groups[5]])
+    if groups[8] != '':
+        phoneNum += ' x' + groups[8]
+    matches.append(phoneNum)
+for groups in emailRegex.findall(text):
+    matches.append(groups[0])
+
+# Copy results to the clipboard.
+if len(matches) > 0:
+    pyperclip.copy('\n'.join(matches))
+    print('Copied to clipboard:')
+    print('\n'.join(matches))
+else:
+    print('No phone numbers or email addresses found.')</pre>
+
+			<h2>Генератор квиза</h2>
+			<pre>
+#! python3
+# randomQuizGenerator.py - Creates quizzes with questions and answers in
+# random order, along with the answer key.
+
+import random
+
+# The quiz data. Keys are states and values are their capitals.
+capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 
+'Arizona': 'Phoenix', 'Arkansas': 'Little Rock', 'California': 
+'Sacramento', 'Colorado': 'Denver', 'Connecticut': 'Hartford', 
+'Delaware': 'Dover', 'Florida': 'Tallahassee', 'Georgia': 
+'Atlanta', 'Hawaii': 'Honolulu', 'Idaho': 'Boise', 'Illinois':
+ 'Springfield', 'Indiana': 'Indianapolis', 'Iowa': 'Des Moines',
+  'Kansas': 'Topeka', 'Kentucky': 'Frankfort', 'Louisiana': 
+  'Baton Rouge', 'Maine': 'Augusta', 'Maryland': 'Annapolis',
+   'Massachusetts': 'Boston', 'Michigan': 'Lansing', 'Minnesota':
+    'Saint Paul', 'Mississippi': 'Jackson', 'Missouri': 
+    'Jefferson City', 'Montana': 'Helena', 'Nebraska': 
+    'Lincoln', 'Nevada': 'Carson City', 'New Hampshire': 
+    'Concord', 'New Jersey': 'Trenton', 'New Mexico': 
+    'Santa Fe', 'New York': 'Albany', 'North Carolina': 
+    'Raleigh', 'North Dakota': 'Bismarck', 'Ohio': 'Columbus',
+     'Oklahoma': 'Oklahoma City', 'Oregon': 'Salem', 
+     'Pennsylvania': 'Harrisburg', 'Rhode Island': 
+     'Providence', 'South Carolina': 'Columbia', 
+     'South Dakota': 'Pierre', 'Tennessee': 'Nashville', 
+     'Texas': 'Austin', 'Utah': 'Salt Lake City', 
+     'Vermont': 'Montpelier', 'Virginia': 'Richmond', 
+     'Washington': 'Olympia', 'West Virginia': 'Charleston', 
+     'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
+capitalsItems = list(capitals.items())
+
+# Generate 35 quiz files.
+for quizNum in range(35): 
+    # Create the quiz and answer key files.
+    quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
+    answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
+
+    # Write out the header for the quiz.
+    quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
+    quizFile.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quizNum + 1))
+    quizFile.write('\n\n')
+
+    # Shuffle the order of the states.
+    states = list(capitals.keys()) # get all states in a list
+    random.shuffle(states) # randomize the order of the states
+
+    # Loop through all 50 states, making a question for each.
+    for questionNum in range(50):
+
+        # Get right and wrong answers.
+        correctAnswer = capitals[states[questionNum]]
+        wrongAnswers = list(capitals.values()) # get a complete list of answers
+        del wrongAnswers[wrongAnswers.index(correctAnswer)] # remove the right answer
+        wrongAnswers = random.sample(wrongAnswers, 3) # pick 3 random ones
+
+        answerOptions = wrongAnswers + [correctAnswer]
+        random.shuffle(answerOptions) # randomize the order of the answers
+
+        # Write the question and answer options to the quiz file.
+        quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
+        for i in range(4):
+            quizFile.write('    %s. %s\n' % ('ABCD'[i], answerOptions[i]))
+        quizFile.write('\n')
+
+        # Write out the answer key to a file.
+        answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+    quizFile.close()
+    answerKeyFile.close()</pre>
+
+			<h2>Открытие карт и поиск адреса введенного в строку</h2>
+			<p>Например py mapIt.py Moscow red square</p>
+			<pre>
+#! python3
+# mapIt.py - Launches a map in the browser using an address from the
+# command line or clipboard.
+
+import webbrowser, sys, pyperclip
+
+if len(sys.argv) > 1:
+    # Get address from command line.
+    address = ' '.join(sys.argv[1:])
+else:
+    # Get address from clipboard.
+    address = pyperclip.paste()
+
+webbrowser.open('https://www.google.com/maps/place/' + address)</pre>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
