@@ -1,5 +1,5 @@
 body {
-	background-color: #000;
+	background-color: #1f2022;
 	color: #fff;
 	font-family: roboto, sans-serif;
 	font-size: 22px;
@@ -70,4 +70,85 @@ b {
 	font-weight: normal;
 	border-radius: 7px;
 	padding: 0px 7px;
+}
+
+
+
+
+
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li,
+ol li {
+	margin-bottom: 16px;
+}
+
+ul.tasks {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul.tasks li {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	transition: 0.3s;
+	cursor: pointer;
+	margin: 10px;
+	background: green;
+}
+
+ul.tasks li a {
+	display: block;
+	border-radius: 5px;
+	padding: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+ul.tasks li:hover a {
+	background-color: #fff;
+	color: #222;
+}
+
+ul.tasks li:hover a {
+	text-decoration: none;
+	color: #222;
+}
+
+
+
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 24px;
+	overflow: hidden;
+	width: 100%;
+	max-width: fit-content;
+	margin-right: 24px;
+}
+
+table tbody tr td {
+	padding: 5px 7px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	word-break: break-all;
+}
+
+table tbody tr th {
+	padding: 5px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	word-break: break-all;
+}
+
+table.tasks td {
+	background: #213521;
 }

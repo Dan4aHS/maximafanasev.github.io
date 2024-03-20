@@ -9,9 +9,38 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="wrapper">	
+<body class="wrapper">
+	<ul class="tasks">
+		<li><a class="done" href="2.html">2</a></li>
+		<li><a class="done" href="5.html">5</a></li>
+		<li><a class="done" href="8.html">8</a></li>
+		<li><a class="done" href="9.html">9</a></li>
+		<li><a class="done" href="12.html">12</a></li>
+		<li><a class="done" href="13.html">13</a></li>
+		<li><a class="done" href="14.html">14</a></li>
+		<li><a class="done" href="15.html">15</a></li>
+		<li><a class="done" href="16.html">16</a></li>
+		<li><a class="done" href="17.html">17</a></li>
+		<li><a class="done" href="19-20-21.html">19-20-21</a></li>
+		<li><a class="done" href="23.html">23</a></li>
+		<li><a class="done" href="24.html">24</a></li>
+		<li><a class="done" href="25.html">25</a></li>
+		<li><a class="not-available" href="">26</a></li>
+		<li><a class="not-available" href="">27</a></li>
+	</ul>
+	<ul class="tasks">
+		<li><a class="done" href="1.html">1</a></li>
+		<li><a class="done" href="3.html">3</a></li>
+		<li><a class="done" href="4.html">4</a></li>
+		<li><a class="done" href="6.html">6</a></li>
+		<li><a class="done" href="7.html">7</a></li>
+		<li><a class="done" href="10.html">10</a></li>
+		<li><a class="done" href="11.html">11</a></li>
+		<li><a class="done" href="18.html">18</a></li>
+		<li><a class="done" href="22.html">22</a></li>
+	</ul>
 	<h2>Numbers</h2>
-		
+
 	<div class="flex">
 		<pre>
 (2+4)*2
@@ -26,7 +55,7 @@
 0.30000000000000004
 5.551115123125783e-17</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 int(3.1415)
@@ -35,7 +64,7 @@ float(3)</pre>
 3
 3.0</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 3**2
@@ -46,7 +75,7 @@ pow(144, .5)</pre>
 12.0
 12.0</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 4/2+3
@@ -59,7 +88,7 @@ pow(144, .5)</pre>
 2.5
 2</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 10//4.0
@@ -72,7 +101,7 @@ pow(144, .5)</pre>
 -3
 1</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 math.sqrt(144)
@@ -93,7 +122,7 @@ abs(-42.0)</pre>
 2.718281828459045
 42.0</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 'True' if True else 'False'
@@ -110,7 +139,7 @@ False
 3
 		</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 sum((1, 2, 3, 4))
@@ -125,7 +154,7 @@ max(3, 1, 2, 4)
 True
 False</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 1<2<3.0<4
@@ -140,7 +169,7 @@ False
 False
 True</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 1j * 1J
@@ -155,7 +184,7 @@ True</pre>
 1
 255</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 0b10000
@@ -170,7 +199,7 @@ eval('64')</pre>
 0b1000000
 64</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 1 << 2
@@ -185,7 +214,7 @@ eval('64')</pre>
 3.333300e-01
 0.33</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 '{0:4.2f}'.format(0.333)
@@ -198,12 +227,12 @@ random.choice(['a', 'b', 'c'])</pre>
 2/3
 a</pre>
 	</div>
-	
-	
-	
+
+
+
 	<h2>Strings</h2>
 	<div class="flex">
-<pre>
+		<pre>
 'a\nb\tc'
 len('a\nb\tc')
 '''Always look
@@ -212,7 +241,7 @@ side of life.'''
 'Always look\n on the bright\nside of life.'
 )
 '-'*10</pre>
-<pre>
+		<pre>
 a
 b	c
 5
@@ -225,14 +254,14 @@ side of life.
 ----------</pre>
 	</div>
 	<div class="flex">
-<pre>
+		<pre>
 '#1'
 for elem in 'hacker': print(elem, end='\n'
 'k' in 'hacker'
 'z' in 'hacker'
 'spam' in 'abcspamdef'
 'spam'[0] , 'spam'[-2]</pre>
-<pre>
+		<pre>
 #1
 h
 a
@@ -244,110 +273,110 @@ True
 False
 True
 s a</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 'spam'[1:3], 'spam'[1:], 'spam'[1]
 '123456789'[1:7:2]
 '123456789'[::2]
 '12345'[::-1]
 '12345'[::-2]</pre>
-<pre>
+		<pre>
 pa pam p
 246
 13579
 54321
 531</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 '1234567'[5:1:-1]
 'spam'[slice(1, 3)]
 'spam'[slice(None, None, -1)]
 int("42"), str(42)
 int ('1101' , 2)</pre>
-<pre>
+		<pre>
 6543
 pa
 maps
 42 42
 13</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 repr(42)
 repr('spam')
 ord('s')
 chr(115)
 bin(13)</pre>
-<pre>
+		<pre>
 42
 'spam'
 115
 s
 0b1101</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 'banana'.count('a')
 'Hello, welcome'.find('welcome')
 'Mi casa, su casa.'.index('casa')
 sorted('cba')
 'Ёёж'.replace('Ё', 'Е').replace('ё', 'е')</pre>
-<pre>
+		<pre>
 3
 7
 3
 ['a', 'b', 'c']
 Ееж</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 'h'.capitalize()
 'Hello My'.swapcase()
 'Welcome to'.title()
 'Hello my friends'.upper()
 'Hello my FRIENDS'.lower()</pre>
-<pre>
+		<pre>
 H
 hELLO mY
 Welcome To
 HELLO MY FRIENDS
 hello my friends</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 'Hello, And'.casefold()
 'banana'.center(20, 'O')
 'H\te\tl\tl\to'.expandtabs()
 'For only {price:.2f} dollars!'.format(price = 49)
 '#'.join(['John', 'Peter', 'Vicky'])</pre>
-<pre>
+		<pre>
 hello, and
 OOOOOOObananaOOOOOOO
 H       e       l       l       o
 For only 49.00 dollars!
 John#Peter#Vicky</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 'welcome to the jungle'.split()
 ' spacious '.strip()
 'spacious '.rstrip()
 'Hello, welcome to my world.'.startswith('Hello')
 'world.'.endswith('.')</pre>
-<pre>
+		<pre>
 ['welcome', 'to', 'the', 'jungle']
 spacious
 spacious
 True
 True</pre>
-		</div>
+	</div>
 	<div class="flex">
-<pre>
+		<pre>
 print('#1',  '50'.zfill(10)
 </pre>
-<pre>
+		<pre>
 0000000050
 </pre>
 	</div>
@@ -367,7 +396,7 @@ None
 1
 1</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 sorted(['b','c','a'])
@@ -382,7 +411,7 @@ None
 None
 b</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 len([1, 2, 3])
@@ -397,7 +426,7 @@ str([1, 2]) + '34'
 [1, 2]34
 [1, 2, '3', '4']</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 3 in [1, 2, 3]
@@ -412,7 +441,7 @@ True
 a
 b</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 ['a', 'b', 'c'][:1]
@@ -429,7 +458,7 @@ a[1:1] = [6,7]
 ['a', 'D', 'c']
 ['a', 6, 7, 'D', 'c']</pre>
 	</div>
-	
+
 	<div class="flex">
 		<pre>
 a = [2, 3, 4, 1]
@@ -445,13 +474,13 @@ a.sort(key=str.lower, reverse=True)
 ['abc', 'ABD', 'aBe']
 ['aBe', 'ABD', 'abc']</pre>
 	</div>
-	
-	
-	
-	
-	
+
+
+
+
+
 	<h2>Regular</h2>
-	
+
 	<div class="flex">
 		<pre>
 import re
@@ -475,8 +504,8 @@ print('#6', b.search('Мой номер: 415-555-4242.').groups()</pre>
 #6 ('415', '555-4242')</pre>
 	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 d = re.compile(r'Batman|Tina Fey')
 d.search('Batman and Tina Fey.').group()
 d.search('Tina Fey and Batman.').group()
@@ -485,16 +514,16 @@ e = re.compile(r'Bat(man|mobile|copter|bat)'
 e.search('Batmobile потерял колесо')
 e.search('Batmobile потерял колесо').group()
 e.search('Batmobile потерял колесо').group(1)</pre>
-	<pre>
+		<pre>
 Batman
 Tina Fey
 re.Match object; span=(0, 9), match='Batmobile'
 Batmobile
 mobile</pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 j = re.compile(r'Bat(wo)?man'
 j.search('The Adventures of Batman')
 j.search('The Adventures of Batman').group()
@@ -503,16 +532,16 @@ j.search('The Adventures of Batwoman').group()
 k = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d'
 k.search('Мой номер: 415-555-4242').group()
 k.search('Мой номер: 555-4242').group()</pre>
-	<pre>
+		<pre>
 re.Match object; span=(18, 24), match='Batman'
 Batman
 Batwoman
 415-555-4242
 555-4242</pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 l = re.compile(r'Bat(wo)*man'
 # * это 0 или более
 l.search('The Adventures of Batman').group()
@@ -524,15 +553,15 @@ q.search('The Adventures of Batwoman').group())
 
 w = re.compile(r'(Ha){3}'
 w.search('HaHaHa').group()</pre>
-	<pre>
+		<pre>
 Batman
 Batwowowoman
 Batwoman
 HaHaHa</pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 w = re.compile(r'(Ha){3,5}'
 # жадный вид поиска берет по максимуму
 w.search('HaHaHa').group()
@@ -544,16 +573,16 @@ qq.findall('Сотовый 444-222-5555, рабочий 333-111-3333')
 
 qq = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
 qq.findall('Сотовый 444-222-5555, рабочий 333-111-3333')</pre>
-	<pre>
+		<pre>
 HaHaHa
 HaHaHaHa
 HaHaHaHaHa
 ['444-222-5555', '333-111-3333']
 [('444', '222', '5555'), ('333', '111', '3333')]</pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 #d Любая от 0 до 9
 #D любой символ не цифра от 0 до 9
 #w любая буква, цифра или _
@@ -570,15 +599,15 @@ ee = re.compile(r'Hello$'
 # $ заканчивается этим
 ee.search('Hello motherf...') == None
 ee.search('motherf... HHHHello').group()</pre>
-	<pre>
+		<pre>
 Hello
 True
 True
 Hello</pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 rr = re.compile(r'.at')
 # at групповой символ
 rr.search('The cat in the hat').group()
@@ -595,56 +624,25 @@ tt.search('<aaaa> bbb>').group()
 tt = re.compile(r'<.*>')
 # at групповой символ
 tt.search('<aaaa> bbb>').group()</pre>
-	<pre>
+		<pre>
 cat
 ['cat', 'hat']
 ('Max', 'Afanasev'
 <aaaa>
 <aaaa> bbb></pre>
-</div>
+	</div>
 
-<div class="flex">
-	<pre>
+	<div class="flex">
+		<pre>
 1
 	</pre>
-	<pre>
+		<pre>
 2
 	</pre>
-</div>
+	</div>
 
-	
-	<h2>2</h2>
-	<img src="img/12456.png" alt="решение задачи">
-	<img src="img/13253.png" alt="решение задачи">
-	<pre>
-from <b>itertools</b> import *
 
-<b>def</b> f(x,y,w,z):
-    return (not(y &#60;= (x==w)) and (z&#60;=x))
 
-<b>for a1,a2,a3,a4,a5 in product([0,1], repeat=5)</b>:
-    table = [(a1,1,1,a2),(0,a3,a4,0),(a5,0,1,0)]
-    if <b>len(table)==len(set(table))</b>:
-        <b>for p in permutations('xywz')</b>:
-            if <b>[f(**dict(zip(p,r))) for r in table]</b>==[1,1,1]:
-                print(p)
-</pre>
+</body>
 
-	<img class="image" src="img/2.png" alt="решение задачи">
-	<img class="image" src="img/5.png" alt="решение задачи">
-	<img class="image" src="img/8.png" alt="решение задачи">
-	<img class="image" src="img/9.png" alt="решение задачи">
-	<img class="image" src="img/12.png" alt="решение задачи">
-	<img class="image" src="img/13.png" alt="решение задачи">
-	<img class="image" src="img/14.png" alt="решение задачи">
-	<img class="image" src="img/15.png" alt="решение задачи">
-	<img class="image" src="img/16.png" alt="решение задачи">
-	<img class="image" src="img/17.png" alt="решение задачи">
-	<img class="image" src="img/19-20-21.png" alt="решение задачи">
-	<img class="image" src="img/23.png" alt="решение задачи">
-	<img class="image" src="img/24.png" alt="решение задачи">
-	<img class="image" src="img/25.png" alt="решение задачи">
-	
-	
-	
-</body></html>
+</html>

@@ -3,7 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="4b325878-46c1-4ff5-84df-0773b77ad7c0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +56,7 @@
       <workItem from="1709449797220" duration="42000" />
       <workItem from="1709451002890" duration="95000" />
       <workItem from="1709451127226" duration="39000" />
+      <workItem from="1710962760068" duration="109000" />
     </task>
     <servers />
   </component>
