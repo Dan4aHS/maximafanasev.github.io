@@ -3,644 +3,165 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Python практика</title>
-	<link rel="icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Maxim Afanasev</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<style>
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  margin: 0;
+	gap: 4px;
+  position: relative;
+}
+
+.card {
+	width: 49%;
+	margin-bottom: 32px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+	font-family: monospace;
+	font-weight: 500;
+	font-size: 15px;
+	margin: 0;
+	padding-top: 2px;
+	padding-left: 16px;
+	padding-right: 5px;
+	white-space: break-spaces;
+}
+
+.card h2:nth-child(2) {
+	padding-top: 10px;
+}
+
+.card h2:nth-child(4) {
+	font-weight: bold;
+}
+
+.carousel-container {
+overflow-x: auto;
+display: flex;
+width: 100%;
+gap: 2px;
+align-items: center;
+scroll-snap-type: x mandatory;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 5px;
+  width: calc(100% - 48px);
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #b1b3b399;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #29AB87;
+}
+
+.carousel-container::-webkit-scrollbar-track-piece:start {
+  background: #29AB87;
+}
+
+.carousel-slide {
+  aspect-ratio: 1;
+  flex-flow: column nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  font-family: cursive;
+}
+
+.carousel-slide img {
+	width: 185px;
+}
+
+	</style>
 </head>
 
-<body class="wrapper">
-<h1>Python &#38; ЕГЭ информатика</h1>
-	<ul class="tasks">
-		<li><a class="done" href="2.html">2</a></li>
-		<li><a class="done" href="5.html">5</a></li>
-		<li><a class="done" href="8.html">8</a></li>
-		<li><a class="done" href="9.html">9</a></li>
-		<li><a class="done" href="12.html">12</a></li>
-		<li><a class="done" href="13.html">13</a></li>
-		<li><a class="done" href="14.html">14</a></li>
-		<li><a class="done" href="15.html">15</a></li>
-		<li><a class="done" href="16.html">16</a></li>
-		<li><a class="done" href="17.html">17</a></li>
-		<li><a class="done" href="19-20-21.html">19-20-21</a></li>
-		<li><a class="done" href="23.html">23</a></li>
-		<li><a class="done" href="24.html">24</a></li>
-		<li><a class="done" href="25.html">25</a></li>
-	</ul>
-	<ul class="tasks">
-		<li><a class="done" href="1.html">1</a></li>
-		<li><a class="done" href="3.html">3</a></li>
-		<li><a class="done" href="4.html">4</a></li>
-		<li><a class="done" href="6.html">6</a></li>
-		<li><a class="done" href="7.html">7</a></li>
-		<li><a class="done" href="10.html">10</a></li>
-		<li><a class="done" href="11.html">11</a></li>
-		<li><a class="done" href="18.html">18</a></li>
-		<li><a class="done" href="22.html">22</a></li>
-	</ul>
-	<h2>Numbers</h2>
-
-	<div class="flex">
-		<pre>
-(2+4)*2
-2+4*2
-2+4.0
-0.1 + 0.1 + 0.1
-0.1 + 0.1 + 0.1 - 0.3</pre>
-		<pre>
-12
-10
-6.0
-0.30000000000000004
-5.551115123125783e-17</pre>
+<body>
+	<div class="card">
+		<div class="carousel-container">
+			<div class="carousel-slide"><img src="1/msg694011896-145281.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145282.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145283.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145284.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145285.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145286.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="1/msg694011896-145287.jpg" alt=""></div>
+		</div>
+		<h2>Puma 180</h2>
+		<h2>EUR(41 42 43 44 45)</h2>
+		<h2>6780₽</h2>
 	</div>
 
-	<div class="flex">
-		<pre>
-int(3.1415)
-float(3)</pre>
-		<pre>
-3
-3.0</pre>
+	
+	<div class="card">
+		<div class="carousel-container">
+			<div class="carousel-slide"><img src="2/1 (1).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (2).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (3).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (4).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (5).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (6).jpg" alt=""></div>
+			<div class="carousel-slide"><img src="2/1 (1).jpg" alt=""></div>
+		</div>
+		<h2>Puma suede black</h2>
+		<h2>EUR(36 37 39)</h2>
+		<h2>6000₽</h2>
 	</div>
 
-	<div class="flex">
-		<pre>
-3**2
-144 ** .5
-pow(144, .5)</pre>
-		<pre>
-9
-12.0
-12.0</pre>
+	<div class="card">
+		<div class="carousel-container">
+			<div class="carousel-slide"><img src="3/msg694011896-145300.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="3/msg694011896-145301.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="3/msg694011896-145302.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="3/msg694011896-145303.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="3/msg694011896-145304.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="3/msg694011896-145305.jpg" alt=""></div>
+		</div>
+		<h2>Puma suede grey</h2>
+		<h2>EUR - 39,39,37,37,36</h2>
+		<h2>6000₽</h2>
 	</div>
 
-	<div class="flex">
-		<pre>
-4/2+3
-1/3.0
-10/4
-10//4</pre>
-		<pre>
-5.0
-0.3333333333333333
-2.5
-2</pre>
+	<div class="card">
+		<div class="carousel-container">
+			<div class="carousel-slide"><img src="4/msg694011896-145306.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="4/msg694011896-145307.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="4/msg694011896-145308.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="4/msg694011896-145309.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="4/msg694011896-1453010.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="4/msg694011896-1453011.jpg" alt=""></div>
+		</div>
+		<h2>Nike Air Traner 1 “Dark Smoke Grey” </h2>
+		<h2>EUR - 42,42,44,44,43,41</h2>
+		<h2>Цена:6500₽</h2>
 	</div>
 
-	<div class="flex">
-		<pre>
-10//4.0
-5//2
-5//-2
-25%6</pre>
-		<pre>
-2.0
-2
--3
-1</pre>
+	<div class="card">
+		<div class="carousel-container">
+			<div class="carousel-slide"><img src="5/msg694011896-145312.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="5/msg694011896-145313.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="5/msg694011896-145314.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="5/msg694011896-145315.jpg" alt=""></div>
+			<div class="carousel-slide"><img src="5/msg694011896-145316.jpg" alt=""></div>
+		</div>
+		<h2>New Balance 5740 Gore-Tex</h2>
+		<h2>EUR - 44,42,5,41,5</h2>
+		<h2>от 14380₽</h2>
 	</div>
-
-	<div class="flex">
-		<pre>
-math.sqrt(144)
-math.floor(2.5)
-math.floor(-2.5)
-math.trunc(2.5)
-math.trunc(-2.5)
-math.pi
-math.e
-abs(-42.0)</pre>
-		<pre>
-12.0
-2
--3
-2
--2
-3.141592653589793
-2.718281828459045
-42.0</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-'True' if True else 'False'
-'True' if False else 'False'
-1, 2, 3, sep='***'
-*[1,2,3], sep='\n'
-		</pre>
-		<pre>
-True
-False
-***1***2***3
-1
-2
-3
-		</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-sum((1, 2, 3, 4))
-min(3, 1, 2, 4)
-max(3, 1, 2, 4)
-2<4 and 4<6
-2<4>6</pre>
-		<pre>
-10
-1
-4
-True
-False</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-1<2<3.0<4
-1>2>3.0>4
-1==2<3
-1.1+2.2 == 3.3
-int(1.1+2.2) == int(3.3)</pre>
-		<pre>
-True
-False
-False
-False
-True</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-1j * 1J
-2 + 1j * 3
-(2+1j)*3
-0o1
-0xFF</pre>
-		<pre>
--1+0j
-2+3j
-6+3j
-1
-255</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-0b10000
-oct(64)
-hex(64)
-bin(64)
-eval('64')</pre>
-		<pre>
-16
-0o100
-0x40
-0b1000000
-64</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-1 << 2
-1 | 2
-1 & 1
-'%e'%0.33333
-'%4.2f'%0.333333</pre>
-		<pre>
-4
-3
-1
-3.333300e-01
-0.33</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-'{0:4.2f}'.format(0.333)
-Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
-Fraction (4, 6)
-random.choice(['a', 'b', 'c'])</pre>
-		<pre>
-0.33
-0.0
-2/3
-a</pre>
-	</div>
-
-
-
-	<h2>Strings</h2>
-	<div class="flex">
-		<pre>
-'a\nb\tc'
-len('a\nb\tc')
-'''Always look
- on the bright
-side of life.'''
-'Always look\n on the bright\nside of life.'
-)
-'-'*10</pre>
-		<pre>
-a
-b	c
-5
-Always look
- on the bright
-side of life.
-Always look
- on the bright
-side of life.
-----------</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'#1'
-for elem in 'hacker': print(elem, end='\n'
-'k' in 'hacker'
-'z' in 'hacker'
-'spam' in 'abcspamdef'
-'spam'[0] , 'spam'[-2]</pre>
-		<pre>
-#1
-h
-a
-c
-k
-e
-r
-True
-False
-True
-s a</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'spam'[1:3], 'spam'[1:], 'spam'[1]
-'123456789'[1:7:2]
-'123456789'[::2]
-'12345'[::-1]
-'12345'[::-2]</pre>
-		<pre>
-pa pam p
-246
-13579
-54321
-531</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'1234567'[5:1:-1]
-'spam'[slice(1, 3)]
-'spam'[slice(None, None, -1)]
-int("42"), str(42)
-int ('1101' , 2)</pre>
-		<pre>
-6543
-pa
-maps
-42 42
-13</pre>
-	</div>
-	<div class="flex">
-		<pre>
-repr(42)
-repr('spam')
-ord('s')
-chr(115)
-bin(13)</pre>
-		<pre>
-42
-'spam'
-115
-s
-0b1101</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'banana'.count('a')
-'Hello, welcome'.find('welcome')
-'Mi casa, su casa.'.index('casa')
-sorted('cba')
-'Ёёж'.replace('Ё', 'Е').replace('ё', 'е')</pre>
-		<pre>
-3
-7
-3
-['a', 'b', 'c']
-Ееж</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'h'.capitalize()
-'Hello My'.swapcase()
-'Welcome to'.title()
-'Hello my friends'.upper()
-'Hello my FRIENDS'.lower()</pre>
-		<pre>
-H
-hELLO mY
-Welcome To
-HELLO MY FRIENDS
-hello my friends</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'Hello, And'.casefold()
-'banana'.center(20, 'O')
-'H\te\tl\tl\to'.expandtabs()
-'For only {price:.2f} dollars!'.format(price = 49)
-'#'.join(['John', 'Peter', 'Vicky'])</pre>
-		<pre>
-hello, and
-OOOOOOObananaOOOOOOO
-H       e       l       l       o
-For only 49.00 dollars!
-John#Peter#Vicky</pre>
-	</div>
-	<div class="flex">
-		<pre>
-'welcome to the jungle'.split()
-' spacious '.strip()
-'spacious '.rstrip()
-'Hello, welcome to my world.'.startswith('Hello')
-'world.'.endswith('.')</pre>
-		<pre>
-['welcome', 'to', 'the', 'jungle']
-spacious
-spacious
-True
-True</pre>
-	</div>
-	<div class="flex">
-		<pre>
-print('#1',  '50'.zfill(10)
-</pre>
-		<pre>
-0000000050
-</pre>
-	</div>
-
-	<h2>Arrays</h2>
-	<div class="flex">
-		<pre>
-[1, 2].append(3)
-[1, 2].extend([3, 4])
-[1, 2].insert(1,'a')
-[1, 2].index(2)
-[1, 2].count(2)</pre>
-		<pre>
-None
-None
-None
-1
-1</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-sorted(['b','c','a'])
-['b','c','a'].reverse()
-copy.copy(['b','c','a'])
-[1,2].clear()
-['a','b'].pop(1)</pre>
-		<pre>
-['a', 'b', 'c']
-None
-['b', 'c', 'a']
-None
-b</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-len([1, 2, 3])
-[1, 2, 3] + [4, 5, 6]
-['a'] * 4
-str([1, 2]) + '34'
-[1, 2] + list('34')</pre>
-		<pre>
-3
-[1, 2, 3, 4, 5, 6]
-['a', 'a', 'a', 'a']
-[1, 2]34
-[1, 2, '3', '4']</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-3 in [1, 2, 3]
-[с * 4 for с in 'SPAM']
-list(map(abs, [-1, -2, 0, 1, 2]))
-['a', 'b', 'c'][0]
-['a', 'b', 'c'][-2]</pre>
-		<pre>
-True
-['SSSS', 'PPPP', 'AAAA', 'MMMM']
-[1, 2, 0, 1, 2]
-a
-b</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-['a', 'b', 'c'][:1]
-['a', 'b', 'c'][1:]
-[[1, 2, 3], [4, 5, 6], [7, 8, 9]][1][1]
-a = ['a', 'b', 'c']
-a[1]='D'
-a[1:1] = [6,7]
-</pre>
-		<pre>
-['a']
-['b', 'c']
-5
-['a', 'D', 'c']
-['a', 6, 7, 'D', 'c']</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-a = [2, 3, 4, 1]
-a[len(a):] = [5, 6, 7]
-a = [ 'abc', 'ABD', 'aBe']
-a.sort()
-a.sort (key=str.lower)
-a.sort(key=str.lower, reverse=True)
-</pre>
-		<pre>
-[2, 3, 4, 1, 5, 6, 7]
-['ABD', 'aBe', 'abc']
-['abc', 'ABD', 'aBe']
-['aBe', 'ABD', 'abc']</pre>
-	</div>
-
-
-
-
-
-	<h2>Regular</h2>
-
-	<div class="flex">
-		<pre>
-import re
-a = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-a.search('Мой номер: 415-555-4242.').group()
-
-b = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)'
-b.search('Мой номер: 415-555-4242.').group()
-b.search('Мой номер: 415-555-4242.').group(0)
-b.search('Мой номер: 415-555-4242.').group(1)
-b.search('Мой номер: 415-555-4242.').group(2)
-b.search('Мой номер: 415-555-4242.').group(1,2)
-print('#6', b.search('Мой номер: 415-555-4242.').groups()</pre>
-		<pre>
-415-555-4242
-415-555-4242
-415-555-4242
-415
-555-4242
-('415', '555-4242')
-#6 ('415', '555-4242')</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-d = re.compile(r'Batman|Tina Fey')
-d.search('Batman and Tina Fey.').group()
-d.search('Tina Fey and Batman.').group()
-
-e = re.compile(r'Bat(man|mobile|copter|bat)'
-e.search('Batmobile потерял колесо')
-e.search('Batmobile потерял колесо').group()
-e.search('Batmobile потерял колесо').group(1)</pre>
-		<pre>
-Batman
-Tina Fey
-re.Match object; span=(0, 9), match='Batmobile'
-Batmobile
-mobile</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-j = re.compile(r'Bat(wo)?man'
-j.search('The Adventures of Batman')
-j.search('The Adventures of Batman').group()
-j.search('The Adventures of Batwoman').group()
-
-k = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d'
-k.search('Мой номер: 415-555-4242').group()
-k.search('Мой номер: 555-4242').group()</pre>
-		<pre>
-re.Match object; span=(18, 24), match='Batman'
-Batman
-Batwoman
-415-555-4242
-555-4242</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-l = re.compile(r'Bat(wo)*man'
-# * это 0 или более
-l.search('The Adventures of Batman').group()
-l.search('The Adventures of Batwowowoman').group()
-
-q = re.compile(r'Bat(wo)+man')
-# + это один и более
-q.search('The Adventures of Batwoman').group())
-
-w = re.compile(r'(Ha){3}'
-w.search('HaHaHa').group()</pre>
-		<pre>
-Batman
-Batwowowoman
-Batwoman
-HaHaHa</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-w = re.compile(r'(Ha){3,5}'
-# жадный вид поиска берет по максимуму
-w.search('HaHaHa').group()
-w.search('HaHaHaHa').group()
-w.search('HaHaHaHaHa').group()
-
-qq = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d'
-qq.findall('Сотовый 444-222-5555, рабочий 333-111-3333')
-
-qq = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
-qq.findall('Сотовый 444-222-5555, рабочий 333-111-3333')</pre>
-		<pre>
-HaHaHa
-HaHaHaHa
-HaHaHaHaHa
-['444-222-5555', '333-111-3333']
-[('444', '222', '5555'), ('333', '111', '3333')]</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-#d Любая от 0 до 9
-#D любой символ не цифра от 0 до 9
-#w любая буква, цифра или _
-#W любой символ не являющийся буквой цифрой или _
-#s символ пробела табуляции или новой строки
-#S любой не пробел табуляция или новоя строка
-
-ww = re.compile(r'^Hello')
-# ^ начало строки
-ww.search('Hello motherf...').group()
-ww.search('motherf... Hello') == None
-
-ee = re.compile(r'Hello$'
-# $ заканчивается этим
-ee.search('Hello motherf...') == None
-ee.search('motherf... HHHHello').group()</pre>
-		<pre>
-Hello
-True
-True
-Hello</pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-rr = re.compile(r'.at')
-# at групповой символ
-rr.search('The cat in the hat').group()
-rr.findall('The cat in the hat')
-
-tt = re.compile(r'First Name: (.*) Last Name: (.*)'
-# at групповой символ
-tt.search('First Name: Max Last Name: Afanasev').groups()
-
-tt = re.compile(r'<.*?>'
-# at групповой символ
-tt.search('<aaaa> bbb>').group()
-
-tt = re.compile(r'<.*>')
-# at групповой символ
-tt.search('<aaaa> bbb>').group()</pre>
-		<pre>
-cat
-['cat', 'hat']
-('Max', 'Afanasev'
-<aaaa>
-<aaaa> bbb></pre>
-	</div>
-
-	<div class="flex">
-		<pre>
-1
-	</pre>
-		<pre>
-2
-	</pre>
-	</div>
-
-
 
 </body>
 
