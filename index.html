@@ -7,26 +7,29 @@
 	<title>Yammy Sneakers</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<style>
-
 		body {
 			margin: 16px;
 			gap: 4px;
 			background: #000;
 		}
+
 		h1 {
-			color: #fff;
+			color: #1eec20;
 			text-align: center;
 			font-family: 'Courier New', Courier, monospace;
 		}
+
 		.flex {
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: 20px;
 			opacity: 0.8;
 		}
+
 		.flex img {
 			width: 40px;
 		}
+
 		.search {
 			margin-left: auto;
 			margin-right: 6px;
@@ -35,6 +38,7 @@
 			border: 2px solid #fff;
 			border-radius: 16px;
 		}
+
 		.wrapper {
 			margin-bottom: 24px;
 			overflow-x: auto;
@@ -55,9 +59,22 @@
 			scroll-snap-align: center;
 			font-family: cursive;
 		}
+
 		.photo-wrapper img {
 			width: 100vw;
 			border-radius: 24px;
+		}
+
+		button {
+			padding: 0;
+			margin: 0;
+			color: #fff;
+			background: none;
+			border: none;
+		}
+
+		.number {
+			color: #fff;
 		}
 	</style>
 </head>
@@ -74,12 +91,50 @@
 		<div class="photo-wrapper"><img src="1/5.jpg"></div>
 	</div>
 
+	<div class="wrapper" style="display: none;">
+		<div class="photo-wrapper"><img src="2/1.jpg"></div>
+		<div class="photo-wrapper"><img src="2/2.jpg"></div>
+		<div class="photo-wrapper"><img src="2/3.jpg"></div>
+		<div class="photo-wrapper"><img src="2/4.jpg"></div>
+		<div class="photo-wrapper"><img src="2/5.jpg"></div>
+	</div>
+
 	<div class="flex">
-		<img src="icons8-cart-90.png" alt="">
+		<button id="button"><img src="icons8-cart-90.png" alt=""><span class="counter-display">(..)</span></button>
 		<img src="icons8-cross-50.png" alt="">
-		<img src="icons8-heart-50.png" alt="">
+		<button class="counter-plus"><img src="icons8-heart-50.png" alt=""></button>
 		<img src="icons8-search-100.svg" alt="search">
 	</div>
+
+
+	<script>
+		nummber = document.getElementById('number')
+		button.onclick = function (event) {
+			nummber.innerHTML = +1
+		};
+
+		let counterDisplayElem = document.querySelector('.counter-display');
+		let counterMinusElem = document.querySelector('.counter-minus');
+		let counterPlusElem = document.querySelector('.counter-plus');
+
+		let count = 0;
+
+		updateDisplay();
+
+		counterPlusElem.addEventListener("click", () => {
+			count++;
+			updateDisplay();
+		});
+
+		counterMinusElem.addEventListener("click", () => {
+			count--;
+			updateDisplay();
+		});
+
+		function updateDisplay() {
+			counterDisplayElem.innerHTML = count;
+		};
+	</script>
 </body>
 
 </html>
