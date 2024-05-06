@@ -7,20 +7,24 @@
 	<title>Yammy Sneakers</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<style>
-		* {}
 
 		body {
 			margin: 16px;
 			gap: 4px;
 			background: #000;
 		}
-		.f {
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-family: 'Courier New', Courier, monospace;
+		}
+		.flex {
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: 20px;
 			opacity: 0.8;
 		}
-		.f img {
+		.flex img {
 			width: 40px;
 		}
 		.search {
@@ -31,12 +35,8 @@
 			border: 2px solid #fff;
 			border-radius: 16px;
 		}
-		.i {
-			margin-top: 5px;
-			margin-left: 5px;
-		}
-		.k {
-			margin-bottom: 2px;
+		.wrapper {
+			margin-bottom: 24px;
 			overflow-x: auto;
 			display: flex;
 			width: 100%;
@@ -46,7 +46,7 @@
 			border-radius: 24px;
 		}
 
-		.s {
+		.photo-wrapper {
 			aspect-ratio: 1;
 			flex-flow: column nowrap;
 			display: flex;
@@ -55,61 +55,30 @@
 			scroll-snap-align: center;
 			font-family: cursive;
 		}
-
-		.s img {
+		.photo-wrapper img {
 			width: 100vw;
 			border-radius: 24px;
-		}
-
-		.b {
-			position: relative;
-			width: 30px;
-			height: 2px;
-			background: #fff;
-			margin: 0 auto;
-			margin-top: 20px;
-		}
-
-		.b::after {
-			position: absolute;
-			content: "";
-			width: 30px;
-			height: 2px;
-			top: 20px;
-			left: 0px;
-			background: #fff;
-		}
-
-		.b::before {
-			position: absolute;
-			content: "";
-			width: 30px;
-			height: 2px;
-			top: 10px;
-			left: 0px;
-			background: #fff;
 		}
 	</style>
 </head>
 
 <body>
-	<div class="f">
-		<img src="p.svg" width="50">
-			<img class="i" src="s.svg" width="40">
+
+	<h1>Найди себе пару</h1>
+
+	<div class="wrapper">
+		<div class="photo-wrapper"><img src="1/1.jpg"></div>
+		<div class="photo-wrapper"><img src="1/2.jpg"></div>
+		<div class="photo-wrapper"><img src="1/3.jpg"></div>
+		<div class="photo-wrapper"><img src="1/4.jpg"></div>
+		<div class="photo-wrapper"><img src="1/5.jpg"></div>
 	</div>
 
-
-	<div class="k">
-		<div class="s"><img src="1/1.jpg"></div>
-		<div class="s"><img src="1/2.jpg"></div>
-		<div class="s"><img src="1/3.jpg"></div>
-		<div class="s"><img src="1/4.jpg"></div>
-		<div class="s"><img src="1/5.jpg"></div>
-	</div>
-
-	<div class="f">
-		<div class="b"></div>
-		<img src="c.svg" alt="" width="5">
+	<div class="flex">
+		<img src="icons8-cart-90.png" alt="">
+		<img src="icons8-cross-50.png" alt="">
+		<img src="icons8-heart-50.png" alt="">
+		<img src="icons8-search-100.svg" alt="search">
 	</div>
 </body>
 
